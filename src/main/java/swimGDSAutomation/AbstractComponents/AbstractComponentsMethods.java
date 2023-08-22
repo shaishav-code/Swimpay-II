@@ -1,5 +1,7 @@
 package swimGDSAutomation.AbstractComponents;
 
+import java.util.Set;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,6 +54,28 @@ public class AbstractComponentsMethods{
 		 String Pagetitle = driver.getTitle();
 		 System.out.println(Pagetitle);
 	}	
+	
+	//Window handling
+	public void Windowhandling()
+	{
+	    String parentid = driver.getWindowHandle();
+		System.out.println("Parent id is :"+parentid);
+		Set<String> allwinid = driver.getWindowHandles();
+
+        int numberofid = allwinid.size();
+		
+		int i =0;
+		String [] winid = new String[numberofid];
+		
+		for(String id:allwinid)
+		{
+			winid[i]=id;
+			i++;
+		}
+		
+		driver.switchTo().window(winid[1]);
+		
+	}
 	
 	
 	//Click on next button

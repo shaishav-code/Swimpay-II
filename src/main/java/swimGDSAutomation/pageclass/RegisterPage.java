@@ -571,7 +571,7 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    {
 			boolean ischecked = TnC_checkbox.isSelected();  
 			System.out.println("TnC checkbox is selected :" +ischecked); //False
-			//TnC_checkbox.click(); //
+			TnC_checkbox.click(); //
 	    }
 	    
 	    //Verify if the user is able to select the checkbox
@@ -579,7 +579,7 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    {
 	    	boolean isenabletoperformaction = rules_checkbox.isEnabled();
 			System.out.println("Rules checkbox is enabled :" +isenabletoperformaction); //True
-			//rules_checkbox.click(); //
+			rules_checkbox.click(); //
 			boolean ischecked = rules_checkboxSelected.isSelected(); 
 			System.out.println("Rules checkbox is Selected " +ischecked); //True
 	    }

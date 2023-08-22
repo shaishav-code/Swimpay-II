@@ -163,15 +163,7 @@ public class LandingPage extends AbstractComponentsMethods{
     	ForgetPasswordPage forgetpassword = new ForgetPasswordPage(driver);
     	return forgetpassword;
     }
-    
-	@FindBy(xpath="//*[text()='Forgot Password?']")
-	private WebElement assertion_forgetpage;
-	
-	//Assertion on Forget page
-	public String Forgetpage()
-	{
-		return assertion_forgetpage.getText();
-	}
+ 
 
     
     

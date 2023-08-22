@@ -13,7 +13,6 @@ public class NegativeLoginTest extends BaseClass{
 	String password ="Admin@123";
 	String invalidemail="cosco1@gmail.com";
 	String invalidpassword ="Admin@1234";
-	
 	String expectedvalidtion1 ="Email is a required field";
 	
 	//Verify if user is able to do login without inserting Email and Password

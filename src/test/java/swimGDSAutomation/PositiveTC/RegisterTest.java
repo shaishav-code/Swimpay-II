@@ -40,7 +40,7 @@ public class RegisterTest extends BaseClass {
 
 	String Fname = "Narola";
 	String Dialcode = "+213";
-	String email="nda.norala12@gmail.com";
+	String email="nda.norala@yopmail.com";//nda.norala12@gmail.com
 	String pass="Nikhil@86";
 	String que1= "What is your date of birth?";
 	String que2= "What city were you born in?";
@@ -164,7 +164,7 @@ public class RegisterTest extends BaseClass {
 		}
 		
 		String expectedText = "Please read and agree to all of the terms & conditions and rules below";
-		String successtextExpected = "You got mail";
+		String successtextExpected = "You got mail!";
 		
 		
 		//Verify if the user is able to select the required check boxes of T&C and rules
