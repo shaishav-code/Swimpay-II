@@ -163,10 +163,7 @@ public class LandingPage extends AbstractComponentsMethods{
     	ForgetPasswordPage forgetpassword = new ForgetPasswordPage(driver);
     	return forgetpassword;
     }
- 
 
-    
-    
     
 //	public ContactPage ContactOption()
 //	{

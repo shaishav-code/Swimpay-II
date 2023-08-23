@@ -9,11 +9,11 @@ import swimGDSAutomation.pageclass.LandingPage;
 public class NegativeLoginTest extends BaseClass{
 
 	
-	String email = "cosco@gmail.com";
+	String email = "nda.norala@yopmail.com";
 	String password ="Admin@123";
-	String invalidemail="cosco1@gmail.com";
+	String invalidemail="nda@gmail.com";
 	String invalidpassword ="Admin@1234";
-	String expectedvalidtion1 ="Email is a required field";
+	String expectedvalidtion1 ="Email and Password are the required field";
 	
 	//Verify if user is able to do login without inserting Email and Password
 	@Test(priority=1)
@@ -29,7 +29,7 @@ public class NegativeLoginTest extends BaseClass{
 	}
 	
 	
-	String expectedvalidtion2 ="Invalid Email Address and Password.";
+	String expectedvalidtion2 ="Invalid Email Address.";
 	
 	//Verify if user is able to do login with invalid credentials(both email & pass)
 	@Test(priority=2)
@@ -47,7 +47,7 @@ public class NegativeLoginTest extends BaseClass{
 	}
 	
 	
-	String expectedvalidtion3 ="Wrong Password";
+	String expectedvalidtion3 ="Wrong Password.";
 	
 	//Verify if user is able to do login with valid email and invalid password
 	@Test(priority=3)
@@ -64,7 +64,6 @@ public class NegativeLoginTest extends BaseClass{
 		Assert.assertEquals(actualvalidtion1, expectedvalidtion3);
 	}
 	
-    String expectedvalidtion4 ="Invalid Email Address.";
 
 	//Verify if user is able to do login with invalid Email and valid Password
 	@Test(priority=4)
@@ -78,7 +77,7 @@ public class NegativeLoginTest extends BaseClass{
 		landingPage.Loginbtn();
 		
 		String actualvalidtion1 = landingPage.Validation_Loginpage();
-		Assert.assertEquals(actualvalidtion1, expectedvalidtion4);
+		Assert.assertEquals(actualvalidtion1, expectedvalidtion2);
 	}
 	
 	String expectedvalidtion5 = "Password is a required field";
@@ -95,9 +94,10 @@ public class NegativeLoginTest extends BaseClass{
 			
 		String actualvalidtion1 = landingPage.Validation_Loginpage();
 		Assert.assertEquals(actualvalidtion1, expectedvalidtion5);
-		}
+		
+	}
 	
-	
+	String expectedvalidtion6="Email is a required field";
 	//Verify if user is able to do login with valid Password and blank in Email field
 	@Test(priority=6)
 	public void loginWithoutEmail()
@@ -109,7 +109,7 @@ public class NegativeLoginTest extends BaseClass{
 		landingPage.Loginbtn();
 			
 		String actualvalidtion1 = landingPage.Validation_Loginpage();
-		Assert.assertEquals(actualvalidtion1, expectedvalidtion1);
-		}
+		Assert.assertEquals(actualvalidtion1, expectedvalidtion6);
+	}
 
 }

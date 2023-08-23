@@ -9,12 +9,29 @@ import swimGDSAutomation.pageclass.LandingPage;
 public class LoginTest extends BaseClass{
 
 	
-	String email = "cosco@gmail.com";
-	String password ="Admin@123";
+	String email = "nda.norala@yopmail.com";
+	String password ="Nayan@86";
 	String expectedtext ="Home";
+	String expectedURL = "https://demo.swimgds.com/seller/account-question";
 	
 	//Verify if user can do login with valid credentials
 	@Test(priority=1)
+	public void EnterEmailandPassword_clickBack() {
+		
+	LandingPage landingPage = new LandingPage(driver);
+	landingPage.SellerLogin();	
+	landingPage.Loginpage();
+	landingPage.Enter_useremail(email);
+	landingPage.Enter_password(password);
+	landingPage.Backoption();
+	
+	String actualURL = driver.getCurrentUrl();
+	Assert.assertEquals(actualURL, expectedURL);
+	}
+	
+	
+	//Verify if user can do login with valid credentials
+	@Test(priority=2)
 	public void LoginWithValidCredentails() {
 		
 	LandingPage landingPage = new LandingPage(driver);
@@ -31,7 +48,7 @@ public class LoginTest extends BaseClass{
 	
 	
 	//Verify if user can do login with valid credentials with password icon in enabled and disabled form
-	@Test(priority=2)
+	@Test(priority=3)
 	public void LoginWithValidCredentails_withPassIcon() {
 	
 	LandingPage landingPage = new LandingPage(driver);
@@ -46,7 +63,7 @@ public class LoginTest extends BaseClass{
 	
 	
 	//Verify if user can do login with valid credentials with Remember checkbox is selected
-	@Test(priority=3)
+	@Test(priority=4)
 	public void LoginWithValidCredentails_withSelectedRememberMe() {
 		
 	LandingPage landingPage = new LandingPage(driver);
@@ -63,7 +80,7 @@ public class LoginTest extends BaseClass{
 	}
 	
 	//Verify if user can do login with valid credentials and all visible options
-	@Test(priority=4)
+	@Test(priority=5)
 	public void LoginWith_AllVisibleOptions() {
 		
 	LandingPage landingPage = new LandingPage(driver);
@@ -74,11 +91,10 @@ public class LoginTest extends BaseClass{
 	landingPage.Click_PassEye();
 	landingPage.Loginbtn();
 	}
-	
 
 	
 	//Verify if user is able to do login with valid credentials and able to do logout
-	@Test(priority=5)
+	@Test(priority=6)
 	public void LoginAndLogout() {
 		
 	LandingPage landingPage = new LandingPage(driver);

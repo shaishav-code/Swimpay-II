@@ -24,7 +24,7 @@ public class NegativeRegisterTest extends BaseClass {
 	{
 		landingPage.SellerLogin();	
 		RegisterPage registerPage= landingPage.registerpage_Option();
-		registerPage.Click_next(); 
+		registerPage.Nextbutton(); 
 		registerPage.Validationtext();
 	}
 
@@ -41,9 +41,9 @@ public class NegativeRegisterTest extends BaseClass {
 		registerPage.EnterNegative_postcode(blank);
 		registerPage.Select_country(countryname);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();	
+		registerPage.Nextbutton();	
 	    registerPage.Validationtext1();   
-	    registerPage.Click_next();	
+	    registerPage.Nextbutton();	
     }
 	
     String invalid= "1222212";
@@ -61,8 +61,8 @@ public class NegativeRegisterTest extends BaseClass {
 		registerPage.Select_country(countryname);
 		registerPage.phonenumber(Landlinenum);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();	
-		registerPage.Click_next();	
+		registerPage.Nextbutton();	
+		registerPage.Nextbutton();	
     }
 	
 	                  ///////////Master User//////////////
@@ -89,7 +89,7 @@ public class NegativeRegisterTest extends BaseClass {
 		registerPage.Companywebiste(companyweb);
 		registerPage.phonenumber(Landlinenum);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();
+		registerPage.Nextbutton();
 		registerPage.Enterfullname(Fname);
 		registerPage.Select_dialcode(Dialcode);
 		registerPage.Enter_emailaddress(invalidEmailAddress);
@@ -99,7 +99,7 @@ public class NegativeRegisterTest extends BaseClass {
 		//registerPage.Click_next1();
     }
 	
-	  //Verify if user is able to navigate into Authorized user section without inserting mandatory details in Master user
+	    //Verify if user is able to navigate into Authorized user section without inserting mandatory details in Master user
 	    @Test(priority=5)
 		public void ClickOnNext_withoutAddingDetails_Master()
 		{
@@ -113,7 +113,7 @@ public class NegativeRegisterTest extends BaseClass {
 			registerPage.Companywebiste(companyweb);
 			registerPage.phonenumber(Landlinenum);
 			registerPage.SCAC_code(SCAC);
-			registerPage.Click_next();
+			registerPage.Nextbutton();
 		    registerPage.Click_next1();
 		    registerPage.Validation2();
 		}
@@ -132,7 +132,7 @@ public class NegativeRegisterTest extends BaseClass {
 			registerPage.Companywebiste(companyweb);
 			registerPage.phonenumber(Landlinenum);
 			registerPage.SCAC_code(SCAC);
-			registerPage.Click_next();
+			registerPage.Nextbutton();
 			registerPage.Enterfullname(blank);
 			registerPage.Enter_emailaddress(email);
 			registerPage.Enter_password(pass);
@@ -163,7 +163,7 @@ public class NegativeRegisterTest extends BaseClass {
 			registerPage.Companywebiste(companyweb);
 			registerPage.phonenumber(Landlinenum);
 			registerPage.SCAC_code(SCAC);
-			registerPage.Click_next();
+			registerPage.Nextbutton();
 			registerPage.Enterfullname(Fname);
 			registerPage.Select_dialcode(Dialcode);
 			registerPage.Enter_emailaddress(email);
@@ -189,7 +189,7 @@ public class NegativeRegisterTest extends BaseClass {
 			registerPage.Companywebiste(companyweb);
 			registerPage.phonenumber(Landlinenum);
 			registerPage.SCAC_code(SCAC);
-			registerPage.Click_next();
+			registerPage.Nextbutton();
 			registerPage.Enterfullname(Fname);
 			registerPage.Select_dialcode(Dialcode);
 			registerPage.Enter_emailaddress(email);
@@ -229,7 +229,7 @@ public class NegativeRegisterTest extends BaseClass {
 		registerPage.Companywebiste(companyweb);
 		registerPage.phonenumber(Landlinenum);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();
+		registerPage.Nextbutton();
 		registerPage.Enterfullname(Fname);
 		registerPage.Select_dialcode(Dialcode);
 		registerPage.Enter_emailaddress(email);
@@ -270,7 +270,7 @@ public class NegativeRegisterTest extends BaseClass {
 		registerPage.Companywebiste(companyweb);
 		registerPage.phonenumber(Landlinenum);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();
+		registerPage.Nextbutton();
 		registerPage.Enterfullname(Fname);
 		registerPage.Select_dialcode(Dialcode);
 		registerPage.Enter_emailaddress(email);

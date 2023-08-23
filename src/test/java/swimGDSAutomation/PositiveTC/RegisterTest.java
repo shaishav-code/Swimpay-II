@@ -35,12 +35,12 @@ public class RegisterTest extends BaseClass {
 		registerPage.Companywebiste(companyweb);
 		registerPage.phonenumber(Landlinenum);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();
+		registerPage.Nextbutton();
 	}
 
 	String Fname = "Narola";
 	String Dialcode = "+213";
-	String email="nda.norala@yopmail.com";//nda.norala12@gmail.com
+	String email="nik07@YOPmail.com";//nda.norala@yopmail.com
 	String pass="Nikhil@86";
 	String que1= "What is your date of birth?";
 	String que2= "What city were you born in?";
@@ -59,7 +59,7 @@ public class RegisterTest extends BaseClass {
 		registerPage.Companywebiste(companyweb);
 		registerPage.phonenumber(Landlinenum);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();
+		registerPage.Nextbutton();
 		
 		String sectiontitle2 =registerPage.Validation();
 		Assert.assertEquals(sectiontitle2, "Master User");
@@ -93,7 +93,7 @@ public class RegisterTest extends BaseClass {
 		registerPage.Companywebiste(companyweb);
 		registerPage.phonenumber(Landlinenum);
 		registerPage.SCAC_code(SCAC);
-		registerPage.Click_next();
+		registerPage.Nextbutton();
 		registerPage.Enterfullname(Fname);
 		registerPage.Select_dialcode(Dialcode);
 		registerPage.Enter_emailaddress(email);
@@ -138,7 +138,7 @@ public class RegisterTest extends BaseClass {
 			registerPage.Companywebiste(companyweb);
 			registerPage.phonenumber(Landlinenum);
 			registerPage.SCAC_code(SCAC);
-			registerPage.Click_next();
+			registerPage.Nextbutton();
 			registerPage.Enterfullname(Fname);
 			registerPage.Select_dialcode(Dialcode);
 			registerPage.Enter_emailaddress(email);
@@ -146,9 +146,9 @@ public class RegisterTest extends BaseClass {
 			registerPage.Select_que1(que1);
 			registerPage.Select_que2(que2);
 			registerPage.Click_next1();
-//			registerPage.EnterAuth_FirstndLastname(AuthFirstName);
-//			registerPage.EnterAuth_dialcode(Auth_Dialcode);
-//			registerPage.EnterAuth_email(Auth_email);
+			registerPage.EnterAuth_FirstndLastname(AuthFirstName);
+			registerPage.EnterAuth_dialcode(Auth_Dialcode);
+			registerPage.EnterAuth_email(Auth_email);
 			registerPage.ClickOnAddAuthorize();
 //			
 //			String sectiontitle4 =registerPage.Bank_sectiontext();
@@ -181,7 +181,7 @@ public class RegisterTest extends BaseClass {
 			registerPage.Companywebiste(companyweb);
 			registerPage.phonenumber(Landlinenum);
 			registerPage.SCAC_code(SCAC);
-			registerPage.Click_next();
+			registerPage.Nextbutton();
 			registerPage.Enterfullname(Fname);
 			registerPage.Select_dialcode(Dialcode);
 			registerPage.Enter_emailaddress(email);
@@ -189,9 +189,9 @@ public class RegisterTest extends BaseClass {
 			registerPage.Select_que1(que1);
 			registerPage.Select_que2(que2);
 			registerPage.Click_next1();
-			registerPage.EnterAuth_FirstndLastname(AuthFirstName);
-			registerPage.EnterAuth_dialcode(Auth_Dialcode);
-			registerPage.EnterAuth_email(Auth_email);
+//			registerPage.EnterAuth_FirstndLastname(AuthFirstName);
+//			registerPage.EnterAuth_dialcode(Auth_Dialcode);
+//			registerPage.EnterAuth_email(Auth_email);
 			registerPage.ClickOnAddAuthorize();	
 			registerPage.Addbankacc(BankName);
 			registerPage.Addbank_address(BankAddress1);

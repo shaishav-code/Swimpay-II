@@ -4,18 +4,15 @@
   <listeners>
     <listener class-name="swimGDSAutomation.TestComponents.ListenersClass"/>
   </listeners>
-  <test thread-count="5" name="Positive test cases(failed)">
+  <test thread-count="5" name="Negative test cases(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.LoginTest">
+      <class name="swimGDSAutomation.NegativeTC.NegativeLoginTest">
         <methods>
-          <include name="LoginWith_AllVisibleOptions"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
-          <include name="LoginAndLogout"/>
-          <include name="LoginWithValidCredentails_withSelectedRememberMe"/>
-          <include name="LoginWithValidCredentails_withPassIcon"/>
+          <include name="Loginwithout_EmailPassword"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.LoginTest -->
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeLoginTest -->
     </classes>
-  </test> <!-- Positive test cases(failed) -->
+  </test> <!-- Negative test cases(failed) -->
 </suite> <!-- Failed suite [Account Login] -->

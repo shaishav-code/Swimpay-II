@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-22T18:38:24 IST" name="Default suite" finished-at="2023-08-22T18:40:04 IST" duration-ms="100660">
+  <suite started-at="2023-08-23T19:01:16 IST" name="Forget Password Functionality" finished-at="2023-08-23T19:07:12 IST" duration-ms="356326">
     <groups>
     </groups>
-    <test started-at="2023-08-22T18:38:24 IST" name="Default test" finished-at="2023-08-22T18:40:04 IST" duration-ms="100660">
-      <class name="swimGDSAutomation.PositiveTC.ForgetPasswordTest">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ForgetPasswordTest@4d5650ae]" started-at="2023-08-22T18:38:24 IST" name="lanuchWebsite" finished-at="2023-08-22T18:39:38 IST" duration-ms="74586" status="PASS">
+    <test started-at="2023-08-23T19:01:16 IST" name="Negative test cases" finished-at="2023-08-23T19:07:12 IST" duration-ms="356326">
+      <class name="swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:01:16 IST" name="lanuchWebsite" finished-at="2023-08-23T19:02:30 IST" duration-ms="73898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Verify_ClickOnSubmitButton()[pri:6, instance:swimGDSAutomation.PositiveTC.ForgetPasswordTest@4d5650ae]" started-at="2023-08-22T18:39:38 IST" name="Verify_ClickOnSubmitButton" finished-at="2023-08-22T18:40:04 IST" duration-ms="26002" status="PASS">
+        <test-method signature="WithoutInsertingEmail_ClickNextBtn()[pri:1, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:02:30 IST" name="WithoutInsertingEmail_ClickNextBtn" finished-at="2023-08-23T19:02:43 IST" duration-ms="13274" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_ClickOnSubmitButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ForgetPasswordTest@4d5650ae]" started-at="2023-08-22T18:40:04 IST" name="tearDown" finished-at="2023-08-22T18:40:04 IST" duration-ms="6" status="PASS">
+        </test-method> <!-- WithoutInsertingEmail_ClickNextBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:02:43 IST" name="tearDown" finished-at="2023-08-23T19:02:44 IST" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- swimGDSAutomation.PositiveTC.ForgetPasswordTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:02:44 IST" name="lanuchWebsite" finished-at="2023-08-23T19:03:42 IST" duration-ms="58311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="InsertUnregisteredEmail_ClickNext()[pri:2, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:03:42 IST" name="InsertUnregisteredEmail_ClickNext" finished-at="2023-08-23T19:03:58 IST" duration-ms="15945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InsertUnregisteredEmail_ClickNext -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:03:58 IST" name="tearDown" finished-at="2023-08-23T19:03:58 IST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:03:58 IST" name="lanuchWebsite" finished-at="2023-08-23T19:04:25 IST" duration-ms="26788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="EnterAnswer_SecurityQues()[pri:3, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:04:25 IST" name="EnterAnswer_SecurityQues" finished-at="2023-08-23T19:04:42 IST" duration-ms="17301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterAnswer_SecurityQues -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:04:42 IST" name="tearDown" finished-at="2023-08-23T19:04:42 IST" duration-ms="283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:04:42 IST" name="lanuchWebsite" finished-at="2023-08-23T19:05:41 IST" duration-ms="58172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="InsertUnverifiedemail_clickNext()[pri:4, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:05:41 IST" name="InsertUnverifiedemail_clickNext" finished-at="2023-08-23T19:05:55 IST" duration-ms="14312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InsertUnverifiedemail_clickNext -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:05:55 IST" name="tearDown" finished-at="2023-08-23T19:05:55 IST" duration-ms="377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:05:55 IST" name="lanuchWebsite" finished-at="2023-08-23T19:06:57 IST" duration-ms="61297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="WithoutInsertingAnswer_clickNext()[pri:5, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:06:57 IST" name="WithoutInsertingAnswer_clickNext" finished-at="2023-08-23T19:07:12 IST" duration-ms="15550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WithoutInsertingAnswer_clickNext -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest@38234a38]" started-at="2023-08-23T19:07:12 IST" name="tearDown" finished-at="2023-08-23T19:07:12 IST" duration-ms="263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest -->
+    </test> <!-- Negative test cases -->
+  </suite> <!-- Forget Password Functionality -->
 </testng-results>

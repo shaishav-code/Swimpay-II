@@ -26,14 +26,14 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@name='email']")
 	private WebElement forgetpassword_email;
 	
-	@FindBy(xpath="//*[text()='Next']")
-	private WebElement nextbtn;
-	
 	@FindBy(xpath="//*[@class='question']")
 	private WebElement securityQue;
 	
 	@FindBy(xpath="//*[@id='answer']")
 	private WebElement answerfield;
+	
+    @FindBy(xpath="//*[@class='alert alert-danger']")
+    private WebElement inactivemail;
 	
 	//Assertion on Forget page
 	public String Forgetpage()
@@ -47,11 +47,11 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 		forgetpassword_email.sendKeys(email);	
     }
 	
-	//click on Next button
-	public void Nextbutton()
-	{
-		nextbtn.click();	
-	}
+    //Validation on Forget Password page
+    public boolean InactiveEmail()
+    {
+    	return inactivemail.isDisplayed();
+    }
 	
 	//Assertion on Security question page
 	public boolean SecurityQues()
@@ -71,6 +71,20 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 		else if (displayedQues.equals("Q. What city were you born in?"))
 		{
 			answerfield.sendKeys("Mumbai");
+		}
+	}
+	
+	//Verify if user is able to select the answer as per the visible question
+	public void Invalidanswer()
+	{
+		String displayedQues = securityQue.getText();
+		if(displayedQues.equals("Q. What is your date of birth?"))
+		{
+			answerfield.sendKeys("Mumbai");
+		}
+		else if (displayedQues.equals("Q. What city were you born in?"))
+		{
+			answerfield.sendKeys("07 July 1998");
 		}
 	}
 	

@@ -78,13 +78,19 @@ public class AbstractComponentsMethods{
 	}
 	
 	
-	//Click on next button
 	@FindBy(xpath="//*[text()='Next']")
 	private WebElement nextbtn;
 	
-	public void Click_next()
+	//click on Next button
+	public void Nextbutton()
 	{
-		nextbtn.click();
+		nextbtn.click();	
+	}
+	
+	//Verify if Next button is enabled or not
+	public boolean Nextbtn_enabled()
+	{
+		return nextbtn.isEnabled();
 	}
 	
 	//Click on Logout Button
@@ -113,7 +119,6 @@ public class AbstractComponentsMethods{
 		contactus_menu.click();
 		ContactPage contactpage = new ContactPage(driver);
 		return contactpage;
-	
 	}
 	
 	@FindBy(xpath="//*[@id='summary']")
@@ -134,6 +139,8 @@ public class AbstractComponentsMethods{
     {
     	backbtn.click();
     }
+    
+
 
 
 }

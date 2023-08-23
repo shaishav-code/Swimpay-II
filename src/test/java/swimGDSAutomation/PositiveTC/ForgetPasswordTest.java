@@ -10,7 +10,7 @@ import swimGDSAutomation.pageclass.LandingPage;
 public class ForgetPasswordTest extends BaseClass {
 	
 	String email = "nda.norala@yopmail.com";
-	String password ="Nikhil@86";
+	String password ="Nayan@86";
 	String expected ="Forgot Password?";
 	
 	//Verify if user is able to click on Forget password link
@@ -40,7 +40,7 @@ public class ForgetPasswordTest extends BaseClass {
         
 	}
 	
-	//Verify if user is able to enter the email in Forget password page
+	//Verify if user is able to enter the email in Forget password page and navigate to Security Questions
 	@Test(priority=3)
 	public void EnterEmail_ForgetPasswordPage(){
 			
@@ -80,7 +80,7 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.Enter_email(email);
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.Answerfield();
-		forgetpasswordpage.Click_next();
+		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
 		boolean ResetbtnDisplayed = forgetpasswordpage.Verify_resetmail();
 		Assert.assertTrue(ResetbtnDisplayed, "Reset Password button is displayed");
@@ -88,7 +88,7 @@ public class ForgetPasswordTest extends BaseClass {
 		}
 	
 	//Verify if user is able to click on reset password button and can navigate to the required page
-	@Test(priority=5)
+	@Test(priority=6)
 	public void ResetPassword() throws InterruptedException{
 				
 		LandingPage landingPage = new LandingPage(driver);
@@ -98,7 +98,7 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.Enter_email(email);
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.Answerfield();
-		forgetpasswordpage.Click_next();
+		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
 		boolean ResetbtnDisplayed = forgetpasswordpage.Verify_resetmail();
 		Assert.assertTrue(ResetbtnDisplayed, "Reset Password button is displayed");	
@@ -106,8 +106,8 @@ public class ForgetPasswordTest extends BaseClass {
 
 		}
 
-	//Verify if user is able to enter New and Confirm password 
-	@Test(priority=6)
+	//Verify if user is able to enter the New and Confirm password 
+	@Test(priority=7)
 	public void Enter_NewandConfirmPassword() throws InterruptedException{
 				
 		LandingPage landingPage = new LandingPage(driver);
@@ -117,17 +117,18 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.Enter_email(email);
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.Answerfield();
-		forgetpasswordpage.Click_next();
+		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
 		forgetpasswordpage.Verify_resetmail();
 		forgetpasswordpage.ResetPasswordbtn();
+		forgetpasswordpage.Windowhandling();
 		forgetpasswordpage.Enter_NewandConfirmPassword();
 		}
 	
 	String ExpectedSuccessmessage = "Success!";
 	
-	//Verify if user is able to click on submit button after entering the details
-	@Test(priority=7)
+	//Verify if user is able to click on submit button after entering the details and get the success message
+	@Test(priority=8)
 	public void Verify_ClickOnSubmitButton() throws InterruptedException{
 				
 		LandingPage landingPage = new LandingPage(driver);
@@ -137,7 +138,7 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.Enter_email(email);
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.Answerfield();
-		forgetpasswordpage.Click_next();
+		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
 		forgetpasswordpage.Verify_resetmail();
 		forgetpasswordpage.ResetPasswordbtn();
