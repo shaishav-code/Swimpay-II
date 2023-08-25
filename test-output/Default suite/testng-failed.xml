@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest">
+      <class name="swimGDSAutomation.PositiveTC.QuotesTest">
         <methods>
-          <include name="WithoutInsertingEmail_ClickNextBtn"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
+          <include name="SelectOutofDateStatus_ShippedContainer"/>
         </methods>
-      </class> <!-- swimGDSAutomation.NegativeTC.NegativeForgetPasswordTest -->
+      </class> <!-- swimGDSAutomation.PositiveTC.QuotesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

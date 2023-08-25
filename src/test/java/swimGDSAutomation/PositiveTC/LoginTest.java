@@ -14,7 +14,7 @@ public class LoginTest extends BaseClass{
 	String expectedtext ="Home";
 	String expectedURL = "https://demo.swimgds.com/seller/account-question";
 	
-	//Verify if user can do login with valid credentials
+	//Verify if user can insert the username and password and clicks on back button.
 	@Test(priority=1)
 	public void EnterEmailandPassword_clickBack() {
 		
@@ -47,7 +47,7 @@ public class LoginTest extends BaseClass{
 	}
 	
 	
-	//Verify if user can do login with valid credentials with password icon in enabled and disabled form
+	//Verify if user is able to do login with valid credentials and clicks on password icon (enabled and disabled)
 	@Test(priority=3)
 	public void LoginWithValidCredentails_withPassIcon() {
 	

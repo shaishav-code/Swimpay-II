@@ -1,5 +1,7 @@
 package swimGDSAutomation.AbstractComponents;
 
+import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -7,13 +9,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import swimGDSAutomation.pageclass.ContactPage;
+import swimGDSAutomation.pageclass.QuotesPage;
 
 public class AbstractComponentsMethods{
 
 
 	WebDriver driver;
+	WebDriverWait wait;
 
 	public AbstractComponentsMethods(WebDriver driver) {
 		this.driver = driver;
@@ -47,16 +53,22 @@ public class AbstractComponentsMethods{
 		js.executeScript("window.scrollBy(0,3000)");
 	}
 	
+	public void ClickhiddenElement(WebElement ele)
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		js.executeScript("arguments[0].click();", ele);
+	}
 	
 	//To get PageTitle
 	public void titleOfPage()
 	{
 		 String Pagetitle = driver.getTitle();
-		 System.out.println(Pagetitle);
+		 System.out.println("Title of Current page is :" +Pagetitle);
 	}	
 	
 	//Window handling
-	public void Windowhandling()
+	public void Windowhandling(int j)
 	{
 	    String parentid = driver.getWindowHandle();
 		System.out.println("Parent id is :"+parentid);
@@ -73,10 +85,15 @@ public class AbstractComponentsMethods{
 			i++;
 		}
 		
-		driver.switchTo().window(winid[1]);
+		driver.switchTo().window(winid[j]);//1
 		
 	}
 	
+	public void waitTimeForWebElementListToAppear(List<WebElement> eleListAppear) 
+	{
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOfAllElements(eleListAppear));
+	}
 	
 	@FindBy(xpath="//*[text()='Next']")
 	private WebElement nextbtn;
@@ -110,7 +127,8 @@ public class AbstractComponentsMethods{
 	{
 		backoption.click();
 	}
-	         //////////Contact Us Page////////////////
+	            //////////Contact Us Page////////////////
+	
 	@FindBy(xpath="//*[@class='collapsed sidebar-link']//span[text()='Contact Us']")
 	private WebElement contactus_menu;
 	
@@ -139,7 +157,17 @@ public class AbstractComponentsMethods{
     {
     	backbtn.click();
     }
-    
+                     //////////Contact Us Page////////////////
+     
+    @FindBy(xpath="(//*[text()='Quotes'])[1]")
+	private WebElement quotes_menu;
+	
+	public QuotesPage QuotesOption()
+	{
+		quotes_menu.click();
+		QuotesPage quotespage = new QuotesPage(driver);
+		return quotespage;
+	}
 
 
 

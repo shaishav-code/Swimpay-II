@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Quotes Functionality]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="swimGDSAutomation.TestComponents.ListenersClass"/>
+  </listeners>
+  <test thread-count="5" name="Positive test cases(failed)">
+    <classes>
+      <class name="swimGDSAutomation.PositiveTC.QuotesTest">
+        <methods>
+          <include name="SelectDeclinedStatus_ShippedContainer"/>
+          <include name="tearDown"/>
+          <include name="SelectQuotedStatus_ShippedContainer"/>
+          <include name="lanuchWebsite"/>
+          <include name="SelectAcceptedStatus"/>
+          <include name="SelectCancelledStatus_ShippedContainer"/>
+          <include name="SelectAcceptedStatus_ShippedContainer"/>
+          <include name="SelectQuotedStatus"/>
+        </methods>
+      </class> <!-- swimGDSAutomation.PositiveTC.QuotesTest -->
+    </classes>
+  </test> <!-- Positive test cases(failed) -->
+</suite> <!-- Failed suite [Quotes Functionality] -->

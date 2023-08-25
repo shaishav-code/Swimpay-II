@@ -87,7 +87,7 @@ public class ForgetPasswordTest extends BaseClass {
 
 		}
 	
-	//Verify if user is able to click on reset password button and can navigate to the required page
+	//Verify if user is able to click on reset password button and is able to navigate to the required page
 	@Test(priority=6)
 	public void ResetPassword() throws InterruptedException{
 				
@@ -121,13 +121,13 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.waitCode();
 		forgetpasswordpage.Verify_resetmail();
 		forgetpasswordpage.ResetPasswordbtn();
-		forgetpasswordpage.Windowhandling();
+		forgetpasswordpage.Windowhandling(1);
 		forgetpasswordpage.Enter_NewandConfirmPassword();
 		}
 	
 	String ExpectedSuccessmessage = "Success!";
 	
-	//Verify if user is able to click on submit button after entering the details and get the success message
+	//Verify if user is able to click on submit button after entering the new and confirm password and get the success message
 	@Test(priority=8)
 	public void Verify_ClickOnSubmitButton() throws InterruptedException{
 				
@@ -142,7 +142,7 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.waitCode();
 		forgetpasswordpage.Verify_resetmail();
 		forgetpasswordpage.ResetPasswordbtn();
-		forgetpasswordpage.Windowhandling();
+		forgetpasswordpage.Windowhandling(1);
 		forgetpasswordpage.Enter_NewandConfirmPassword();
 		forgetpasswordpage.Click_submitbtn();
 		String ActualSuccessmessage = forgetpasswordpage.SuccessMessage();

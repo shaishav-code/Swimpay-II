@@ -132,6 +132,9 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 		@FindBy(xpath="//*[text()='Success!']")
 		private WebElement success;
 		
+		@FindBy(xpath="//*[text()='Passwords do not match']")
+		private WebElement validationforinvalidPassword;
+		
 				
 	   //Verify if user is able to get the reset password link on mentioned mail 
 		public boolean Verify_resetmail()
@@ -158,12 +161,26 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 			confirmpassword.sendKeys("Nayan@86");
 		}
 		
+		//Verify if user is able to enter new and confirm password 
+		public void Invalid_NewandConfirmPassword()
+		{			
+			newpassword.sendKeys("Nayan@86");
+			confirmpassword.sendKeys("Nayan@12");
+			
+		}
+		
 		//Verify if user is able to click on submit button after inserting valid New & Confirm Password
 		public void Click_submitbtn()
 		{
 			boolean Boolean = submitbtn.isEnabled();
 			System.out.println("Submit button is Enabled" +Boolean);
 			submitbtn.click();
+		}
+		
+		//Capture the validation if user insert the mismatch password in New and confirm Field
+		public String EnterinvalidPassword()
+		{
+			return validationforinvalidPassword.getText();
 		}
 		
 		//Verify if user has successfully changed the new password

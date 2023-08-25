@@ -172,5 +172,9 @@ public class LandingPage extends AbstractComponentsMethods{
 //		return contactpage;
 //	}
 
-	
+	public void reused()
+	{
+		Enter_useremail("nayan");
+		
+	}
 }

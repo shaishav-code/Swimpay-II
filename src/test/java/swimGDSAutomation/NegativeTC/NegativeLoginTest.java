@@ -98,6 +98,7 @@ public class NegativeLoginTest extends BaseClass{
 	}
 	
 	String expectedvalidtion6="Email is a required field";
+	
 	//Verify if user is able to do login with valid Password and blank in Email field
 	@Test(priority=6)
 	public void loginWithoutEmail()
