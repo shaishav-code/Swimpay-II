@@ -156,10 +156,8 @@ public class RegisterPage extends AbstractComponentsMethods{
 			System.out.println("Validation of mobile number :"+ validation_mobileno.getText());
 			System.out.println("Validation of SCAC code :" + validation_SCACcode.getText());
 			
-		}
-		
-		
-		       //////////////////////MasterUSer///////////////////
+		}	
+		       //////////////////////Master User///////////////////
 		
 		
 		@FindBy(xpath="//*[text()='Master User']")

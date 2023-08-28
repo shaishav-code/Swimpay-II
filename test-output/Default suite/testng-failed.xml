@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.QuotesTest">
+      <class name="swimGDSAutomation.PositiveTC.MyAccountTest">
         <methods>
+          <include name="InsertDetailsIn_EditBankAccountInfoPopup_ClickSaveBtn"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
-          <include name="SelectOutofDateStatus_ShippedContainer"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.QuotesTest -->
+      </class> <!-- swimGDSAutomation.PositiveTC.MyAccountTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

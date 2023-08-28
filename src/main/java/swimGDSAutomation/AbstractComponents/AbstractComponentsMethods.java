@@ -10,9 +10,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import swimGDSAutomation.pageclass.ContactPage;
+import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.QuotesPage;
 
 public class AbstractComponentsMethods{
@@ -34,7 +36,7 @@ public class AbstractComponentsMethods{
 	  //js.executeScript("window.scrollBy(0, -400)");
 	}
 
-	//Scrolling till prticular webelement
+	//Scrolling till particular webelement
 	public void scrollToElement(WebElement element) {
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
 	    js.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -53,10 +55,10 @@ public class AbstractComponentsMethods{
 		js.executeScript("window.scrollBy(0,3000)");
 	}
 	
+	//Click hidden element
 	public void ClickhiddenElement(WebElement ele)
 	{
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		
+		JavascriptExecutor js = (JavascriptExecutor)driver;	
 		js.executeScript("arguments[0].click();", ele);
 	}
 	
@@ -87,6 +89,13 @@ public class AbstractComponentsMethods{
 		
 		driver.switchTo().window(winid[j]);//1
 		
+	}
+	
+	//Select dropdown
+	public void Selectdropdown(WebElement ele, String s)
+	{
+		Select select = new Select(ele);
+		select.selectByVisibleText(s);
 	}
 	
 	public void waitTimeForWebElementListToAppear(List<WebElement> eleListAppear) 
@@ -157,7 +166,7 @@ public class AbstractComponentsMethods{
     {
     	backbtn.click();
     }
-                     //////////Contact Us Page////////////////
+                     //////////Quotes Page////////////////
      
     @FindBy(xpath="(//*[text()='Quotes'])[1]")
 	private WebElement quotes_menu;
@@ -168,6 +177,32 @@ public class AbstractComponentsMethods{
 		QuotesPage quotespage = new QuotesPage(driver);
 		return quotespage;
 	}
+	
+	
+                     //////////My Account Management Page////////////////
+    
+    @FindBy(xpath="//*[text()='Account Management']")
+    private WebElement accountmanagement_menu;
+
+    public AccountManagementPage AccountManagementOption()
+    {
+    	accountmanagement_menu.click();
+        AccountManagementPage accountmanagement = new AccountManagementPage(driver);
+        return accountmanagement;
+    }
+    
+                     //////////////My AccountPage/////////////////////
+    
+    //Click on cross arrow to cancel the popup
+    @FindBy(xpath="//*[@class='close']")
+    private List<WebElement> crossarrow;
+    
+    public void Click_crossarrow(int i)
+    {
+    	crossarrow.get(i).click();
+    }
+	
+	                    
 
 
 
