@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.MyAccountTest">
+      <class name="swimGDSAutomation.PositiveTC.AuthorizeUserTest">
         <methods>
-          <include name="InsertDetailsIn_EditBankAccountInfoPopup_ClickSaveBtn"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
+          <include name="CreateNewAuthorizedUser"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.MyAccountTest -->
+      </class> <!-- swimGDSAutomation.PositiveTC.AuthorizeUserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

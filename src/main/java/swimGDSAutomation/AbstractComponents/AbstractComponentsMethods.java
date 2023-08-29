@@ -32,7 +32,7 @@ public class AbstractComponentsMethods{
 	public void scrolling() {
 		
        JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0, 300)");
+		js.executeScript("window.scrollBy(0, 400)");
 	  //js.executeScript("window.scrollBy(0, -400)");
 	}
 
@@ -97,6 +97,15 @@ public class AbstractComponentsMethods{
 		Select select = new Select(ele);
 		select.selectByVisibleText(s);
 	}
+  
+	
+    @FindBy(xpath="//*[@class='alert alert-success']")
+    private WebElement successmessage;
+    //Verify if user got the success message after clicking on save changes button
+    public boolean Success_message()
+    {
+    	return successmessage.isDisplayed();
+    }
 	
 	public void waitTimeForWebElementListToAppear(List<WebElement> eleListAppear) 
 	{
@@ -191,7 +200,6 @@ public class AbstractComponentsMethods{
         return accountmanagement;
     }
     
-                     //////////////My AccountPage/////////////////////
     
     //Click on cross arrow to cancel the popup
     @FindBy(xpath="//*[@class='close']")
@@ -201,10 +209,6 @@ public class AbstractComponentsMethods{
     {
     	crossarrow.get(i).click();
     }
-	
-	                    
-
-
 
 }
 

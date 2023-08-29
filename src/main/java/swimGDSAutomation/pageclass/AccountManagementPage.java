@@ -74,5 +74,21 @@ public class AccountManagementPage extends AbstractComponentsMethods {
         MyAccountPage myaccountpage = new MyAccountPage(driver);
         return myaccountpage;
     }
+
+	
+                ///////////////My Account//////////////////////////
+
+	@FindBy(xpath="//*[@title='Authorized Users']")
+	private WebElement Authorizeuser;
+
+
+    public AuthorizeUserPage AuthorizeUserOption()
+    {
+    	Authorizeuser.click();
+        AuthorizeUserPage authorizeuserpage = new AuthorizeUserPage(driver);
+        return authorizeuserpage;
+    }   
+    
+    
    
 }

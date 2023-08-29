@@ -48,8 +48,7 @@ WebDriver driver;
     @FindBy(xpath="(//*[contains(text(),'Save Changes')])[2]")
     private WebElement company_savebtn;
     
-    @FindBy(xpath="//*[@class='alert alert-success']")
-    private WebElement successmessage;
+
     
     //Verify if user is able to click on edit Company info
     public void Click_editcompanyinfo()
@@ -110,12 +109,7 @@ WebDriver driver;
     {
     	company_savebtn.click();
     }
-    
-    //Verify if user got the success message after clicking on save changes button
-    public boolean Success_message()
-    {
-    	return successmessage.isDisplayed();
-    }
+   
     
     
       /////////////////////////Edit Account info/////////////////////
