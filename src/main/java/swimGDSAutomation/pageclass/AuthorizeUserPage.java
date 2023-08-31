@@ -143,29 +143,32 @@ public class AuthorizeUserPage extends AbstractComponentsMethods{
 	}
 	
 	//Verify if user is able to enter the first name
-	public void Enter_firstname()
+	public void Enter_firstname(String fname)
 	{
-		firstname.sendKeys("Mohit");
+		firstname.clear();
+		firstname.sendKeys(fname);
 	}
 	
 	//Verify if user is able to enter the last name
-	public void Enter_lastname()
+	public void Enter_lastname(String lname)
 	{
-		lastname.sendKeys("Paul");
+		lastname.clear();
+		lastname.sendKeys(lname);
 	}
 	
 	//Verify if user is able to enter the  email address
-	public void Enter_emailId()
+	public void Enter_emailId(String mail)
 	{
-		email.sendKeys("test17@yopmail.com");
+		email.clear();
+		email.sendKeys(mail);
 	}
 	
 	//Verify if user is able to select the dial code and enter the mobile number
-	public void Enter_mobilenumber()
+	public void Enter_mobilenumber(String mobile)
 	{
 		
 		Selectdropdown(dialcode, "+213");
-		mobilenumber.sendKeys("9838278022");
+		mobilenumber.sendKeys(mobile);
 	}	
 	
 	//Verify if user is able to click on Create button

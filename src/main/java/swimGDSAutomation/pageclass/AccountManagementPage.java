@@ -88,7 +88,31 @@ public class AccountManagementPage extends AbstractComponentsMethods {
         AuthorizeUserPage authorizeuserpage = new AuthorizeUserPage(driver);
         return authorizeuserpage;
     }   
+     
+                ///////////////Swim GDS TnC//////////////////////////
+
+	@FindBy(xpath="//*[@title='SWiM Terms & Conditions']")
+	private WebElement SwimTnC;
+
+
+    public SwimGDSTnCPage SwimGDSTnCOption()
+    {
+    	SwimTnC.click();
+        SwimGDSTnCPage TnCpage = new SwimGDSTnCPage(driver);
+        return TnCpage;
+     }   
     
-    
+                ///////////////Swim GDS Rules//////////////////////////
+        
+	@FindBy(xpath="//*[@title='SWiM GDS Rules']")
+	private WebElement SwimRules;
+
+    public SwimGDSRulesPage SwimGDSRulesOption()
+    {
+    	SwimRules.click();
+        SwimGDSRulesPage swimrulespage = new SwimGDSRulesPage(driver);
+        return swimrulespage;
+    } 
+
    
 }

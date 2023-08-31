@@ -30,8 +30,14 @@ WebDriver driver;
     @FindBy(xpath="//*[@id='editProfile-name']")
     private WebElement companyname;
     
+    @FindBy(xpath="//*[@id='editProfile-name-error']")
+    private WebElement companyname_validation;
+    
     @FindBy(xpath="//*[@id='editProfile-address_1']")
     private WebElement address1;
+    
+    @FindBy(xpath="//*[@id='editProfile-address_2']")
+    private WebElement address2;
     
     @FindBy(xpath="//*[@id='editProfile-region']")
     private WebElement region;
@@ -45,11 +51,22 @@ WebDriver driver;
     @FindBy(xpath="//*[@name='country']")
     private WebElement countrydropdown;
     
+    @FindBy(xpath="//*[@id='editProfile-phone_number']")
+    private WebElement mobilenumber_company;
+    
+    @FindBy(xpath="//*[@id='editProfile-phone_number-error']")
+    private WebElement validationmobilenumber_company;
+    
+    @FindBy(xpath="//*[@id='editProfile-phone_number']")
+    private WebElement companywebsite;
+    
+    @FindBy(xpath="//*[@id='editProfile-scac_code']")
+    private WebElement Scac;
+    
     @FindBy(xpath="(//*[contains(text(),'Save Changes')])[2]")
     private WebElement company_savebtn;
     
 
-    
     //Verify if user is able to click on edit Company info
     public void Click_editcompanyinfo()
     {
@@ -64,38 +81,46 @@ WebDriver driver;
     }
     
     //Verify if user is able to insert Company name
-    public void Insert_companyname()
+    public void Insert_companyname(String comp)
     {
     	companyname.clear();
-    	companyname.sendKeys("narola infotech");
+    	companyname.sendKeys(comp);
+    }
+    //Verify if user is able to get the validation behind the Company name field
+    public boolean Validation_companyname()
+    {
+    	scrollToElement(companyname_validation);
+    	return companyname_validation.isDisplayed();
     }
     
     //Verify if user is able to insert Address1
-    public void Insert_address()
+    public void Insert_address(String add1 , String add2)
     {
     	address1.clear();
-    	address1.sendKeys("ca road");
+    	address1.sendKeys(add1);
+    	address2.clear();
+    	address2.sendKeys(add2);
     }
-    
-    //Verify if user is able to insert Address1
-    public void Insert_region()
+
+    //Verify if user is able to insert region
+    public void Insert_region(String reg)
     {
     	region.clear();
-    	region.sendKeys("surat");
+    	region.sendKeys(reg);
     }
-    
+
     //Verify if user is able to insert Postcode
-    public void Insert_postcode()
+    public void Insert_postcode(String post)
     {
     	postcode.clear();
-    	postcode.sendKeys("surat");
+    	postcode.sendKeys(post);
     }
     
     //Verify if user is able to insert State
-    public void Insert_state()
+    public void Insert_state(String sta)
     {
     	state.clear();
-    	state.sendKeys("gujarat");
+    	state.sendKeys(sta);
     }
     
     //Verify if user is able to select Country from dropdown
@@ -104,9 +129,40 @@ WebDriver driver;
     	Selectdropdown(countrydropdown, "India");
     }
     
+    //Verify if user is able to insert the mobile number
+    public void Insert_mobilenumber(String mob)
+    {
+    	scrollToElement(mobilenumber_company);
+    	mobilenumber_company.clear();
+    	mobilenumber_company.sendKeys(mob);
+    }
+    
+    //Verify if user is able to get the validation behind the Mobile number field
+    public boolean Validation_mobilefield()
+    {
+    	scrollToElement(mobilenumber_company);
+    	return validationmobilenumber_company.isDisplayed();
+    }
+    
+    //Verify if user is able to insert the company website
+    public void Insert_companywebsite(String website)
+    {
+    	scrollToElement(companywebsite);
+    	companywebsite.clear();
+    	companywebsite.sendKeys(website);
+    }
+    
+    //Verify if user is able to insert the SCAC code
+    public void Insert_SCACcode(String scac)
+    {
+    	Scac.clear();
+    	Scac.sendKeys(scac);
+    }
+    
     //Verify if user is able to click on save changes button
     public void Click_Companysavebtn()
     {
+    	scrollToElement(company_savebtn);
     	company_savebtn.click();
     }
    
@@ -126,6 +182,9 @@ WebDriver driver;
     @FindBy(xpath="//*[@id='editUserForm-email']")
     private WebElement email;
     
+    @FindBy(xpath="//*[@id='dial_code']")
+    private WebElement dialcode_account;
+    
     @FindBy(xpath="//*[@id='editUserForm-phone']")
     private WebElement mobile;
     
@@ -142,26 +201,32 @@ WebDriver driver;
     }
     
     //Verify if user is able to enter the First and last name
-    public void Enter_firstndlastname()
+    public void Enter_firstndlastname(String fir,String las)
     {
     	firstname.clear();
-    	firstname.sendKeys("narola");
+    	firstname.sendKeys(fir);
     	lastname.clear();
-    	lastname.sendKeys("infotech");
+    	lastname.sendKeys(las);
     }
-    
+
     //Verify if user is able to insert the valid email address
-    public void Enter_email()
+    public void Enter_email(String ema)
     {
     	email.clear();
-    	email.sendKeys("nda.norala@yopmail.com");
+    	email.sendKeys(ema);
+    }
+    
+    //Verify if user is able to select the dial code
+    public void selectdialcode_account()
+    {
+    	Selectdropdown(dialcode_account, "Please choose");
     }
     
     //Verify if user is able to insert the mobile number
-    public void Enter_mobile()
+    public void Enter_mobile(String mob)
     {
     	mobile.clear();
-    	mobile.sendKeys("22232543");
+    	mobile.sendKeys(mob);
     }
     
     //Verify if user is able to click on Cancel button
@@ -220,16 +285,16 @@ WebDriver driver;
     }
     
     //Verify if user is able to insert the Old password
-    public void Enter_oldpasssword()
+    public void Enter_oldpasssword(String pas)
     {
-    	oldpassword.sendKeys("Akojwar@07");
+    	oldpassword.sendKeys(pas);
     }
     
     //Verify if user is able to insert the New & Confirm Password
-    public void Enter_NewnConfirmPassword()
+    public void Enter_NewnConfirmPassword(String New , String cnf)
     {
-    	newpassword.sendKeys("Dilip@07");
-    	confirmnewpassword.sendKeys("Dilip@07");
+    	newpassword.sendKeys(New);
+    	confirmnewpassword.sendKeys(cnf);
     }
     
     //Verify if user is able to click on Change Password button
@@ -240,23 +305,23 @@ WebDriver driver;
     }
     
     //Verify if user is able to insert Current password in Change Security section
-    public void Enter_currentpassword()
+    public void Enter_currentpassword(String curr)
     {
-    	currentpasssword.sendKeys("Dilip@07");
+    	currentpasssword.sendKeys(curr);
     }
     
     //Verify if user is able to select the question1 from dropdown and enter the Answer1
-    public void Selectquest1_EnterAns1()
+    public void Selectquest1_EnterAns1(String ans1)
     {
     	Selectdropdown(question1, "What was your first car?");
-    	answer1.sendKeys("i20");	
+    	answer1.sendKeys(ans1);	
     }
     
     //Verify if user is able to select the question2 from dropdown and enter the Answer2
-    public void Selectquest2_EnterAns2()
+    public void Selectquest2_EnterAns2(String ans2)
     {
     	Selectdropdown(question2, "What’s your favorite movie?");
-    	answer2.sendKeys("MSD");	
+    	answer2.sendKeys(ans2);	
     }
     
     public void Click_updatedetailsbtn()
@@ -273,6 +338,9 @@ WebDriver driver;
     
     @FindBy(xpath="//*[@id='editBankInformation-bank_name']")
     private WebElement bankfield;
+    
+    @FindBy(xpath="//*[@id='editBankInformation-bank_name-error']")
+    private WebElement bankfieldvalidation;
     
     @FindBy(xpath="//*[@id='editBankInformation-address_1']")
     private WebElement bankaddress1;
@@ -317,45 +385,52 @@ WebDriver driver;
     }
     
     //Verify if user is able to enter the bank name
-    public void Enter_bank()
+    public void Enter_bank(String bank)
     {
     	bankfield.clear();
-    	bankfield.sendKeys("SBI");
+    	bankfield.sendKeys(bank);
+    }
+    
+    //Verify if user is getting validation behind bank field for allowing invalid details
+    public boolean Validationbank()
+    {
+    	scrollToElement(bankfieldvalidation);
+    	return bankfieldvalidation.isDisplayed();
     }
     
     //Verify if user is able to enter the address 1
-    public void Enter_Address1_bank()
+    public void Enter_Address1_bank(String add1)
     {
     	bankaddress1.clear();
-    	bankaddress1.sendKeys("adajan");
+    	bankaddress1.sendKeys(add1);
     }
     
     //Verify if user is able to enter the address 2
-    public void Enter_Address2_bank()
+    public void Enter_Address2_bank(String add2)
     {
     	bankaddress2.clear();
-    	bankaddress2.sendKeys("adajan");
+    	bankaddress2.sendKeys(add2);
     } 
     
     //Verify if user is able to enter the region
-    public void Enter_region_bank()
+    public void Enter_region_bank(String bankregion)
     {
     	regionfield.clear();
-    	regionfield.sendKeys("surat");
+    	regionfield.sendKeys(bankregion);
     } 
     
     //Verify if user is able to enter the Postcode
-    public void Enter_postcode_bank()
+    public void Enter_postcode_bank(String bankpost)
     {
     	postcode_bank.clear();
-    	postcode_bank.sendKeys("2121");
+    	postcode_bank.sendKeys(bankpost);
     } 
     
     //Verify if user is able to enter the State
-    public void Enterstate_bank()
+    public void Enterstate_bank(String bankstate)
     {
     	state_bank.clear();
-    	state_bank.sendKeys("gujarat");
+    	state_bank.sendKeys(bankstate);
     } 
     
     //Verify if user is able to Select the Country
@@ -365,31 +440,31 @@ WebDriver driver;
     } 
     
     //Verify if user is able to enter the Account name
-    public void Enter_accountname()
+    public void Enter_accountname(String accname)
     {
     	accountname_bank.clear();
-    	accountname_bank.sendKeys("nda");
+    	accountname_bank.sendKeys(accname);
     } 
      
     //Verify if user is able to enter the Account number
-    public void Enter_accountnumber()
+    public void Enter_accountnumber(String accno)
     {
     	accountnumber_bank.clear();
-    	accountnumber_bank.sendKeys("3122207823821");
+    	accountnumber_bank.sendKeys(accno);
     } 
     
     //Verify if user is able to enter the Swift code
-    public void Enter_Swiftcode()
+    public void Enter_Swiftcode(String swift)
     {
     	swiftcode_bank.clear();
-    	swiftcode_bank.sendKeys("AXISINBB250");
+    	swiftcode_bank.sendKeys(swift);
     } 
     
     //Verify if user is able to enter the IBAN code
-    public void Enter_IBANcode()
+    public void Enter_IBANcode(String iban)
     {
     	IBANcode_bank.clear();
-    	IBANcode_bank.sendKeys("AL47 2121 1009 0000 0002");
+    	IBANcode_bank.sendKeys(iban);
     } 
     
     

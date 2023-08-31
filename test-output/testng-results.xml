@@ -1,205 +1,471 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="5" failed="0" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-29T17:41:52 IST" name="Authorize User Functionality" finished-at="2023-08-29T18:02:15 IST" duration-ms="1222314">
+  <suite started-at="2023-08-31T19:16:43 IST" name="Authorize User Functionality" finished-at="2023-08-31T19:23:44 IST" duration-ms="421505">
     <groups>
     </groups>
-    <test started-at="2023-08-29T17:41:52 IST" name="Positive test cases" finished-at="2023-08-29T18:02:15 IST" duration-ms="1222314">
-      <class name="swimGDSAutomation.PositiveTC.AuthorizeUserTest">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:41:52 IST" name="lanuchWebsite" finished-at="2023-08-29T17:43:11 IST" duration-ms="78644" status="PASS">
+    <test started-at="2023-08-31T19:16:43 IST" name="Negative test cases" finished-at="2023-08-31T19:23:44 IST" duration-ms="421505">
+      <class name="swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:16:43 IST" name="lanuchWebsite" finished-at="2023-08-31T19:17:51 IST" duration-ms="67710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnEditBankInfo()[pri:1, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:43:11 IST" name="ClickOnEditBankInfo" finished-at="2023-08-29T17:43:32 IST" duration-ms="21119" status="PASS">
+        <test-method signature="WithoutInsertingValues_ClickOnSubmitButton()[pri:1, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:17:51 IST" name="WithoutInsertingValues_ClickOnSubmitButton" finished-at="2023-08-31T19:18:07 IST" duration-ms="16275" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnEditBankInfo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:43:32 IST" name="tearDown" finished-at="2023-08-29T17:43:33 IST" duration-ms="325" status="PASS">
+        </test-method> <!-- WithoutInsertingValues_ClickOnSubmitButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:18:07 IST" name="tearDown" finished-at="2023-08-31T19:18:07 IST" duration-ms="470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:43:33 IST" name="lanuchWebsite" finished-at="2023-08-29T17:44:31 IST" duration-ms="58071" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:18:07 IST" name="lanuchWebsite" finished-at="2023-08-31T19:19:06 IST" duration-ms="58432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="EnterValidDetailsInSearchfield()[pri:2, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:44:31 IST" name="EnterValidDetailsInSearchfield" finished-at="2023-08-29T17:44:48 IST" duration-ms="17357" status="PASS">
+        <test-method signature="WithoutInsertingValueInEditDetails_clickSaveBtn()[pri:2, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:19:06 IST" name="WithoutInsertingValueInEditDetails_clickSaveBtn" finished-at="2023-08-31T19:19:29 IST" duration-ms="23248" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EnterValidDetailsInSearchfield -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:44:48 IST" name="tearDown" finished-at="2023-08-29T17:44:48 IST" duration-ms="337" status="PASS">
+        </test-method> <!-- WithoutInsertingValueInEditDetails_clickSaveBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:19:29 IST" name="tearDown" finished-at="2023-08-31T19:19:29 IST" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:44:48 IST" name="lanuchWebsite" finished-at="2023-08-29T17:45:39 IST" duration-ms="50611" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:19:29 IST" name="lanuchWebsite" finished-at="2023-08-31T19:20:33 IST" duration-ms="63448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnSubmitButton()[pri:3, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:45:39 IST" name="ClickOnSubmitButton" finished-at="2023-08-29T17:45:57 IST" duration-ms="17800" status="PASS">
+        <test-method signature="WithoutInsertingDetailsInAddUser_ClickCreateBtn()[pri:3, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:20:33 IST" name="WithoutInsertingDetailsInAddUser_ClickCreateBtn" finished-at="2023-08-31T19:20:53 IST" duration-ms="20049" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnSubmitButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:45:57 IST" name="tearDown" finished-at="2023-08-29T17:45:57 IST" duration-ms="235" status="PASS">
+        </test-method> <!-- WithoutInsertingDetailsInAddUser_ClickCreateBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:20:53 IST" name="tearDown" finished-at="2023-08-31T19:20:54 IST" duration-ms="819" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:45:57 IST" name="lanuchWebsite" finished-at="2023-08-29T17:46:22 IST" duration-ms="24766" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:20:54 IST" name="lanuchWebsite" finished-at="2023-08-31T19:21:51 IST" duration-ms="57381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ViewSearchResults()[pri:4, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:46:22 IST" name="ViewSearchResults" finished-at="2023-08-29T17:46:48 IST" duration-ms="26219" status="PASS">
+        <test-method signature="WithoutInsertingEmail_ClickCreateBtn()[pri:4, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:21:51 IST" name="WithoutInsertingEmail_ClickCreateBtn" finished-at="2023-08-31T19:22:14 IST" duration-ms="23050" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ViewSearchResults -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:46:48 IST" name="tearDown" finished-at="2023-08-29T17:46:48 IST" duration-ms="363" status="PASS">
+        </test-method> <!-- WithoutInsertingEmail_ClickCreateBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:22:14 IST" name="tearDown" finished-at="2023-08-31T19:22:15 IST" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:46:48 IST" name="lanuchWebsite" finished-at="2023-08-29T17:47:24 IST" duration-ms="35530" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:22:15 IST" name="lanuchWebsite" finished-at="2023-08-31T19:23:10 IST" duration-ms="54947" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectViewDetailOption()[pri:5, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:47:24 IST" name="SelectViewDetailOption" finished-at="2023-08-29T17:47:45 IST" duration-ms="21529" status="PASS">
+        <test-method signature="InsertingEmail_ClickCreateBtn()[pri:5, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:10 IST" name="InsertingEmail_ClickCreateBtn" finished-at="2023-08-31T19:23:32 IST" duration-ms="22187" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectViewDetailOption -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:47:45 IST" name="tearDown" finished-at="2023-08-29T17:47:46 IST" duration-ms="390" status="PASS">
+        </test-method> <!-- InsertingEmail_ClickCreateBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:32 IST" name="tearDown" finished-at="2023-08-31T19:23:32 IST" duration-ms="456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:47:46 IST" name="lanuchWebsite" finished-at="2023-08-29T17:48:42 IST" duration-ms="55837" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:32 IST" name="lanuchWebsite" finished-at="2023-08-31T19:23:44 IST" duration-ms="11974" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at swimGDSAutomation.pageclass.LandingPage.launchURL(LandingPage.java:23)
+at swimGDSAutomation.TestComponents.BaseClass.lanuchWebsite(BaseClass.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectCancelUserOption_ClickNoButton()[pri:6, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:48:42 IST" name="SelectCancelUserOption_ClickNoButton" finished-at="2023-08-29T17:49:18 IST" duration-ms="35932" status="PASS">
+        <test-method signature="InsertingAlreadyRegisteredEmail_ClickCreateBtn()[pri:6, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="InsertingAlreadyRegisteredEmail_ClickCreateBtn" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at swimGDSAutomation.pageclass.LandingPage.launchURL(LandingPage.java:23)
+at swimGDSAutomation.TestComponents.BaseClass.lanuchWebsite(BaseClass.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectCancelUserOption_ClickNoButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:49:18 IST" name="tearDown" finished-at="2023-08-29T17:49:18 IST" duration-ms="365" status="PASS">
+        </test-method> <!-- InsertingAlreadyRegisteredEmail_ClickCreateBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="tearDown" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:49:18 IST" name="lanuchWebsite" finished-at="2023-08-29T17:50:15 IST" duration-ms="57348" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="lanuchWebsite" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectCancelUserOption_ClickYesButton()[pri:7, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:50:15 IST" name="SelectCancelUserOption_ClickYesButton" finished-at="2023-08-29T17:50:46 IST" duration-ms="31000" status="PASS">
+        <test-method signature="WithPendingEmailVerificationStatus_TryToDoLogin()[pri:7, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="WithPendingEmailVerificationStatus_TryToDoLogin" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at swimGDSAutomation.pageclass.LandingPage.launchURL(LandingPage.java:23)
+at swimGDSAutomation.TestComponents.BaseClass.lanuchWebsite(BaseClass.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectCancelUserOption_ClickYesButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:50:46 IST" name="tearDown" finished-at="2023-08-29T17:50:47 IST" duration-ms="336" status="PASS">
+        </test-method> <!-- WithPendingEmailVerificationStatus_TryToDoLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="tearDown" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:50:47 IST" name="lanuchWebsite" finished-at="2023-08-29T17:52:11 IST" duration-ms="84637" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="lanuchWebsite" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectDeleteUserOption_ClickNoButton()[pri:8, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:52:11 IST" name="SelectDeleteUserOption_ClickNoButton" finished-at="2023-08-29T17:52:45 IST" duration-ms="33438" status="PASS">
+        <test-method signature="WithCancelledStatus_TryToDoLogin()[pri:8, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="WithCancelledStatus_TryToDoLogin" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at swimGDSAutomation.pageclass.LandingPage.launchURL(LandingPage.java:23)
+at swimGDSAutomation.TestComponents.BaseClass.lanuchWebsite(BaseClass.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectDeleteUserOption_ClickNoButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:52:45 IST" name="tearDown" finished-at="2023-08-29T17:52:45 IST" duration-ms="381" status="PASS">
+        </test-method> <!-- WithCancelledStatus_TryToDoLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="tearDown" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:52:45 IST" name="lanuchWebsite" finished-at="2023-08-29T17:53:41 IST" duration-ms="56305" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="lanuchWebsite" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectDeleteUserOption_ClickYesButton()[pri:9, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:53:41 IST" name="SelectDeleteUserOption_ClickYesButton" finished-at="2023-08-29T17:54:13 IST" duration-ms="31802" status="PASS">
+        <test-method signature="WithDeletedStatus_TryToDoLogin()[pri:9, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="WithDeletedStatus_TryToDoLogin" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_ADDRESS_UNREACHABLE
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4b63bbde6d54784978861adba6105e8, get {url=https://demo.swimgds.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63987/devtoo..., se:cdpVersion: 116.0.5845.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b63bbde6d54784978861adba6105e8
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at swimGDSAutomation.pageclass.LandingPage.launchURL(LandingPage.java:23)
+at swimGDSAutomation.TestComponents.BaseClass.lanuchWebsite(BaseClass.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectDeleteUserOption_ClickYesButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:54:13 IST" name="tearDown" finished-at="2023-08-29T17:54:13 IST" duration-ms="344" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:54:13 IST" name="lanuchWebsite" finished-at="2023-08-29T17:55:09 IST" duration-ms="55409" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="EditAccountInformation()[pri:10, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:55:09 IST" name="EditAccountInformation" finished-at="2023-08-29T17:55:33 IST" duration-ms="23626" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EditAccountInformation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:55:33 IST" name="tearDown" finished-at="2023-08-29T17:55:33 IST" duration-ms="402" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:55:33 IST" name="lanuchWebsite" finished-at="2023-08-29T17:56:46 IST" duration-ms="73085" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectSetInactiveOption_ClickNoButton()[pri:11, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:56:46 IST" name="SelectSetInactiveOption_ClickNoButton" finished-at="2023-08-29T17:57:08 IST" duration-ms="22249" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SelectSetInactiveOption_ClickNoButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:57:08 IST" name="tearDown" finished-at="2023-08-29T17:57:09 IST" duration-ms="275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:57:09 IST" name="lanuchWebsite" finished-at="2023-08-29T17:57:43 IST" duration-ms="34043" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectSetInactiveOption_ClickYesButton()[pri:12, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:57:43 IST" name="SelectSetInactiveOption_ClickYesButton" finished-at="2023-08-29T17:58:06 IST" duration-ms="23571" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SelectSetInactiveOption_ClickYesButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:58:06 IST" name="tearDown" finished-at="2023-08-29T17:58:06 IST" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:58:06 IST" name="lanuchWebsite" finished-at="2023-08-29T17:58:33 IST" duration-ms="26341" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickAddNewUserButton_ClickCancelButton()[pri:13, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:58:33 IST" name="ClickAddNewUserButton_ClickCancelButton" finished-at="2023-08-29T17:58:52 IST" duration-ms="19197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickAddNewUserButton_ClickCancelButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:58:52 IST" name="tearDown" finished-at="2023-08-29T17:58:52 IST" duration-ms="182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:58:52 IST" name="lanuchWebsite" finished-at="2023-08-29T17:59:46 IST" duration-ms="53672" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="InsertDetails_ClickCancelButton()[pri:14, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T17:59:46 IST" name="InsertDetails_ClickCancelButton" finished-at="2023-08-29T18:00:11 IST" duration-ms="25590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InsertDetails_ClickCancelButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T18:00:11 IST" name="tearDown" finished-at="2023-08-29T18:00:12 IST" duration-ms="378" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T18:00:12 IST" name="lanuchWebsite" finished-at="2023-08-29T18:00:40 IST" duration-ms="27932" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="CreateNewAuthorizedUser()[pri:15, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T18:00:40 IST" name="CreateNewAuthorizedUser" finished-at="2023-08-29T18:01:01 IST" duration-ms="20971" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateNewAuthorizedUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T18:01:01 IST" name="tearDown" finished-at="2023-08-29T18:01:01 IST" duration-ms="296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T18:01:01 IST" name="lanuchWebsite" finished-at="2023-08-29T18:01:53 IST" duration-ms="52466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Verify_AuthorizeUserRequestCreated()[pri:16, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T18:01:53 IST" name="Verify_AuthorizeUserRequestCreated" finished-at="2023-08-29T18:02:14 IST" duration-ms="20821" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_AuthorizeUserRequestCreated -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.AuthorizeUserTest@545b995e]" started-at="2023-08-29T18:02:14 IST" name="tearDown" finished-at="2023-08-29T18:02:15 IST" duration-ms="293" status="PASS">
+        </test-method> <!-- WithDeletedStatus_TryToDoLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest@22f31dec]" started-at="2023-08-31T19:23:44 IST" name="tearDown" finished-at="2023-08-31T19:23:44 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- swimGDSAutomation.PositiveTC.AuthorizeUserTest -->
-    </test> <!-- Positive test cases -->
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest -->
+    </test> <!-- Negative test cases -->
   </suite> <!-- Authorize User Functionality -->
 </testng-results>

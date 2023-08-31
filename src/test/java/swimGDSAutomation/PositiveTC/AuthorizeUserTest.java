@@ -273,7 +273,7 @@ public class AuthorizeUserTest extends BaseClass {
 	     {
 		    e.printStackTrace();
 	     }
-	 authorizeuserpage.Enter_mobilenumber();
+	 authorizeuserpage.Enter_mobilenumber("9838278022");
 	 authorizeuserpage.Click_savechanges();
 	 
     }
@@ -373,10 +373,10 @@ public class AuthorizeUserTest extends BaseClass {
 	 AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
 	 AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
      authorizeuserpage.Click_addnewuser();
-     authorizeuserpage.Enter_firstname();
-     authorizeuserpage.Enter_lastname();
-     authorizeuserpage .Enter_emailId();
-     authorizeuserpage.Enter_mobilenumber();
+     authorizeuserpage.Enter_firstname("Mohit");
+     authorizeuserpage.Enter_lastname("Paul");
+     authorizeuserpage .Enter_emailId("test50@yopmail.com");
+     authorizeuserpage.Enter_mobilenumber("9838278022");
      try {
 		    authorizeuserpage.waitCode();
 	     } 
@@ -403,10 +403,10 @@ public class AuthorizeUserTest extends BaseClass {
 	 AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
 	 AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
      authorizeuserpage.Click_addnewuser();
-     authorizeuserpage.Enter_firstname();
-     authorizeuserpage.Enter_lastname();
-     authorizeuserpage .Enter_emailId();
-     authorizeuserpage.Enter_mobilenumber();
+     authorizeuserpage.Enter_firstname("Mohit");
+     authorizeuserpage.Enter_lastname("Paul");
+     authorizeuserpage .Enter_emailId("test50@yopmail.com");
+     authorizeuserpage.Enter_mobilenumber("9838278022");
      authorizeuserpage.Click_createbtn();
      try {
 		    authorizeuserpage.waitCode();

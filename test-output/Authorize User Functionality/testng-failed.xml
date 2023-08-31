@@ -4,15 +4,18 @@
   <listeners>
     <listener class-name="swimGDSAutomation.TestComponents.ListenersClass"/>
   </listeners>
-  <test thread-count="5" name="Positive test cases(failed)">
+  <test thread-count="5" name="Negative test cases(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.AuthorizeUserTest">
+      <class name="swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest">
         <methods>
           <include name="tearDown"/>
+          <include name="WithCancelledStatus_TryToDoLogin"/>
           <include name="lanuchWebsite"/>
-          <include name="CreateNewAuthorizedUser"/>
+          <include name="WithPendingEmailVerificationStatus_TryToDoLogin"/>
+          <include name="InsertingAlreadyRegisteredEmail_ClickCreateBtn"/>
+          <include name="WithDeletedStatus_TryToDoLogin"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.AuthorizeUserTest -->
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeAuthorizeUserTest -->
     </classes>
-  </test> <!-- Positive test cases(failed) -->
+  </test> <!-- Negative test cases(failed) -->
 </suite> <!-- Failed suite [Authorize User Functionality] -->

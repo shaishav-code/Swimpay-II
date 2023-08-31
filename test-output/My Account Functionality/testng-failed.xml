@@ -4,15 +4,17 @@
   <listeners>
     <listener class-name="swimGDSAutomation.TestComponents.ListenersClass"/>
   </listeners>
-  <test thread-count="5" name="Positive test cases(failed)">
+  <test thread-count="5" name="Negative test cases(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.MyAccountTest">
+      <class name="swimGDSAutomation.NegativeTC.NegativeMyAccountTest">
         <methods>
-          <include name="InsertDetailsIn_EditBankAccountInfoPopup_ClickSaveBtn"/>
           <include name="tearDown"/>
+          <include name="EnterBlankSpaceInAllField_ClickSaveBtn"/>
           <include name="lanuchWebsite"/>
+          <include name="EnterNumberInAllField_ClickSaveBtn"/>
+          <include name="InsertNumbersInAllFields_ClickSaveBankBtn"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.MyAccountTest -->
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeMyAccountTest -->
     </classes>
-  </test> <!-- Positive test cases(failed) -->
+  </test> <!-- Negative test cases(failed) -->
 </suite> <!-- Failed suite [My Account Functionality] -->

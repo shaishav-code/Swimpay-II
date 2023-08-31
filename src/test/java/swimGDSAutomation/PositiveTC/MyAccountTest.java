@@ -45,12 +45,13 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_editcompanyinfo();
-	 myaccountpage.Insert_companyname();
-	 myaccountpage.Insert_address();
-	 myaccountpage.Insert_region();
-	 myaccountpage.Insert_postcode();
-	 myaccountpage.Insert_state();
+	 myaccountpage.Insert_companyname("narola infotech");
+	 myaccountpage.Insert_address("ca road", "ca road");
+	 myaccountpage.Insert_region("surat");
+	 myaccountpage.Insert_postcode("1212");
+	 myaccountpage.Insert_state("gujarat");
 	 myaccountpage.Select_country();
+	 myaccountpage.Insert_SCACcode("ABCD");
 	 myaccountpage.Click_Companycancelbtn();
      }
 	 
@@ -68,12 +69,13 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_editcompanyinfo();
-	 myaccountpage.Insert_companyname();
-	 myaccountpage.Insert_address();
-	 myaccountpage.Insert_region();
-	 myaccountpage.Insert_postcode();
-	 myaccountpage.Insert_state();
+	 myaccountpage.Insert_companyname("narola infotech");
+	 myaccountpage.Insert_address("ca road","ca road");
+	 myaccountpage.Insert_region("surat");
+	 myaccountpage.Insert_postcode("1212");
+	 myaccountpage.Insert_state("gujarat");
 	 myaccountpage.Select_country();
+	 myaccountpage.Insert_SCACcode("ABCD");
 	 myaccountpage.Click_Companysavebtn();
 	 try {
 		myaccountpage.waitCode();
@@ -121,9 +123,9 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_editaccount();
-	 myaccountpage.Enter_firstndlastname();
-	 myaccountpage.Enter_email();
-	 myaccountpage.Enter_mobile();
+	 myaccountpage.Enter_firstndlastname("narola","infotech");
+	 myaccountpage.Enter_email("nda.norala@yopmail.com");
+	 myaccountpage.Enter_mobile("22232543");
 	 myaccountpage.Click_accountCancelbtn();
     }
 	 
@@ -141,9 +143,9 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_editaccount();
-	 myaccountpage.Enter_firstndlastname();
-	 myaccountpage.Enter_email();
-	 myaccountpage.Enter_mobile();
+	 myaccountpage.Enter_firstndlastname("narola","infotech");
+	 myaccountpage.Enter_email("nda.norala@yopmail.com");
+	 myaccountpage.Enter_mobile("22232543");
 	 myaccountpage.Click_Accountsavebtn();
 	 try {
 			myaccountpage.waitCode();
@@ -184,8 +186,8 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_changePasswordnSecurity();
-	 myaccountpage.Enter_oldpasssword();
-	 myaccountpage.Enter_NewnConfirmPassword();
+	 myaccountpage.Enter_oldpasssword("Akojwar@07");
+	 myaccountpage.Enter_NewnConfirmPassword("Dilip@07","Dilip@07");
 	 myaccountpage.Click_changePasswordbtn();
 	 try {
 			myaccountpage.waitCode();
@@ -212,9 +214,9 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_changePasswordnSecurity();
-     myaccountpage.Enter_currentpassword();
-     myaccountpage.Selectquest1_EnterAns1();
-     myaccountpage.Selectquest2_EnterAns2();
+     myaccountpage.Enter_currentpassword("Dilip@07");
+     myaccountpage.Selectquest1_EnterAns1("i20");
+     myaccountpage.Selectquest2_EnterAns2("MSD");
      myaccountpage.Click_updatedetailsbtn();	 
 	 try {
 			myaccountpage.waitCode();
@@ -263,17 +265,17 @@ public class MyAccountTest extends BaseClass {
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.scrolling();
 	 myaccountpage.Click_editbankinfo();	
-	 myaccountpage.Enter_bank();
-	 myaccountpage.Enter_Address1_bank();
-	 myaccountpage.Enter_Address2_bank();
-	 myaccountpage.Enter_region_bank();
-	 myaccountpage.Enter_postcode_bank();
-	 myaccountpage.Enterstate_bank();
+	 myaccountpage.Enter_bank("SBI");
+	 myaccountpage.Enter_Address1_bank("adajan");
+	 myaccountpage.Enter_Address2_bank("adajan");
+	 myaccountpage.Enter_region_bank("surat");
+	 myaccountpage.Enter_postcode_bank("2121");
+	 myaccountpage.Enterstate_bank("gujarat");
 	 myaccountpage.Selectcountry_bank();
-	 myaccountpage.Enter_accountname();
-	 myaccountpage.Enter_accountnumber();
-	 myaccountpage.Enter_Swiftcode();
-	 myaccountpage.Enter_IBANcode();
+	 myaccountpage.Enter_accountname("nda");
+	 myaccountpage.Enter_accountnumber("3122207823821");
+	 myaccountpage.Enter_Swiftcode("AXISINBB250");
+	 myaccountpage.Enter_IBANcode("AL47 2121 1009 0000 0002");
 	 try {
 			myaccountpage.waitCode();
 		} catch (InterruptedException e) {
@@ -297,17 +299,17 @@ public class MyAccountTest extends BaseClass {
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.scrolling();
 	 myaccountpage.Click_editbankinfo();	
-	 myaccountpage.Enter_bank();
-	 myaccountpage.Enter_Address1_bank();
-	 myaccountpage.Enter_Address2_bank();
-	 myaccountpage.Enter_region_bank();
-	 myaccountpage.Enter_postcode_bank();
-	 myaccountpage.Enterstate_bank();
+	 myaccountpage.Enter_bank("SBI");
+	 myaccountpage.Enter_Address1_bank("adajan");
+	 myaccountpage.Enter_Address2_bank("adajan");
+	 myaccountpage.Enter_region_bank("surat");
+	 myaccountpage.Enter_postcode_bank("2121");
+	 myaccountpage.Enterstate_bank("gujarat");
 	 myaccountpage.Selectcountry_bank();
-	 myaccountpage.Enter_accountname();
-	 myaccountpage.Enter_accountnumber();
-	 myaccountpage.Enter_Swiftcode();
-	 myaccountpage.Enter_IBANcode();
+	 myaccountpage.Enter_accountname("nda");
+	 myaccountpage.Enter_accountnumber("3122207823821");
+	 myaccountpage.Enter_Swiftcode("AXISINBB250");
+	 myaccountpage.Enter_IBANcode("AL47 2121 1009 0000 0002");
 	 try {
 			myaccountpage.waitCode();
 		} catch (InterruptedException e) {
