@@ -355,7 +355,7 @@ public class NegativeMyAccountTest extends BaseClass {
 			
 		 }
 		 
-		//Verify if user is able to change the password with inserting Incorrect Old Password but without entering the New and Confirm password in Change password and Security Details pop-up
+		 //Verify if user is able to change the password with inserting Incorrect Old Password but without entering the New and Confirm password in Change password and Security Details pop-up
 		 @Test(priority=14)
 		 public void ClickSaveBtn_WithoutInsertingNewNConfirmPasswordDetails_ButInsertingInCorrectOldPassword() {
 			
@@ -380,7 +380,7 @@ public class NegativeMyAccountTest extends BaseClass {
 		 }
 		 
 		 
-		//Verify if user is able to change the password with inserting correct Old Password but without entering the New and Confirm password in Change password and Security Details pop-up
+	 	//Verify if user is able to change the password with inserting correct Old Password but without entering the New and Confirm password in Change password and Security Details pop-up
 		 @Test(priority=15)
 		 public void ClickSaveBtn_WithoutInsertingNewNConfirmPasswordDetails_ButInsertingCorrectOldPassword() {
 			

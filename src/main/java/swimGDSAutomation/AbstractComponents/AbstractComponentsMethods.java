@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import swimGDSAutomation.pageclass.ContactPage;
+import swimGDSAutomation.pageclass.ManageTradingTermPage;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.QuotesPage;
 
@@ -98,10 +99,10 @@ public class AbstractComponentsMethods{
 		select.selectByVisibleText(s);
 	}
   
-	
+    //Verify if user got the success message after clicking on save changes button	
     @FindBy(xpath="//*[@class='alert alert-success']")
     private WebElement successmessage;
-    //Verify if user got the success message after clicking on save changes button
+
     public boolean Success_message()
     {
     	return successmessage.isDisplayed();
@@ -113,10 +114,17 @@ public class AbstractComponentsMethods{
 		wait.until(ExpectedConditions.visibilityOfAllElements(eleListAppear));
 	}
 	
+    public void waitTimeForElementToClickable(WebElement eleClick) 
+    {
+			wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+			wait.until(ExpectedConditions.elementToBeClickable(eleClick));
+	}
+
+	
+	//click on Next button
 	@FindBy(xpath="//*[text()='Next']")
 	private WebElement nextbtn;
 	
-	//click on Next button
 	public void Nextbutton()
 	{
 		nextbtn.click();	
@@ -166,16 +174,44 @@ public class AbstractComponentsMethods{
     	return validation.getText();
     }
     
-    
+    //Click on Back button
     @FindBy(xpath="//*[text()='Back']")
     private WebElement backbtn;
     
-    //Click on Back button
     public void Clickback()
     {
     	backbtn.click();
     }
-                     //////////Quotes Page////////////////
+    
+    //Click on cross arrow to cancel the popup
+    @FindBy(xpath="//*[@class='close']")
+    private List<WebElement> crossarrow;
+    
+    public void Click_crossarrow(int i)
+    {
+    	crossarrow.get(i).click();
+    }
+    
+	@FindBy(xpath="//*[text()='Yes']")
+	private WebElement yes_btn;
+	
+	//Verify if user is able to click on Yes button
+	public void Click_yes_btn()
+	{
+		yes_btn.click();
+	}
+	
+	@FindBy(xpath="//*[text()='No']")
+	private WebElement no_btn;
+	
+	//Verify if user is able to click on No button
+	public void Click_no_btn()
+	{
+		no_btn.click();
+	}
+    
+    
+                     ////////////Quotes Page///////////////////////
      
     @FindBy(xpath="(//*[text()='Quotes'])[1]")
 	private WebElement quotes_menu;
@@ -200,14 +236,17 @@ public class AbstractComponentsMethods{
         return accountmanagement;
     }
     
-    
-    //Click on cross arrow to cancel the popup
-    @FindBy(xpath="//*[@class='close']")
-    private List<WebElement> crossarrow;
-    
-    public void Click_crossarrow(int i)
+	
+                    //////////Manage Trading Terms////////////////
+
+    @FindBy(xpath="//*[@title='Manage Trading Terms']")
+    private WebElement managetradingterms;
+
+    public ManageTradingTermPage ManageTradingTermOption()
     {
-    	crossarrow.get(i).click();
+    	managetradingterms.click();
+        ManageTradingTermPage managetradingterms = new ManageTradingTermPage(driver);
+        return managetradingterms;
     }
 
 }

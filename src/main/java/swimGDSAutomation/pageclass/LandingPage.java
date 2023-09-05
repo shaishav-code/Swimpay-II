@@ -153,6 +153,7 @@ public class LandingPage extends AbstractComponentsMethods{
     	loginbutton.click();
     }
     
+    ////////////////Forget Password//////////////
     
     @FindBy(xpath="//*[@class='forgot-password text-decoration-none']")
 	private WebElement forgetpasswordlink;
@@ -163,14 +164,25 @@ public class LandingPage extends AbstractComponentsMethods{
     	ForgetPasswordPage forgetpassword = new ForgetPasswordPage(driver);
     	return forgetpassword;
     }
-
     
-//	public ContactPage ContactOption()
-//	{
-//		contactus_menu.click();
-//		ContactPage contactpage = new ContactPage(driver);
-//		return contactpage;
-//	}
+    //////////Authorize User Forget Password///////////
+    
+    @FindBy(xpath="//*[@class='forgot-password text-decoration-none']")
+    private WebElement authforgetpasswordlink;
+
+    public AuthorizeUserForgetPasswordPage AuthForgetPasswordOption()
+    {
+        authforgetpasswordlink.click();
+        AuthorizeUserForgetPasswordPage authforgetpassword = new AuthorizeUserForgetPasswordPage(driver);
+        return authforgetpassword;
+    }
+
+    /*	public ContactPage ContactOption()
+	{
+		contactus_menu.click();
+		ContactPage contactpage = new ContactPage(driver);
+		return contactpage;
+	} */
 
 	public void reused()
 	{

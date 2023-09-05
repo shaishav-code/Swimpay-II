@@ -141,8 +141,6 @@ public class QuotesPage extends AbstractComponentsMethods {
     	scrollToElement(scrollvertical);
         boolean enabled = submitbtn.isEnabled();
     	System.out.println("Submit button is displayed :" +enabled);
-  
-    	
     }
     //Clicn on submit button
     public void Click_Submitbtn()

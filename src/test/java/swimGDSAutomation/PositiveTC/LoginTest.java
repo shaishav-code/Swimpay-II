@@ -10,7 +10,7 @@ public class LoginTest extends BaseClass{
 
 	
 	String email = "nda.norala@yopmail.com";
-	String password ="Nayan@86";
+	String password ="Nikhil@86";
 	String expectedtext ="Home";
 	String expectedURL = "https://demo.swimgds.com/seller/account-question";
 	

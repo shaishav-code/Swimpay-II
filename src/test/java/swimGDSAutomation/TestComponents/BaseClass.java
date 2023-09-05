@@ -36,7 +36,6 @@ public class BaseClass {
 		 landingPage =new LandingPage(driver);
 		 landingPage.launchURL();
 		 return landingPage;
-	
 	}
 	
 	@AfterMethod
@@ -44,7 +43,7 @@ public class BaseClass {
 	{
 		
 		 waitt = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 driver.quit();
+		 //driver.quit();
 	}
 	
 	public static String getScreenshots(String testCaseName, WebDriver driver) throws java.io.IOException {

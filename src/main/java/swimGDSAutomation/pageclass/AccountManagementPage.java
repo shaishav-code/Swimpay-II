@@ -76,7 +76,7 @@ public class AccountManagementPage extends AbstractComponentsMethods {
     }
 
 	
-                ///////////////My Account//////////////////////////
+                ///////////////Authorize User Page//////////////////////////
 
 	@FindBy(xpath="//*[@title='Authorized Users']")
 	private WebElement Authorizeuser;

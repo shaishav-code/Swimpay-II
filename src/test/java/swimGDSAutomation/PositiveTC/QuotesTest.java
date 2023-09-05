@@ -32,7 +32,7 @@ public class QuotesTest extends  BaseClass{
 	  //Verify if user is able to click on Carrier container & see the displayed quotes
 	  @Test(priority=2)
 	  public void VerifyQuotesin_CarrierContainer()
-	   {
+	  {
 			LandingPage landingPage = new LandingPage(driver);
 			landingPage.SellerLogin();	
 			landingPage.Loginpage();
@@ -274,7 +274,7 @@ public class QuotesTest extends  BaseClass{
 			quotespage.scrolling();
 	   }
 	  
-	  //Verify if user is able to select the  option and see the quotes in Shipper Owned container
+	  //Verify if user is able to select the option and see the quotes in Shipper Owned container
 	  @Test(priority=14)
 	  public void SelectQuotedStatus_ShippedContainer()
 	   {

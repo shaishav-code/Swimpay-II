@@ -14,7 +14,7 @@ public class AuthorizeUserTest extends BaseClass {
      String user ="vrs";
     
     
-	 //Verify if user is able to click on Authorize tab and able to navigate between the section pages
+	 //Verify if user is able to click on Authorize menu and is able to navigate between the section pages(Pagination)
 	 @Test(priority=1)
 	 public void ClickOnEditBankInfo() {
 		
@@ -93,7 +93,7 @@ public class AuthorizeUserTest extends BaseClass {
 	 authorizeuserpage.Searchresults();
      }
 	 
-	 //Verify if user is able to click on click on menu icon and select the view details option
+	 //Verify if user is able to click on menu icon and select the view details option
 	 @Test(priority=5)
 	 public void SelectViewDetailOption() {
 		
@@ -384,8 +384,7 @@ public class AuthorizeUserTest extends BaseClass {
 	     {
 		    e.printStackTrace();
 	     }
-     authorizeuserpage.Click_cancelbtn();
-     
+     authorizeuserpage.Click_cancelbtn();     
      
     }
 

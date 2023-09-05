@@ -36,12 +36,6 @@ public class AuthorizeUserPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@class='dropdown-menu dropdown-menu-right show']//li")
 	private List<WebElement> menu_options;
 	
-	@FindBy(xpath="//*[text()='Yes']")
-	private WebElement yes_btn;
-	
-	@FindBy(xpath="//*[text()='No']")
-	private WebElement no_btn;
-	
 	@FindBy(xpath="//*[@class='page-link']")
 	private List<WebElement> pagenavigation_arrow;
 	
@@ -84,18 +78,6 @@ public class AuthorizeUserPage extends AbstractComponentsMethods{
 				value.click();
 			}
 		}
-	}
-	
-	//Verify if user is able to click on Yes button
-	public void Click_yes_btn()
-	{
-		yes_btn.click();
-	}
-	
-	//Verify if user is able to click on No button
-	public void Click_no_btn()
-	{
-		no_btn.click();
 	}
 	
 	//Verify if user is able to click on Page Navigation Arrows
