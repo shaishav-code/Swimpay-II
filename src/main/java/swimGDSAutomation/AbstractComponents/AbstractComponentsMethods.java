@@ -17,6 +17,7 @@ import swimGDSAutomation.pageclass.ContactPage;
 import swimGDSAutomation.pageclass.ManageTradingTermPage;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.QuotesPage;
+import swimGDSAutomation.pageclass.UserManualPage;
 
 public class AbstractComponentsMethods{
 
@@ -33,7 +34,7 @@ public class AbstractComponentsMethods{
 	public void scrolling() {
 		
        JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0, 400)");
+		js.executeScript("window.scrollBy(0, 1000)");
 	  //js.executeScript("window.scrollBy(0, -400)");
 	}
 
@@ -76,6 +77,7 @@ public class AbstractComponentsMethods{
 	    String parentid = driver.getWindowHandle();
 		System.out.println("Parent id is :"+parentid);
 		Set<String> allwinid = driver.getWindowHandles();
+	    System.out.println("All windows ID :" +driver.getWindowHandles());
 
         int numberofid = allwinid.size();
 		
@@ -98,7 +100,16 @@ public class AbstractComponentsMethods{
 		Select select = new Select(ele);
 		select.selectByVisibleText(s);
 	}
-  
+	
+    //Verify Validation on page
+    @FindBy(xpath="//*[@class='page-title-wrapper']")
+    private WebElement pageheadline;
+    
+    public String Validationonpage()
+    {
+    	return pageheadline.getText();
+    }
+	
     //Verify if user got the success message after clicking on save changes button	
     @FindBy(xpath="//*[@class='alert alert-success']")
     private WebElement successmessage;
@@ -247,6 +258,18 @@ public class AbstractComponentsMethods{
     	managetradingterms.click();
         ManageTradingTermPage managetradingterms = new ManageTradingTermPage(driver);
         return managetradingterms;
+    }
+
+                    ////////////User Manual////////////////////
+
+    @FindBy(xpath="//*[@title='User Manual']")
+    private WebElement usermanual;
+
+    public UserManualPage UserManualOption()
+    {
+    	usermanual.click();
+        UserManualPage usermanualpage = new UserManualPage(driver);
+        return usermanualpage;
     }
 
 }

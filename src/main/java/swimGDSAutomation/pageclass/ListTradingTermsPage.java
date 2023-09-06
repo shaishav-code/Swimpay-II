@@ -44,11 +44,6 @@ public class ListTradingTermsPage extends AbstractComponentsMethods {
     @FindBy(xpath="(//*[@class='page-link'])[5]")
     private WebElement pagination;  
     
-    //Verify Validation on page
-    public String Validationonpage()
-    {
-    	return pageheadline.getText();
-    }
     
     WebElement toggleswitch;
   
@@ -96,28 +91,27 @@ public class ListTradingTermsPage extends AbstractComponentsMethods {
 	//Verify if user is able to click on pagination
 	public void Click_pagination()
 	{
-//		if(pagination.isEnabled()==true)
-//		{
-//			pagination.click();
-//		}
-//		else
-//		{
-//			System.out.println("No Pagination is present to click");
-//		}
-//   }
+/*		if(pagination.isEnabled()==true)
+		{
+			pagination.click();
+		}
+		else
+		{
+			System.out.println("No Pagination is present to click");
+		}
+   } */
 	
-	while (true) 
-	{
-	    // Check if Next button is disabled, indicating the last page
+	 while (true) 
+	 {
 	    if (!pagination.isEnabled()) 
 	    {
 	    	System.out.println(pagination.isEnabled());
-	        break; // Exit the loop when the last page is reached
+	        break;
 	    }
 	    
         pagination.click();
 
-    }
+     }
 	
 	}
 }
