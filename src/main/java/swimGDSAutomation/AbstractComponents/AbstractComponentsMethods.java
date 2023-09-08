@@ -17,6 +17,7 @@ import swimGDSAutomation.pageclass.ContactPage;
 import swimGDSAutomation.pageclass.ManageTradingTermPage;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.QuotesPage;
+import swimGDSAutomation.pageclass.SellerReportPage;
 import swimGDSAutomation.pageclass.UserManualPage;
 
 public class AbstractComponentsMethods{
@@ -270,6 +271,18 @@ public class AbstractComponentsMethods{
     	usermanual.click();
         UserManualPage usermanualpage = new UserManualPage(driver);
         return usermanualpage;
+    }
+    
+                  ////////////User Manual////////////////////
+
+    @FindBy(xpath="//*[@title='Seller Reports']")
+    private WebElement sellerreports;
+
+    public SellerReportPage SellerReportPageOption()
+    {
+    	sellerreports.click();
+        SellerReportPage sellerreportspage = new SellerReportPage(driver);
+        return sellerreportspage;
     }
 
 }

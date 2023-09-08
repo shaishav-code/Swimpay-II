@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.ListTradingTermsTest">
+      <class name="swimGDSAutomation.PositiveTC.ReadyMadeTest">
         <methods>
           <include name="tearDown"/>
-          <include name="ClickOnPagination"/>
           <include name="lanuchWebsite"/>
+          <include name="SelectForwarderOption"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.ListTradingTermsTest -->
+      </class> <!-- swimGDSAutomation.PositiveTC.ReadyMadeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

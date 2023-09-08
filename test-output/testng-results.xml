@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-06T11:51:36 IST" name="User Manual Functionality" finished-at="2023-09-06T11:54:09 IST" duration-ms="152356">
+  <suite started-at="2023-09-08T17:18:43 IST" name="Read Made menu and its sub-menu Functionality" finished-at="2023-09-08T17:20:00 IST" duration-ms="76652">
     <groups>
     </groups>
-    <test started-at="2023-09-06T11:51:36 IST" name="Positive Test cases" finished-at="2023-09-06T11:54:09 IST" duration-ms="152356">
-      <class name="swimGDSAutomation.PositiveTC.UserManualTest">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.UserManualTest@7ae42ce3]" started-at="2023-09-06T11:51:36 IST" name="lanuchWebsite" finished-at="2023-09-06T11:52:30 IST" duration-ms="54102" status="PASS">
+    <test started-at="2023-09-08T17:18:43 IST" name="Negative Test cases" finished-at="2023-09-08T17:20:00 IST" duration-ms="76652">
+      <class name="swimGDSAutomation.NegativeTC.NegativeReadyMadeTest">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeReadyMadeTest@5a755cc1]" started-at="2023-09-08T17:18:43 IST" name="lanuchWebsite" finished-at="2023-09-08T17:19:44 IST" duration-ms="60790" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnUserManualMenuAndLogout()[pri:1, instance:swimGDSAutomation.PositiveTC.UserManualTest@7ae42ce3]" started-at="2023-09-06T11:52:30 IST" name="ClickOnUserManualMenuAndLogout" finished-at="2023-09-06T11:53:01 IST" duration-ms="30256" status="PASS">
+        <test-method signature="ClickViewButtonWithoutSelectingBuyer()[pri:1, instance:swimGDSAutomation.NegativeTC.NegativeReadyMadeTest@5a755cc1]" started-at="2023-09-08T17:19:44 IST" name="ClickViewButtonWithoutSelectingBuyer" finished-at="2023-09-08T17:19:59 IST" duration-ms="15455" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnUserManualMenuAndLogout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.UserManualTest@7ae42ce3]" started-at="2023-09-06T11:53:01 IST" name="tearDown" finished-at="2023-09-06T11:53:01 IST" duration-ms="526" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.UserManualTest@7ae42ce3]" started-at="2023-09-06T11:53:01 IST" name="lanuchWebsite" finished-at="2023-09-06T11:53:49 IST" duration-ms="47525" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnUserManualButton()[pri:2, instance:swimGDSAutomation.PositiveTC.UserManualTest@7ae42ce3]" started-at="2023-09-06T11:53:49 IST" name="ClickOnUserManualButton" finished-at="2023-09-06T11:54:08 IST" duration-ms="19447" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickOnUserManualButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.UserManualTest@7ae42ce3]" started-at="2023-09-06T11:54:08 IST" name="tearDown" finished-at="2023-09-06T11:54:09 IST" duration-ms="308" status="PASS">
+        </test-method> <!-- ClickViewButtonWithoutSelectingBuyer -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.NegativeTC.NegativeReadyMadeTest@5a755cc1]" started-at="2023-09-08T17:19:59 IST" name="tearDown" finished-at="2023-09-08T17:20:00 IST" duration-ms="309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- swimGDSAutomation.PositiveTC.UserManualTest -->
-    </test> <!-- Positive Test cases -->
-  </suite> <!-- User Manual Functionality -->
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeReadyMadeTest -->
+    </test> <!-- Negative Test cases -->
+  </suite> <!-- Read Made menu and its sub-menu Functionality -->
 </testng-results>

@@ -37,7 +37,7 @@ public class CreateNewTradingTermsTest extends BaseClass{
 	 
 	}
 	
-	 //Verify if user is able to enter the value in required fields
+	 //Verify if user is able to enter the value in required fields to Create New Terms
 	 @Test(priority=2)
 	 public void ClickOnCreateTradingTerms()   {
 		

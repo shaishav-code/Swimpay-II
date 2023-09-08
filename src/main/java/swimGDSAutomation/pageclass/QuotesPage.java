@@ -112,7 +112,8 @@ public class QuotesPage extends AbstractComponentsMethods {
     public void Select_dropdown()
     {
     	Click_dropdown();
-    	for(int i=1; i<6; i++)
+    	
+    	for(int i=1; i<dropdownoptions.size(); i++)
 		{
 	      String dropdownotpions = driver.findElement(By.xpath("//*[@class='dropdown-item']["+i+"]")).getText();
 	      
@@ -128,7 +129,7 @@ public class QuotesPage extends AbstractComponentsMethods {
     		{
     			String options = value.getText();    		
     			
-    			if(options.equals(option))
+    			if(options.contains(option))
     			{
     				value.click();
     			}
