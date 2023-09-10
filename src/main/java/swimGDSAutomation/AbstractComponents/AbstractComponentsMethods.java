@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import swimGDSAutomation.pageclass.ContactPage;
+import swimGDSAutomation.pageclass.ManageTEUSlotsPage;
 import swimGDSAutomation.pageclass.ManageTradingTermPage;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.QuotesPage;
@@ -66,10 +67,11 @@ public class AbstractComponentsMethods{
 	}
 	
 	//To get PageTitle
-	public void titleOfPage()
+	public String titleOfPage()
 	{
 		 String Pagetitle = driver.getTitle();
 		 System.out.println("Title of Current page is :" +Pagetitle);
+		 return Pagetitle;
 	}	
 	
 	//Window handling
@@ -283,6 +285,19 @@ public class AbstractComponentsMethods{
     	sellerreports.click();
         SellerReportPage sellerreportspage = new SellerReportPage(driver);
         return sellerreportspage;
+    }
+    
+    
+                  ////////////User Manual////////////////////
+
+    @FindBy(xpath="//*[text()='Manage TEU Slots']")
+    private WebElement manageTEUslots;
+
+    public ManageTEUSlotsPage ManageTEUSlotsPageOption()
+    {
+    	manageTEUslots.click();
+        ManageTEUSlotsPage manageTEUslotspage = new ManageTEUSlotsPage(driver);
+        return manageTEUslotspage;
     }
 
 }
