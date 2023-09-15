@@ -104,8 +104,32 @@ public class ListTradingTermsTest extends BaseClass{
 	 
 	 }
 	 
-	 //Verify if user is able to click on toggle button to deactivate the Terms and click on Yes button
+	 
+	 //Verify if user is able to click on toggle button to deactivate the Terms and can view the proper validation in pop-up
 	 @Test(priority=6)
+	 public void ChangeTheStatusToDeactivite_AndViewValidation() throws InterruptedException   {
+		
+	 LandingPage landingPage = new LandingPage(driver);
+	 landingPage.SellerLogin();	
+	 landingPage.Loginpage();
+	 landingPage.Enter_useremail(email);
+	 landingPage.Enter_password(password);
+	 landingPage.Loginbtn();
+	 ManageTradingTermPage managetradingterms = landingPage.ManageTradingTermOption();
+	 ListTradingTermsPage listtradingterms = managetradingterms.ListTradingTermsPageOptions();
+	 listtradingterms.Entries("121");
+	 Thread.sleep(3000);
+	 listtradingterms.Click_yes_btn();
+	 listtradingterms.Entries("121");
+	 String validation = listtradingterms.Getvalidationonpopup();
+	 System.out.println("Validation popup text :" + validation);
+	 Assert.assertEquals(validation, "Term Code will become invalid after it gets deactivated");
+	 Thread.sleep(3000);
+	 
+	 }
+	 
+	 //Verify if user is able to click on toggle button to deactivate the Terms and click on Yes button
+	 @Test(priority=7)
 	 public void ChangeTheStatusToDeactivite_ClickYesBtn() throws InterruptedException   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
@@ -126,7 +150,7 @@ public class ListTradingTermsTest extends BaseClass{
 	 String expected1 ="Create New Terms";
 	 
 	 //Verify if user is able to click on create new item button and is able to navigate to the Create New Trading terms page
-	 @Test(priority=7)
+	 @Test(priority=8)
 	 public void ClickCreateNewItemsButton() throws InterruptedException   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
@@ -145,7 +169,7 @@ public class ListTradingTermsTest extends BaseClass{
 	 
 	 
 	 //Verify if user is able to click on Pagination and if it is visible on DOM
-	 @Test(priority=8)
+	 @Test(priority=9)
 	 public void ClickOnPagination() throws InterruptedException   {
 		
 	 LandingPage landingPage = new LandingPage(driver);

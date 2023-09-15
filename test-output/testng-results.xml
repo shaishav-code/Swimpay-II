@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="10" failed="2" skipped="1">
+<testng-results ignored="8" total="9" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-10T23:40:05 IST" name="Seller Reports - Ready Made Functionality" finished-at="2023-09-10T23:55:29 IST" duration-ms="923785">
+  <suite started-at="2023-09-15T17:20:03 IST" name="Default suite" finished-at="2023-09-15T17:21:27 IST" duration-ms="84393">
     <groups>
     </groups>
-    <test started-at="2023-09-10T23:40:05 IST" name="Positive Test cases" finished-at="2023-09-10T23:55:29 IST" duration-ms="923785">
-      <class name="swimGDSAutomation.PositiveTC.ReadyMadeTest">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:40:06 IST" name="lanuchWebsite" finished-at="2023-09-10T23:40:52 IST" duration-ms="46677" status="PASS">
+    <test started-at="2023-09-15T17:20:03 IST" name="Default test" finished-at="2023-09-15T17:21:27 IST" duration-ms="84393">
+      <class name="swimGDSAutomation.PositiveTC.ListTradingTermsTest">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ListTradingTermsTest@4a883b15]" started-at="2023-09-15T17:20:03 IST" name="lanuchWebsite" finished-at="2023-09-15T17:21:06 IST" duration-ms="63264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickBalancePayableSubmenu()[pri:1, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:40:52 IST" name="ClickBalancePayableSubmenu" finished-at="2023-09-10T23:41:14 IST" duration-ms="21661" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickBalancePayableSubmenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:41:14 IST" name="tearDown" finished-at="2023-09-10T23:41:15 IST" duration-ms="929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:41:15 IST" name="lanuchWebsite" finished-at="2023-09-10T23:42:13 IST" duration-ms="58004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectBuyerName()[pri:2, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:42:13 IST" name="SelectBuyerName" finished-at="2023-09-10T23:42:42 IST" duration-ms="29201" status="FAIL">
+        <test-method signature="ChangeTheStatusToDeactivite_AndViewValidation()[pri:6, instance:swimGDSAutomation.PositiveTC.ListTradingTermsTest@4a883b15]" started-at="2023-09-15T17:21:06 IST" name="ChangeTheStatusToDeactivite_AndViewValidation" finished-at="2023-09-15T17:21:27 IST" duration-ms="20940" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [DB Schenker] but found []]]>
+              <![CDATA[expected [Term Code will become invalid after it gets deactivated] but found [Do you want to set this term to Active]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [DB Schenker] but found []
+              <![CDATA[java.lang.AssertionError: expected [Term Code will become invalid after it gets deactivated] but found [Do you want to set this term to Active]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:655)
 at org.testng.Assert.assertEquals(Assert.java:665)
-at swimGDSAutomation.PositiveTC.ReadyMadeTest.SelectBuyerName(ReadyMadeTest.java:55)
+at swimGDSAutomation.PositiveTC.ListTradingTermsTest.ChangeTheStatusToDeactivite_AndViewValidation(ListTradingTermsTest.java:126)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -70,210 +58,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectBuyerName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:42:43 IST" name="tearDown" finished-at="2023-09-10T23:42:44 IST" duration-ms="986" status="PASS">
+        </test-method> <!-- ChangeTheStatusToDeactivite_AndViewValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ListTradingTermsTest@4a883b15]" started-at="2023-09-15T17:21:27 IST" name="tearDown" finished-at="2023-09-15T17:21:27 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="ClickViewButtonToViewDetails()[pri:3, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:42:44 IST" name="ClickViewButtonToViewDetails" finished-at="2023-09-10T23:42:44 IST" depends-on-methods="swimGDSAutomation.PositiveTC.ReadyMadeTest.SelectBuyerName" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method swimGDSAutomation.PositiveTC.ReadyMadeTest.ClickViewButtonToViewDetails() on instance swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2 depends on not successfully finished methods 
-[swimGDSAutomation.PositiveTC.ReadyMadeTest.SelectBuyerName() on instance swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method swimGDSAutomation.PositiveTC.ReadyMadeTest.ClickViewButtonToViewDetails() on instance swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2 depends on not successfully finished methods 
-[swimGDSAutomation.PositiveTC.ReadyMadeTest.SelectBuyerName() on instance swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickViewButtonToViewDetails -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:42:44 IST" name="lanuchWebsite" finished-at="2023-09-10T23:43:51 IST" duration-ms="67081" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ChangeBuyerByClickingOnDropdownAgain()[pri:4, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:43:51 IST" name="ChangeBuyerByClickingOnDropdownAgain" finished-at="2023-09-10T23:44:19 IST" duration-ms="27861" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [THOMTT] but found [Test Cancel Voyage]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [THOMTT] but found [Test Cancel Voyage]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at swimGDSAutomation.PositiveTC.ReadyMadeTest.ChangeBuyerByClickingOnDropdownAgain(ReadyMadeTest.java:109)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeBuyerByClickingOnDropdownAgain -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:44:19 IST" name="tearDown" finished-at="2023-09-10T23:44:20 IST" duration-ms="1027" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:44:20 IST" name="lanuchWebsite" finished-at="2023-09-10T23:45:12 IST" duration-ms="52116" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickSellersInventoryPositionReportSubmenu()[pri:5, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:45:12 IST" name="ClickSellersInventoryPositionReportSubmenu" finished-at="2023-09-10T23:45:36 IST" duration-ms="24046" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickSellersInventoryPositionReportSubmenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:45:36 IST" name="tearDown" finished-at="2023-09-10T23:45:38 IST" duration-ms="1453" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:45:38 IST" name="lanuchWebsite" finished-at="2023-09-10T23:46:36 IST" duration-ms="58062" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickDownloadSellersInventoryPositionReportButton()[pri:6, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:46:36 IST" name="ClickDownloadSellersInventoryPositionReportButton" finished-at="2023-09-10T23:47:05 IST" duration-ms="29138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickDownloadSellersInventoryPositionReportButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:47:05 IST" name="tearDown" finished-at="2023-09-10T23:47:06 IST" duration-ms="942" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:47:06 IST" name="lanuchWebsite" finished-at="2023-09-10T23:47:34 IST" duration-ms="28552" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickSellersSlotAvailabilityTrendReportSubmenu()[pri:7, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:47:34 IST" name="ClickSellersSlotAvailabilityTrendReportSubmenu" finished-at="2023-09-10T23:48:00 IST" duration-ms="26157" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickSellersSlotAvailabilityTrendReportSubmenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:48:00 IST" name="tearDown" finished-at="2023-09-10T23:48:01 IST" duration-ms="788" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:48:01 IST" name="lanuchWebsite" finished-at="2023-09-10T23:48:58 IST" duration-ms="56974" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickAscendingNDescendingArrows()[pri:8, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:48:58 IST" name="ClickAscendingNDescendingArrows" finished-at="2023-09-10T23:49:27 IST" duration-ms="29073" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickAscendingNDescendingArrows -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:49:27 IST" name="tearDown" finished-at="2023-09-10T23:49:28 IST" duration-ms="1142" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:49:28 IST" name="lanuchWebsite" finished-at="2023-09-10T23:49:54 IST" duration-ms="25863" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnBillReportSubmenu()[pri:9, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:49:54 IST" name="ClickOnBillReportSubmenu" finished-at="2023-09-10T23:50:16 IST" duration-ms="21534" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickOnBillReportSubmenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:50:16 IST" name="tearDown" finished-at="2023-09-10T23:50:17 IST" duration-ms="735" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:50:17 IST" name="lanuchWebsite" finished-at="2023-09-10T23:51:14 IST" duration-ms="57503" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickUpNDownArrowOfSellerColoumn()[pri:10, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:51:14 IST" name="ClickUpNDownArrowOfSellerColoumn" finished-at="2023-09-10T23:51:40 IST" duration-ms="26231" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickUpNDownArrowOfSellerColoumn -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:51:40 IST" name="tearDown" finished-at="2023-09-10T23:51:41 IST" duration-ms="945" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:51:41 IST" name="lanuchWebsite" finished-at="2023-09-10T23:52:41 IST" duration-ms="59442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickForwarderDropdownField()[pri:11, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:52:41 IST" name="ClickForwarderDropdownField" finished-at="2023-09-10T23:53:02 IST" duration-ms="21111" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickForwarderDropdownField -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:53:02 IST" name="tearDown" finished-at="2023-09-10T23:53:03 IST" duration-ms="828" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:53:03 IST" name="lanuchWebsite" finished-at="2023-09-10T23:53:36 IST" duration-ms="33540" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SelectForwarderOption()[pri:12, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:53:36 IST" name="SelectForwarderOption" finished-at="2023-09-10T23:54:00 IST" duration-ms="23757" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SelectForwarderOption -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:54:00 IST" name="tearDown" finished-at="2023-09-10T23:54:01 IST" duration-ms="754" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:54:01 IST" name="lanuchWebsite" finished-at="2023-09-10T23:54:59 IST" duration-ms="58296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickDownloadCSV()[pri:13, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:54:59 IST" name="ClickDownloadCSV" finished-at="2023-09-10T23:55:29 IST" duration-ms="29583" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickDownloadCSV -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ReadyMadeTest@7f0d96f2]" started-at="2023-09-10T23:55:29 IST" name="tearDown" finished-at="2023-09-10T23:55:29 IST" duration-ms="635" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- swimGDSAutomation.PositiveTC.ReadyMadeTest -->
-    </test> <!-- Positive Test cases -->
-  </suite> <!-- Seller Reports - Ready Made Functionality -->
+      </class> <!-- swimGDSAutomation.PositiveTC.ListTradingTermsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

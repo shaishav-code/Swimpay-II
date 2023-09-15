@@ -111,4 +111,38 @@ public class LoginTest extends BaseClass{
 	landingPage.Logoutbtn();
 	}
 	
+	//Verify if user is able to click on Back arrow to navigate to Landing page
+    //Failed
+	@Test(priority=7)
+
+	public void ClickBackArrowToNavigateLandingPage() {
+			
+	LandingPage landingPage = new LandingPage(driver);
+	landingPage.SellerLogin();	
+	landingPage.Loginpage();
+	landingPage.Click_backarrow();
+	String url = landingPage.CurrentURLOfPage();
+	Assert.assertEquals(url, "https://demo.swimgds.com/");
+	
+	}
+	
+	
+	//Verify if user is able to get the title for the Login page
+	@Test(priority=8)
+
+	public void GetTitleForLoginPage() {
+			
+	LandingPage landingPage = new LandingPage(driver);
+	landingPage.SellerLogin();	
+	landingPage.Loginpage();
+	String logintitle = landingPage.titleOfPage();
+	System.out.println("Title of the page is :" +logintitle);
+	Assert.assertEquals(logintitle, "SWiM GDS - Seller - Login");
+	try {
+		landingPage.waitCode();
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+	
+	}
 }

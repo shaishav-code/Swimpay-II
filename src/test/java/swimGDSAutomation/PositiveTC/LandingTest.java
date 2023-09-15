@@ -7,7 +7,7 @@ import swimGDSAutomation.TestComponents.BaseClass;
 import swimGDSAutomation.pageclass.LandingPage;
 public class LandingTest extends BaseClass {
 
-    //Verify User can view login page
+    ///Verify if user is able to view the Login page
 	@Test
 	public void LoginWithSeller() throws InterruptedException
 	{
@@ -18,7 +18,7 @@ public class LandingTest extends BaseClass {
 	landingPage.Loginpage();
 	}
 	
-	//Verify User can Register page
+	//Verify if user is able to view the Register page
 	@Test		
 	public void RegisterWithSeller() throws InterruptedException{
 	LandingPage landingPage = new LandingPage(driver);

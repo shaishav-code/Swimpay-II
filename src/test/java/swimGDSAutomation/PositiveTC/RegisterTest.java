@@ -4,6 +4,7 @@ package swimGDSAutomation.PositiveTC;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import swimGDSAutomation.TestComponents.BaseClass;
+import swimGDSAutomation.pageclass.LandingPage;
 import swimGDSAutomation.pageclass.RegisterPage;
 
 public class RegisterTest extends BaseClass {
@@ -17,9 +18,27 @@ public class RegisterTest extends BaseClass {
 	String companyweb = "www.ndainfotech.com";
 	String SCAC = "1111";
 	
+	//Verify if user is able to get the title for the Registration page
+	@Test(priority=1)
+
+	public void GetTitleForRegisterPage() {
+			
+	LandingPage landingPage = new LandingPage(driver);
+	landingPage.SellerLogin();	
+	RegisterPage registerPage= landingPage.registerpage_Option();
+	String registertitle = registerPage.titleOfPage();
+	System.out.println("Title of the page is :" +registertitle);
+	Assert.assertEquals(registertitle, "SWiM GDS - Seller - Register");
+	try {
+		registerPage.waitCode();
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+	
+	}
 	
 	//Verify if user is able to Enter the details in Account info section
-	@Test(priority=1)
+	@Test(priority=2)
 	public void Fill_AccountInfo()
 	{
 		landingPage.SellerLogin();	
@@ -46,7 +65,7 @@ public class RegisterTest extends BaseClass {
 	String que2= "What city were you born in?";
 	
 	//Verify if the user is able to Enter the details in Master User section
-	@Test(priority=2)
+	@Test(priority=3)
 	public void Fill_MasterUserInfo()
 	{
 		landingPage.SellerLogin();	
@@ -80,7 +99,7 @@ public class RegisterTest extends BaseClass {
 	String Auth_email = "virajsurati1008@gmail.com";
 	
 	//Verify if the user is able to Enter the details in Authorised Users section
-	@Test(priority=3)
+	@Test(priority=4)
 	public void Fill_AuthorizeUserDetails() throws InterruptedException
 	{
 		landingPage.SellerLogin();	
@@ -125,7 +144,7 @@ public class RegisterTest extends BaseClass {
 	String SwiftCode = "1111";
 	
         //Verify if the user is able to Enter the details in Billing Info section
-		@Test(priority=4)
+		@Test(priority=5)
 		public void Fill_BillingInfo() throws InterruptedException
 		{
 			landingPage.SellerLogin();	
@@ -168,7 +187,7 @@ public class RegisterTest extends BaseClass {
 		
 		
 		//Verify if the user is able to select the required check boxes of T&C and rules
-		@Test(priority=5)
+		@Test(priority=6)
 		public void Verify_TermsAndConditions() throws InterruptedException
 		{
 			landingPage.SellerLogin();	

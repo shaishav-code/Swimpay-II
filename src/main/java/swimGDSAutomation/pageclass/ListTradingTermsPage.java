@@ -35,6 +35,9 @@ public class ListTradingTermsPage extends AbstractComponentsMethods {
     @FindBy(xpath="(//*[text()='Create New Terms'])[2]")
     private WebElement createnewitem_field;  
     
+    @FindBy(xpath="//*[@id=\"active-confirm\"]/div/div/div/div/div[2]/h2")
+    private WebElement validationonpopup; 
+    
     @FindBy(xpath="(//*[text()='Yes'])[2]")
     private WebElement yesbtn;  
     
@@ -61,6 +64,13 @@ public class ListTradingTermsPage extends AbstractComponentsMethods {
          }
     	    toggleswitch.click();
      }
+    
+	//Popup validation
+	public String Getvalidationonpopup()
+	{
+		return validationonpopup.getText();
+	}
+	
     
     //Verify if user is able to search the terms created from the list
     public void Enterterms_search(String term)

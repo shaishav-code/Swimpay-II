@@ -35,6 +35,9 @@ public class LandingPage extends AbstractComponentsMethods{
 	@FindBy(xpath ="//*[text()='Create Seller Account']")
 	private WebElement registertext;
 	
+	@FindBy(xpath ="//*[@class='swim-icon swm-arrowleft']")
+	private WebElement backarrow;
+	
 	@FindBy(xpath="//*[@id='email']")
 	private WebElement login_email;
 	
@@ -87,6 +90,12 @@ public class LandingPage extends AbstractComponentsMethods{
 		String RegText = registertext.getText();
 		System.out.println("Visible is " + RegText);
 		driver.navigate().back();
+	}
+	
+	//Verify if user is able to click on back arrow
+	public void Click_backarrow()
+	{
+		backarrow.click();
 	}
 	
 	//Login method

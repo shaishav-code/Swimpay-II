@@ -29,7 +29,7 @@ public class ReadyMadePage extends AbstractComponentsMethods {
 	@FindBy(xpath="//*[@id='select-user-dropdown']")
 	private WebElement selectbuyerdropdownfield;
 	
-	@FindBy(xpath="//*[@id=\"company-name\"]")
+	@FindBy(xpath="//*[@id='company-name']")
 	private WebElement buyername;
 	
 	@FindBy(xpath="//*[@class='dropdown-item company-id']")
@@ -37,6 +37,12 @@ public class ReadyMadePage extends AbstractComponentsMethods {
 	
 	@FindBy(xpath="//*[@id='btn-view']")
 	private WebElement viewbtn;
+	
+	//Verify if user is able to pass the buyername in the entry buyer field
+	public void Enter_buyer(String enterbuyer)
+	{
+		buyername.sendKeys(enterbuyer);
+	}
 	
 	//Verify if user is able to click on Balances payable sub-menu
 	public void Click_balpayable()

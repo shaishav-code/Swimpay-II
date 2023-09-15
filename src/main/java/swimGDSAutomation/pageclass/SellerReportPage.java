@@ -49,14 +49,14 @@ public class SellerReportPage extends AbstractComponentsMethods{
     
             //////////////////Report Writer//////////////////
     
-//    @FindBy(xpath="//*[@title='Report Writer']")
-//    private WebElement Reportwriter;
-//
-//    public ReportWriterPage ReportWriterPageOption()
-//    {
-//        Readymade.click();
-//        ReportWriterPage reportwriterpage = new ReportWriterPage(driver);
-//        return reportwriterpage;
-//    }
+    @FindBy(xpath="//*[@title='Report Writer']")
+    private WebElement Reportwriter;
+
+    public ReportWriterPage ReportWriterPageOption()
+    {
+    	Reportwriter.click();
+        ReportWriterPage reportwriterpage = new ReportWriterPage(driver);
+        return reportwriterpage;
+    }
     
 }

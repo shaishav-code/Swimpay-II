@@ -3,35 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swimGDSAutomation.NegativeTC.NegativeMyAccountTest">
+      <class name="swimGDSAutomation.PositiveTC.ListTradingTermsTest">
         <methods>
-          <include name="EnterCharacterInMobileField_ClickSaveBtn"/>
-          <include name="ClickSaveBtn_WithoutInsertingNewNConfirmPasswordDetails_ButInsertingInCorrectOldPassword"/>
           <include name="tearDown"/>
-          <include name="EnterBlankSpaceInAllField_ClickSaveBtn"/>
           <include name="lanuchWebsite"/>
-          <include name="ChangePasswordByInserting_Misma"/>
-          <include name="EnterBlankInAllField_ClickSaveBtn"/>
-          <include name="InsertBlankInAllFields_ClickSaveBtn"/>
-          <include name="InsertNumbersInMobileField_WithoutSelectingDialCode_ClickSaveBtn"/>
-          <include name="WithoutInsertingValues_clickSaveBtn"/>
-          <include name="EnterCharInAllField_ClickSaveBtn"/>
-          <include name="ClickSaveBtn_WithoutInsertingNewNConfirmPasswordDetails_ButInsertingCorrectOldPassword"/>
-          <include name="InsertBlankInAllField_ClickSaveBtn"/>
-          <include name="InsertNumbersInAllFields_ClickSaveBtn"/>
-          <include name="VerifySecurityDetailsChange"/>
-          <include name="ChangePasswordByInserting_IncorrectOldPassword"/>
-          <include name="InsertingSpecialCharacter_ClickSaveBtn"/>
-          <include name="InsertBlankSpaceInAllFields_ClickSaveBankBtn"/>
-          <include name="InsertInCorrectPassword_ClickUpdateBtn"/>
-          <include name="InsertBlankSpaceInAllFields_ClickSaveBtn"/>
-          <include name="EnterNumberInAllField_ClickSaveBtn"/>
-          <include name="InsertNumbersInAllFields_ClickSaveBankBtn"/>
-          <include name="ClickSaveBtnWithoutInsertingPasswordDetails"/>
-          <include name="SelectDialCode_WithoutInsertingMobileNumber_ClickSaveBtn"/>
-          <include name="InsertOnlyCurrentPassword_ClickUpdateBtn"/>
+          <include name="ChangeTheStatusToDeactivite_AndViewValidation"/>
         </methods>
-      </class> <!-- swimGDSAutomation.NegativeTC.NegativeMyAccountTest -->
+      </class> <!-- swimGDSAutomation.PositiveTC.ListTradingTermsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

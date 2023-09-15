@@ -69,9 +69,15 @@ public class AbstractComponentsMethods{
 	//To get PageTitle
 	public String titleOfPage()
 	{
-		 String Pagetitle = driver.getTitle();
-		 System.out.println("Title of Current page is :" +Pagetitle);
+		 String Pagetitle = driver.getTitle();	 
 		 return Pagetitle;
+	}	
+	
+	//To get currentURL
+	public String CurrentURLOfPage()
+	{
+		 String URL = driver.getCurrentUrl();
+		 return URL;
 	}	
 	
 	//Window handling
@@ -113,7 +119,7 @@ public class AbstractComponentsMethods{
     	return pageheadline.getText();
     }
 	
-    //Verify if user got the success message after clicking on save changes button	
+    //Verify if user got the success message
     @FindBy(xpath="//*[@class='alert alert-success']")
     private WebElement successmessage;
 
@@ -122,6 +128,16 @@ public class AbstractComponentsMethods{
     	return successmessage.isDisplayed();
     }
 	
+    //Verify if user got the failed validation
+    @FindBy(xpath="//*[@class='alert alert-danger']")
+    private WebElement failmessage;
+
+    public boolean failed_message()
+    {
+    	return failmessage.isDisplayed();
+    }
+    
+   
 	public void waitTimeForWebElementListToAppear(List<WebElement> eleListAppear) 
 	{
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -222,8 +238,7 @@ public class AbstractComponentsMethods{
 	public void Click_no_btn()
 	{
 		no_btn.click();
-	}
-    
+	}    
     
                      ////////////Quotes Page///////////////////////
      
@@ -275,7 +290,7 @@ public class AbstractComponentsMethods{
         return usermanualpage;
     }
     
-                  ////////////User Manual////////////////////
+                  ////////////Seller Reports////////////////////
 
     @FindBy(xpath="//*[@title='Seller Reports']")
     private WebElement sellerreports;
@@ -288,7 +303,7 @@ public class AbstractComponentsMethods{
     }
     
     
-                  ////////////User Manual////////////////////
+                  ////////////Manage TEU Slots////////////////////
 
     @FindBy(xpath="//*[text()='Manage TEU Slots']")
     private WebElement manageTEUslots;
