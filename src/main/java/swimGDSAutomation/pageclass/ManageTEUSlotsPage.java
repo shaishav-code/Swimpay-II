@@ -1,5 +1,9 @@
 package swimGDSAutomation.pageclass;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.locators.RelativeLocator;
-
+import java.awt.event.KeyEvent;
 import swimGDSAutomation.AbstractComponents.AbstractComponentsMethods;
 
 public class ManageTEUSlotsPage extends AbstractComponentsMethods{
@@ -81,16 +85,15 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 		return specifyyearfield.getAttribute("value");
 		
 	}
-	
-	
+
 	//Verify if user is able to click on Specify Month/Year field and print the drop down options in console
     public int Click_specifymonthfield()
     {
     	specifyyearfield.click();
        for(int i=1; i<specifyyeardropdown.size(); i++)
 		{
-	      String dropdownotpions = driver.findElement(By.xpath("//*[@class='dropdown-item']["+i+"]")).getText();
-	      System.out.println("Drop down list option :" +dropdownotpions);
+	      String dropdownoptions = driver.findElement(By.xpath("//*[@class='dropdown-item']["+i+"]")).getText();
+	      System.out.println("Drop down list option :" +dropdownoptions);
 	      
 		}
        return specifyyeardropdown.size();    
@@ -115,12 +118,31 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 		choosefilefield.click();
 	}
 	
+	
 	//Verify if user is able to upload the needed file
+	public void Uploadfile(String filePath) throws AWTException
+	{
+		   Robot robot = new Robot();
+	       String localFilePath = filePath;
+		   // Copy the file path to the clipboard
+		   StringSelection stringSelection = new StringSelection(localFilePath);
+	       Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+	       //Use Command (⌘) + V to paste the file path (adjust for Mac)
+	       robot.keyPress(KeyEvent.VK_CONTROL); // Command key
+	       robot.keyPress(KeyEvent.VK_V); // V key
+	       robot.keyRelease(KeyEvent.VK_V); // Release V key
+	       robot.keyRelease(KeyEvent.VK_CONTROL); // Release Command key       
+	       // Press Enter to confirm the file selection (adjust for Mac)
+	       robot.keyPress(KeyEvent.VK_ENTER);
+	       robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+	
+/*    Verify if user is able to upload the needed file
 	public void Uploadfile()
 	{
 		 String filePath = "/Users/c100-96/Desktop/Validfile.csv";
 		choosefilefield.sendKeys(filePath);
-	}
+	}  */
 	
 	@FindBy(xpath="//*[@class='file-name active']")
 	private WebElement filenametext;
@@ -188,18 +210,18 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 		
 	}
 	
-	//Verify if user is able to click on Up & down arrow of month column
-	public void click_updownarrow()
+	//Verify if user is able to click on Up arrow of month column
+	public void click_uparrow()
 	{
 		month_uparrow.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		month_downarrow.click();
 	}
 	
+	//Verify if user is able to click on down arrow of month column
+	public void click_downarrow()
+	{
+		month_downarrow.click();
+	}
+
 	WebElement downloadlink;
 	
 	//Verify if user is able to see the created Terms in list trading page
@@ -231,6 +253,12 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[text()='Submit']")  
 	private List<WebElement> submitbtn;
 	
+	@FindBy(xpath="//*[@title='Up']")  
+	private List<WebElement> increasearrow;
+	
+	@FindBy(xpath="//*[@title='Down']")  
+	private List<WebElement> decreasearrow;
+	
 	@FindBy(xpath="//*[@id='price-tab']")  
 	private WebElement priceoption;
 
@@ -255,9 +283,9 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 	}
 	
 	//Verify if user is able to enter the voyage in the field
-	public void Enter_voyage()
+	public void Enter_voyage(String voyage)
 	{
-		voyagefield.sendKeys("V00010-S");
+		voyagefield.sendKeys(voyage);
 	}
 	
 	//Verify if user is able to click on search button
@@ -266,12 +294,26 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 		searchbtn.click();
 	}
 	
+	//Verify if user is able to click Arrow to increase the quantity
+	public void Click_increaseqty(int i)
+	{
+		increasearrow.get(i).click();
+	}
+	
+	//Verify if user is able to click Arrow to increase the quantity
+	public void Click_decreaseqty(int i)
+	{
+		decreasearrow.get(i).click();
+	}
+	
+	
+	
 	//Verify if user is able to enter the new qty in the fields
-	public void Enter_newqty()
+	public void Enter_newqty(String quantity)
 	{
 		for(int i=0;i<newqty.size();i++)
 		{
-			newqty.get(i).sendKeys("1");
+			newqty.get(i).sendKeys(quantity);
 		}
 	}
 	
@@ -288,14 +330,14 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 	}
 	
 	//Verify if user is able to enter the charges in the fields
-	public void Enter_newcharge()
+	public void Enter_newcharge(String price)
 	{
 		for(int i=1;i<chargefield.size();i++)
 		{
 			System.out.println(chargefield.size());
-			chargefield.get(i).sendKeys("111");
+			chargefield.get(i).sendKeys(price);
 		}
 	}
 	
-	    
+
 }

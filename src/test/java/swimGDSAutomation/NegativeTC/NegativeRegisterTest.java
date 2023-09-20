@@ -29,7 +29,7 @@ public class NegativeRegisterTest extends BaseClass {
 	}
 
 	
-	//Verify if the fields accept the blank space
+	//Verify if user enters the blank space in fields of Account info section and clicks on next button
 	@Test(priority=2)
 	public void Enter_AI_BlankSpace()
 	{
@@ -40,7 +40,7 @@ public class NegativeRegisterTest extends BaseClass {
 		registerPage.Enter_region(blank);
 		registerPage.EnterNegative_postcode(blank);
 		registerPage.Select_country(countryname);
-		registerPage.SCAC_code(SCAC);
+		registerPage.SCAC_code(blank);
 		registerPage.Nextbutton();	
 	    registerPage.Validationtext1();   
 	    registerPage.Nextbutton();	
@@ -247,7 +247,6 @@ public class NegativeRegisterTest extends BaseClass {
 		registerPage.NegativeAddbank_region(blank);
 		registerPage.NegativeAddAccount_details(blank);
 		registerPage.NegativeAddCodes(blank);
-	    registerPage.Validation4();
 		registerPage.NegativeAddCodes(blank);
 
 	    

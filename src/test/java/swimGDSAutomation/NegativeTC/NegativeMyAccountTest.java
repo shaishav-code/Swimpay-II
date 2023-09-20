@@ -10,8 +10,8 @@ import swimGDSAutomation.pageclass.MyAccountPage;
 
 public class NegativeMyAccountTest extends BaseClass {
 
-	 String email = "nda.norala@yopmail.com";
-     String password ="Dilip@07";
+	 String email = "nda.norala@gmail.com";
+     String password ="Nikhil@86";
    
 	 //Verify if user is able to click on save changes button without inserting details in Edit company info pop-up
 	 @Test(priority=1)
@@ -59,9 +59,7 @@ public class NegativeMyAccountTest extends BaseClass {
 	 myaccountpage.Click_Companysavebtn();
 	 
 	 }
-	 
-	 //Verify if user is able to enter the blankspace in all mandatory fields and click on save changes button in Edit company info pop-up
-	 //Failed: Phone number field is accepting the blankspace - https://nda-narola.tinytake.com/msc/ODYzMzU5Ml8yMjAwMDAyMw
+ //Verify if user is able to enter the blankspace in all mandatory fields and click on save changes button in Edit company info pop-up
 	 @Test(priority=3)
 	 public void EnterBlankSpaceInAllField_ClickSaveBtn() {
 		
@@ -80,7 +78,7 @@ public class NegativeMyAccountTest extends BaseClass {
 	 myaccountpage.Insert_region(" ");
 	 myaccountpage.Insert_postcode(" ");
 	 myaccountpage.Insert_state(" ");
-	 myaccountpage.Insert_mobilenumber(" ");
+	 myaccountpage.Insert_mobilenumber("        ");
 	 myaccountpage.Insert_companywebsite(" ");
 	 myaccountpage.Insert_SCACcode(" ");
 	 try {
@@ -95,7 +93,6 @@ public class NegativeMyAccountTest extends BaseClass {
 	 }
 	 
 	 //Verify if user is able to enter the number in all mandatory fields and click on save changes button in Edit company info pop-up
-	 //Failed-Company and state fields are accepting the digit- https://nda-narola.tinytake.com/msc/ODYzMzYzMl8yMjAwMDA3Nw
 	 @Test(priority=4)
 	 public void EnterNumberInAllField_ClickSaveBtn() {
 		
@@ -122,7 +119,7 @@ public class NegativeMyAccountTest extends BaseClass {
 			e.printStackTrace();
 		}
 	 myaccountpage.Click_Companysavebtn();
-	boolean valid = myaccountpage.Validation_companyname();
+	boolean valid = myaccountpage.Validation_state();
 	Assert.assertTrue(valid, "Validation has been displayed");
 	 
 	 }

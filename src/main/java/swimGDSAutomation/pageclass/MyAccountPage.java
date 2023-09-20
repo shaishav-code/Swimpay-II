@@ -33,6 +33,9 @@ WebDriver driver;
     @FindBy(xpath="//*[@id='editProfile-name-error']")
     private WebElement companyname_validation;
     
+    @FindBy(xpath="//*[text()='This is a required field']")
+    private WebElement state_validation;
+    
     @FindBy(xpath="//*[@id='editProfile-address_1']")
     private WebElement address1;
     
@@ -91,6 +94,13 @@ WebDriver driver;
     {
     	scrollToElement(companyname_validation);
     	return companyname_validation.isDisplayed();
+    }
+    
+    //Verify if user is able to get the validation behind the state field
+    public boolean Validation_state()
+    {
+    	scrollToElement(state_validation);
+    	return state_validation.isDisplayed();
     }
     
     //Verify if user is able to insert Address1

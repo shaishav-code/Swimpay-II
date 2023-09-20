@@ -443,14 +443,14 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    public void Addbank_address(String bankaddress1)
 	    {
 	    	bank_address1.sendKeys(bankaddress1);
-	    	bank_address2.sendKeys("CA road");//
+	    	bank_address2.sendKeys("  ");//
 	    }
 	    
 	    //Verify if user is able to add the Region and post code
 	    public void Addbank_region(String bank_Region)
 	    {
 	    	bank_region.sendKeys(bank_Region);
-	    	bank_postcode.sendKeys("1111");//
+	    	bank_postcode.sendKeys("  ");//
 	    }
 	    
 	    //Verify for Negative scenario insert blank space

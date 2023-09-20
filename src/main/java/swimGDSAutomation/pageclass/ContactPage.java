@@ -43,6 +43,9 @@ public class ContactPage extends AbstractComponentsMethods{
 		@FindBy(xpath="//*[text()='This is a required field']")
 		private WebElement validation_firstname;
 		
+		@FindBy(xpath="//*[text()='Please enter a valid email address.']")
+		private WebElement validation_email;
+		
 		//Verify if user is able to do login with valid credentials
 		
         //Verify if user is able to do select the contact us form menu
@@ -98,9 +101,16 @@ public class ContactPage extends AbstractComponentsMethods{
         	return displayed;
         }
         
-        public void ValidationVerify()
+        public String Validation_onfield()
         {
         	System.out.println("Validation on Firstname :"+ validation_firstname.getText());
+        	return validation_firstname.getText();
+        }
+        
+        public String Validation_onemail()
+        {
+        	System.out.println("Validation on email field :"+ validation_email.getText());
+        	return validation_email.getText();
         }
         
 		
