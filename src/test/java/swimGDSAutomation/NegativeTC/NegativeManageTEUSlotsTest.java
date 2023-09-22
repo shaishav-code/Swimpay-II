@@ -9,13 +9,13 @@ import swimGDSAutomation.TestComponents.BaseClass;
 import swimGDSAutomation.pageclass.LandingPage;
 import swimGDSAutomation.pageclass.ManageTEUSlotsPage;
 
-public class NegativeManageTEUSlots extends BaseClass{
+public class NegativeManageTEUSlotsTest extends BaseClass{
 	
 	 String email = "nda.norala@gmail.com";
      String password ="Nikhil@86";
 	
      
-     //Verify if user is able to click on directly Upload CSV button without selecting the month and required file 
+     //Verify if user is able to directly click on Upload CSV button without selecting the month and required file 
      @Test(priority=1)
 	 public void ClickUploadButtonWithoutSelectingFileAndMonth	() {
 		
@@ -89,7 +89,7 @@ public class NegativeManageTEUSlots extends BaseClass{
 		
 	 }  
      
-	 //Verify if user is able to find the search by insert the Month which is not listed in the dropdown option in specify Month / Year to upload CSV files field and can able to search the same
+	 //Verify if user is able to find the search by inserting the Month which is not listed in the dropdown option in specify Month / Year to upload CSV file and can able to search the same
      @Test(priority=4)
 	 public void ClickOnSpecifyMonthOrYearField() {
 		
@@ -113,7 +113,7 @@ public class NegativeManageTEUSlots extends BaseClass{
 	 }
      
 	 //Verify if user is able to find the Autosuggetion list for the matching month in the Month/Year field
-     // Failed: Here, after entering the July Month in the field, it should only display the option which is matching with July
+     //Failed
      @Test(priority=5)
 	 public void AutosuggestionForTheMatchingMonth() {
 		
@@ -137,7 +137,7 @@ public class NegativeManageTEUSlots extends BaseClass{
 	 }
      
      //Verify if user is able to change the month by simply clicking on the dropdown field again
-     // Failed: User is not able to change the month option
+     //Failed
      @Test(priority=6)
 	 public void ChangeTheMonth_ByClickingOnDropdownAgain() {
 		
@@ -477,8 +477,8 @@ public class NegativeManageTEUSlots extends BaseClass{
    	 
 	 }
 	 
-	 //Verify if user is able to click on submit button without inserting the Quantity
-	 //Failed: Verify user get the success message without inserting/updating any details in quantity fields and click on Submit button
+	 //Verify if user is able to click on submit button without inserting/updating the Quantity and can get the succes message
+	 //Failed
 	 @Test(priority=18)
 	 public void ClickSubmitBtnWithoutInsertingQuantity() {
 		
@@ -517,7 +517,7 @@ public class NegativeManageTEUSlots extends BaseClass{
 	 }
 	 
 	 //Verify if user is able to click on submit button without inserting/updating the existing data and can get the succes message
-	 //Failed: User is able to click on submit button and getting the success message without inserting/updating the existing details
+	 //Failed
 	 @Test(priority=20)
 	 public void ClickSubmitButtonWithoutInsertingPrice() {
 		

@@ -110,7 +110,7 @@ public class NegativeMyAccountTest extends BaseClass {
 	 myaccountpage.Insert_address("1221", "1221");
 	 myaccountpage.Insert_region("1221");
 	 myaccountpage.Insert_postcode("1221");
-	 myaccountpage.Insert_state("1221");
+	 myaccountpage.Insert_state("1221"); 
 	 myaccountpage.Insert_companywebsite("1212");
 	 myaccountpage.Insert_SCACcode("1221");
 	 try {
@@ -599,7 +599,7 @@ public class NegativeMyAccountTest extends BaseClass {
 	     }
  
 		 //Verify if user is able to insert the numbers in all required fields and is able to save the changes in Billing info popup
-		 //Failed: Bank field is accepting the numbers as well as Special characters- https://nda-narola.tinytake.com/msc/ODYzMzY4OF8yMjAwMDEzNA
+		 //Passed
 		 @Test(priority=23)
 		 public void InsertNumbersInAllFields_ClickSaveBankBtn() {
 			

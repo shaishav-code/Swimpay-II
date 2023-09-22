@@ -101,7 +101,7 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 
 	 }
 	  
-	 //Verify if user is able to click on Choose file field and the file location pop-up should get displayed
+	 //Verify if user is able to click on Choose file field and the file manager pop-up should get displayed
 	 @Test(priority=6)
 	 public void ClickOnChooseFileField() {
 		
@@ -155,7 +155,7 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 manageTEUslotspage.Click_choosefilefield();
 	 manageTEUslotspage.Uploadfile("/Users/c100-96/Desktop/Validfile.csv");
 	 String actual = manageTEUslotspage.Filename_gettext();
-	 Assert.assertEquals(actual, "CSV-ALB-29.08.2022 (2).csv");
+	 Assert.assertEquals(actual, "Validfile.csv");
 	 
 	 }
 	 
@@ -206,7 +206,7 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 
 	 }	 
 	 
-	 //Verify if user is able to see the uploaded file details in CSV File list sub-menu
+	 //Verify if user is able to see the uploaded file details in CSV File list sub-menu and can download the required file
 	 //@Test(priority=11)
 	 public void VerifyUploadedFileDetailsVisibleInCSVFileListSubmenu() throws AWTException {
 		
@@ -229,7 +229,7 @@ public class ManageTEUSlotsTest extends BaseClass{
 		e.printStackTrace();
 	 }
 	 manageTEUslotspage.Click_CSVfilelist();
-	 manageTEUslotspage.Click_DownloadCSVfilelink("FILENAME.csv");  ////////////
+	 manageTEUslotspage.Click_DownloadCSVfilelink("Validfile.csv");  ////////////
 	 
 	 }	
 	 
@@ -348,7 +348,7 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 manageTEUslotspage.Click_inventoryupdate();
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
-	 manageTEUslotspage.Click_increaseqty(0);
+	 manageTEUslotspage.Click_increaseqty();
 	 try {
 		 manageTEUslotspage.waitCode();
 	     } 
@@ -374,7 +374,7 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 manageTEUslotspage.Click_inventoryupdate();
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
-	 manageTEUslotspage.Click_increaseqty(0);
+	 manageTEUslotspage.Click_increaseqty();
 	 try {
 		 manageTEUslotspage.waitCode();
 	     } 
@@ -382,7 +382,7 @@ public class ManageTEUSlotsTest extends BaseClass{
 	     {
 		    e.printStackTrace();
 	     }
-	 manageTEUslotspage.Click_decreaseqty(0);
+	 manageTEUslotspage.Click_decreaseqty();
 
 	 
 	 }

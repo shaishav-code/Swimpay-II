@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Manage TEU Slots- CSV File Upload, CSV File List and Inventory Update MadeFunctionality]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="swimGDSAutomation.TestComponents.ListenersClass"/>
+  </listeners>
+  <test thread-count="5" name="Negative Test cases(failed)">
+    <classes>
+      <class name="swimGDSAutomation.NegativeTC.NegativeManageTEUSlotsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="lanuchWebsite"/>
+          <include name="ClickSubmitButtonWithoutInsertingPrice"/>
+          <include name="ChangeTheMonth_ByClickingOnDropdownAgain"/>
+          <include name="AutosuggestionForTheMatchingMonth"/>
+          <include name="ClickSubmitBtnWithoutInsertingQuantity"/>
+        </methods>
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeManageTEUSlotsTest -->
+    </classes>
+  </test> <!-- Negative Test cases(failed) -->
+</suite> <!-- Failed suite [Manage TEU Slots- CSV File Upload, CSV File List and Inventory Update MadeFunctionality] -->

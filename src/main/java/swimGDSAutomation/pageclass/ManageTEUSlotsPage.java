@@ -295,20 +295,27 @@ public class ManageTEUSlotsPage extends AbstractComponentsMethods{
 	}
 	
 	//Verify if user is able to click Arrow to increase the quantity
-	public void Click_increaseqty(int i)
-	{
-		increasearrow.get(i).click();
+	public void Click_increaseqty()
+	{	
+		for(int j=0;j<increasearrow.size();j++)
+		{
+			increasearrow.get(j).click();
+		}	
 	}
 	
 	//Verify if user is able to click Arrow to increase the quantity
-	public void Click_decreaseqty(int i)
+	public void Click_decreaseqty()
 	{
-		decreasearrow.get(i).click();
+		for(int j=0;j<decreasearrow.size();j++)
+		{
+			decreasearrow.get(j).click();
+		}
+		
 	}
 	
 	
 	
-	//Verify if user is able to enter the new qty in the fields
+	//Verify if user is able to entser the new qty in the fields
 	public void Enter_newqty(String quantity)
 	{
 		for(int i=0;i<newqty.size();i++)

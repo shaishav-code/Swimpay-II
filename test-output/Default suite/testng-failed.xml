@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
-          <include name="EnterNumberInAllField_ClickSaveBtn"/>
+          <include name="InsertNumbersInAllFields_ClickSaveBankBtn"/>
         </methods>
       </class> <!-- swimGDSAutomation.NegativeTC.NegativeMyAccountTest -->
     </classes>
