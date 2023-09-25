@@ -3,7 +3,6 @@ package swimGDSAutomation.AbstractComponents;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,10 +11,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import swimGDSAutomation.pageclass.ContactPage;
 import swimGDSAutomation.pageclass.ManageTEUSlotsPage;
 import swimGDSAutomation.pageclass.ManageTradingTermPage;
+import swimGDSAutomation.pageclass.ManageVoyagePage;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.QuotesPage;
 import swimGDSAutomation.pageclass.SellerReportPage;
@@ -313,6 +312,18 @@ public class AbstractComponentsMethods{
     	manageTEUslots.click();
         ManageTEUSlotsPage manageTEUslotspage = new ManageTEUSlotsPage(driver);
         return manageTEUslotspage;
+    }
+    
+                 ///////////////Manage Voyage////////////////////
+    
+	@FindBy(xpath="//*[@title='Manage Voyages']")
+	private WebElement managevoyagemenu;
+	
+    public ManageVoyagePage ManageVoyagePageOption()
+    {
+    	managevoyagemenu.click();
+    	ManageVoyagePage managevoyagepage = new ManageVoyagePage(driver);
+        return managevoyagepage;
     }
 
 }
