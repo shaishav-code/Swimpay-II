@@ -35,14 +35,14 @@ public class AbstractComponentsMethods{
 	public void scrolling() {
 		
        JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0, 1000)");
-	  //js.executeScript("window.scrollBy(0, -400)");
+		js.executeScript("window.scrollBy(0, 400)");
+	    js.executeScript("window.scrollBy(0, -400)");
 	}
 
 	//Scrolling till particular webelement
 	public void scrollToElement(WebElement element) {
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("arguments[0].scrollIntoView(true);", element);
+	    js.executeScript("arguments[0].scrollIntoView;", element);
 	}
 	
 	//For Holding the code
