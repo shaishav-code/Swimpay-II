@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Manage Voyages - List Voyages Functionality]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="swimGDSAutomation.TestComponents.ListenersClass"/>
+  </listeners>
+  <test thread-count="5" name="Positive Test cases(failed)">
+    <classes>
+      <class name="swimGDSAutomation.PositiveTC.ManageVoyageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="ClickOnAscDescArrow"/>
+          <include name="lanuchWebsite"/>
+        </methods>
+      </class> <!-- swimGDSAutomation.PositiveTC.ManageVoyageTest -->
+    </classes>
+  </test> <!-- Positive Test cases(failed) -->
+</suite> <!-- Failed suite [Manage Voyages - List Voyages Functionality] -->

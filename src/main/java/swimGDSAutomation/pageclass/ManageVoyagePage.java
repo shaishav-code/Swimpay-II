@@ -1,14 +1,12 @@
 package swimGDSAutomation.pageclass;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.locators.RelativeLocator;
-
 import swimGDSAutomation.AbstractComponents.AbstractComponentsMethods;
 
 public class ManageVoyagePage extends AbstractComponentsMethods{
@@ -167,7 +165,6 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 		loadbtn.click();
 	}
 	
-	
 	                  //////////////////////Cancel Voyage////////////////////////
 	
 	@FindBy(xpath="//*[@title='Cancel Voyage']")
@@ -179,8 +176,8 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@class='dropdown-item']")
 	private List<WebElement> voyageoption;
 	
-	@FindBy(xpath="//*[@type='checkbox']")
-	private WebElement checkbox;
+	@FindBy(xpath="//*[contains(@type,'checkbox')]")
+	private List<WebElement> checkbox;
 	
 	@FindBy(xpath="//*[text()='Submit']")
 	private WebElement submitbtn;
@@ -214,12 +211,12 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 	public void Select_voyagenumber(String Voyagenumber)
 	{
 		voyagenofield.click();
-		for(WebElement month:voyageoption)
+		for(WebElement number:voyageoption)
 		{
-			String buyername = month.getText();
-			if(buyername.contains(Voyagenumber))
+			String voyageno = number.getText();
+			if(voyageno.contains(Voyagenumber))
 			{
-				month.click();
+				number.click();
 			}
 		}
 	}
@@ -227,7 +224,13 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 	//Click on checkbox
 	public void Select_Checkbox()
 	{
-		checkbox.click();
+		for (int i=0;i<checkbox.size();i++)
+		{	
+			checkbox.get(i).click();
+		}
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+//		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@type,'checkbox')]")));
+//		element.click();
 	}
 	
 	//Click on Submit button
@@ -249,13 +252,32 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 	}
 	
 	
-	
-	
-	                 ///////////////////////Change Voyage///////////////////////////
+	                 ///////////////////////Change Voyage Date///////////////////////////
 	
 	
 	@FindBy(xpath="//*[@title='Change Voyage Date']")
 	private WebElement changevoyage;
+	
+	@FindBy(xpath="//*[@class='input-with-icon']//input")
+	private List<WebElement> ETDnETAfield;
+	
+	//For Month
+	@FindBy(xpath = "//div[@class='ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all']/div[1]/div[2]")
+	private WebElement month1;
+	
+	//next button
+	@FindBy(xpath = "//div[@class='ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all']/div[1]/div[3]/a[1]")
+	private WebElement nextbtn;
+	
+	// date picker
+	@FindBy(xpath = "//table[@class='ui-datepicker-calendar']/tbody/tr/td/a")
+	private List<WebElement> Dates;
+	
+	@FindBy(xpath="//*[@id='voyage[0][etd]-error']")
+	private WebElement erroronETDField;
+	
+	@FindBy(xpath="//*[@class='btn btn-primary btn-submit']")
+	private WebElement Submitbtn;
 	
 	public void Click_changevoyage()
 	{
@@ -269,17 +291,56 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 		}	
 	}
 	
+	//Click on ETD field to select the date from Calender
+	public void Click_ETDfield()
+	{
+		for (int i=0;i<ETDnETAfield.size();i++)
+		{	
+			ETDnETAfield.get(i).click();
+		}
+	}
 	
+    //Verify if user is able to click on Expiry date picker and able to select the date
+    public void SelectdatenMonth(int i,String month, String day) {
+    	ETDnETAfield.get(i).click();
+		while (!month1.getText().equalsIgnoreCase(month)) {
+			waitTimeForElementToClickable(nextbtn);
+			nextbtn.click();
+		}
+		for(WebElement value:Dates)
+		{
+			String dayvalue  = value.getText();	
+			if(dayvalue.equals(day))
+			{
+				value.click();
+			}
+		}
+	} 
+    
+	//Validation behind ETD Field
+	public boolean Validation_behindETDfield()
+	{
+		return erroronETDField.isDisplayed();
+	}
 	
+	//Click on Submit button on Change voyage date sub-menu
+	public void Click_SubmitonChangeVoyagedatesubmenu()
+	{
+		Submitbtn.click();
+	}
 	
-	
-	
-	
-	                  /////////////////////Change Vessel//////////////////////////
+	                  /////////////////////Change of Vessel//////////////////////////
 	
 	@FindBy(xpath="//*[@title='Change of Vessel']")
 	private WebElement changevessel;
 	
+	@FindBy(xpath="//*[@name='voyage[0][vessel_name]']")
+	private WebElement newvesselnamefield;
+	
+	@FindBy(xpath="//*[@name='voyage[0][imo]']")
+	private WebElement newIMOnofield;
+	
+	//Click on Change of Vessel sub-menu
 	public void Click_changevessel()
 	{
 		changevessel.isDisplayed();
@@ -292,8 +353,17 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 		}	
 	}
 	
+	//Enter new vessel name in the field
+	public void Enter_newvesselname(String vesselname)
+	{
+		newvesselnamefield.sendKeys(vesselname);
+	}
 	
-	
+	//Enter new IMO number in the field
+	public void Enter_newIMOnumber(String IMOno)
+	{
+		newIMOnofield.sendKeys(IMOno);
+	}
 	
 	
 }

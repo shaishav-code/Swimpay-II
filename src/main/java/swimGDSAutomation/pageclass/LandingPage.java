@@ -20,7 +20,8 @@ public class LandingPage extends AbstractComponentsMethods{
 	
 	public void launchURL() 
 	{
-		driver.get("https://demo.swimgds.com/");
+		//driver.get("https://demo.swimgds.com/");
+		driver.get("https://demo.swimgds.com/seller/login");
 	}
 	
 	@FindBy(xpath ="//*[text()='Seller Login / Register']")

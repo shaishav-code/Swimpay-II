@@ -5,8 +5,8 @@
     <classes>
       <class name="swimGDSAutomation.PositiveTC.ManageVoyageTest">
         <methods>
-          <include name="ClickOnViewFromBCNColumn_SelectedStatusAsCancelled"/>
           <include name="tearDown"/>
+          <include name="ClickOnAscDescArrow"/>
           <include name="lanuchWebsite"/>
         </methods>
       </class> <!-- swimGDSAutomation.PositiveTC.ManageVoyageTest -->
