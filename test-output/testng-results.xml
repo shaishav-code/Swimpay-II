@@ -1,67 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="37" total="38" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-02T16:14:39 IST" name="Default suite" finished-at="2023-10-02T16:15:26 IST" duration-ms="46553">
+  <suite started-at="2023-10-03T14:54:03 IST" name="Manage BCN menu and its Sub-menu Functionality" finished-at="2023-10-03T15:00:02 IST" duration-ms="359591">
     <groups>
     </groups>
-    <test started-at="2023-10-02T16:14:39 IST" name="Default test" finished-at="2023-10-02T16:15:26 IST" duration-ms="46553">
-      <class name="swimGDSAutomation.PositiveTC.ManageVoyageTest">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageVoyageTest@6c1a5b54]" started-at="2023-10-02T16:14:39 IST" name="lanuchWebsite" finished-at="2023-10-02T16:15:12 IST" duration-ms="32864" status="PASS">
+    <test started-at="2023-10-03T14:54:03 IST" name="Positive Test cases" finished-at="2023-10-03T15:00:02 IST" duration-ms="359591">
+      <class name="swimGDSAutomation.PositiveTC.ManageBCNTest">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:54:03 IST" name="lanuchWebsite" finished-at="2023-10-03T14:54:39 IST" duration-ms="36044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnAscDescArrow()[pri:7, instance:swimGDSAutomation.PositiveTC.ManageVoyageTest@6c1a5b54]" started-at="2023-10-02T16:15:12 IST" name="ClickOnAscDescArrow" finished-at="2023-10-02T16:15:25 IST" duration-ms="13165" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertTrue(Assert.java:56)
-at org.testng.Assert.assertTrue(Assert.java:66)
-at swimGDSAutomation.PositiveTC.ManageVoyageTest.ClickOnAscDescArrow(ManageVoyageTest.java:166)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="ClickOnManageBCNMenu()[pri:1, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:54:39 IST" name="ClickOnManageBCNMenu" finished-at="2023-10-03T14:54:43 IST" duration-ms="4665" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnAscDescArrow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageVoyageTest@6c1a5b54]" started-at="2023-10-02T16:15:25 IST" name="tearDown" finished-at="2023-10-02T16:15:26 IST" duration-ms="391" status="PASS">
+        </test-method> <!-- ClickOnManageBCNMenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:54:43 IST" name="tearDown" finished-at="2023-10-03T14:54:44 IST" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- swimGDSAutomation.PositiveTC.ManageVoyageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:54:44 IST" name="lanuchWebsite" finished-at="2023-10-03T14:55:16 IST" duration-ms="32760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="ClickOnEnterBCNNumberSubmenu()[pri:2, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:55:16 IST" name="ClickOnEnterBCNNumberSubmenu" finished-at="2023-10-03T14:55:25 IST" duration-ms="8191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnEnterBCNNumberSubmenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:55:25 IST" name="tearDown" finished-at="2023-10-03T14:55:25 IST" duration-ms="363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:55:25 IST" name="lanuchWebsite" finished-at="2023-10-03T14:55:57 IST" duration-ms="31579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="ClickOnManageBCNNumberSubmenu()[pri:3, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:55:57 IST" name="ClickOnManageBCNNumberSubmenu" finished-at="2023-10-03T14:56:05 IST" duration-ms="8167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnManageBCNNumberSubmenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:56:05 IST" name="tearDown" finished-at="2023-10-03T14:56:05 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:56:05 IST" name="lanuchWebsite" finished-at="2023-10-03T14:56:38 IST" duration-ms="32732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="ClickOnCancelBCNSubmenu()[pri:4, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:56:38 IST" name="ClickOnCancelBCNSubmenu" finished-at="2023-10-03T14:56:46 IST" duration-ms="8118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnCancelBCNSubmenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:56:46 IST" name="tearDown" finished-at="2023-10-03T14:56:46 IST" duration-ms="348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:56:46 IST" name="lanuchWebsite" finished-at="2023-10-03T14:57:15 IST" duration-ms="28576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="ClickOnViewBCNSubmenu()[pri:5, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:57:15 IST" name="ClickOnViewBCNSubmenu" finished-at="2023-10-03T14:57:23 IST" duration-ms="8270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnViewBCNSubmenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:57:23 IST" name="tearDown" finished-at="2023-10-03T14:57:23 IST" duration-ms="320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:57:23 IST" name="lanuchWebsite" finished-at="2023-10-03T14:57:53 IST" duration-ms="29924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="ClickOnManageBCNSubmenu()[pri:6, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:57:53 IST" name="ClickOnManageBCNSubmenu" finished-at="2023-10-03T14:58:14 IST" duration-ms="20268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnManageBCNSubmenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:58:14 IST" name="tearDown" finished-at="2023-10-03T14:58:14 IST" duration-ms="440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:58:14 IST" name="lanuchWebsite" finished-at="2023-10-03T14:58:54 IST" duration-ms="39979" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="ClickOnReviewBalanceShiftSubmenu()[pri:7, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:58:54 IST" name="ClickOnReviewBalanceShiftSubmenu" finished-at="2023-10-03T14:59:03 IST" duration-ms="8947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnReviewBalanceShiftSubmenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:59:03 IST" name="tearDown" finished-at="2023-10-03T14:59:03 IST" duration-ms="321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:59:03 IST" name="lanuchWebsite" finished-at="2023-10-03T14:59:53 IST" duration-ms="49555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="ClickOnManageAlternateVoyageSubmenu()[pri:8, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T14:59:53 IST" name="ClickOnManageAlternateVoyageSubmenu" finished-at="2023-10-03T15:00:02 IST" duration-ms="9161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnManageAlternateVoyageSubmenu -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:swimGDSAutomation.PositiveTC.ManageBCNTest@32c726ee]" started-at="2023-10-03T15:00:02 IST" name="tearDown" finished-at="2023-10-03T15:00:02 IST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- swimGDSAutomation.PositiveTC.ManageBCNTest -->
+    </test> <!-- Positive Test cases -->
+  </suite> <!-- Manage BCN menu and its Sub-menu Functionality -->
 </testng-results>

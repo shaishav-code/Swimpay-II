@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import swimGDSAutomation.pageclass.ContactPage;
+import swimGDSAutomation.pageclass.ManageBCNPage;
 import swimGDSAutomation.pageclass.ManageTEUSlotsPage;
 import swimGDSAutomation.pageclass.ManageTradingTermPage;
 import swimGDSAutomation.pageclass.ManageVoyagePage;
@@ -324,6 +325,18 @@ public class AbstractComponentsMethods{
     	managevoyagemenu.click();
     	ManageVoyagePage managevoyagepage = new ManageVoyagePage(driver);
         return managevoyagepage;
+    }
+    
+                 ///////////////Manage Voyage////////////////////
+    
+    @FindBy(xpath="(//*[@title='Manage BCN'])[1]")
+    private WebElement manageBCNmenu;
+
+    public ManageBCNPage ManageBCNPageOption()
+    {
+       manageBCNmenu.click();
+       ManageBCNPage managebcnpage = new ManageBCNPage(driver);
+       return managebcnpage;
     }
 
 }
