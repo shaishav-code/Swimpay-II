@@ -18,8 +18,8 @@ public class ManageBCNTest extends BaseClass {
 	 public void ClickOnManageBCNMenu() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageBCNPage managebcnpage = landingPage.ManageBCNPageOption();
 	 try {

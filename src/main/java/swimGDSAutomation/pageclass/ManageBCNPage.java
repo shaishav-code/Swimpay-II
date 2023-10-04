@@ -35,6 +35,12 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[text()='Submit']")
 	private WebElement Submitbtn;
 	
+	//Click on Enter BCN Number Range sub-menu
+	public void Click_BCNrangesubmenu()
+	{
+		BCN_range.click();
+	}
+	
 	//Enter Starting number in the field
 	public void Enter_startingnumber(String startingno)
 	{
@@ -83,6 +89,11 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@class='dropdown-item js-change-status']")
 	private List<WebElement> Actionmenu_dropdownoptions;
 	
+	//Click on Manage BCN number sub-menu
+	public void Click_manageBCNno()
+	{
+		ManageBCNno.click();
+	}
 	
 	//Click on Add BCN Number Range button
 	public void Click_AddBCNRangeBtn()
@@ -159,6 +170,12 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="(//*[text()='No'])[3]")
 	private WebElement nobtn;
 	
+	//Click on Cancel BCN sub-menu
+	public void Click_cancelBCN()
+	{
+		cancelBCN.click();
+	}
+	
 	//Enter BCN Number in the field
 	public void Enter_BCNno(String BCNno)
 	{
@@ -198,6 +215,11 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="(//*[text()='View BCN'])[3]")
 	private WebElement viewBCNbtn;
 	
+	//Click on View BCN sub-menu
+	public void Click_viewBCN()
+	{
+		viewBCN.click();
+	}
 	
 	//Click on View BCN button
 	public void click_ViewBCNbtn()
@@ -223,8 +245,23 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@class='dropdown-item js-action-manage']")
 	private List<WebElement> menu_options;
 	
+	@FindBy(xpath="//*[@aria-label='Next »']")
+	private WebElement pagination;
+	
+	@FindBy(xpath="//*[@class='swm-caret-up sorting active']")
+	private WebElement descarrow;
+	
+	@FindBy(xpath="(//*[@class='swm-caret-down sorting'])[3]")
+	private WebElement ascarrow;
+	
 	@FindBy(xpath="//*[@class='close']")
 	private WebElement closebtn;
+	
+	//Click on Manage BCN sub-menu
+	public void Click_manageBCNsubmenu()
+	{
+		manageBCNsubmenu.click();
+	}
 	
 	//Click on Status and Select buyer field
 	public void Click_dropdownfield(int i)
@@ -232,6 +269,80 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 		dropdownsfield.get(i).click();
 	}
 	
+	//Verify if user is able to select the options from the status dropdown
+    public void Select_menudropdownoption(String menuoption)
+	{
+    	
+    	for(WebElement options:menu_options)
+		{
+			String status = options.getText();
+			if(status.contains(menuoption))
+			{
+				options.click();
+			}
+		}
+	}
+	
+	//Verify if user is able to select the options from the status dropdown
+    public void Select_statusdropdownoption(String action)
+	{ 	
+    	for(WebElement options:status_dropdownoptions)
+		{
+			String status = options.getText();
+			if(status.contains(action))
+			{
+				options.click();
+			}
+		}
+	}
+    
+	//Verify if user is able to select the options from the Select Buyer dropdown
+    public void Select_buyerdropdownoption(String action)
+	{
+    	menubutton.click();
+    	
+    	for(WebElement options:selectbuyer_dropdownoptions)
+		{
+			String buyername = options.getText();
+			if(buyername.contains(action))
+			{
+				options.click();
+			}
+		}
+	}
+    
+    //Verify if user is able to click on Page Navigation Arrows
+  	public void Click_PageNavigationArrow()
+  	{
+  		try {
+  		 while (true) 
+  		 {
+  		    if (!pagination.isEnabled()) 
+  		    {
+  		    	System.out.println(pagination.isEnabled());
+  		        break;
+  		    }
+  		    
+  	        pagination.click();
+  		 }
+  		}
+  		 catch(Exception e){
+  			 System.out.println("Executing the catch block");
+  		 }     
+  	}
+    
+  //Click on Asc Arrow
+    public void Click_Ascarrow()
+    {
+    	ascarrow.click();
+    }
+    
+	//Click on Asc Arrow
+    public void Click_Descarrow()
+    {
+    	descarrow.click();
+    }
+    
 	//Click on cross icon to close the screen
 	public void Click_crossicon()
 	{
@@ -239,52 +350,60 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	}
 	
 	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
+        /////////////////////Review Balance Shift///////////////////
 	
 	@FindBy(xpath="//*[@title='Review Balance Shift']")
 	private WebElement reviewbalanceshift;
 	
+	@FindBy(xpath="//*[@class='balance-shift-top collapsed']")
+	private List <WebElement> details;
+	
+	@FindBy(xpath="//*[@class='btn btn-secondary']")
+	private WebElement declinebtbn;
+	
+	@FindBy(xpath="//*[@class='btn btn-primary']")
+	private WebElement acceptbtbn;
+	
+	//Click on menu to see the details
+	public void Click_toseethedetails(int i)
+	{
+		for(int j=0;j<details.size();j++)
+		{
+			details.get(j).click();
+		}
+	}
+
+	//Click on Decline button
+	public void Click_declinebtn()
+	{
+		declinebtbn.click();
+	}
+	
+	//Click on Accept button
+	public void Click_acceptbtn()
+	{
+		acceptbtbn.click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	@FindBy(xpath="//*[@title='Manage Alternative Voyage']")
 	private WebElement manageAlternatevoyage;
 	
-	//Click on Enter BCN Number Range sub-menu
-	public void Click_BCNrangesubmenu()
-	{
-		BCN_range.click();
-	}
+
 	
-	//Click on Manage BCN number sub-menu
-	public void Click_manageBCNno()
-	{
-		ManageBCNno.click();
-	}
+
 	
-	//Click on Cancel BCN sub-menu
-	public void Click_cancelBCN()
-	{
-		cancelBCN.click();
-	}
+
 	
-	//Click on View BCN sub-menu
-	public void Click_viewBCN()
-	{
-		viewBCN.click();
-	}
+
 	
-	//Click on Manage BCN sub-menu
-	public void Click_manageBCNsubmenu()
-	{
-		manageBCNsubmenu.click();
-	}
+
 	
 	//Click on Review Balance shift sub-menu
 	public void Click_reviewbalanceshift()

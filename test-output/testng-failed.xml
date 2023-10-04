@@ -5,9 +5,9 @@
     <classes>
       <class name="swimGDSAutomation.PositiveTC.ManageBCNTest">
         <methods>
+          <include name="ClickOnManageBCNMenu"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
-          <include name="ClickOnEditBankInfo"/>
         </methods>
       </class> <!-- swimGDSAutomation.PositiveTC.ManageBCNTest -->
     </classes>
