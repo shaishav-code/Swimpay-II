@@ -2,10 +2,12 @@ package swimGDSAutomation.pageclass;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.locators.RelativeLocator;
 
 import swimGDSAutomation.AbstractComponents.AbstractComponentsMethods;
 
@@ -20,8 +22,7 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-	           ////////////////////Enter BCN Number Range////////////////
+	        ////////////////////Enter BCN Number Range////////////////
 	
 	@FindBy(xpath="//*[@title='Enter BCN Number Range']")
 	private WebElement BCN_range;
@@ -29,8 +30,14 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@name='start_number']")
 	private WebElement startnumberfield;
 	
+	@FindBy(xpath="//*[@id='start_number-error']")
+	private WebElement Validation_startnumberfield;
+	
 	@FindBy(xpath="//*[@name='end_number']")
 	private WebElement endnumberfield;
+	
+	@FindBy(xpath="//*[@id='end_number-error']")
+	private WebElement Validation_endnumberfield;
 	
 	@FindBy(xpath="//*[text()='Submit']")
 	private WebElement Submitbtn;
@@ -47,10 +54,28 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 		startnumberfield.sendKeys(startingno);
 	}
 	
+	//Validation on Starting number in the field
+	public boolean Validation_onstartingnumber()
+	{
+		return Validation_startnumberfield.isDisplayed();
+	}
+	
 	//Enter Ending number in the field
 	public void Enter_Endingnumber(String endingno)
 	{
-		startnumberfield.sendKeys(endingno);
+		endnumberfield.sendKeys(endingno);
+	}
+	
+	//Validation on ending number in the field
+	public boolean Validation_onendingnumber()
+	{
+		return Validation_endnumberfield.isDisplayed();
+	}
+	
+	//Submit button is enabled or not
+	public boolean Enabled_submitBtn()
+	{
+		return Submitbtn.isEnabled();
 	}
 	
 	//Click on Submit button
@@ -66,7 +91,7 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	private WebElement ManageBCNno;
 	
 	@FindBy(xpath="//*[@class='action-menu dropdown-toggle']")
-	private WebElement menubutton;
+	private List <WebElement> menubutton;
 	
 	@FindBy(xpath="//*[@class='btn btn-primary btn-add-range']")
 	private WebElement addBCNrange_btn;
@@ -86,7 +111,7 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[text()='Yes, Delete it']")
 	private WebElement deletebtbn;
 	
-	@FindBy(xpath="//*[@class='dropdown-item js-change-status']")
+	@FindBy(xpath="//*[@class='dropdown-menu-right dropdown-menu show']//li")
 	private List<WebElement> Actionmenu_dropdownoptions;
 	
 	//Click on Manage BCN number sub-menu
@@ -101,6 +126,12 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 		addBCNrange_btn.click();
 	}
 	
+	//Add button is enabled or not
+	public boolean Enabled_AddBtn()
+	{
+		return addbutton.isEnabled();
+	}
+	
 	//Click on Add button
 	public void Click_AddBtn()
 	{
@@ -110,19 +141,32 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	//Click on Cancel button
 	public void Click_CancelBtn()
 	{
-		cancelBCN.click();
+		cancelbutton.click();
 	}
 	
 	//Click on menu button
-	public void Click_menubtn()
+	public void Click_menubtn(int i)
 	{
-		menubutton.click();
+		menubutton.get(i).click();
 	}	
-
-	//Verify if user is able to select the options from the dropdown
-    public void Select_dropdownoption(String action)
+    
+	//Enter Starting number in the field
+	public void Enter_startingnumberinedit(String startingno)
 	{
-    	menubutton.click();
+		startnumberfield.clear();
+		startnumberfield.sendKeys(startingno);
+	}
+	
+	//Enter Ending number in the field
+	public void Enter_Endingnumberinedit(String endingno)
+	{
+		endnumberfield.clear();
+		endnumberfield.sendKeys(endingno);
+	}
+	
+	//Verify if user is able to select the options from the dropdown
+    public void Select_dropdownoption(String action) 
+    {
     	
     	for(WebElement options:Actionmenu_dropdownoptions)
 		{
@@ -163,12 +207,18 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	
 	@FindBy(xpath="//*[@id='cancel-type-select']")
 	private WebElement cancellationtypefield;
+	
+	@FindBy(xpath="//*[@class='dropdown-item']")
+	private List<WebElement> cancellationoptions;
+	
+	@FindBy(xpath="//*[@class='js-action-view']")
+	private WebElement showdetails;
 		
 	@FindBy(xpath="//*[text()='Yes']")
 	private WebElement yesbtn;
 	
 	@FindBy(xpath="(//*[text()='No'])[3]")
-	private WebElement nobtn;
+	private WebElement Nobtn;
 	
 	//Click on Cancel BCN sub-menu
 	public void Click_cancelBCN()
@@ -182,8 +232,8 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 		enterBCNno.sendKeys(BCNno);
 	}
 	
-	//Click on  BCN Number in the field
-	public void Click_BCNnofield(String BCNno)
+	//Click on BCN Number in the field
+	public void Click_BCNnofield()
 	{
 		enterBCNno.click();
 	}
@@ -194,10 +244,44 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 		cancellationtypefield.click();
 	}
 	
+	//Verify if user is able to select the options from the status dropdown
+    public void Select_cancellationtypeoption(String type)
+	{ 	
+    	for(WebElement options:cancellationoptions)
+		{
+			String status = options.getText();
+			if(status.contains(type))
+			{
+				options.click();
+			}
+		}
+	}
+    
+
+	//Verify if user is able to select the options from the status dropdown
+    public void Select_BCNNumberFromoption(String type)
+	{ 	
+    	for(WebElement options:cancellationoptions)
+		{
+			String status = options.getText();
+			if(status.contains(type))
+			{
+				options.click();
+			}
+		}
+	}
+    
+    
+	//Click on show details link
+	public void click_showdetails()
+	{
+		showdetails.click();
+	}
+	
 	//Click on No button
 	public void click_Nobtn()
 	{
-		nobtbn.click();
+		Nobtn.click();
 	}
 	
 	//Click on Yes button
@@ -207,7 +291,7 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	}
 	
 	
-              /////////////////////View BCN/////////////////
+              /////////////////////View BCN/////////////////////
 	
 	@FindBy(xpath="//*[@title='View BCN']")
 	private WebElement viewBCN;
@@ -227,6 +311,19 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 		viewBCNbtn.click();
 	}
 	
+	//Verify if user is able to select the options from the status dropdown
+    public void Select_BCNnumberfromdropdownoption(String BCN)
+	{ 	
+    	for(WebElement options:cancellationoptions)
+		{
+			String status = options.getText();
+			if(status.contains(BCN))
+			{
+				options.click();
+			}
+		}
+	}
+	
 	 
 	         /////////////////////Manage BCN////////////////
 	
@@ -242,8 +339,17 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@class='dropdown-item company-name ']")
 	private List<WebElement> selectbuyer_dropdownoptions;
 	
-	@FindBy(xpath="//*[@class='dropdown-item js-action-manage']")
+	@FindBy(xpath="//*[@class='dropdown-menu-right dropdown-menu show']//li")
 	private List<WebElement> menu_options;
+	
+	@FindBy(xpath="//*[@id='manage-bcn-result']//tr//td")
+	private List<WebElement> common;
+	
+	@FindBy(xpath="//*[@class='btn btn-primary btn-action']")
+	private List<WebElement> yesbtn_Tocancelbcn;
+	
+	@FindBy(xpath="//*[@class='btn btn-secondary']")
+	private List<WebElement> nobtn_Tocancelbcn;
 	
 	@FindBy(xpath="//*[@aria-label='Next »']")
 	private WebElement pagination;
@@ -298,9 +404,7 @@ public class ManageBCNPage extends AbstractComponentsMethods{
     
 	//Verify if user is able to select the options from the Select Buyer dropdown
     public void Select_buyerdropdownoption(String action)
-	{
-    	menubutton.click();
-    	
+	{    	
     	for(WebElement options:selectbuyer_dropdownoptions)
 		{
 			String buyername = options.getText();
@@ -310,6 +414,25 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 			}
 		}
 	}
+    
+    WebElement link;
+	
+   	   //Verify if user is able to view of Action Column
+       public void Click_MenuOnActionColumn(String filename)
+       {
+    	   common.size();
+           for (WebElement referenceElement : common) 
+       	 {
+       		String getreferenceElement = referenceElement.getText().toString();
+       		if (getreferenceElement.contains(filename)) 
+       			{
+       			link = driver.findElement(RelativeLocator.with(By.xpath("//*[@class='swim-icon swm-menu']")).toRightOf(referenceElement));
+       			
+       			}
+            }
+           link.click();
+        }
+       
     
     //Verify if user is able to click on Page Navigation Arrows
   	public void Click_PageNavigationArrow()
@@ -331,11 +454,24 @@ public class ManageBCNPage extends AbstractComponentsMethods{
   		 }     
   	}
     
-  //Click on Asc Arrow
+   //Click on Asc Arrow
     public void Click_Ascarrow()
     {
     	ascarrow.click();
     }
+    
+    
+     //Click on yes btn to cancel BCN
+     public void Click_yesbtn_tocancelbcn(int i)
+     {
+    	 yesbtn_Tocancelbcn.get(i).click();
+     }
+     
+     //Click on No btn to cancel BCN
+     public void Click_nobtn_tocancelbcn(int i)
+     {
+    	 nobtn_Tocancelbcn.get(i).click();
+     }
     
 	//Click on Asc Arrow
     public void Click_Descarrow()
@@ -355,6 +491,9 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@title='Review Balance Shift']")
 	private WebElement reviewbalanceshift;
 	
+	@FindBy(xpath="//*[@class='dropdown-item company-name']")
+	private List<WebElement> selectbuyer_dropdownoptions_inReviewBalanceShift;
+	
 	@FindBy(xpath="//*[@class='balance-shift-top collapsed']")
 	private List <WebElement> details;
 	
@@ -364,13 +503,40 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@class='btn btn-primary']")
 	private WebElement acceptbtbn;
 	
+	//Click on Review Balance shift sub-menu
+	public void Click_reviewbalanceshift()
+	{
+		reviewbalanceshift.click();
+	}
+	
+	//Verify if user is able to select the options from the Select Buyer dropdown
+    public void Select_buyerdropdownoption_InBalReviewShift(String action)
+	{    	
+    	for(WebElement options:selectbuyer_dropdownoptions_inReviewBalanceShift)
+		{
+			String buyername = options.getText();
+			if(buyername.contains(action))
+			{
+				options.click();
+			}
+		}
+	}
+	
 	//Click on menu to see the details
-	public void Click_toseethedetails(int i)
+	public void Click_toseethedetails()
 	{
 		for(int j=0;j<details.size();j++)
 		{
 			details.get(j).click();
 		}
+	}
+	
+	//Click on particular Row
+	public void Click_toseetheparticulardetails(int j)
+	{
+	
+			details.get(j).click();
+	
 	}
 
 	//Click on Decline button
@@ -383,38 +549,48 @@ public class ManageBCNPage extends AbstractComponentsMethods{
 	public void Click_acceptbtn()
 	{
 		acceptbtbn.click();
-	}
+	}	
 	
 	
 	
-	
-	
-	
+	           //////////////////Manage Alternative Voyage////////////////
 	
 	
 	@FindBy(xpath="//*[@title='Manage Alternative Voyage']")
 	private WebElement manageAlternatevoyage;
 	
-
+	@FindBy(xpath="//*[@class='balance-shift-top']")
+	private List <WebElement> managedetails;
 	
-
-	
-
-	
-
-	
-
-	
-	//Click on Review Balance shift sub-menu
-	public void Click_reviewbalanceshift()
-	{
-		reviewbalanceshift.click();
-	}
+	@FindBy(xpath="//*[@class='dropdown-item company-name']")
+	private List<WebElement> selectbuyer_dropdownoptions_inManageVoyage;
 	
 	//Click on Manage Alternate Voyage sub-menu
 	public void Click_manageAlternatevoyage()
 	{
 		manageAlternatevoyage.click();
+	}
+	
+	//Click on menu to see the details
+	public void Click_toseethemanagedetails()
+	{
+		for(int j=0;j<managedetails.size();j++)
+		{
+			managedetails.get(j).click();
+		}
+	}
+	
+	//Verify if user is able to select the options from the Select Buyer dropdown
+    public void Select_buyerdropdownoption_inManageVoyage(String action)
+	{    	
+    	for(WebElement options:selectbuyer_dropdownoptions_inManageVoyage)
+		{
+			String buyername = options.getText();
+			if(buyername.contains(action))
+			{
+				options.click();
+			}
+		}
 	}
 	
 }

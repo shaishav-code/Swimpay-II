@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.ManageBCNTest">
+      <class name="swimGDSAutomation.NegativeTC.NegativeStandardDocumentsTest">
         <methods>
-          <include name="ClickOnManageBCNMenu"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
+          <include name="EnterNthNumbersDetailsInVersionFieldInUploadTnCSubmenu"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.ManageBCNTest -->
+      </class> <!-- swimGDSAutomation.NegativeTC.NegativeStandardDocumentsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

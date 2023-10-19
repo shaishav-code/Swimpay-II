@@ -112,7 +112,7 @@ public class LoginTest extends BaseClass{
 	}
 	
 	//Verify if user is able to click on Back arrow to navigate to Landing page
-    //Failed
+    //pass- https://prnt.sc/qBOSRmEGW5Le
 	@Test(priority=7)
 
 	public void ClickBackArrowToNavigateLandingPage() {
@@ -128,6 +128,7 @@ public class LoginTest extends BaseClass{
 	
 	
 	//Verify if user is able to get the title for the Login page
+	//Pass- https://prnt.sc/7h5S9wN10B70
 	@Test(priority=8)
 
 	public void GetTitleForLoginPage() {

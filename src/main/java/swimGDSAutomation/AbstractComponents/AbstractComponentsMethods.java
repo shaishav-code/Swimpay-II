@@ -13,12 +13,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import swimGDSAutomation.pageclass.ContactPage;
 import swimGDSAutomation.pageclass.ManageBCNPage;
+import swimGDSAutomation.pageclass.ManageCouponPage;
 import swimGDSAutomation.pageclass.ManageTEUSlotsPage;
 import swimGDSAutomation.pageclass.ManageTradingTermPage;
 import swimGDSAutomation.pageclass.ManageVoyagePage;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.QuotesPage;
 import swimGDSAutomation.pageclass.SellerReportPage;
+import swimGDSAutomation.pageclass.StandardDocumentsPage;
 import swimGDSAutomation.pageclass.UserManualPage;
 
 public class AbstractComponentsMethods{
@@ -37,7 +39,7 @@ public class AbstractComponentsMethods{
 		
        JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0, 400)");
-	    js.executeScript("window.scrollBy(0, -400)");
+	   // js.executeScript("window.scrollBy(0, -400)");
 	}
 
 	//Scrolling till particular webelement
@@ -327,7 +329,7 @@ public class AbstractComponentsMethods{
         return managevoyagepage;
     }
     
-                 ///////////////Manage Voyage////////////////////
+                 ///////////////Manage BCN////////////////////
     
     @FindBy(xpath="(//*[@title='Manage BCN'])[1]")
     private WebElement manageBCNmenu;
@@ -338,6 +340,31 @@ public class AbstractComponentsMethods{
        ManageBCNPage managebcnpage = new ManageBCNPage(driver);
        return managebcnpage;
     }
+    
+    
+                ////////////////Standard Documents/////////////////
+    
+    @FindBy(xpath="//*[text()='Standard Documents']")
+    private WebElement standarddocumentsmenu;
+
+    public StandardDocumentsPage StandardDocumentsPageOption()
+    {
+      standarddocumentsmenu.click();
+      StandardDocumentsPage standarddocumentsnpage = new StandardDocumentsPage(driver);
+      return standarddocumentsnpage;
+    }
+    
+                ////////////////Manage Coupon/////////////////
+    
+    @FindBy(xpath="//*[text()='Manage Coupons']")
+    private WebElement managecouponmenu;
+
+    public ManageCouponPage ManageCouponPageOption()
+    {  
+      managecouponmenu.click();
+      ManageCouponPage managecouponpage = new ManageCouponPage(driver);
+      return managecouponpage;
+     }
 
 }
 

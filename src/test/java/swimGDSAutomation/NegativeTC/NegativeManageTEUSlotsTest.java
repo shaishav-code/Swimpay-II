@@ -118,8 +118,8 @@ public class NegativeManageTEUSlotsTest extends BaseClass{
 	 public void AutosuggestionForTheMatchingMonth() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();

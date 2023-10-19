@@ -59,7 +59,8 @@ public class NegativeMyAccountTest extends BaseClass {
 	 myaccountpage.Click_Companysavebtn();
 	 
 	 }
- //Verify if user is able to enter the blankspace in all mandatory fields and click on save changes button in Edit company info pop-up
+	 
+     //Verify if user is able to enter the blankspace in all mandatory fields and click on save changes button in Edit company info pop-up
 	 @Test(priority=3)
 	 public void EnterBlankSpaceInAllField_ClickSaveBtn() {
 		
@@ -563,7 +564,7 @@ public class NegativeMyAccountTest extends BaseClass {
 			}
 	     }
 		 
-		//Verify if user is able to insert the Blankspace in all required fields and is able to save the changes in Billing info popup
+		 //Verify if user is able to insert the Blankspace in all required fields and is able to save the changes in edit bank info popup
 		 @Test(priority=22)
 		 public void InsertBlankSpaceInAllFields_ClickSaveBankBtn() {
 			
@@ -597,8 +598,8 @@ public class NegativeMyAccountTest extends BaseClass {
 				e.printStackTrace();
 			}
 	     }
- 
-		 //Verify if user is able to insert the numbers in all required fields and is able to save the changes in Billing info popup
+		 
+		 //Verify if user is able to insert the numbers in all required fields and is able to save the changes in Edit Bank info info popup
 		 //Passed
 		 @Test(priority=23)
 		 public void InsertNumbersInAllFields_ClickSaveBankBtn() {
@@ -614,7 +615,7 @@ public class NegativeMyAccountTest extends BaseClass {
 		 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 		 myaccountpage.scrolling();
 		 myaccountpage.Click_editbankinfo();	
-		 myaccountpage.Enter_bank("1221211");
+		 myaccountpage.Enter_bank("@#@!##$");
 		 myaccountpage.Enter_Address1_bank("1221211");
 		 myaccountpage.Enter_Address2_bank("1221211");
 		 myaccountpage.Enter_region_bank("1221211");
@@ -625,6 +626,43 @@ public class NegativeMyAccountTest extends BaseClass {
 		 myaccountpage.Enter_accountnumber("1221211");
 		 myaccountpage.Enter_Swiftcode("1221211");
 		 myaccountpage.Enter_IBANcode("1221211");
+		 myaccountpage.Click_banksavebtn();
+		 myaccountpage.Validationbank();
+		
+		 try {
+				myaccountpage.waitCode();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+	     }
+ 
+		 //Verify if user is able to insert the Special characters in all required fields and is able to save the changes in Edit Bank info info popup
+		 //Passed
+		 @Test(priority=24)
+		 public void InsertSpecialCharactersNumbersInAllFields_ClickSaveBankBtn() {
+			
+		 LandingPage landingPage = new LandingPage(driver);
+		 landingPage.SellerLogin();	
+		 landingPage.Loginpage();
+		 landingPage.Enter_useremail(email);
+		 landingPage.Enter_password(password);
+		 landingPage.Loginbtn();
+		 AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
+		 accountmanagement.Click_myaccount();
+		 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
+		 myaccountpage.scrolling();
+		 myaccountpage.Click_editbankinfo();	
+		 myaccountpage.Enter_bank("@#@!##$");
+		 myaccountpage.Enter_Address1_bank("@#@!##$");
+		 myaccountpage.Enter_Address2_bank("@#@!##$");
+		 myaccountpage.Enter_region_bank("@#@!##$");
+		 myaccountpage.Enter_postcode_bank("@#@!##$");
+		 myaccountpage.Enterstate_bank("@#@!##$");
+		 myaccountpage.Selectcountry_bank();
+		 myaccountpage.Enter_accountname("@#@!##$");
+		 myaccountpage.Enter_accountnumber("@#@!##$");
+		 myaccountpage.Enter_Swiftcode("@#@!##$");
+		 myaccountpage.Enter_IBANcode("@#@!##$");
 		 myaccountpage.Click_banksavebtn();
 		 myaccountpage.Validationbank();
 		

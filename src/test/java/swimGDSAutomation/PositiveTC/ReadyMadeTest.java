@@ -31,12 +31,13 @@ public class ReadyMadeTest extends BaseClass {
 	 }
 	 
 	 //Verify if user is able to click on the Select buyer dropdown with buyer name listed
+	 //Pass- manually working fine- https://prnt.sc/pCBSmgHwkaR_
 	 @Test(priority=2)
 	 public void SelectBuyerName() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -57,7 +58,7 @@ public class ReadyMadeTest extends BaseClass {
      }
 	 
 	 //Verify if user is able to click on view button and can view the buyer details
-	 @Test( dependsOnMethods="SelectBuyerName",priority=3)
+	 @Test(priority=3)
 	 public void ClickViewButtonToViewDetails() {
 		 
 	 LandingPage landingPage = new LandingPage(driver);
@@ -83,6 +84,7 @@ public class ReadyMadeTest extends BaseClass {
      }
 	 
 	 //Verify if user is able to Change the buyer by clicking on the dropdown again 
+	 //Pass- https://prnt.sc/BkyiuG9y5I_f
 	 @Test( priority=4)
 	 public void ChangeBuyerByClickingOnDropdownAgain() {
 		 

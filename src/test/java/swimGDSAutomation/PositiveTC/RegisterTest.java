@@ -19,6 +19,7 @@ public class RegisterTest extends BaseClass {
 	String SCAC = "1111";
 	
 	//Verify if user is able to get the title for the Registration page
+	//pass- https://prnt.sc/qbsenoqxetPw
 	@Test(priority=1)
 
 	public void GetTitleForRegisterPage() {

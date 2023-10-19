@@ -61,7 +61,7 @@ public class ListTradingTermsTest extends BaseClass{
 	 ManageTradingTermPage managetradingterms = landingPage.ManageTradingTermOption();
 	 ListTradingTermsPage listtradingterms = managetradingterms.ListTradingTermsPageOptions();
 	 listtradingterms.Entries("Nik1234");
-	 Thread.sleep(3000);
+	 listtradingterms.waitCode();
 	 listtradingterms.Click_no_btn();
 	 
 	 }
@@ -80,7 +80,7 @@ public class ListTradingTermsTest extends BaseClass{
 	 ManageTradingTermPage managetradingterms = landingPage.ManageTradingTermOption();
 	 ListTradingTermsPage listtradingterms = managetradingterms.ListTradingTermsPageOptions();
 	 listtradingterms.Entries("Nik1234");
-	 Thread.sleep(3000);
+	 listtradingterms.waitCode();
 	 listtradingterms.Click_yes_btn();
 	 listtradingterms.Success_message();
 	 
@@ -99,7 +99,7 @@ public class ListTradingTermsTest extends BaseClass{
 	 ManageTradingTermPage managetradingterms = landingPage.ManageTradingTermOption();
 	 ListTradingTermsPage listtradingterms = managetradingterms.ListTradingTermsPageOptions();
 	 listtradingterms.Entries("Nik1234");
-	 Thread.sleep(3000);
+	 listtradingterms.waitCode();
 	 listtradingterms.Click_nobtn();
 	 
 	 }
@@ -110,21 +110,21 @@ public class ListTradingTermsTest extends BaseClass{
 	 public void ChangeTheStatusToDeactivite_AndViewValidation() throws InterruptedException   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTradingTermPage managetradingterms = landingPage.ManageTradingTermOption();
 	 ListTradingTermsPage listtradingterms = managetradingterms.ListTradingTermsPageOptions();
-	 listtradingterms.Entries("121");
-	 Thread.sleep(3000);
+	 listtradingterms.Entries("terms");
+	 listtradingterms.waitCode();
 	 listtradingterms.Click_yes_btn();
-	 listtradingterms.Entries("121");
+	 listtradingterms.Entries("terms");
 	 String validation = listtradingterms.Getvalidationonpopup();
 	 System.out.println("Validation popup text :" + validation);
 	 Assert.assertEquals(validation, "Term Code will become invalid after it gets deactivated");
-	 Thread.sleep(3000);
+	 listtradingterms.waitCode();
 	 
 	 }
 	 
@@ -141,7 +141,7 @@ public class ListTradingTermsTest extends BaseClass{
 	 ManageTradingTermPage managetradingterms = landingPage.ManageTradingTermOption();
 	 ListTradingTermsPage listtradingterms = managetradingterms.ListTradingTermsPageOptions();
 	 listtradingterms.Entries("Nik1234");
-	 Thread.sleep(3000);
+	 listtradingterms.waitCode();
 	 listtradingterms.Click_yesbtn();
 	 listtradingterms.Success_message();
 	 
@@ -184,8 +184,8 @@ public class ListTradingTermsTest extends BaseClass{
      try {
     	     listtradingterms.Click_pagination();
 			} catch (ElementClickInterceptedException e) {
-				e.printStackTrace();
-			}
+			e.printStackTrace();
+	 }
 	 
 	 }
 	 
