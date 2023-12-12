@@ -19,8 +19,8 @@ public class QuotesTest extends  BaseClass{
 	  public void Visit_QuotesPage()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -34,8 +34,8 @@ public class QuotesTest extends  BaseClass{
 	  public void VerifyQuotesin_CarrierContainer()
 	  {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -51,8 +51,8 @@ public class QuotesTest extends  BaseClass{
 	  public void ClickDropDown_VisibleOptions()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -66,8 +66,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectCancelledStatus()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -88,8 +88,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectAcceptedStatus()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -110,8 +110,8 @@ public class QuotesTest extends  BaseClass{
 	  public void Select_OutOfDateStatus()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -132,8 +132,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectQuotedStatus()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -154,8 +154,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectDeclinedStatus()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -181,8 +181,8 @@ public class QuotesTest extends  BaseClass{
 	  public void VerifyQuotesin_ShippedContainer()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -195,8 +195,8 @@ public class QuotesTest extends  BaseClass{
 	  public void ClickDropDown_ShippedContainer()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -210,8 +210,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectCancelledStatus_ShippedContainer()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -233,8 +233,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectAcceptedStatus_ShippedContainer()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -256,8 +256,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectOutofDateStatus_ShippedContainer()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -279,8 +279,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectQuotedStatus_ShippedContainer()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();
@@ -302,8 +302,8 @@ public class QuotesTest extends  BaseClass{
 	  public void SelectDeclinedStatus_ShippedContainer() throws InterruptedException
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();

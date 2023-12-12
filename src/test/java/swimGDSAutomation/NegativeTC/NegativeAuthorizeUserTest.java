@@ -9,25 +9,26 @@ import swimGDSAutomation.pageclass.LandingPage;
 
 public class NegativeAuthorizeUserTest extends BaseClass {
 	
-	 String email = "nda.norala@yopmail.com";
-     String password ="Dilip@07";
+	 String email = "nda.norala@gmail.com";
+     String password ="Nikhil@86";
 
-	 //Verify if user is able to get the searched list by keeping search field blank and click on submit button
-	 @Test(priority=1)
-	 public void WithoutInsertingValues_ClickOnSubmitButton() {
+	   //Verify if user is able to get the searched list by keeping search field blank and click on submit button
+	   @Test(priority=1)
+	   public void WithoutInsertingValues_ClickOnSubmitButton() {
 		
-	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
-	 landingPage.Loginbtn();
-	 AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
-	 AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
-	 authorizeuserpage.titleOfPage();
-	 authorizeuserpage.Enterdetails_searchtab("");
-	 authorizeuserpage.Click_submitbtn();
-    }
+	   LandingPage landingPage = new LandingPage(driver);
+	   landingPage.SellerLogin();	
+	   landingPage.Loginpage();
+	   landingPage.Enter_useremail(email);
+	   landingPage.Enter_password(password);
+	   landingPage.Loginbtn();
+	   AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
+	   AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
+	   authorizeuserpage.titleOfPage();
+	   authorizeuserpage.Enterdetails_searchtab("");
+	   authorizeuserpage.Click_submitbtn();
+	   
+       }
 	 
 	     String user="virat";
 	     //Verify if user is able to edit the details without inserting First & Last name in Edit details popup
@@ -106,7 +107,7 @@ public class NegativeAuthorizeUserTest extends BaseClass {
 	     authorizeuserpage.Enter_firstname("August");
 	     authorizeuserpage.Enter_lastname("August");
 	     authorizeuserpage .Enter_emailId("");
-	     authorizeuserpage.Enter_mobilenumber("73488973hh");
+	     authorizeuserpage.Enter_mobilenumber("734889734");
 	     authorizeuserpage.Click_createbtn();
 	     try {
 			    authorizeuserpage.waitCode();
@@ -118,8 +119,7 @@ public class NegativeAuthorizeUserTest extends BaseClass {
 	     
 	    }
 		 
-		 
-		 //Verify if user is able to add the new Authorized user by inserting the invalid details in field and click on create button 
+		 //Verify if user is able to add the new Authorized user by inserting the Already registered email address in field and click on create button 
 		 @Test(priority=5)
 		 public void InsertingEmail_ClickCreateBtn() {
 			
@@ -134,7 +134,7 @@ public class NegativeAuthorizeUserTest extends BaseClass {
 	     authorizeuserpage.Click_addnewuser();
 	     authorizeuserpage.Enter_firstname("Nayan");
 	     authorizeuserpage.Enter_lastname("Akojwar");
-	     authorizeuserpage .Enter_emailId("test20@yopmail.com");
+	     authorizeuserpage .Enter_emailId("virat@yopmail.com");
 	     authorizeuserpage.Enter_mobilenumber("7846823787");
 	     authorizeuserpage.Click_createbtn();
 	     try {
@@ -146,7 +146,7 @@ public class NegativeAuthorizeUserTest extends BaseClass {
 		     }
 	    }
 		 
-		 //Verify if user is able to add the new Authorized user by inserting the Already registered email address in field and click on create button 
+		 //Verify if user is able to add the new Authorized user by inserting the invalid details in field and click on create button 
 		 @Test(priority=6)
 		 public void InsertingAlreadyRegisteredEmail_ClickCreateBtn() {
 			
@@ -206,7 +206,7 @@ public class NegativeAuthorizeUserTest extends BaseClass {
 	    }
 		 
 		 
-		 String Email3="test27@yopmail.com";
+		 String Email3="virat@yopmail.com";
 		 String Password3="Prabha@07";
 		 
 		 //Verify if user is able to do login by inactice Authorize user  

@@ -2,6 +2,8 @@ package swimGDSAutomation.pageclass;
 
 
 import java.util.List;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -63,6 +65,9 @@ public class RegisterPage extends AbstractComponentsMethods{
 		@FindBy(xpath="//*[text()='Company name is a required field']")
 		private WebElement validation_companytext;
 		
+		@FindBy(xpath="//*[@id='state-error']")
+		private WebElement validation_state;
+		
 		@FindBy(xpath="//*[text()='Company name is a required field']")
 		private WebElement validation_addresstext;
 		
@@ -71,6 +76,9 @@ public class RegisterPage extends AbstractComponentsMethods{
 		
 		@FindBy(xpath="//*[text()='Please enter a valid SCAC code']")
 		private WebElement validation_SCACcode;
+		
+		@FindBy(xpath="//*[text()='Next']")
+		private List<WebElement> register_nextbutton;
 		
 		
 		
@@ -87,32 +95,37 @@ public class RegisterPage extends AbstractComponentsMethods{
 			companyfield.sendKeys(compname);
 		}
 		
-		//Enter Address 1 & 2
-		public void Enter_addresses(String add1)
+		//Enter Address 1 
+		public void Enter_address1(String add1)
 		{
 			addressfield1.sendKeys(add1);
-			addressfield2.sendKeys("    ");//
+		}
+		
+		//Enter Address 2
+		public void Enter_address2(String add2)
+	 	{
+			addressfield2.sendKeys(add2);
 			scrolling();
 		}
+
 		//Enter Region
 		public void Enter_region(String region)
 		{
 			regionfield.sendKeys(region);
 		}
-		//Enter Postcode & state 
+		//Enter Postcode  
 		public void Enter_postcode(String postcode)
 		{
-			postfield.sendKeys(postcode);
-			statefield.sendKeys("Gujarat");  //Gujarat
-			
+			postfield.sendKeys(postcode);			
 		}
 		
-		public void EnterNegative_postcode(String postcode)
+		//Enter state 
+		public void Enter_state(String state)
 		{
-			postfield.sendKeys(postcode);
-			statefield.sendKeys("1111111");  
-			
+			statefield.sendKeys(state);  
+					
 		}
+		
 		//Select country name
 		public void Select_country(String country)
 		{
@@ -139,24 +152,8 @@ public class RegisterPage extends AbstractComponentsMethods{
 		{
 			scac_codefield.sendKeys(code);
 		}
+				
 		
-		
-		//Validation text for company and Addrees
-		public void Validationtext()
-		{
-			System.out.println("Validation of Company name :" +validation_companytext.getText());
-			System.out.println("Validation of Company address :" + validation_addresstext.getText());
-			
-		}
-		
-		//Validation text for mobile and SCAC
-		public void Validationtext1()
-		{
-			scrolling();
-			System.out.println("Validation of mobile number :"+ validation_mobileno.getText());
-			System.out.println("Validation of SCAC code :" + validation_SCACcode.getText());
-			
-		}	
 		       //////////////////////Master User///////////////////
 		
 		
@@ -208,30 +205,48 @@ public class RegisterPage extends AbstractComponentsMethods{
 		    return masteruser_sectiontext.getText();
 			}
 		
-		//Enter First and Last name 
-	    public void Enterfullname(String Fname)
+		//Enter First name 
+	    public void Enter_firstname(String Fname)
 	    {
 	    	firstname.sendKeys(Fname);
-	    	lastname.sendKeys("Infotech");
+	    }
+	    
+	    //Enter Last name 
+	    public void Enter_lastname(String Lname)
+	    {
+	    	lastname.sendKeys(Lname);
 	    }
 	    
 	    @FindBy(xpath="//*[@id='master-user-next']")
 		private WebElement nextbtn1;
-		
+	    
+	    //Diplayed next1 button
+		public boolean Displayed_next1()
+		{
+			return nextbtn1.isDisplayed();
+		}
+	    
+		//Click on next1 button
 		public void Click_next1()
 		{
 			nextbtn1.click();
+
 		}
-	  
-	    
-	  //Select dial code
+		
+	   //Select dial code
 	    public void Select_dialcode(String dial_code)
 		{
 			
 			Select select = new Select(dialcode);
 			select.selectByVisibleText(dial_code);
-			mobilenumber.sendKeys("1111122222");
 		}
+	    
+	    //Enter email address
+	    public void Enter_mobilenumber(String mobileno)
+	    {
+	    	mobilenumber.sendKeys(mobileno);
+	    }
+	    
 	    
 	
 	    //Enter email address
@@ -240,43 +255,48 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    	emailid.sendKeys(email);	
 	    }
 	    
-	    //Enter password and confirm password
+	    //Enter password
 	    public void Enter_password(String pass)
 	    {
 	    	password.sendKeys(pass);
-	    	confirmpassword.sendKeys("Nikhil@86");
+	    }
+	    
+	   //Enter confirm password
+	    public void Enter_cnfpassword(String cnfpass)
+	    {
+	    	confirmpassword.sendKeys(cnfpass);
 	    }
 	    
 	    //Enter question1 and answer1
-	    public void Select_que1(String ans1)
+	    public void Select_que1(String ans1, String text)
 	    {
 	    	Select select = new Select(que1);
 			select.selectByVisibleText(ans1);
-	    	answer1.sendKeys("07 July 1998");//
+	    	answer1.sendKeys(text);
 	    }
 	    
 	    //Negative: Enter question1 and answer1
-	    public void NegativeSelect_que1(String ans1)
+	    public void NegativeSelect_que1(String question1, String ans1)
 	    {
 	    	Select select = new Select(que1);
-			select.selectByVisibleText(ans1);
-	    	answer1.sendKeys("        ");//
+			select.selectByVisibleText(question1);
+	    	answer1.sendKeys(ans1);//
 	    }
 	    
-	  //Enter question2 and answer2
-	    public void Select_que2(String ans2)
+	    //Enter question2 and answer2
+	    public void Select_que2(String question1, String ans2)
 	    {
 	    	Select select = new Select(que2);
-			select.selectByVisibleText(ans2);
-	    	answer2.sendKeys("Mumbai");  //
+			select.selectByVisibleText(question1);
+	    	answer2.sendKeys(ans2);  
 	    }
 	    
 	    //Negative: Enter question2 and answer2
-	    public void NegativeSelect_que2(String ans2)
+	    public void NegativeSelect_que2(String ans2, String text)
 	    {
 	    	Select select = new Select(que2);
 			select.selectByVisibleText(ans2);
-	    	answer2.sendKeys("        ");//
+	    	answer2.sendKeys(text);
 	    }
 	    
 	    //validation on Password and confirm password field
@@ -317,7 +337,10 @@ public class RegisterPage extends AbstractComponentsMethods{
 	  	private WebElement auth_sectiontext;
 	    
 		@FindBy(xpath="//*[text()='Email is a required field']")
-		private WebElement validation_EmailAddress;
+		private WebElement validation_blankEmailAddress;
+	    
+		@FindBy(xpath="//*[@id='authorize_user[1][email]-error']")
+		private WebElement validation_invalidemail;
 	    
 	    
 	    
@@ -327,26 +350,30 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    return auth_sectiontext.getText();
 		}
 	    
-	    //Enter First and Last name of Authorize user
-	    public void EnterAuth_FirstndLastname(String AutFirstname)
+	    //Enter First name of Authorize user
+	    public void EnterAuth_Firstname(String AutFirstname)
 	    {
 	    	authorize_firstname.sendKeys(AutFirstname);
-	    	authorize_lastname.sendKeys("Narola");
 	    }
 	    
-	    //Negative: Enter First and Last name of Authorize user
-	    public void NegativeEnterAuth_FirstndLastname(String AutFirstname)
+	    //Enter last name of Authorize user
+	    public void EnterAuth_Lastname(String Autlastname)
 	    {
-	    	authorize_firstname.sendKeys(AutFirstname);
-	    	authorize_lastname.sendKeys("      ");
+	    	authorize_lastname.sendKeys(Autlastname);
 	    }
 	    
-	    //Enter authorize user's Dial code and Mobile number
+	    //Enter authorize user's Dial code
 	    public void EnterAuth_dialcode(String DialCode)
 	    {
 		   authorize_dialcode.sendKeys(DialCode); 
-		   authorize_mobile.sendKeys("1212121212");
 	    }  
+	    
+	    //Enter authorize user's  Mobile number
+	    public void EnterAuth_mobileno(String mobileno)
+	    {
+		   authorize_mobile.sendKeys(mobileno);
+	    }  
+
 	    
 	    //Enter the email address of Authorize user
 	    public void EnterAuth_email(String mailID)
@@ -360,25 +387,41 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    	auth_clearbtn.click();
 	    }
 	    
+
 	    //To add the authorize user
 	    public void ClickOnAddAuthorize() throws InterruptedException
 	    {
-	    	//add_authorizeUser.click();//
+	    	add_authorizeUser.click();
+
+	    }
+	    
+	    //Displayed authorize usernext button
+	    public boolean Displayed_nextbuttonInAuthorize() 
+	    {
+	    	return auth_nxtbtn.isDisplayed();
+	    }
+	    
+	    //To add the authorize user
+	    public void ClickOn_nextbuttonInAuthorize() throws InterruptedException
+	    {
 	    	waitCode();
 	    	auth_nxtbtn.click();
 	    }
 	    
-	  //Negative: To add the authorize user
-	    public void NegativeClickOnAddAuthorize() throws InterruptedException
+	    //Validation on blankspace Email address
+	    public boolean Validation_blankemailID()
 	    {
-	    	waitCode();
-	    	auth_nxtbtn.click();
+	    	System.out.println("Validation on email field of Auth section :" +validation_blankEmailAddress.getText());
+	    	return validation_blankEmailAddress.isDisplayed();
 	    }
-	    //Validation on Email address
-	    public void Validation3()
+	    
+	    //Validation on blankspace Email address
+	    public boolean Validation_invalidemailID()
 	    {
-	    	System.out.println("Validation on email field of Auth section :" +validation_EmailAddress.getText());
+	    	System.out.println("Validation on email field of Auth section :" +validation_invalidemail.getText());
+	    	return validation_invalidemail.isDisplayed();
 	    }
+	  
 	  
 	    
 	    
@@ -439,67 +482,76 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    	bankfield.sendKeys(bankname);
 	    }
 	    
-	    //Verify if user is able to add the Address 1 & 2
-	    public void Addbank_address(String bankaddress1)
+	    //Verify if user is able to add the Address 1 
+	    public void Addbank_address1(String bankaddress1)
 	    {
 	    	bank_address1.sendKeys(bankaddress1);
-	    	bank_address2.sendKeys("  ");//
 	    }
 	    
-	    //Verify if user is able to add the Region and post code
+	    //Verify if user is able to add the Address 2
+	    public void Addbank_address2(String bankaddress2)
+	    {
+	    	bank_address2.sendKeys(bankaddress2);
+	    }
+	    
+	    //Verify if user is able to add the 
 	    public void Addbank_region(String bank_Region)
 	    {
 	    	bank_region.sendKeys(bank_Region);
-	    	bank_postcode.sendKeys("  ");//
 	    }
 	    
-	    //Verify for Negative scenario insert blank space
-	    public void NegativeAddbank_region(String bank_Region)
+	    //Verify if user is able to add the Postcode
+	    public void Addbank_postcode(String postcode)
 	    {
-	    	bank_region.sendKeys(bank_Region);
-	    	bank_postcode.sendKeys("   ");//
+	    	bank_postcode.sendKeys(postcode);
 	    }
 	    
 	    
-	  //Verify if user is able to add the State and country
+	    //Verify if user is able to add the State 
 	    public void Addbank_state(String bank_State)
 	    {
 	    	bank_state.sendKeys(bank_State);
+	    }
+	    
+	    //Verify if user is able to add the country
+	    public void Addbank_country(String bankcountry)
+	    {
 	    	Select select = new Select(bank_countrydropdown);
-	    	select.selectByVisibleText("India");
+	    	select.selectByVisibleText(bankcountry);
 	    }
 	    
-	  //Verify if user is able to add the Account name & number
-	    public void AddAccount_details(String bank_Accname)
+	    //Verify if user is able to add the Account name 
+	    public void AddAccount_name(String bank_Accname)
 	    {
 	    	bank_accountname.sendKeys(bank_Accname);
-	        bank_accountno.sendKeys("2222222222");//
 	    }
 	    
-	    //Verify for Negative scenario insert blank space
-	    public void NegativeAddAccount_details(String bank_Accname)
+	    //Verify if user is able to add the number
+	    public void AddAccount_number(String accno)
 	    {
-	    	bank_accountname.sendKeys(bank_Accname);
-	        bank_accountno.sendKeys("12121112");
-	    }
-	    
-	  //Verify for negative scenario if user is able to add the Swift code & IBAN code
-	    public void NegativeAddCodes(String bank_Swiftcode)
-	    {
-	    	bank_swiftcode.sendKeys(bank_Swiftcode);
-	        bank_IBANcode.sendKeys("      ");//
-	        bank_nxtbtn.click();
-	    }
-	    
+	        bank_accountno.sendKeys(accno);
+	    }    
 	    
 	
-	  //Verify if user is able to add the Swift code & IBAN code
-	    public void AddCodes(String bank_Swiftcode)
+	    //Verify if user is able to add the Swift code
+	    public void Add_swiftcode(String bank_Swiftcode)
 	    {
 	    	bank_swiftcode.sendKeys(bank_Swiftcode);
-	        bank_IBANcode.sendKeys("1111");//
+	    }
+	    
+	    //Displayed bank next button
+	    public boolean Bank_nxtbtn()
+	    {
+	        return bank_nxtbtn.isDisplayed();
+	    }
+	    
+	    //Verify if user is able to add the IBAN code
+	    public void Add_IbanCode(String iban)
+	    {
+	        bank_IBANcode.sendKeys(iban);
 	        bank_nxtbtn.click();
 	    }
+	    
 	    
 	    //Validation check on Account number field
 	    public void Validation4()
@@ -546,6 +598,15 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    @FindBy(xpath="(//*[text()='You got mail!'])[2]")
 		private WebElement success_signup;
 	    
+		@FindBy(xpath="//*[@id='login']")
+		private WebElement loginid;
+	    
+		@FindBy(xpath="//*[@id='ifmail']")
+		private WebElement iframe;
+		
+		@FindBy(xpath="//*[text()='Verify Email Address']")
+		private WebElement Verifyemailbtn;
+	    
 	    //Verify if the user is on Terms and Condition section
 	    public String TC_sectiontext()
 		{
@@ -582,6 +643,13 @@ public class RegisterPage extends AbstractComponentsMethods{
 			System.out.println("Rules checkbox is Selected " +ischecked); //True
 	    }
 	    
+	    //register button displayed
+	    public boolean Displayed_registered()
+	    {
+	        scrolling();
+	    	return registerbtn.isDisplayed();	   
+	    }
+	    
 	    //Verify if the user is able to register
 	    public void Registered()
 	    {
@@ -605,4 +673,23 @@ public class RegisterPage extends AbstractComponentsMethods{
 	    	return success_signup.getText();
 	    	
 	    }
+	    
+		
+	    //Verify if user is able to get the reset password link on mentioned mail 
+	    public boolean Verify_resetmail(String email)
+		{
+			driver.get("https://yopmail.com/en/");
+			loginid.sendKeys(email);
+			loginid.sendKeys(Keys.ENTER);
+			driver.switchTo().frame(iframe);
+			scrolling();
+			return Verifyemailbtn.isDisplayed();
+				
+		}
+	    
+	    //Verify if user is able to click on Verify email button
+	  	public void ResetPasswordbtn()
+	  	{
+	  		Verifyemailbtn.click();		
+	  	}
  }

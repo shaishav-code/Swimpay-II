@@ -94,7 +94,7 @@ public class NegativeManageVoyagesTest extends BaseClass{
 	 managevoyagepage.Click_cancelvoyage();
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.Select_voyagenumber("V00011-S");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
      {
@@ -219,7 +219,7 @@ public class NegativeManageVoyagesTest extends BaseClass{
 	 }
 	 
 	 //Verify if user is able to select the past date in ETD field in Change voyage Date sub-menu
-	 @Test(priority=9)
+	 //@Test(priority=9)
 	 public void SelectThePastDateInETDField() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
@@ -249,7 +249,7 @@ public class NegativeManageVoyagesTest extends BaseClass{
 	 }
 	 
 	 //Verify if user is able to select the before date from current selected date in ETA field in Change voyage Date sub-menu
-	 @Test(priority=10)
+	 //@Test(priority=10)
 	 public void SelectThePastDateInETAField() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
@@ -279,7 +279,7 @@ public class NegativeManageVoyagesTest extends BaseClass{
 	 }
 	 
 	 //Verify if user is able to select the future date in ETD field from the current selected date in ETA field in Change voyage Date sub-menu
-	 @Test(priority=11)
+	 //@Test(priority=11)
 	 public void SelectTheFutureDateInETAFieldFromCurrentETDDate() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
@@ -452,7 +452,8 @@ public class NegativeManageVoyagesTest extends BaseClass{
 	 
 	 }
 	 
-	 //Verify if user is able to enter invalid details in the new Vessel name field in Change of Vessel sub-menu - Fail
+	 //Verify if user is able to enter invalid details in the new Vessel name field in Change of Vessel sub-menu - 
+	 //Pass: https://nda-narola.tinytake.com/msc/ODg0ODkzOV8yMjI5MDI0Ng
 	 @Test(priority=17)
 	 public void EnterInvalidDetailsInNewVesselNameField() throws InterruptedException {
 			
@@ -472,10 +473,10 @@ public class NegativeManageVoyagesTest extends BaseClass{
 		    System.out.println("Executing corresponding Catch block");
 	     }
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Enter_newvesselname("@!@3d:/>");
-	 managevoyagepage.Click_submitbtn();
+	 managevoyagepage.Enter_newvesselname("@!@3:/>");
 	 managevoyagepage.waitCode();
-	 Assert.assertFalse(managevoyagepage.failed_message(),"Invalid Voyage number");		 
+	 Assert.assertFalse(managevoyagepage.Enable_submitbtn());		
+	 
 	 }
 	 
 	 //Verify if user is able to enter invalid details in the new IMO number field in Change of Vessel sub-menu

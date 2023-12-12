@@ -9,10 +9,10 @@ import swimGDSAutomation.pageclass.LandingPage;
 public class LoginTest extends BaseClass{
 
 	
-	String email = "nda.norala@yopmail.com";
+	String email = "nda.norala@gmail.com";
 	String password ="Nikhil@86";
 	String expectedtext ="Home";
-	String expectedURL = "https://demo.swimgds.com/seller/account-question";
+	String expectedURL = "https://demo.swimgds.com/";
 	
 	//Verify if user can insert the username and password and clicks on back button.
 	@Test(priority=1)
@@ -138,12 +138,13 @@ public class LoginTest extends BaseClass{
 	landingPage.Loginpage();
 	String logintitle = landingPage.titleOfPage();
 	System.out.println("Title of the page is :" +logintitle);
-	Assert.assertEquals(logintitle, "SWiM GDS - Seller - Login");
+	Assert.assertEquals(logintitle, "SWiM GDS");
 	try {
 		landingPage.waitCode();
 	} catch (InterruptedException e) {
 		e.printStackTrace();
 	}
 	
+
 	}
 }

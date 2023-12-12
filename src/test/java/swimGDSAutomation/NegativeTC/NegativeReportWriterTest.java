@@ -16,8 +16,8 @@ public class NegativeReportWriterTest extends BaseClass{
 	 public void WithoutSelectingOptionClickOnExportQuerybutton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -38,8 +38,8 @@ public class NegativeReportWriterTest extends BaseClass{
 	 public void withoutInsertingValueInAddRuleField_ClickExportQueryButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -65,8 +65,8 @@ public class NegativeReportWriterTest extends BaseClass{
 	 public void withoutInsertingValueInAddGroupfield_ClickExportQueryButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -92,8 +92,8 @@ public class NegativeReportWriterTest extends BaseClass{
 	 public void withoutSelectingValueInfields_ClickResetQueryButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();

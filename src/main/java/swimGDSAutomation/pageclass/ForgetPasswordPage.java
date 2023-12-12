@@ -29,6 +29,9 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 	@FindBy(xpath="//*[@class='question']")
 	private WebElement securityQue;
 	
+	@FindBy(xpath="//*[text()='Email Address is not verified']")
+	private WebElement unverifiedemail;	
+	
 	@FindBy(xpath="//*[@id='answer']")
 	private WebElement answerfield;
 	
@@ -45,6 +48,12 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 	public void Enter_email(String email)
 	{
 		forgetpassword_email.sendKeys(email);	
+    }
+	
+	//Validation on unverified accound
+    public boolean UnverifiedEmail()
+    {
+    	return unverifiedemail.isDisplayed();
     }
 	
     //Validation on Forget Password page
@@ -137,10 +146,10 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 		
 				
 	   //Verify if user is able to get the reset password link on mentioned mail 
-		public boolean Verify_resetmail()
+		public boolean Verify_resetmail(String email)
 		{
 			driver.get("https://yopmail.com/en/");
-			loginid.sendKeys("nda.norala@yopmail.com");
+			loginid.sendKeys(email);
 			loginid.sendKeys(Keys.ENTER);
 			driver.switchTo().frame(iframe);
 			scrolling();
@@ -155,17 +164,17 @@ public class ForgetPasswordPage extends AbstractComponentsMethods{
 		}
 	
 		//Verify if user is able to enter new and confirm password 
-		public void Enter_NewandConfirmPassword()
+		public void Enter_NewandConfirmPassword(String newpass, String cnfpass)
 		{			
-			newpassword.sendKeys("Nayan@86");
-			confirmpassword.sendKeys("Nayan@86");
+			newpassword.sendKeys(newpass);
+			confirmpassword.sendKeys(cnfpass);
 		}
 		
 		//Verify if user is able to enter new and confirm password 
-		public void Invalid_NewandConfirmPassword()
+		public void Invalid_NewandConfirmPassword(String invalidnewpass, String invalidcnfpass)
 		{			
-			newpassword.sendKeys("Nayan@86");
-			confirmpassword.sendKeys("Nayan@12");
+			newpassword.sendKeys(invalidnewpass);
+			confirmpassword.sendKeys(invalidcnfpass);
 			
 		}
 		

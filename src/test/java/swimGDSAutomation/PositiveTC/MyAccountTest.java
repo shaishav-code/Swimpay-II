@@ -2,7 +2,6 @@ package swimGDSAutomation.PositiveTC;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import swimGDSAutomation.TestComponents.BaseClass;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.LandingPage;
@@ -11,16 +10,16 @@ import swimGDSAutomation.pageclass.MyAccountPage;
 public class MyAccountTest extends BaseClass {
 
 	
-     String email = "nda.norala@yopmail.com";
-     String password ="Akojwar@07";
+     String email = "october@yopmail.com";
+     String password ="Narola@21";
     
 	 //Verify if user is able to click on Edit Company information and cancel the popup
 	 @Test(priority=1)
 	 public void ClickOnEditBankInfo() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -36,8 +35,8 @@ public class MyAccountTest extends BaseClass {
 	 public void InsertDetailsIn_EditCompanyInfoPopup_ClickCancelBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -60,8 +59,8 @@ public class MyAccountTest extends BaseClass {
 	 public void InsertDetailsIn_EditCompanyInfoPopup_ClickSubmitBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -92,8 +91,8 @@ public class MyAccountTest extends BaseClass {
 	 public void ClickOnEditAccountInfo() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -114,8 +113,8 @@ public class MyAccountTest extends BaseClass {
 	 public void InsertDetailsIn_EditAccountInfoPopup_ClickCancelBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -124,7 +123,7 @@ public class MyAccountTest extends BaseClass {
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_editaccount();
 	 myaccountpage.Enter_firstndlastname("narola","infotech");
-	 myaccountpage.Enter_email("nda.norala@yopmail.com");
+	 myaccountpage.Enter_email("october@yopmail.com");
 	 myaccountpage.Enter_mobile("22232543");
 	 myaccountpage.Click_accountCancelbtn();
     }
@@ -134,8 +133,8 @@ public class MyAccountTest extends BaseClass {
 	 public void InsertDetailsIn_EditAccountInfoPopup_ClickSaveBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -144,7 +143,7 @@ public class MyAccountTest extends BaseClass {
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_editaccount();
 	 myaccountpage.Enter_firstndlastname("narola","infotech");
-	 myaccountpage.Enter_email("nda.norala@yopmail.com");
+	 myaccountpage.Enter_email("october@yopmail.com");
 	 myaccountpage.Enter_mobile("22232543");
 	 myaccountpage.Click_Accountsavebtn();
 	 try {
@@ -161,8 +160,8 @@ public class MyAccountTest extends BaseClass {
 	 public void ClickOnChangePasswordnSecurityDetails() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -177,8 +176,8 @@ public class MyAccountTest extends BaseClass {
 	 public void VerifyPasswordChange() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -186,8 +185,8 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_changePasswordnSecurity();
-	 myaccountpage.Enter_oldpasssword("Akojwar@07");
-	 myaccountpage.Enter_NewnConfirmPassword("Dilip@07","Dilip@07");
+	 myaccountpage.Enter_oldpasssword("Narola@21");
+	 myaccountpage.Enter_NewnConfirmPassword("Narola@12","Narola@12");
 	 myaccountpage.Click_changePasswordbtn();
 	 try {
 			myaccountpage.waitCode();
@@ -198,15 +197,15 @@ public class MyAccountTest extends BaseClass {
 	     Assert.assertTrue(displayed, "Success message has been displayed");
 	 }
 
-     String updatedpassword ="Dilip@07";
+     String updatedpassword ="Narola@12";
      
 	 //Verify if user is able to enter the required details in the field and able to Change the Security details 
 	 @Test(priority=9)
 	 public void VerifySecurityDetailsChange() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(updatedpassword);
 	 landingPage.Loginbtn();
@@ -214,7 +213,7 @@ public class MyAccountTest extends BaseClass {
 	 accountmanagement.Click_myaccount();
 	 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 	 myaccountpage.Click_changePasswordnSecurity();
-     myaccountpage.Enter_currentpassword("Dilip@07");
+     myaccountpage.Enter_currentpassword("Narola@12");
      myaccountpage.Selectquest1_EnterAns1("i20");
      myaccountpage.Selectquest2_EnterAns2("MSD");
      myaccountpage.Click_updatedetailsbtn();	 
@@ -232,8 +231,8 @@ public class MyAccountTest extends BaseClass {
 	 public void ClickOnAccountManagementDropDown() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(updatedpassword);
 	 landingPage.Loginbtn();
@@ -255,8 +254,8 @@ public class MyAccountTest extends BaseClass {
 	 public void InsertDetailsIn_EditBankAccountInfoPopup_ClickCancelBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(updatedpassword);
 	 landingPage.Loginbtn();
@@ -289,8 +288,8 @@ public class MyAccountTest extends BaseClass {
 	 public void InsertDetailsIn_EditBankAccountInfoPopup_ClickSaveBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(updatedpassword);
 	 landingPage.Loginbtn();

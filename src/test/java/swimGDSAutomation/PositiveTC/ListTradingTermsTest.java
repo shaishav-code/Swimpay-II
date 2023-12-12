@@ -20,8 +20,8 @@ public class ListTradingTermsTest extends BaseClass{
 	 public void ClickListTermsAndViewTermsList() throws InterruptedException   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -37,8 +37,8 @@ public class ListTradingTermsTest extends BaseClass{
 	 public void InsertTermsCodeInSearchField_ClickEnter() throws InterruptedException   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -106,12 +106,11 @@ public class ListTradingTermsTest extends BaseClass{
 	 
 	 
 	 //Verify if user is able to click on toggle button to deactivate the Terms and can view the proper validation in pop-up
+	 //pass: https://nda-narola.tinytake.com/msc/ODgzMjYwM18yMjI2NzU2Mg
 	 @Test(priority=6)
 	 public void ChangeTheStatusToDeactivite_AndViewValidation() throws InterruptedException   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-//	 landingPage.SellerLogin();	
-//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();

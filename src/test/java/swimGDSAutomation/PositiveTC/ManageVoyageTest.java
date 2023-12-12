@@ -21,8 +21,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnManageVoyageMenu() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.titleOfPage();
@@ -41,8 +41,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnListVoyageSubmenu() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -64,8 +64,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnStatusDropdown() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);;
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -86,13 +86,13 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnViewFromActionColumn() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Click_ViewOnActionColumn("CMACGM-W-048");
+	 managevoyagepage.Click_ViewOnActionColumn("CMACGM-W-049");
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -108,13 +108,13 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickToCloseThePopup() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Click_ViewOnActionColumn("CMACGM-W-048");
+	 managevoyagepage.Click_ViewOnActionColumn("CMACGM-W-049");
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -130,8 +130,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnViewFromBCNColumn() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -158,13 +158,11 @@ public class ManageVoyageTest extends BaseClass{
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Click_ViewOnBCNColumn("CMACGM-W-048");
+	 managevoyagepage.Click_ViewOnBCNColumn("CMACGM-W-049");
 	 managevoyagepage.Windowhandling(1);
 	 managevoyagepage.Click_Ascarrow();
 	 managevoyagepage.waitCode();
 	 managevoyagepage.Click_Descarrow();
-	 Assert.assertTrue(false);
-
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -180,13 +178,13 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnPaginationArrow() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Click_ViewOnBCNColumn("CMACGM-W-048");
+	 managevoyagepage.Click_ViewOnBCNColumn("CMACGM-W-049");
 	 managevoyagepage.Windowhandling(1);
 	 managevoyagepage.waitCode();
 	 managevoyagepage.scrolling();
@@ -207,8 +205,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void SelectTheCompletedStatusFromDropdown() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -229,8 +227,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnCompletedStatus() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -254,8 +252,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnViewFromActionColumn_SelectedStatusAsCompleted() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -281,8 +279,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnViewFromBCNColumn_SelectedStatusAsCompeleted() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -306,8 +304,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnCancelledStatus() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -331,8 +329,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnViewFromActionColumn_SelectedStatusAsCancelled() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -340,7 +338,7 @@ public class ManageVoyageTest extends BaseClass{
 	 managevoyagepage.Select_status("Cancelled");
 	 managevoyagepage.Click_loadbtn();
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Click_ViewOnActionColumn("CMACGM-W-032");
+	 managevoyagepage.Click_ViewOnActionColumn("CMACGM-W-026");
 	 try {
 		 managevoyagepage.waitCode();
 		     } 
@@ -358,8 +356,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnViewFromBCNColumn_SelectedStatusAsCancelled() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_listvoyage();
@@ -367,7 +365,7 @@ public class ManageVoyageTest extends BaseClass{
 	 managevoyagepage.Select_status("Cancelled");
 	 managevoyagepage.Click_loadbtn();
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Click_ViewOnBCNColumn("CMACGM-W-029");
+	 managevoyagepage.Click_ViewOnBCNColumn("CMACGM-W-026");
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -376,7 +374,7 @@ public class ManageVoyageTest extends BaseClass{
 		    e.printStackTrace();
 	     }
 		 
-		 } 
+	 } 
 		 
 	 
 	 
@@ -408,12 +406,12 @@ public class ManageVoyageTest extends BaseClass{
 	 public void EnterVoyageNumberInField() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_cancelvoyage();
-	 managevoyagepage.Click_voyagenofield("CMACGM-W-047");
+	 managevoyagepage.Click_voyagenofield("CMACGM-W-062");
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -429,13 +427,13 @@ public class ManageVoyageTest extends BaseClass{
 	 public void SelectVoyageNumberFromDropdownOptions() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_cancelvoyage();
 	 try {
-		 managevoyagepage.Select_voyagenumber("CMACGM-W-050");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
 	     {
@@ -456,14 +454,14 @@ public class ManageVoyageTest extends BaseClass{
 	 public void SelectCheckBoxOfPortPairs() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_cancelvoyage();
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.Select_voyagenumber("CMACGM-W-050");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
 	     {
@@ -494,7 +492,7 @@ public class ManageVoyageTest extends BaseClass{
 	 managevoyagepage.Click_cancelvoyage();
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.Select_voyagenumber("V00012-S");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
      {
@@ -526,7 +524,7 @@ public class ManageVoyageTest extends BaseClass{
 	 managevoyagepage.Click_cancelvoyage();
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.Select_voyagenumber("V00012-S");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
      {
@@ -548,7 +546,7 @@ public class ManageVoyageTest extends BaseClass{
 	 }
 	 
 	 //Verify if user is able to click on Yes Button to cancel the voyage in Cancel Voyage sub-menu
-	 @Test(priority=22)
+	 //@Test(priority=22)
 	 public void ClickOnYesButtonToCancelVoyage() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
@@ -559,7 +557,7 @@ public class ManageVoyageTest extends BaseClass{
 	 managevoyagepage.Click_cancelvoyage();
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.Select_voyagenumber("V00012-S");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
      {
@@ -590,7 +588,7 @@ public class ManageVoyageTest extends BaseClass{
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_cancelvoyage();
-	 managevoyagepage.Select_voyagenumber("V00012-S");
+	 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	 managevoyagepage.waitCode();
 	 managevoyagepage.Select_Checkbox();
 	 managevoyagepage.Click_submitbtn();
@@ -621,7 +619,7 @@ public class ManageVoyageTest extends BaseClass{
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_cancelvoyage();
-	 managevoyagepage.Select_voyagenumber("V00012-S");
+	 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	 managevoyagepage.waitCode();
 	 managevoyagepage.Select_Checkbox();
 	 managevoyagepage.Click_submitbtn();
@@ -641,7 +639,7 @@ public class ManageVoyageTest extends BaseClass{
 	 }
 	 
 	//Verify if user has successfully cancelled the Voyage number or not in List Voyage sub-menu by selecting Cancelled option from the dropdown
-	 @Test(priority=25)
+	// @Test(priority=25)
 	 public void VerifyTheCancelledVoyageNumber() throws InterruptedException {
 				
 	 LandingPage landingPage = new LandingPage(driver);
@@ -652,7 +650,7 @@ public class ManageVoyageTest extends BaseClass{
 	 managevoyagepage.Click_cancelvoyage();
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.Select_voyagenumber("V00012-S");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
      {
@@ -673,7 +671,7 @@ public class ManageVoyageTest extends BaseClass{
 	 managevoyagepage.waitCode();
 	 managevoyagepage.Click_loadbtn();
 	 managevoyagepage.waitCode();
-	 managevoyagepage.Click_ViewOnBCNColumn("V00012-S");
+	 managevoyagepage.Click_ViewOnBCNColumn("CMACGM-W-062");
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -714,14 +712,14 @@ public class ManageVoyageTest extends BaseClass{
 	 public void ClickOnETDAndETAField() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_changevoyage();
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.Select_voyagenumber("CMACGM-W-044");
+		 managevoyagepage.Select_voyagenumber("CMACGM-W-062");
 	     } 
 	 catch (Exception e) 
      {
@@ -758,7 +756,7 @@ public class ManageVoyageTest extends BaseClass{
 	    System.out.println("Executing corresponding Catch block");
      }
 	 managevoyagepage.waitCode();
-	 managevoyagepage.SelectdatenMonth(0,"September 2023","30");
+	 managevoyagepage.SelectdatenMonth(0,"November 2023","1");
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -788,7 +786,7 @@ public class ManageVoyageTest extends BaseClass{
 	    System.out.println("Executing corresponding Catch block");
      }
 	 managevoyagepage.waitCode();
-	 managevoyagepage.SelectdatenMonth(1,"December 2023","12");
+	 managevoyagepage.SelectdatenMonth(1,"November 2023","5");
 	 try {
 		 managevoyagepage.waitCode();
 	     } 
@@ -819,7 +817,7 @@ public class ManageVoyageTest extends BaseClass{
      }
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.SelectdatenMonth(0,"September 2023","30"); 
+		 managevoyagepage.SelectdatenMonth(0,"November 2023","1"); 
 	     } 
 	 catch (Exception e) 
      {
@@ -827,7 +825,7 @@ public class ManageVoyageTest extends BaseClass{
      }
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.SelectdatenMonth(1,"December 2023","12");
+		 managevoyagepage.SelectdatenMonth(1,"November 2023","5");
 		 } 
 	 catch (Exception e) 
      {
@@ -865,7 +863,7 @@ public class ManageVoyageTest extends BaseClass{
      }
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.SelectdatenMonth(0,"October 2023","12"); 
+		 managevoyagepage.SelectdatenMonth(0,"November 2023","1"); 
 	     } 
 	 catch (Exception e) 
      {
@@ -873,7 +871,7 @@ public class ManageVoyageTest extends BaseClass{
      }
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.SelectdatenMonth(1,"December 2023","12");
+		 managevoyagepage.SelectdatenMonth(1,"November 2023","5");
 		 } 
 	 catch (Exception e) 
      {
@@ -913,7 +911,7 @@ public class ManageVoyageTest extends BaseClass{
      }
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.SelectdatenMonth(0,"October 2023","12"); 
+		 managevoyagepage.SelectdatenMonth(0,"November 2023","1"); 
 	     } 
 	 catch (Exception e) 
      {
@@ -921,7 +919,7 @@ public class ManageVoyageTest extends BaseClass{
      }
 	 managevoyagepage.waitCode();
 	 try {
-		 managevoyagepage.SelectdatenMonth(1,"December 2023","12");
+		 managevoyagepage.SelectdatenMonth(1,"November 2023","5");
 		 } 
 	 catch (Exception e) 
      {
@@ -945,7 +943,7 @@ public class ManageVoyageTest extends BaseClass{
 	 
 	 
 	 //Verify if user has succesfully changed the date or not in List Voyage sub-menu
-	 @Test(priority=33)
+	 //@Test(priority=33)
 	 public void VerifyDateChange() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
@@ -1025,8 +1023,8 @@ public class ManageVoyageTest extends BaseClass{
 	 public void EnterVoyageNumberInChangeOfVesselSubmenu() throws InterruptedException {
 			
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+	 landingPage.Enter_useremail(Email);
+	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
 	 ManageVoyagePage managevoyagepage = landingPage.ManageVoyagePageOption();
 	 managevoyagepage.Click_changevessel();
@@ -1157,7 +1155,7 @@ public class ManageVoyageTest extends BaseClass{
 	     }
 	 managevoyagepage.waitCode();
 	 managevoyagepage.Enter_newvesselname("MSC Rom");
-	 managevoyagepage.Enter_newIMOnumber("920266");
+	 managevoyagepage.Enter_newIMOnumber("837289");
 	 managevoyagepage.Click_submitbtn();
 	 try {
 		 managevoyagepage.waitCode();

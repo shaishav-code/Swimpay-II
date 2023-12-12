@@ -136,7 +136,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.3");
      standarddocumentsnpage.Click_datefield();
      standarddocumentsnpage.waitCode();
-     standarddocumentsnpage.SelectdatenMonth("October 2023", "17");
+     standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      try {
 		 standarddocumentsnpage.waitCode();
 	 } catch (InterruptedException e) {
@@ -163,7 +163,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.3");
      standarddocumentsnpage.Click_datefield();
      standarddocumentsnpage.waitCode();
-     standarddocumentsnpage.SelectdatenMonth("October 2023", "17");
+     standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      standarddocumentsnpage.Click_uploadfilefield();
      try {
 		 standarddocumentsnpage.waitCode();
@@ -191,7 +191,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.3");
      standarddocumentsnpage.Click_datefield();
      standarddocumentsnpage.waitCode();
-     standarddocumentsnpage.SelectdatenMonth("October 2023", "17");
+     standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      standarddocumentsnpage.Click_uploadfilefield();
      standarddocumentsnpage.waitCode();
      standarddocumentsnpage.Uploadfile("Users//C-96//desktop.file.pdf");
@@ -221,7 +221,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.3");
      standarddocumentsnpage.Click_datefield();
      standarddocumentsnpage.waitCode();
-     standarddocumentsnpage.SelectdatenMonth("October 2023", "17");
+     standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      standarddocumentsnpage.Click_uploadfilefield();
      standarddocumentsnpage.waitCode();
      standarddocumentsnpage.Uploadfile("Users//C-96//desktop.file.pdf");
@@ -253,7 +253,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.3");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-     standarddocumentsnpage.SelectdatenMonth("October 2023", "17");
+     standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      standarddocumentsnpage.Click_uploadfilefield();
 	 standarddocumentsnpage.waitCode();
 	 standarddocumentsnpage.Uploadfile("Users//C-96//desktop.file.pdf");
@@ -460,7 +460,7 @@ public class StandardDocumentsTest extends BaseClass {
 	 standarddocumentsnpage.Enter_version("1.1");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-	 standarddocumentsnpage.SelectdatenMonth("October 2023", "18");
+	 standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
    	 try {
 	 	 standarddocumentsnpage.waitCode();
 	 } catch (InterruptedException e) {
@@ -573,7 +573,7 @@ public class StandardDocumentsTest extends BaseClass {
 	 standarddocumentsnpage.Enter_version("1.1");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-	 standarddocumentsnpage.SelectdatenMonth("October 2023", "18");
+	 standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
 	 try {
 		 standarddocumentsnpage.waitCode();
 		 } catch (InterruptedException e) {
@@ -581,8 +581,7 @@ public class StandardDocumentsTest extends BaseClass {
 		 }
 
      }
-	     
-		 
+	 
 	 //Verify if the user has successfully upload the form in the SOC Indemmnity Form in View Forms History submenu ////////////////////////////
 	 //@Test(priority=23)
 	 public void VerifyFileUploadedOrNotInSOCIndemmnityForm() throws InterruptedException, AWTException {
@@ -602,7 +601,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.3");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-	 standarddocumentsnpage.SelectdatenMonth("October 2023", "18");
+	 standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      standarddocumentsnpage.Click_uploadfilefield();
 	 standarddocumentsnpage.waitCode();
 	 standarddocumentsnpage.Uploadfile("Users//C-96//desktop.file.pdf");
@@ -687,7 +686,7 @@ public class StandardDocumentsTest extends BaseClass {
 	 standarddocumentsnpage.Enter_version("1.1");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-	 standarddocumentsnpage.SelectdatenMonth("October 2023", "18");
+	 standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
 	 try {
 		 standarddocumentsnpage.waitCode();
 		 } catch (InterruptedException e) {
@@ -716,7 +715,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.1");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-	 standarddocumentsnpage.SelectdatenMonth("October 2023", "18");
+	 standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      standarddocumentsnpage.Click_uploadfilefield();
 	 standarddocumentsnpage.waitCode();
 	 standarddocumentsnpage.Uploadfile("Users//C-96//desktop.file.pdf");
@@ -801,7 +800,7 @@ public class StandardDocumentsTest extends BaseClass {
 	 standarddocumentsnpage.Enter_version("1.1");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-	 standarddocumentsnpage.SelectdatenMonth("October 2023", "18");
+	 standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
 	 try {
 	 standarddocumentsnpage.waitCode();
 		 } catch (InterruptedException e) {
@@ -830,7 +829,7 @@ public class StandardDocumentsTest extends BaseClass {
      standarddocumentsnpage.Enter_version("1.1");
 	 standarddocumentsnpage.Click_datefield();
 	 standarddocumentsnpage.waitCode();
-	 standarddocumentsnpage.SelectdatenMonth("October 2023", "18");
+	 standarddocumentsnpage.SelectdatenMonth("November 2023", "07");
      standarddocumentsnpage.Click_uploadfilefield();
 	 standarddocumentsnpage.waitCode();
 	 standarddocumentsnpage.Uploadfile("Users//C-96//desktop.file.pdf");

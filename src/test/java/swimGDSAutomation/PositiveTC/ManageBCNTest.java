@@ -114,8 +114,8 @@ public class ManageBCNTest extends BaseClass {
 	 managebcnpage.waitCode();
 	 managebcnpage.Click_BCNrangesubmenu();
 	 managebcnpage.waitCode();
-	 managebcnpage.Enter_startingnumber("11");
-	 managebcnpage.Enter_Endingnumber("15");
+	 managebcnpage.Enter_startingnumber("1");
+	 managebcnpage.Enter_Endingnumber("5");
 	 managebcnpage.Click_submitBtn();
 	 managebcnpage.waitCode();
 	 try {
@@ -321,6 +321,7 @@ public class ManageBCNTest extends BaseClass {
 	 }
 	 
 	 //Verify if the user is able to select the menu options i.e.Inactive in Manage BCN Numbers sub-menu - Suggestion
+	 //pass: https://prnt.sc/pZXCnU6sh5yU
 	 @Test(priority=14)
 	 public void SelectInactiveOptionFromMenuToggleButton() throws InterruptedException {
 				 
@@ -344,7 +345,7 @@ public class ManageBCNTest extends BaseClass {
 	 }
 	 
 	 //Verify if the user is able to select the menu options i.e.Active in Manage BCN Numbers sub-menu-Skip
-	 @Test(priority=15, dependsOnMethods ="SelectInactiveOptionFromMenuToggleButton" )
+	 @Test(priority=15)
 	 public void SelectActiveOptionFromMenuToggleButton() throws InterruptedException {
 				 
 				
@@ -576,7 +577,7 @@ public class ManageBCNTest extends BaseClass {
 	 ManageBCNPage managebcnpage = landingPage.ManageBCNPageOption();
 	 managebcnpage.waitCode();
 	 managebcnpage.Click_cancelBCN();
-	 managebcnpage.Enter_BCNno("MMCU0000759"); 
+	 managebcnpage.Enter_BCNno("MMCU0000873"); 
 	 try {
 		managebcnpage.waitCode();
 		 } 
@@ -600,7 +601,7 @@ public class ManageBCNTest extends BaseClass {
 	 managebcnpage.Click_cancelBCN();
 	 managebcnpage.Click_BCNnofield();
 	 managebcnpage.waitCode();
-	 managebcnpage.Select_BCNNumberFromoption("MMCU0000759"); 
+	 managebcnpage.Select_BCNNumberFromoption("MMCU0000873"); 
 	 managebcnpage.waitCode();
 	 managebcnpage.click_cancellationtypedropdown();
 	 try {
@@ -626,7 +627,7 @@ public class ManageBCNTest extends BaseClass {
 	 managebcnpage.Click_cancelBCN();
 	 managebcnpage.Click_BCNnofield();
 	 managebcnpage.waitCode();
-	 managebcnpage.Select_BCNNumberFromoption("MMCU0000759"); 
+	 managebcnpage.Select_BCNNumberFromoption("MMCU0000873"); 
 	 managebcnpage.waitCode();
 	 managebcnpage.click_cancellationtypedropdown();
 	 managebcnpage.waitCode();
@@ -655,9 +656,10 @@ public class ManageBCNTest extends BaseClass {
 	 managebcnpage.Click_cancelBCN();
 	 managebcnpage.Click_BCNnofield();
 	 managebcnpage.waitCode();
-	 managebcnpage.Select_BCNNumberFromoption("MMCU0000216"); //MMCU0000759
+	 managebcnpage.Select_BCNNumberFromoption("MMCU0000873"); //MMCU0000759
 	 managebcnpage.waitCode();
 	 managebcnpage.click_cancellationtypedropdown();
+	 
 	 managebcnpage.waitCode();
 	 managebcnpage.Select_cancellationtypeoption("1. Before CRN Issued");
 	 managebcnpage.waitCode();
@@ -685,7 +687,7 @@ public class ManageBCNTest extends BaseClass {
 	 managebcnpage.Click_cancelBCN();
 	 managebcnpage.Click_BCNnofield();
 	 managebcnpage.waitCode();
-	 managebcnpage.Select_BCNNumberFromoption("MMCU0000759"); 
+	 managebcnpage.Select_BCNNumberFromoption("MMCU0000873"); 
 	 managebcnpage.waitCode();
 	 managebcnpage.click_cancellationtypedropdown();
 	 managebcnpage.waitCode();
@@ -716,7 +718,7 @@ public class ManageBCNTest extends BaseClass {
 	 managebcnpage.waitCode();
 	 managebcnpage.Click_BCNnofield();
 	 managebcnpage.waitCode();
-	 managebcnpage.Select_BCNNumberFromoption("MMCU0000759"); 
+	 managebcnpage.Select_BCNNumberFromoption("MMCU0000873"); 
 	 managebcnpage.waitCode();
 	 managebcnpage.click_cancellationtypedropdown();
 	 managebcnpage.waitCode();
@@ -749,7 +751,7 @@ public class ManageBCNTest extends BaseClass {
 	 managebcnpage.waitCode();
 	 managebcnpage.Click_BCNnofield();
 	 managebcnpage.waitCode();
-	 managebcnpage.Select_BCNNumberFromoption("MMCU0000759"); 
+	 managebcnpage.Select_BCNNumberFromoption("MMCU0000873"); 
 	 managebcnpage.click_cancellationtypedropdown();
 	 managebcnpage.waitCode();
 	 managebcnpage.Select_cancellationtypeoption("1. Before CRN Issued");
@@ -1585,8 +1587,8 @@ public class ManageBCNTest extends BaseClass {
 
 	}
 
-	//Verify if the user is able to click on Ascending & Descending arrow in Manage BCN sub-menu---Fail
-	//https://nda-narola.tinytake.com/msc/ODgwMTc1NV8yMjIyNjY4Mw
+	//Verify if the user is able to click on Ascending & Descending arrow in Manage BCN sub-menu
+	//Pass: https://nda-narola.tinytake.com/msc/ODg0OTEzM18yMjI5MDQ3Mw 
 	@Test(priority = 53)
 	public void ClickOnAscDescArrowInManageBCNSubmenu() throws InterruptedException {
 
@@ -1595,16 +1597,16 @@ public class ManageBCNTest extends BaseClass {
 		landingPage.Enter_password(password);
 		landingPage.Loginbtn();
 		ManageBCNPage managebcnpage = landingPage.ManageBCNPageOption();
+		managebcnpage.Click_manageBCNsubmenu();
 		try {
 			managebcnpage.waitCode();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		managebcnpage.Click_manageBCNsubmenu();
-		managebcnpage.Click_Ascarrow();
 		managebcnpage.Click_Descarrow();
 		managebcnpage.waitCode();
-		Assert.assertTrue(false);
+		managebcnpage.Click_Ascarrow();
+		managebcnpage.waitCode();
 
 	}
 

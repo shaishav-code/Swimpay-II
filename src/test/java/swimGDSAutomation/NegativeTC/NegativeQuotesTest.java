@@ -20,8 +20,8 @@ public class NegativeQuotesTest extends BaseClass {
 	  public void VerifyQuotesin_CarrierContainer()
 	   {
 			LandingPage landingPage = new LandingPage(driver);
-			landingPage.SellerLogin();	
-			landingPage.Loginpage();
+//			landingPage.SellerLogin();	
+//			landingPage.Loginpage();
 			landingPage.Enter_useremail(email);
 			landingPage.Enter_password(password);
 			landingPage.Loginbtn();

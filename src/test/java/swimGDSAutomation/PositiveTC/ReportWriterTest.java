@@ -17,8 +17,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void ClickOnReportWriterSubmenu() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -34,8 +34,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void SelectOptionFromExportTypeDropdown() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -51,8 +51,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void SelectOptionFromColumnToExportDropdown() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -69,8 +69,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void SelectOptionAndClickOnExportQuerybutton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -92,8 +92,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void ClickOnAddRuleButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -108,8 +108,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void ClickOnAddGroupButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -125,8 +125,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void SearchResultsUsingAddRuleOption_ANDGateLogic() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -154,8 +154,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void SearchResultsUsingAddRuleOption_ORGateLogic() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -186,8 +186,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void SearchResultsUsingAddRuleAndGroupOption_ANDGateLogic() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -214,8 +214,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void SearchResultsUsingAddRuleAndGroupOption_ORGateLogic() {
 		
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -241,8 +241,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void ClickOnDeleteButtonForAddRuleOption() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -262,8 +262,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void ClickOnDeleteButtonForAddGroupOption() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -285,8 +285,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void ClickOnResetQueryButtonForAddRuleOption() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -311,8 +311,8 @@ public class ReportWriterTest extends BaseClass{
 	 public void ClickOnResetQueryButtonForAddGroupOption() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();

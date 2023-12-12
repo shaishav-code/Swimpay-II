@@ -35,7 +35,7 @@ public class ListTradingTermsPage extends AbstractComponentsMethods {
     @FindBy(xpath="(//*[text()='Create New Terms'])[2]")
     private WebElement createnewitem_field;  
     
-    @FindBy(xpath="//*[@id=\"active-confirm\"]/div/div/div/div/div[2]/h2")
+    @FindBy(xpath="//*[@id='inactive-confirm']//p")
     private WebElement validationonpopup; 
     
     @FindBy(xpath="(//*[text()='Yes'])[2]")

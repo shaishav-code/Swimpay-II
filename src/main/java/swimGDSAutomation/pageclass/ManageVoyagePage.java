@@ -233,6 +233,13 @@ public class ManageVoyagePage extends AbstractComponentsMethods{
 //		element.click();
 	}
 	
+
+	//Verify submit button is enable
+	public boolean Enable_submitbtn()
+	{
+		return submitbtn.isEnabled();
+	}
+	
 	//Click on Submit button
 	public void Click_submitbtn()
 	{

@@ -9,8 +9,8 @@ import swimGDSAutomation.pageclass.LandingPage;
 
 public class ForgetPasswordTest extends BaseClass {
 	
-	String email = "nda.norala@yopmail.com";
-	String password ="Nayan@86";
+	String email = "nik1999@yopmail.com";
+	String password ="Nik@1234";
 	String expected ="Forgot Password?";
 	
 	//Verify if user is able to click on Forget password link
@@ -82,7 +82,7 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.Answerfield();
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
-		boolean ResetbtnDisplayed = forgetpasswordpage.Verify_resetmail();
+		boolean ResetbtnDisplayed = forgetpasswordpage.Verify_resetmail(email);
 		Assert.assertTrue(ResetbtnDisplayed, "Reset Password button is displayed");
 
 		}
@@ -100,7 +100,7 @@ public class ForgetPasswordTest extends BaseClass {
 		forgetpasswordpage.Answerfield();
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
-		boolean ResetbtnDisplayed = forgetpasswordpage.Verify_resetmail();
+		boolean ResetbtnDisplayed = forgetpasswordpage.Verify_resetmail(email);
 		Assert.assertTrue(ResetbtnDisplayed, "Reset Password button is displayed");	
 		forgetpasswordpage.ResetPasswordbtn();
 
@@ -115,14 +115,15 @@ public class ForgetPasswordTest extends BaseClass {
 		landingPage.Loginpage();		
 		ForgetPasswordPage forgetpasswordpage = landingPage.ForgetPasswordOption();
 		forgetpasswordpage.Enter_email(email);
+		forgetpasswordpage.waitCode();
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.Answerfield();
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
-		forgetpasswordpage.Verify_resetmail();
+		forgetpasswordpage.Verify_resetmail(email);
 		forgetpasswordpage.ResetPasswordbtn();
 		forgetpasswordpage.Windowhandling(1);
-		forgetpasswordpage.Enter_NewandConfirmPassword();
+		forgetpasswordpage.Enter_NewandConfirmPassword("Nik@1235","Nik@1235");
 		}
 	
 	String ExpectedSuccessmessage = "Success!";
@@ -136,14 +137,15 @@ public class ForgetPasswordTest extends BaseClass {
 		landingPage.Loginpage();		
 		ForgetPasswordPage forgetpasswordpage = landingPage.ForgetPasswordOption();
 		forgetpasswordpage.Enter_email(email);
+		forgetpasswordpage.waitCode();
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.Answerfield();
 		forgetpasswordpage.Nextbutton();
 		forgetpasswordpage.waitCode();
-		forgetpasswordpage.Verify_resetmail();
+		forgetpasswordpage.Verify_resetmail(email);
 		forgetpasswordpage.ResetPasswordbtn();
 		forgetpasswordpage.Windowhandling(1);
-		forgetpasswordpage.Enter_NewandConfirmPassword();
+		forgetpasswordpage.Enter_NewandConfirmPassword("Nik@1234","Nik@1234");
 		forgetpasswordpage.Click_submitbtn();
 		String ActualSuccessmessage = forgetpasswordpage.SuccessMessage();
 		Assert.assertEquals(ActualSuccessmessage, ExpectedSuccessmessage);

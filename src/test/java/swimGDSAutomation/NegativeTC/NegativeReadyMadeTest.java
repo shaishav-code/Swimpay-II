@@ -18,8 +18,8 @@ public class NegativeReadyMadeTest extends BaseClass{
 	public void EnterInvalidBuyerInSelectBuyerField() {
 		
 	LandingPage landingPage = new LandingPage(driver);
-	landingPage.SellerLogin();	
-	landingPage.Loginpage();
+//	landingPage.SellerLogin();	
+//	landingPage.Loginpage();
 	landingPage.Enter_useremail(email);
 	landingPage.Enter_password(password);
 	landingPage.Loginbtn();
@@ -40,8 +40,8 @@ public class NegativeReadyMadeTest extends BaseClass{
 	public void ClickViewButtonWithoutSelectingBuyer() {
 		
 	LandingPage landingPage = new LandingPage(driver);
-	landingPage.SellerLogin();	
-	landingPage.Loginpage();
+//	landingPage.SellerLogin();	
+//	landingPage.Loginpage();
 	landingPage.Enter_useremail(email);
 	landingPage.Enter_password(password);
 	landingPage.Loginbtn();

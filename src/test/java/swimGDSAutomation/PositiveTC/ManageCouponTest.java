@@ -111,7 +111,7 @@ public class ManageCouponTest extends BaseClass{
 	 
 	 }
 	 
-	 //Verify if user is able to click on Create button in Create new coupon submenu : 
+	 //Verify if user is able to click on Create button in Create new coupon submenu
 	 //Fail- https://nda-narola.tinytake.com/msc/ODgyMzA3M18yMjI1NTMzNQ
 	 @Test(priority=7)
 	 public void ClickOnCreateButtonInCreateNewCouponSubmenu() throws InterruptedException {

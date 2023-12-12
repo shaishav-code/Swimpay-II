@@ -42,8 +42,8 @@ public class BaseClass {
 	public void tearDown()
 	{
 		
-		 waitt = new WebDriverWait(driver, Duration.ofSeconds(10));
-	//	 driver.quit();
+		waitt = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    driver.quit();
 	}
 	
 	public static String getScreenshots(String testCaseName, WebDriver driver) throws java.io.IOException {

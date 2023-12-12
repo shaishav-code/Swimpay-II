@@ -1,7 +1,7 @@
 package swimGDSAutomation.PositiveTC;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import swimGDSAutomation.TestComponents.BaseClass;
 import swimGDSAutomation.pageclass.AccountManagementPage;
 import swimGDSAutomation.pageclass.AuthorizeUserPage;
@@ -9,9 +9,11 @@ import swimGDSAutomation.pageclass.LandingPage;
 
 public class AuthorizeUserTest extends BaseClass {
 
-	 String email = "cma@gmail.com";
-     String password ="Admin@123";
-     String user ="vrs";
+	 String email = "nda.norala@gmail.com";
+     String password ="Nikhil@86";
+	 String emailid = "cma@gmail.com";
+     String Password1 ="Admin@123";
+     String user ="demo";
     
     
 	 //Verify if user is able to click on Authorize menu and is able to navigate between the section pages(Pagination)
@@ -19,10 +21,10 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void ClickOnEditBankInfo() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
+	 landingPage.Enter_useremail(emailid);
+	 landingPage.Enter_password(Password1);
 	 landingPage.Loginbtn();
 	 AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
 	 AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
@@ -47,8 +49,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void EnterValidDetailsInSearchfield() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -56,6 +58,7 @@ public class AuthorizeUserTest extends BaseClass {
 	 AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
 	 authorizeuserpage.titleOfPage();
 	 authorizeuserpage.Enterdetails_searchtab(user);
+	 
      }
 	 
 	 //Verify after entering the user details in search field then user is able to click on submit button
@@ -63,8 +66,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void ClickOnSubmitButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -80,8 +83,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void ViewSearchResults() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -98,8 +101,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void SelectViewDetailOption() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -121,14 +124,45 @@ public class AuthorizeUserTest extends BaseClass {
 	 
     }
 	 
+	 //Verify if user is able to select the Edit Details option and able to edit the details
+	 @Test(priority=6)
+	 public void EditAccountInformation() {
+		
+	 LandingPage landingPage = new LandingPage(driver);
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
+	 landingPage.Enter_useremail(email);
+	 landingPage.Enter_password(password);
+	 landingPage.Loginbtn();
+	 AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
+	 AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
+	 authorizeuserpage.titleOfPage();
+	 authorizeuserpage.Enterdetails_searchtab(user);
+	 authorizeuserpage.Click_submitbtn();
+	 authorizeuserpage.Searchresults();
+	 authorizeuserpage.Click_menu(0);
+	 authorizeuserpage.Select_menu_option("Edit Details");
+	 try {
+		    authorizeuserpage.waitCode();
+	     } 
+	 catch (InterruptedException e) 
+	     {
+		    e.printStackTrace();
+	     }
+	 authorizeuserpage.Enter_mobilenumber("9838278022");
+	 authorizeuserpage.Click_savechanges();
+	 
+     }
+	
+	 
 	
 	 //Verify if user is able to select the Cancel User option and click on No button
-	 @Test(priority=6)
+	 @Test(priority=7)
 	 public void SelectCancelUserOption_ClickNoButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -152,12 +186,12 @@ public class AuthorizeUserTest extends BaseClass {
     }
 	 
 	 //Verify if user is able to select the Cancel User option and click on Yes button
-	 @Test(priority=7)
+	 @Test(priority=8)
 	 public void SelectCancelUserOption_ClickYesButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -182,15 +216,15 @@ public class AuthorizeUserTest extends BaseClass {
 	 
     }
 	 
-   	 String user1="kks";
+   	 String user1="VRS Narola";
 	
 	 //Verify if user is able to select the Delete User option and click on No button
-	 @Test(priority=8)
+	 @Test(priority=9)
 	 public void SelectDeleteUserOption_ClickNoButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -220,8 +254,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void SelectDeleteUserOption_ClickYesButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -242,50 +276,20 @@ public class AuthorizeUserTest extends BaseClass {
 		    e.printStackTrace();
 	     }
 	 boolean displayed = authorizeuserpage.Success_message();
-  Assert.assertTrue(displayed, "Success message has been displayed");
+    Assert.assertTrue(displayed, "Success message has been displayed");
 	 
     }
 	 
-	 String user2="act";
+	 String user2="testing";
 	 
-	 //Verify if user is able to select the Edit Details option and able to edit the details
-	 @Test(priority=10)
-	 public void EditAccountInformation() {
-		
-	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
-	 landingPage.Enter_useremail(email);
-	 landingPage.Enter_password(password);
-	 landingPage.Loginbtn();
-	 AccountManagementPage accountmanagement = landingPage.AccountManagementOption();
-	 AuthorizeUserPage authorizeuserpage= accountmanagement.AuthorizeUserOption();
-	 authorizeuserpage.titleOfPage();
-	 authorizeuserpage.Enterdetails_searchtab(user2);
-	 authorizeuserpage.Click_submitbtn();
-	 authorizeuserpage.Searchresults();
-	 authorizeuserpage.Click_menu(0);
-	 authorizeuserpage.Select_menu_option("Edit Details");
-	 try {
-		    authorizeuserpage.waitCode();
-	     } 
-	 catch (InterruptedException e) 
-	     {
-		    e.printStackTrace();
-	     }
-	 authorizeuserpage.Enter_mobilenumber("9838278022");
-	 authorizeuserpage.Click_savechanges();
-	 
-    }
-	 
-	 
+		 
 	 //Verify if user is able to select the Set Inactive option and click on No button
 	 @Test(priority=11)
 	 public void SelectSetInactiveOption_ClickNoButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -314,8 +318,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void SelectSetInactiveOption_ClickYesButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -336,7 +340,7 @@ public class AuthorizeUserTest extends BaseClass {
 		    e.printStackTrace();
 	     }
 	 boolean displayed = authorizeuserpage.Success_message();
-  Assert.assertTrue(displayed, "Success message has been displayed");
+     Assert.assertTrue(displayed, "Success message has been displayed");
 	 
     }
 	 
@@ -349,8 +353,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void ClickAddNewUserButton_ClickCancelButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(Email);
 	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
@@ -365,8 +369,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void InsertDetails_ClickCancelButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(Email);
 	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
@@ -375,7 +379,7 @@ public class AuthorizeUserTest extends BaseClass {
      authorizeuserpage.Click_addnewuser();
      authorizeuserpage.Enter_firstname("Mohit");
      authorizeuserpage.Enter_lastname("Paul");
-     authorizeuserpage .Enter_emailId("test50@yopmail.com");
+     authorizeuserpage .Enter_emailId("testingOct29@yopmail.com");
      authorizeuserpage.Enter_mobilenumber("9838278022");
      try {
 		    authorizeuserpage.waitCode();
@@ -394,8 +398,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void CreateNewAuthorizedUser() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(Email);
 	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();
@@ -404,7 +408,7 @@ public class AuthorizeUserTest extends BaseClass {
      authorizeuserpage.Click_addnewuser();
      authorizeuserpage.Enter_firstname("Mohit");
      authorizeuserpage.Enter_lastname("Paul");
-     authorizeuserpage .Enter_emailId("test50@yopmail.com");
+     authorizeuserpage .Enter_emailId("testingOct29@yopmail.com");
      authorizeuserpage.Enter_mobilenumber("9838278022");
      authorizeuserpage.Click_createbtn();
      try {
@@ -425,8 +429,8 @@ public class AuthorizeUserTest extends BaseClass {
 	 public void Verify_AuthorizeUserRequestCreated() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(Email);
 	 landingPage.Enter_password(Password);
 	 landingPage.Loginbtn();

@@ -18,8 +18,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnManageTEUSlotsMenu() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -34,8 +34,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnCSVUploadSlotSubmenu() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -51,8 +51,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnDownloadCSVTemplateFile() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -67,8 +67,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnSpecifyMonthOrYearField() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -89,8 +89,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void SelectMonthOrYearOption() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -106,8 +106,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnChooseFileField() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -124,8 +124,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void UploadCSVFile() throws AWTException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -143,8 +143,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void VerifySelectedFilename() throws AWTException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -164,8 +164,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnUploadCSVButton() throws AWTException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -194,8 +194,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnCSVListSlotSubmenu() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -211,15 +211,15 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void VerifyUploadedFileDetailsVisibleInCSVFileListSubmenu() throws AWTException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_CSVfileupload();
 	 manageTEUslotspage.Click_specifymonthfield();
-	 manageTEUslotspage.Select_monthfromdropdown("August 2024");
+	 manageTEUslotspage.Select_monthfromdropdown("August 2024");			
 	 manageTEUslotspage.Click_choosefilefield();
 	 manageTEUslotspage.Uploadfile("/Users/c100-96/Desktop/Validfile.csv");
 	 manageTEUslotspage.Click_uploadCSVbtn();
@@ -238,8 +238,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickPaginationForSwitchingThePage() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -254,13 +254,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickUpArrowOfMonthcolumn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_CSVfilelist();
+	 try {
+		landingPage.waitCode();
+	 } catch (InterruptedException e) {
+		e.printStackTrace();
+	 }
 	 manageTEUslotspage.click_uparrow();
 	 
 	 }	 
@@ -270,13 +275,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickDownArrowOfMonthcolumn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_CSVfilelist();
+	 try {
+		landingPage.waitCode();
+	 } catch (InterruptedException e) {
+		e.printStackTrace();
+	 }
 	 manageTEUslotspage.click_downarrow();
 	 
 	 }
@@ -284,16 +294,17 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 
 	 //Verify if user is able to click on Inventary Update sub-menu option and get the title of the page
 	 @Test(priority=15)
-	 public void ClickOnInventoryUpdateSubmenu() {
+	 public void ClickOnInventoryUpdateSubmenu() throws InterruptedException {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 landingPage.waitCode();
 	 String actual = manageTEUslotspage.titleOfPage();
 	 Assert.assertEquals(actual, "SWiM GDS - Seller - Inventory Update");
 	 
@@ -304,13 +315,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void EnterVoyageAndClickOnSearchButton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 try {
+		manageTEUslotspage.waitCode();
+  	 } catch (InterruptedException e) {
+		e.printStackTrace();
+	 }
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
 	 
@@ -321,13 +337,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void EnterNewQunatityInFields() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 try {
+			manageTEUslotspage.waitCode();
+	  	 } catch (InterruptedException e) {
+			e.printStackTrace();
+		 }
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
 	 manageTEUslotspage.Enter_newqty("1");
@@ -339,13 +360,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickArrowToIncreaseQuantity() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 try {
+			manageTEUslotspage.waitCode();
+	  	 } catch (InterruptedException e) {
+			e.printStackTrace();
+		 }
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
 	 manageTEUslotspage.Click_increaseqty();
@@ -365,8 +391,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickArrowToDecreaseQuantity() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -392,13 +418,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void EnterNewQunatityInFieldsAndClickSubmitbutton() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 try {
+			manageTEUslotspage.waitCode();
+	  	 } catch (InterruptedException e) {
+			e.printStackTrace();
+		 }
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
 	 manageTEUslotspage.Enter_newqty("1");
@@ -412,13 +443,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void ClickOnPriceOption() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 try {
+			manageTEUslotspage.waitCode();
+	  	 } catch (InterruptedException e) {
+			e.printStackTrace();
+		 }
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
 	 manageTEUslotspage.Click_Priceoption();
@@ -430,13 +466,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void EnterNewChargesInField() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 try {
+			manageTEUslotspage.waitCode();
+	  	 } catch (InterruptedException e) {
+			e.printStackTrace();
+		 }
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
 	 manageTEUslotspage.Click_Priceoption();
@@ -449,13 +490,18 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void EnterPriceInFieldsAndClickSubmit() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
 	 ManageTEUSlotsPage manageTEUslotspage = landingPage.ManageTEUSlotsPageOption();
 	 manageTEUslotspage.Click_inventoryupdate();
+	 try {
+			manageTEUslotspage.waitCode();
+	  	 } catch (InterruptedException e) {
+			e.printStackTrace();
+		 }
 	 manageTEUslotspage.Enter_voyage("V00010-S");
 	 manageTEUslotspage.Click_searchbtn();
 	 manageTEUslotspage.Click_Priceoption();
@@ -470,8 +516,8 @@ public class ManageTEUSlotsTest extends BaseClass{
 	 public void LogoutFromInventoryUpdateSubmenu() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();

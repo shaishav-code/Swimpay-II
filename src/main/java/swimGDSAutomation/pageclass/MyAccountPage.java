@@ -51,6 +51,9 @@ WebDriver driver;
     @FindBy(xpath="//*[@id='editProfile-state']")
     private WebElement state;
     
+    @FindBy(xpath="//*[@id='editProfile-state-error']")
+    private WebElement state_invalidvalidation;
+    
     @FindBy(xpath="//*[@name='country']")
     private WebElement countrydropdown;
     
@@ -102,6 +105,14 @@ WebDriver driver;
     	scrollToElement(state_validation);
     	return state_validation.isDisplayed();
     }
+    
+    //Verify if user is able to get the validation for invalid details behind the state field
+    public boolean Validation_invalidstate()
+    {
+    	scrollToElement(state_invalidvalidation);
+    	return state_invalidvalidation.isDisplayed();
+    }
+
     
     //Verify if user is able to insert Address1
     public void Insert_address(String add1 , String add2)

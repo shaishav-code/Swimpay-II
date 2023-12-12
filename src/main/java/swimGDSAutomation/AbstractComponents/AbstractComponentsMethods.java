@@ -18,6 +18,7 @@ import swimGDSAutomation.pageclass.ManageTEUSlotsPage;
 import swimGDSAutomation.pageclass.ManageTradingTermPage;
 import swimGDSAutomation.pageclass.ManageVoyagePage;
 import swimGDSAutomation.pageclass.AccountManagementPage;
+import swimGDSAutomation.pageclass.BCNDocumentsPage;
 import swimGDSAutomation.pageclass.QuotesPage;
 import swimGDSAutomation.pageclass.SellerReportPage;
 import swimGDSAutomation.pageclass.StandardDocumentsPage;
@@ -38,8 +39,15 @@ public class AbstractComponentsMethods{
 	public void scrolling() {
 		
        JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0, 400)");
-	   // js.executeScript("window.scrollBy(0, -400)");
+	   js.executeScript("window.scrollBy(0, 400)");
+	   //js.executeScript("window.scrollBy(0, -400)");
+	}
+	
+	//Scrolling up
+	public void ScrollingUp() {
+			
+	   JavascriptExecutor js = (JavascriptExecutor)driver;
+	   js.executeScript("window.scrollBy(0, -400)");
 	}
 
 	//Scrolling till particular webelement
@@ -148,7 +156,7 @@ public class AbstractComponentsMethods{
 	
     public void waitTimeForElementToClickable(WebElement eleClick) 
     {
-			wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+    	   wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 			wait.until(ExpectedConditions.elementToBeClickable(eleClick));
 	}
 
@@ -365,6 +373,20 @@ public class AbstractComponentsMethods{
       ManageCouponPage managecouponpage = new ManageCouponPage(driver);
       return managecouponpage;
      }
+    
+    
+               ////////////////BCN Documents/////////////////
+
+    @FindBy(xpath="//*[text()='BCN Documents']")
+    private WebElement bcndocsmenu;
+
+    public BCNDocumentsPage BCNDocumentsPageOption()
+    {
+      bcndocsmenu.click();
+      BCNDocumentsPage BCNdocumentstest = new BCNDocumentsPage(driver);
+      return BCNdocumentstest;
+    }
+
 
 }
 

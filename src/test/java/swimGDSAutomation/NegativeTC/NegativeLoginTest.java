@@ -9,11 +9,11 @@ import swimGDSAutomation.pageclass.LandingPage;
 public class NegativeLoginTest extends BaseClass{
 
 	
-	String email = "nda.norala@yopmail.com";
-	String password ="Admin@123";
+	String email = "nik07@yopmail.com";
+	String password ="Nikhil@86";
 	String invalidemail="nda@gmail.com";
 	String invalidpassword ="Admin@1234";
-	String expectedvalidtion1 ="Email and Password are the required field";
+	String expectedvalidtion ="Email is a required field";
 	
 	//Verify if user is able to do login without inserting Email and Password
 	@Test(priority=1)
@@ -25,7 +25,7 @@ public class NegativeLoginTest extends BaseClass{
 		landingPage.Loginbtn();
 		
 		String actualvalidtion1 = landingPage.Validation_Loginpage();
-		Assert.assertEquals(actualvalidtion1, expectedvalidtion1);
+		Assert.assertEquals(actualvalidtion1, expectedvalidtion);
 	}
 	
 	
@@ -111,6 +111,7 @@ public class NegativeLoginTest extends BaseClass{
 			
 		String actualvalidtion1 = landingPage.Validation_Loginpage();
 		Assert.assertEquals(actualvalidtion1, expectedvalidtion6);
+		
 	}
 
 }

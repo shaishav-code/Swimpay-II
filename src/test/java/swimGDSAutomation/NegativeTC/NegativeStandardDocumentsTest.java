@@ -82,7 +82,7 @@ public class NegativeStandardDocumentsTest extends BaseClass{
 		 }
 		 
 		 //Verify if the user is able to enter the nth numbers in the version number field in Upload T&C's Submenu
-		 //Suggestion
+		 //As per client no fix required
 		 @Test(priority=4)
 		 public void EnterNthNumbersDetailsInVersionFieldInUploadTnCSubmenu() throws InterruptedException {
 				
@@ -100,7 +100,7 @@ public class NegativeStandardDocumentsTest extends BaseClass{
 	     standarddocumentsnpage.Enter_version("11111111111111111111111111111111111111111111111111111111111111111111111.0000000000000000000");
 	     standarddocumentsnpage.Click_datefield();
 	     standarddocumentsnpage.waitCode();
-	     Assert.assertEquals(standarddocumentsnpage.Validation_versionnield(), "Please enter a valid version. Version with pattern like 1.1");
+	     //Assert.assertEquals(standarddocumentsnpage.Validation_versionnield(), "Please enter a valid version. Version with pattern like 1.1");
 			
 		 }
 		 
@@ -378,7 +378,7 @@ public class NegativeStandardDocumentsTest extends BaseClass{
 		 }
 		 
 		 //Verify if the user is able to enter the nth numbers in the version number field in Upload Forms Submenu
-		 //Suggestion
+		 //No fix required as per client
 		 @Test(priority=15)
 		 public void EnterNthNumbersDetailsInVersionFieldInUploadFormsSubmenu() throws InterruptedException {
 				
@@ -396,7 +396,7 @@ public class NegativeStandardDocumentsTest extends BaseClass{
 	     standarddocumentsnpage.Enter_version("11111111111111111111111111111111111111111111111111111111111111111111111.0000000000000000000");
 	     standarddocumentsnpage.Click_datefield();
 	     standarddocumentsnpage.waitCode();
-	     Assert.assertEquals(standarddocumentsnpage.Validation_versionnield(), "Please enter a valid version. Version with pattern like 1.1");
+	     //Assert.assertEquals(standarddocumentsnpage.Validation_versionnield(), "Please enter a valid version. Version with pattern like 1.1");
 			
 		 }
 		 

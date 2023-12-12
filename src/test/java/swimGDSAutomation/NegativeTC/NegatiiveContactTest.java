@@ -8,13 +8,13 @@ import swimGDSAutomation.pageclass.LandingPage;
 
 public class NegatiiveContactTest extends BaseClass {
 
-	   String Email = "maersk@gmail.com";
+	   String Email = "nda.norala@gmail.com";
 	   String name ="SHD";
 	   String mobile="11111111111";
 	   String email= "shd@narola.email";
 	   String invalidemail= "343@gmcom";
 	   String message = "I'm filling the contact us form";
-	   String expectedURL="https://demo.swimgds.com/seller/contact-us";
+	   String expectedURL="https://demo.swimgds.com/seller/contact-us"; 
 	   String blank = "           ";
 	   String numbers = "12321";
 	   String specialchar = "#@$(1";
@@ -26,13 +26,13 @@ public class NegatiiveContactTest extends BaseClass {
 	   public void EnterBlankspace_ContactUsForm()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
 	    contactpage.Contactus_name(blank);
-	  //contactpage.Contactus_mobile(blank);
+	    contactpage.Contactus_mobile(blank);
 	    contactpage.Contactus_email(email);
 	    contactpage.Contactus_message(blank);
         contactpage.Contactus_sendbtn();
@@ -42,34 +42,34 @@ public class NegatiiveContactTest extends BaseClass {
 	   }
 	   
 	   //Verify if the user is able to insert the numbers in the fields and can submit the form
-	   //Failed
+	   //Pass
 	   @Test(priority=2)
 	   public void VerifyFieldAcceptTheNumber()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
 	    contactpage.Contactus_name(numbers);
 	    contactpage.Contactus_mobile(numbers);
-	    contactpage.Contactus_email(numbers);
+	    contactpage.Contactus_email(Email);
 	    contactpage.Contactus_message(numbers);
         contactpage.Contactus_sendbtn();
-        String successmessageonform = contactpage.Validation_onfield();
-        Assert.assertEquals(successmessageonform, "This is a required field");
+        String successmessageonform = contactpage.Validation_invaliddetails();
+        Assert.assertEquals(successmessageonform, "Please enter a valid your name");
 
 	   }
 	   
 	   //Verify if the user is able to insert the invalid Email address in the field and can submit the form
-	   //Failed
+	   //Pass
 	   @Test(priority=3)
 	   public void VerifyEmailFieldAcceptInvalidEmail() throws InterruptedException
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
@@ -79,29 +79,29 @@ public class NegatiiveContactTest extends BaseClass {
 	    contactpage.Contactus_message(message);
 	    Thread.sleep(3000);
         contactpage.Contactus_sendbtn();
-        String successmessageonform = contactpage.Validation_onemail();
-        Assert.assertEquals(successmessageonform, "This is a required field");
+        String successmessageonform = contactpage.Validation_invaliddetails();
+        Assert.assertEquals(successmessageonform, "Please enter a valid email address");
 
 	   }
 	   
 	   //Verify if the user is able to insert the Special Character in the fields and can submit the form
-	   //Failed
+	   //Pass
 	   @Test(priority=4)
 	   public void VerifyFieldAcceptTheSpecialCharacter()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
 	    contactpage.Contactus_name(specialchar);
 	    contactpage.Contactus_mobile(specialchar);
-	    contactpage.Contactus_email(specialchar);
+	    contactpage.Contactus_email(Email);
 	    contactpage.Contactus_message(specialchar);
         contactpage.Contactus_sendbtn();
-        String successmessageonform = contactpage.Validation_onfield();
-        Assert.assertEquals(successmessageonform, "This is a required field");
+        String successmessageonform = contactpage.Validation_invaliddetails();
+        Assert.assertEquals(successmessageonform, "Please enter a valid your name");
 
 	   }
 	   
@@ -110,8 +110,8 @@ public class NegatiiveContactTest extends BaseClass {
 	   public void WithoutInsertingdetails_ContactUsForm()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
@@ -124,8 +124,8 @@ public class NegatiiveContactTest extends BaseClass {
 	   public void WithoutInsertingName_ContactUsForm()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption(); 		
@@ -133,7 +133,8 @@ public class NegatiiveContactTest extends BaseClass {
 		contactpage.Contactus_email(email);
 	    contactpage.Contactus_message(message);
         contactpage.Contactus_sendbtn();
-	   } 
+	    
+	    } 
 	   
 	   
 	   //Verify if user is able submit the form without inserting the Email address
@@ -141,30 +142,32 @@ public class NegatiiveContactTest extends BaseClass {
 	   public void WithoutInsertingEmail_ContactUsForm()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
 	    contactpage.Contactus_name(name);
 	    contactpage.Contactus_message(message);
         contactpage.Contactus_sendbtn();
-	   } 
+        
+	    } 
 	   
 	   //Verify if user is able submit the form without inserting the Message
 	   @Test(priority=8)
 	   public void WithoutInsertingMessage_ContactUsForm()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
 	    contactpage.Contactus_name(name);
 		contactpage.Contactus_email(email);
         contactpage.Contactus_sendbtn();
-	   } 
+        
+	    } 
 	
 	
 }

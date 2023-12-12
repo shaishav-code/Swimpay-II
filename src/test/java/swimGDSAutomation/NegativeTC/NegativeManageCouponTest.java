@@ -13,7 +13,10 @@ public class NegativeManageCouponTest extends BaseClass{
 	 String email = "nda.norala@gmail.com";
      String password ="Nikhil@86";
      
-    /* //Verify if user is able to click directly on create button without inserting mandatory details in the fields in Create coupon code submenu
+     
+                       ////////////////////////Create New Coupon///////////////////////
+     
+     //Verify if user is able to click directly on create button without inserting mandatory details in the fields in Create coupon code submenu
    	 @Test(priority=1)
    	 public void ClickOnCreateTradingTerms() throws InterruptedException {
    		
@@ -43,7 +46,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("   ");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("   ");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.waitCode();
    	 Assert.assertFalse(managecouponpage.Createbtn_isenabled());
    	 managecouponpage.Click_createbtn();
@@ -65,7 +68,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("@%&*?.,");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("20");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
    	 managecouponpage.Click_createbtn();
    	 managecouponpage.waitCode();
    	 Assert.assertTrue(managecouponpage.Validationoncode());
@@ -87,7 +90,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("@%&*?.,");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("0");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.Click_createbtn();
 	 managecouponpage.waitCode();
 	 Assert.assertTrue(managecouponpage.Validationoncode());
@@ -110,7 +113,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("@%&*?.,");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("101");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.Click_createbtn();
 	 managecouponpage.waitCode();
 	 Assert.assertTrue(managecouponpage.Validationoncode());
@@ -133,12 +136,12 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("Narola18");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("20");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.Click_createbtn();
 	 managecouponpage.waitCode();
 	 Assert.assertTrue(managecouponpage.Validationoncode());
 		     
-	 }	*/ 
+	 }	
 	 
 	 
 	                       /////////////////////Coupon List////////////////////////
@@ -191,7 +194,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("   ");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("   ");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.waitCode();
    	 Assert.assertFalse(managecouponpage.Createbtn_isenabled());
    	 managecouponpage.Click_createbtn();
@@ -215,7 +218,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("@%&*?.,");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("20");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
    	 managecouponpage.Click_createbtn();
    	 managecouponpage.waitCode();
    	 Assert.assertTrue(managecouponpage.Validationoncode());
@@ -239,7 +242,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("@%&*?.,");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("0");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.Click_createbtn();
 	 managecouponpage.waitCode();
 	 Assert.assertTrue(managecouponpage.Validationoncode());
@@ -264,7 +267,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("@%&*?.,");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("101");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.Click_createbtn();
 	 managecouponpage.waitCode();
 	 Assert.assertTrue(managecouponpage.Validationoncode());
@@ -289,7 +292,7 @@ public class NegativeManageCouponTest extends BaseClass{
 	 managecouponpage.Enter_couponname("Narola18");
 	 managecouponpage.waitCode();
 	 managecouponpage.Enter_discount("20");
-	 managecouponpage.SelectdatenMonth("October 2023","19");
+	 managecouponpage.SelectdatenMonth("October 2023","20");
 	 managecouponpage.Click_createbtn();
 	 managecouponpage.waitCode();
 	 Assert.assertTrue(managecouponpage.Validationoncode());

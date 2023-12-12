@@ -20,15 +20,16 @@ public class LandingPage extends AbstractComponentsMethods{
 	
 	public void launchURL() 
 	{
-		//driver.get("https://demo.swimgds.com/");
-		driver.get("https://demo.swimgds.com/seller/login");
+	// driver.get("https://demo.swimgds.com/");
+	 //driver.get("https://demo.swimgds.com/seller/account-question");
+	 driver.get("https://demo.swimgds.com/seller/login");
 	}
 	
 	@FindBy(xpath ="//*[text()='Seller Login / Register']")
 	private WebElement  sellerLogin;
 	
 	@FindBy(xpath ="//*[@class='btn btn-primary']")
-	private WebElement  alreadylogin;
+	private WebElement  login;
 	
 	@FindBy(xpath="//*[text()='Seller Login']")
 	private WebElement logintext;
@@ -36,8 +37,8 @@ public class LandingPage extends AbstractComponentsMethods{
 	@FindBy(xpath ="//*[text()='Create Seller Account']")
 	private WebElement registertext;
 	
-	@FindBy(xpath ="//*[@class='swim-icon swm-arrowleft']")
-	private WebElement backarrow;
+	@FindBy(xpath ="//*[@class='txt-back']")
+	private WebElement backtext;
 	
 	@FindBy(xpath="//*[@id='email']")
 	private WebElement login_email;
@@ -70,7 +71,7 @@ public class LandingPage extends AbstractComponentsMethods{
 	
 	public void Loginpage()
 	{
-		alreadylogin.click();
+		login.click();
 		String LogText = logintext.getText();
 		System.out.println("Visible is " +  LogText);
 		//driver.navigate().back();
@@ -96,14 +97,14 @@ public class LandingPage extends AbstractComponentsMethods{
 	//Verify if user is able to click on back arrow
 	public void Click_backarrow()
 	{
-		backarrow.click();
+		backtext.click();
 	}
 	
 	//Login method
 	public void Enter_logincredentials(String email)
 	{
 		login_email.sendKeys(email);
-		login_password.sendKeys("Admin@123");
+		login_password.sendKeys("Nikhil@86");
 		login_eyeicon.click();
 		login_rememberme.click();
 	}

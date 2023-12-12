@@ -9,16 +9,16 @@ import swimGDSAutomation.pageclass.AccountManagementPage;
 
 public class AccountManagementTest extends BaseClass  {
 
-     String email = "nda.norala@yopmail.com";
-     String password ="Nayan@86"; 
+     String email = "nda.norala@gmail.com";
+     String password ="Nikhil@86"; 
      
      //Verify if user is able to click on Account Management menu and dropdown list is getting visible 
 	 @Test(priority=1)
 	 public void ClickOnAccountManagementDropDown() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -33,8 +33,8 @@ public class AccountManagementTest extends BaseClass  {
 	 public void ClickOnMyAccount() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -51,8 +51,8 @@ public class AccountManagementTest extends BaseClass  {
 	 public void ClickOnAuthorizeUser() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -69,8 +69,8 @@ public class AccountManagementTest extends BaseClass  {
 	 public void ClickOn_SwimTermsNCondition() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -88,8 +88,8 @@ public class AccountManagementTest extends BaseClass  {
 	 public void ClickOn_SwimGDSRules() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();

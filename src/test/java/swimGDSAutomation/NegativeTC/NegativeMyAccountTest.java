@@ -10,16 +10,16 @@ import swimGDSAutomation.pageclass.MyAccountPage;
 
 public class NegativeMyAccountTest extends BaseClass {
 
-	 String email = "nda.norala@gmail.com";
-     String password ="Nikhil@86";
+	 String email = "nayanako@yopmail.com";
+     String password ="Narola@21";
    
 	 //Verify if user is able to click on save changes button without inserting details in Edit company info pop-up
 	 @Test(priority=1)
 	 public void WithoutInsertingValues_clickSaveBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -36,8 +36,8 @@ public class NegativeMyAccountTest extends BaseClass {
 	 public void EnterBlankInAllField_ClickSaveBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -65,8 +65,8 @@ public class NegativeMyAccountTest extends BaseClass {
 	 public void EnterBlankSpaceInAllField_ClickSaveBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -98,8 +98,8 @@ public class NegativeMyAccountTest extends BaseClass {
 	 public void EnterNumberInAllField_ClickSaveBtn() {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -120,7 +120,7 @@ public class NegativeMyAccountTest extends BaseClass {
 			e.printStackTrace();
 		}
 	 myaccountpage.Click_Companysavebtn();
-	boolean valid = myaccountpage.Validation_state();
+	boolean valid = myaccountpage.Validation_invalidstate();
 	Assert.assertTrue(valid, "Validation has been displayed");
 	 
 	 }
@@ -186,8 +186,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertBlankInAllField_ClickSaveBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -211,9 +211,9 @@ public class NegativeMyAccountTest extends BaseClass {
 		 @Test(priority=8)
 		 public void InsertBlankSpaceInAllFields_ClickSaveBtn() {
 			
-		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 LandingPage landingPage = new LandingPage(driver);
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -237,8 +237,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertNumbersInAllFields_ClickSaveBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -262,8 +262,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertNumbersInMobileField_WithoutSelectingDialCode_ClickSaveBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -286,8 +286,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void SelectDialCode_WithoutInsertingMobileNumber_ClickSaveBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -309,8 +309,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertingSpecialCharacter_ClickSaveBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -335,8 +335,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void ClickSaveBtnWithoutInsertingPasswordDetails() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -358,8 +358,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void ClickSaveBtn_WithoutInsertingNewNConfirmPasswordDetails_ButInsertingInCorrectOldPassword() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -383,8 +383,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void ClickSaveBtn_WithoutInsertingNewNConfirmPasswordDetails_ButInsertingCorrectOldPassword() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -392,7 +392,7 @@ public class NegativeMyAccountTest extends BaseClass {
 		 accountmanagement.Click_myaccount();
 		 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 		 myaccountpage.Click_changePasswordnSecurity();
-		 myaccountpage.Enter_oldpasssword("Dilip@07");    
+		 myaccountpage.Enter_oldpasssword("Narola@12");    
 		 myaccountpage.Click_changePasswordbtn();
 		 try {
 				myaccountpage.waitCode();
@@ -407,8 +407,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void ChangePasswordByInserting_IncorrectOldPassword() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -432,8 +432,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void ChangePasswordByInserting_Misma() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -441,7 +441,7 @@ public class NegativeMyAccountTest extends BaseClass {
 		 accountmanagement.Click_myaccount();
 		 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 		 myaccountpage.Click_changePasswordnSecurity();
-		 myaccountpage.Enter_oldpasssword("Dilip@07");
+		 myaccountpage.Enter_oldpasssword("Narola@12");
 		 myaccountpage.Enter_NewnConfirmPassword("Mohit@07","Mohit@70");        //Mismatched Password
 		 myaccountpage.Click_changePasswordbtn();
 		 try {
@@ -458,8 +458,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void VerifySecurityDetailsChange() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -481,8 +481,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertOnlyCurrentPassword_ClickUpdateBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -490,7 +490,7 @@ public class NegativeMyAccountTest extends BaseClass {
 		 accountmanagement.Click_myaccount();
 		 MyAccountPage myaccountpage= accountmanagement.MyAccountOption();
 		 myaccountpage.Click_changePasswordnSecurity();
-	     myaccountpage.Enter_currentpassword("Dilip@07");
+	     myaccountpage.Enter_currentpassword("Narola@12");
 	     myaccountpage.Selectquest1_EnterAns1("");
 	     myaccountpage.Selectquest2_EnterAns2("");
 	     myaccountpage.Click_updatedetailsbtn();
@@ -507,8 +507,8 @@ public class NegativeMyAccountTest extends BaseClass {
 			 public void InsertInCorrectPassword_ClickUpdateBtn() {
 				
 			 LandingPage landingPage = new LandingPage(driver);
-			 landingPage.SellerLogin();	
-			 landingPage.Loginpage();
+//			 landingPage.SellerLogin();	
+//			 landingPage.Loginpage();
 			 landingPage.Enter_useremail(email);
 			 landingPage.Enter_password(password);
 			 landingPage.Loginbtn();
@@ -535,8 +535,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertBlankInAllFields_ClickSaveBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -569,8 +569,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertBlankSpaceInAllFields_ClickSaveBankBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -605,8 +605,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertNumbersInAllFields_ClickSaveBankBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();
@@ -642,8 +642,8 @@ public class NegativeMyAccountTest extends BaseClass {
 		 public void InsertSpecialCharactersNumbersInAllFields_ClickSaveBankBtn() {
 			
 		 LandingPage landingPage = new LandingPage(driver);
-		 landingPage.SellerLogin();	
-		 landingPage.Loginpage();
+//		 landingPage.SellerLogin();	
+//		 landingPage.Loginpage();
 		 landingPage.Enter_useremail(email);
 		 landingPage.Enter_password(password);
 		 landingPage.Loginbtn();

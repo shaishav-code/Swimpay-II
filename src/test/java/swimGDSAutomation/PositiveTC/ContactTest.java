@@ -9,7 +9,7 @@ import swimGDSAutomation.pageclass.LandingPage;
 
 public class ContactTest extends BaseClass {
  
-	   String Email = "cma@gmail.com";
+	   String Email = "nda.norala@gmail.com";
 	   String name ="SHD";
 	   String mobile="11111111111";
 	   String email= "shd@narola.email";
@@ -22,8 +22,8 @@ public class ContactTest extends BaseClass {
 	   public void Visible_ContactUsForm()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
@@ -40,8 +40,8 @@ public class ContactTest extends BaseClass {
 	   public void Fill_ContactUsForm()
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();
@@ -52,6 +52,7 @@ public class ContactTest extends BaseClass {
 	    contactpage.Contactus_message(message);
 	    boolean display = contactpage.Assertion_sendbtn();
         System.out.println("Send button is displayed on page: "+ display);		
+        
 	   }
 	   
 	   
@@ -61,8 +62,8 @@ public class ContactTest extends BaseClass {
 	   
 	   {
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.SellerLogin();	
-		landingPage.Loginpage();
+//		landingPage.SellerLogin();	
+//		landingPage.Loginpage();
 		landingPage.Enter_logincredentials(Email);
 		landingPage.Loginbtn();
 		ContactPage contactpage =  landingPage.ContactOption();

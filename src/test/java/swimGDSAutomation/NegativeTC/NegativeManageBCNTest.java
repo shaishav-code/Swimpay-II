@@ -19,7 +19,8 @@ public class NegativeManageBCNTest extends BaseClass{
                   ////////////////////Enter BCN Number Range////////////////
      
      //Verify if the user is able to enter the character in Starting & Ending number field in Enter BCN Number Range sub-menu--Fail
-   	 @Test(priority=1)
+   	 //Pass: https://prnt.sc/VKb_pi5jxaXX
+     @Test(priority=1)
    	 public void EnterTheCharacterInStartingAndEndingNumberField() throws InterruptedException {
    			 
    			
@@ -224,9 +225,8 @@ public class NegativeManageBCNTest extends BaseClass{
    	
    	 }
    	 
-     //Verify if the user is to able to enter a duplicate number i.e. a number that is already in a current range for me on my system in Enter BCN Number Range sub-menu--Fail
-   	 //https://skp-narola.tinytake.com/msc/ODc5MDU0N18yMjIxMjUzMQ
-   	 
+     //Verify if the user is to able to enter a duplicate number i.e. a number that is already in a current range for me on my system in Enter BCN Number Range sub-menu   	 
+   	 //Pass: https://gjp-narola.tinytake.com/msc/ODg1MzE2OV8yMjI5NTU0Nw
    	 @Test(priority=9)
    	 public void EnterDuplicateBCNNumberRange_AndVerifySubmittion() throws InterruptedException {
    			 
@@ -240,7 +240,7 @@ public class NegativeManageBCNTest extends BaseClass{
 	 managebcnpage.waitCode();
    	 managebcnpage.Click_BCNrangesubmenu();
    	 managebcnpage.waitCode();
-   	 managebcnpage.Enter_startingnumber("5");
+   	 managebcnpage.Enter_startingnumber("7");
    	 managebcnpage.Enter_Endingnumber("10");
    	 try {
    			managebcnpage.waitCode();
@@ -249,7 +249,8 @@ public class NegativeManageBCNTest extends BaseClass{
    		 }
    	 managebcnpage.Click_submitBtn();
    	 managebcnpage.waitCode();
-   	 Assert.assertTrue(managebcnpage.failed_message());
+   	 Assert.assertTrue(managebcnpage.Validation_onstartingnumber());
+     Assert.assertTrue(managebcnpage.Validation_onendingnumber());
      	
    	 }  
    	 
@@ -472,9 +473,9 @@ public class NegativeManageBCNTest extends BaseClass{
    	
    	 }
    	 
-     //Verify if the user is to able to enter a duplicate number i.e. a number that is already in a current range for me on my system in Manage BCN number sub-menu--Fail
-   	 //https://cks-narola.tinytake.com/msc/ODc5NzgzNF8yMjIyMTQ5Mg
-   	 @Test(priority=18)
+     //Verify if the user is to able to enter a duplicate number i.e. a number that is already in a current range for me on my system in Manage BCN number sub-menu   	 
+   	 //Pass: https://gjp-narola.tinytake.com/msc/ODg1MzI2N18yMjI5NTY4NQ
+     @Test(priority=18)
    	 public void EnterDuplicateBCNNumberRange_AndVerifySubmittion_InManageBCNNumberSubmenu() throws InterruptedException {
    			 
    			
@@ -487,8 +488,8 @@ public class NegativeManageBCNTest extends BaseClass{
 	 managebcnpage.waitCode();
 	 managebcnpage.Click_AddBCNRangeBtn();        
    	 managebcnpage.waitCode();
-   	 managebcnpage.Enter_startingnumber("4");
-   	 managebcnpage.Enter_Endingnumber("14");
+   	 managebcnpage.Enter_startingnumber("8");
+   	 managebcnpage.Enter_Endingnumber("13");
    	 try {
    			managebcnpage.waitCode();
    		 } catch (InterruptedException e) {
@@ -496,7 +497,8 @@ public class NegativeManageBCNTest extends BaseClass{
    		 }
    	 managebcnpage.Click_AddBtn();
    	 managebcnpage.waitCode();
-   	 Assert.assertTrue(managebcnpage.failed_message());
+   	 Assert.assertTrue(managebcnpage.Validation_onstartingnumber());
+     Assert.assertTrue(managebcnpage.Validation_onendingnumber());
      	
    	 } 
      

@@ -18,8 +18,8 @@ public class NegativeCreateNewTradingTermsTest extends BaseClass{
 	 public void WithoutEnteringDetails_ClickOnCreateTradingTerms()   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -35,8 +35,8 @@ public class NegativeCreateNewTradingTermsTest extends BaseClass{
 	 public void EnterBlankSpace_ClickOnCreateTradingTerms()   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -55,8 +55,8 @@ public class NegativeCreateNewTradingTermsTest extends BaseClass{
 	 public void EnterSpecialCharacter_ClickOnCreateTradingTerms()   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -76,8 +76,8 @@ public class NegativeCreateNewTradingTermsTest extends BaseClass{
 	 public void WithoutSelectingDays_ClickCreateBtn()   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -95,8 +95,8 @@ public class NegativeCreateNewTradingTermsTest extends BaseClass{
 	 public void SelectInvalidDaysOption_FromTermsDropdown()   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
@@ -119,8 +119,8 @@ public class NegativeCreateNewTradingTermsTest extends BaseClass{
 	 public void WithoutSelectingDate_ClickCreateBtn()   {
 		
 	 LandingPage landingPage = new LandingPage(driver);
-	 landingPage.SellerLogin();	
-	 landingPage.Loginpage();
+//	 landingPage.SellerLogin();	
+//	 landingPage.Loginpage();
 	 landingPage.Enter_useremail(email);
 	 landingPage.Enter_password(password);
 	 landingPage.Loginbtn();
