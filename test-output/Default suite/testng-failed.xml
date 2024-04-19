@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swimGDSAutomation.PositiveTC.ManageVoyageTest">
+      <class name="SwimPay.positiveTests.InvoicingTest">
         <methods>
           <include name="tearDown"/>
-          <include name="ClickOnAscDescArrow"/>
+          <include name="InsertAllDetailsAndClickOnNextButtonInCreateInvoiceSubmenu"/>
           <include name="lanuchWebsite"/>
         </methods>
-      </class> <!-- swimGDSAutomation.PositiveTC.ManageVoyageTest -->
+      </class> <!-- SwimPay.positiveTests.InvoicingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

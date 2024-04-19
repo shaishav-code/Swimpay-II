@@ -18,15 +18,15 @@ public class ExtentReportGen {
 
 	reporter.config().setTheme(Theme.DARK);
 
-	reporter.config().setReportName("Swim GDS Automation");
+	reporter.config().setReportName("Swim-Pay Automation");
 	
-	reporter.config().setDocumentTitle("Swim GDS Automation Test Report");
+	reporter.config().setDocumentTitle("Swim Pay Automation Test Report");
 
 	extent = new ExtentReports();
 
 	extent.attachReporter(reporter);
 
-	extent.setSystemInfo("Project name", "Swim GDS Website");
+	extent.setSystemInfo("Project name", "Swim Pay Website");
 
 	extent.setSystemInfo("Environment", "SIT");
 

@@ -32,16 +32,13 @@
     <artifactId>java-client</artifactId>
     <version>7.5.1</version>
 </dependency>
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-		<dependency>
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
-    <version>5.4.1</version>
+    <version>5.8.0</version>
 </dependency>
 
-
-
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -49,6 +46,12 @@
 			<version>7.7.0</version>
 			<scope>test</scope>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.16.1</version>
+</dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
@@ -71,7 +74,15 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>7.8.1</version>
 		</dependency>
-
+		
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
+</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -79,32 +90,53 @@
 			<version>7.8.1</version>
 		</dependency>
   </dependencies>
-
+   
+  <profiles>
+		<profile>
+			<id>Regression</id>
+			  <build>
+				<pluginManagement>
+					<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0-M7</version>
+							<configuration>
+							<suiteXmlFiles>
+							<suiteXmlFile>PositiveInvoiceTest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>  
+	</profiles>
+		
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-      
+      <plugins>    
        <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                <source>1.8</source>
+                <target>1.8</target>
                 </configuration>
-            </plugin>
-      
+        </plugin>      
       				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0-M7</version>
 					<configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>NegativeContact.xml</suiteXmlFile>
-						</suiteXmlFiles>
+					<suiteXmlFiles>
+					<suiteXmlFile>PositiveInvoiceTest.xml</suiteXmlFile>
+					</suiteXmlFiles>
 					</configuration>
-				</plugin>
-      
+	    </plugin>    
+				
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
