@@ -12,7 +12,7 @@ public class InvoicingTest extends baseClass{
 	String email1="qa1@narola.email";
 	String password= "Pass@1234";
 	
-	//Verify if user is able to click on Invoicing menu
+	/* //Verify if user is able to click on Invoicing menu
 	@Test(priority=1)
 	public void ClickOnInvoicingMenu()
 	{
@@ -449,7 +449,7 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.otpVerify();
 		invoicingPage.waitcode();
 		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
-	}
+	} */
 	
 	
 	///////////////Invoice List///////////////
@@ -467,9 +467,167 @@ public class InvoicingTest extends baseClass{
 		LoginPage.otpSubmitBtn();
 		LoginPage.waitcode();
 		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnCreateInvoicePage();
+		invoicingPage.ClickOnInvoiceListPage();
 		invoicingPage.waitcode();
 		invoicingPage.ScrollingTillButton(7);
-	}		
+		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
+		LoginPage.waitcode();
+		invoicingPage.clickOnPagination();
+		
+	}	
+	
+	//Verify if user is able to click on Create Invoice button 
+	@Test(priority=18)
+	public void ClickOnCreateInvoiceButton()
+	{
+		loginPage LoginPage=new loginPage(driver);
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.waitcode();
+		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+		invoicingPage.ClickOnInvoiceListPage();
+		invoicingPage.waitcode();
+		invoicingPage.ClickButton(2); //create button
+		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing/create");
+	}
+	
+	//Verify if user is able to enter all the required details and click on Search button in invoice list submenu
+	@Test(priority=19)
+	public void InsertAllDetailsAndClickOnSearchButton()
+	{
+		loginPage LoginPage=new loginPage(driver);
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.waitcode();
+		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+		invoicingPage.ClickOnInvoiceListPage();
+		invoicingPage.waitcode();
+		invoicingPage.EnterReference("INV0");
+		invoicingPage.Selectdatetype();
+		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
+		invoicingPage.waitcode();
+		invoicingPage.EnterDate(1, "24 Jul 2025");   //To date
+		invoicingPage.ClickOnSearchBtn();
+	}
+	
+	//Verify if user is able to reset filters and click on the refresh icon in invoice list submenu
+	@Test(priority=20)
+	public void ResetFilters()
+	{
+		loginPage LoginPage=new loginPage(driver);
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.waitcode();
+		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+		invoicingPage.ClickOnInvoiceListPage();
+		invoicingPage.waitcode();
+		invoicingPage.EnterReference("INV0");
+		invoicingPage.Selectdatetype();
+		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
+		invoicingPage.waitcode();
+		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
+		invoicingPage.ClickOnSearchBtn();
+		invoicingPage.waitcode();
+		invoicingPage.ClickOnResetFilters();
+		invoicingPage.waitcode();
+		invoicingPage.ClickOnRefreshIcon();
+
+	}
+	
+	//Verify if user is able to click on Preview button in invoice list submenu
+	@Test(priority=21)
+	public void ClickOnPreviewButton()
+	{
+		loginPage LoginPage=new loginPage(driver);
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.waitcode();
+		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+		invoicingPage.ClickOnInvoiceListPage();
+		invoicingPage.waitcode();
+		invoicingPage.EnterReference("INV0");
+		invoicingPage.Selectdatetype();
+		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
+		invoicingPage.waitcode();
+		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
+		invoicingPage.ClickOnSearchBtn();
+		invoicingPage.waitcode();
+		invoicingPage.ClickOnPreviewButton("INV000124");
+		invoicingPage.waitcode();
+		invoicingPage.CommonPath(31);  //cross arrow of preview button
+
+	}
+	
+	//Verify if user is able to click on Edit button in invoice list submenu
+	@Test(priority=22)
+	public void ClickOnEditButton()
+	{
+		loginPage LoginPage=new loginPage(driver);
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.waitcode();
+		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+		invoicingPage.ClickOnInvoiceListPage();
+		invoicingPage.waitcode();
+		invoicingPage.EnterReference("INV0");
+		invoicingPage.Selectdatetype();
+		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
+		invoicingPage.waitcode();
+		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
+		invoicingPage.ClickOnSearchBtn();
+		invoicingPage.waitcode();
+		invoicingPage.ClickOnEditButton("INV000121"); //cross arrow of edit button
+		invoicingPage.waitcode();
+		Assert.assertEquals(invoicingPage.GetCurrentURL(),"https://demo.swimpay.com/invoicing/66220c534f799133a5b0a9bf");  
+	}
+	
+	//Verify if user is able to edit the invoice details in invoice list submenu
+	@Test(priority=23)
+	public void EditInvoiceDetails()
+	{
+		loginPage LoginPage=new loginPage(driver);
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.waitcode();
+		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+		invoicingPage.ClickOnInvoiceListPage();
+		invoicingPage.ClickOnEditButton("INV000121");
+		invoicingPage.waitcode();
+		invoicingPage.ClickExternalTypeCheckbox();
+		invoicingPage.InsertBillToAndAddress(0, 1,"Mr. Tester", "Victoria Street, Brazil");
+		invoicingPage.InsertDiscount("2");
+		invoicingPage.waitcode();
+		invoicingPage.VerifyDiscountValue();
+		invoicingPage.InsertTax("2");
+		invoicingPage.ScrollingTillButton(8);
+		invoicingPage.waitcode();
+		invoicingPage.ClickButton(8);
+		Assert.assertEquals("https://demo.swimpay.com/invoicing", invoicingPage.GetCurrentURL());
+	}
+		
 	
 }

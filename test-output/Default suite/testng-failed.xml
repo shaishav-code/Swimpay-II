@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SwimPay.positiveTests.InvoicingTest">
+      <class name="SwimPay.negativeTests.NegativeInvoicingTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="InsertAllDetailsAndClickOnNextButtonInCreateInvoiceSubmenu"/>
+          <include name="InsertInvalidDatesInFromAndToField"/>
           <include name="lanuchWebsite"/>
         </methods>
-      </class> <!-- SwimPay.positiveTests.InvoicingTest -->
+      </class> <!-- SwimPay.negativeTests.NegativeInvoicingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

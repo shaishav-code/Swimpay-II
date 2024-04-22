@@ -1,63 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="0" total="4" passed="3" failed="0" skipped="0">
+<testng-results ignored="10" total="11" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-19T14:29:16 IST" name="Instructions Sub-menu functionality" finished-at="2024-04-19T14:34:14 IST" duration-ms="297777">
+  <suite started-at="2024-04-22T17:04:53 IST" name="Default suite" finished-at="2024-04-22T17:05:36 IST" duration-ms="43370">
     <groups>
     </groups>
-    <test started-at="2024-04-19T14:29:16 IST" name="Positive Test cases" finished-at="2024-04-19T14:34:14 IST" duration-ms="297777">
-      <class name="SwimPay.positiveTests.InvoicingTest">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:29:17 IST" name="lanuchWebsite" finished-at="2024-04-19T14:29:43 IST" duration-ms="26333" status="PASS">
+    <test started-at="2024-04-22T17:04:53 IST" name="Default test" finished-at="2024-04-22T17:05:36 IST" duration-ms="43370">
+      <class name="SwimPay.negativeTests.NegativeInvoicingTest">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.negativeTests.NegativeInvoicingTest@76a4ebf2]" started-at="2024-04-22T17:04:53 IST" name="lanuchWebsite" finished-at="2024-04-22T17:05:05 IST" duration-ms="12180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="UploadDoucmentInInstructionSubmenu()[pri:6, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:29:43 IST" name="UploadDoucmentInInstructionSubmenu" finished-at="2024-04-19T14:30:18 IST" duration-ms="35385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UploadDoucmentInInstructionSubmenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:30:18 IST" name="tearDown" finished-at="2024-04-19T14:30:19 IST" duration-ms="748" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:30:19 IST" name="lanuchWebsite" finished-at="2024-04-19T14:30:33 IST" duration-ms="14325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnUpdateLogoButtonInInstructionSubmenu()[pri:7, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:30:33 IST" name="ClickOnUpdateLogoButtonInInstructionSubmenu" finished-at="2024-04-19T14:31:33 IST" duration-ms="59811" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickOnUpdateLogoButtonInInstructionSubmenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:31:33 IST" name="tearDown" finished-at="2024-04-19T14:31:34 IST" duration-ms="511" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:31:34 IST" name="lanuchWebsite" finished-at="2024-04-19T14:31:47 IST" duration-ms="13439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method retried="true" signature="ClickOnNextButton()[pri:8, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:31:47 IST" name="ClickOnNextButton" finished-at="2024-04-19T14:32:51 IST" duration-ms="64225" status="SKIP">
+        <test-method signature="InsertInvalidDatesInFromAndToField()[pri:11, instance:SwimPay.negativeTests.NegativeInvoicingTest@76a4ebf2]" started-at="2024-04-22T17:05:05 IST" name="InsertInvalidDatesInFromAndToField" finished-at="2024-04-22T17:05:36 IST" duration-ms="31018" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='submit']"}
-  (Session info: chrome=124.0.6367.62)
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#inputPassword"}
+  (Session info: chrome=124.0.6367.60)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.7.5', java.version: '17.0.6'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [02b340813bee0b6784fd32a88981e3e1, findElement {using=xpath, value=//*[@type='submit']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51817}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51817/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 02b340813bee0b6784fd32a88981e3e1]]>
+Command: [3df89f4f4113d236ac6cfdab06826308, findElement {using=id, value=inputPassword}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Users\psejal\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62856/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3df89f4f4113d236ac6cfdab06826308]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='submit']"}
-  (Session info: chrome=124.0.6367.62)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#inputPassword"}
+  (Session info: chrome=124.0.6367.60)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.7.5', java.version: '17.0.6'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [02b340813bee0b6784fd32a88981e3e1, findElement {using=xpath, value=//*[@type='submit']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: /var/folders/qp/wg7rvws16w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51817}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51817/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 02b340813bee0b6784fd32a88981e3e1
+Command: [3df89f4f4113d236ac6cfdab06826308, findElement {using=id, value=inputPassword}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Users\psejal\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62856/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3df89f4f4113d236ac6cfdab06826308
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -76,9 +52,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
-at SwimPay.pageObject.InvoicingPage.ClickOnUpdateLogoButton(InvoicingPage.java:187)
-at SwimPay.positiveTests.InvoicingTest.ClickOnNextButton(InvoicingTest.java:182)
+at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+at SwimPay.pageObject.loginPage.userPassword(loginPage.java:85)
+at SwimPay.negativeTests.NegativeInvoicingTest.InsertInvalidDatesInFromAndToField(NegativeInvoicingTest.java:295)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -105,31 +81,15 @@ at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnNextButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:32:51 IST" name="tearDown" finished-at="2024-04-19T14:32:52 IST" duration-ms="551" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:32:52 IST" name="lanuchWebsite" finished-at="2024-04-19T14:33:09 IST" duration-ms="16760" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ClickOnNextButton()[pri:8, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:33:09 IST" name="ClickOnNextButton" finished-at="2024-04-19T14:34:14 IST" duration-ms="65122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickOnNextButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.InvoicingTest@5ddeb7cb]" started-at="2024-04-19T14:34:14 IST" name="tearDown" finished-at="2024-04-19T14:34:14 IST" duration-ms="412" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- SwimPay.positiveTests.InvoicingTest -->
-    </test> <!-- Positive Test cases -->
-  </suite> <!-- Instructions Sub-menu functionality -->
+        </test-method> <!-- InsertInvalidDatesInFromAndToField -->
+      </class> <!-- SwimPay.negativeTests.NegativeInvoicingTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

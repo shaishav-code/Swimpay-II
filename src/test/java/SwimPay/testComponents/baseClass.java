@@ -47,7 +47,7 @@ public class baseClass {
 	}
 	
 	//Closing browser once Test Methods completed 
-	@AfterMethod
+//	@AfterMethod
 	public void tearDown()
 	{
 		abstractComponentsMethods AbstarctPage=new abstractComponentsMethods(driver);
