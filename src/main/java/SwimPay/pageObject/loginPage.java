@@ -55,7 +55,7 @@ public class loginPage extends abstractComponentsMethods{
 	//Getting website Url invoked
 	public void invokeURL() 
 	{
-		driver.get("https://demo.swimpay.com/auth/login");
+		driver.get("https://demo.swimpay.com/");
 		//driver.get("http://192.168.100.141:3600/auth/login");
 		//driver.get("http://192.168.100.141:3500/auth/login");
 	}
@@ -63,15 +63,22 @@ public class loginPage extends abstractComponentsMethods{
 	//Entering User Email in Email field
 	public void userEmail(String email) 
 	{
-		
+		loginID.clear();
 		loginID.sendKeys(email);
 	}
 	
 	//Click on Nect Button once email is Provided
 	public void loginEmailSubmit()
 	{
-		waitTimeForElementToClickable(nextBtn);		
-		nextBtn.click();
+	//	waitTimeForElementToClickable(nextBtn);		
+		if(nextBtn.isEnabled())
+		{
+			nextBtn.click();
+		}
+		else
+		{
+			System.out.println("Button is disable");
+		}
 	}
 	
 	//back to Email Page from password page section 
@@ -114,7 +121,7 @@ public class loginPage extends abstractComponentsMethods{
 	}
 	
 	//Find Singup opttion & Perform Click action
-	@FindBy(xpath="//div[@class='text-center']")
+	@FindBy(xpath="//div[@class='text-center fs-20']")
 	private WebElement signUpOpt;
 	
 	public onboardingPage singUpOption()
@@ -123,4 +130,13 @@ public class loginPage extends abstractComponentsMethods{
 		onboardingPage OnBoardPage=new onboardingPage(driver);
 		return OnBoardPage;
 	}
+	
+		
+	
+	
+	
+	
+	
+	
+	
 }

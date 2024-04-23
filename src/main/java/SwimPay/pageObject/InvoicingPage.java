@@ -7,14 +7,15 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.util.List;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import java.awt.*;
+
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.locators.RelativeLocator;
 import SwimPay.AbstractComponents.abstractComponentsMethods;
 
 public class InvoicingPage extends abstractComponentsMethods{
@@ -37,8 +38,10 @@ Actions act;
 	{
         // Get the source URL of the image
         String imageURL = ele.getAttribute("src");
+
         // Verify if the image URL is not empty
-        if (!imageURL.isEmpty()) {        	
+        if (!imageURL.isEmpty()) {
+        	
               // Check if the image is loaded successfully
           try {
                  driver.navigate().to(imageURL);
@@ -71,7 +74,7 @@ Actions act;
 	@FindBy(xpath="//*[@class='content2-container']//ol")
 	private WebElement instructionlist;
 	
-	@FindBy(xpath="//p[contains(text(), 'Click here again to update Logo')]")
+	@FindBy(xpath="//*[@class='upload-wrapper border-2 border-secondary rounded-3']")
 	private WebElement fileupload;
 	
 	@FindBy(xpath="//*[@type='submit']")
@@ -121,74 +124,16 @@ Actions act;
 	
 	public void ClickOnUploadButton()
 	{
-		fileupload.click();	
+		waitTimeForWebElementToAppear(fileupload);
+		fileupload.click();
+		
 	}
 	
-	public void UploadDocuments()
-	{
-		waitTimeForElementToClickable(fileupload);
-		fileupload.sendKeys("C:\\Users\\psejal\\Desktop\\11.jfif");
-	}
-	
-	public void uploadDocument(String filePath) {
-	    waitTimeForElementToClickable(fileupload);
-	    waitcode();
-	    fileupload.sendKeys(filePath);
-	}
-
-	public void MacFileUpload()
-	{
-            try {
-            Robot robot = new Robot();
-
-            // Ensure some delay to let the system catch up
-            robot.delay(1000);
-
-            // Open Go To Folder
-            robot.keyPress(KeyEvent.VK_META);
-            robot.keyPress(KeyEvent.VK_SHIFT);
-            robot.keyPress(KeyEvent.VK_G);
-            robot.delay(100);
-            robot.keyRelease(KeyEvent.VK_G);
-            robot.keyRelease(KeyEvent.VK_SHIFT);
-            robot.keyRelease(KeyEvent.VK_META);
-
-            robot.delay(500);
-
-            // Paste the clipboard content - Command ⌘ + V
-            robot.keyPress(KeyEvent.VK_META);
-            robot.keyPress(KeyEvent.VK_V);
-            robot.delay(100);
-            robot.keyRelease(KeyEvent.VK_V);
-            robot.keyRelease(KeyEvent.VK_META);
-
-            robot.delay(500);
-
-            // Press Enter to confirm the file path in Go To Folder dialog
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.delay(100);
-            robot.keyRelease(KeyEvent.VK_ENTER);
-            robot.delay(1000);
-
-            // Press Enter to confirm the Open button in file dialog
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.delay(100);
-            robot.keyRelease(KeyEvent.VK_ENTER);
-
-        }
-            catch (AWTException e) {
-            e.printStackTrace();
-        }
-	}
 	
 	public void UploadValidDocument()
 	{
-		waitcode();
-		File file = new File("/Users/c100-96/Downloads/image_P2.png");
-		StringSelection stringSelection = new StringSelection(file.getAbsolutePath());
-	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-	    MacFileUpload();
-		
+		waitTimeForWebElementToAppear(fileupload);
+		fileupload.sendKeys("C:\\Users\\pgargi\\Desktop\\ABC\\JPG.jpg");		
 	}
 	
 	public boolean ClickOnUpdateLogoButton()
@@ -207,18 +152,18 @@ Actions act;
 	
 	public boolean SuccessMessage()
 	{
-		waitcode();
+	//	waitcode();
 	 	return successmessage.isDisplayed();
 	}
 	
 	
 	public boolean ValidateOverSizeDocument()
 	{
-		waitcode();
+	//	waitcode();
 		File file = new File("/Users/c100-96/Downloads/image_P2.png"); //
 		StringSelection stringSelection = new StringSelection(file.getAbsolutePath());
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-	    MacFileUpload();
+	//    MacFileUpload();
 		return oversizevalidation.isDisplayed();
 	}
 	
@@ -233,14 +178,8 @@ Actions act;
 	@FindBy(xpath="//*[@placeholder='dd mmm yyyy']")
 	private List <WebElement> datefield;
 	
-	@FindBy(xpath="//*[@name='purchaseOrder']")
-	private WebElement validation_datefield;
-	
 	@FindBy(xpath="//*[@id='swimpay-customer']")
 	private WebElement customertype_checkbox;
-	
-	@FindBy(xpath="//*[@id='external-customer']")
-	private WebElement externaltype_checkbox;
 	
 	@FindBy(xpath="//*[@id='billTo']")
 	private List <WebElement> billto_andAddressfield;  
@@ -260,9 +199,6 @@ Actions act;
 	@FindBy(xpath="//*[@placeholder='Unit Cost']")
 	private List <WebElement> unitcostfield;
 	
-	@FindBy(xpath="//*[text()='Invalid value']")
-	private List <WebElement> validation_unitandqty;  
-	
 	@FindBy(xpath="//*[@placeholder='Quantity']")
 	private List <WebElement> quantity;
 	
@@ -281,9 +217,6 @@ Actions act;
 	@FindBy(xpath="//*[@placeholder='Discount']")
 	private WebElement discountamount;
 	
-	@FindBy(xpath="//*[@class='small text-danger']")
-	private List <WebElement> validation_taxandiscount;
-	
 	@FindBy(xpath="(//*[contains(@id,':r2')])[16]")
 	private WebElement verifyotpbtn;
 	
@@ -300,13 +233,8 @@ Actions act;
 	public void EnterDate(int i, String date)
 	{
 		datefield.get(i).sendKeys(date);
-		waitcode();
+	//	waitcode();
 		datefield.clear();
-	}
-	
-	public boolean ValidationOnDate()
-	{
-		return validation_datefield.isDisplayed();
 	}
 	
 	public void CommonPath(int i)
@@ -319,17 +247,9 @@ Actions act;
 		customertype_checkbox.click();
 	}
 	
-	public void ClickExternalTypeCheckbox()
-	{
-		externaltype_checkbox.click();
-	}
-	
-	
 	public void InsertBillToAndAddress(int i, int k, String CompName, String CompAddress)
 	{
-		billto_andAddressfield.get(i).clear();
 		billto_andAddressfield.get(i).sendKeys(CompName);
-		billto_andAddressfield.get(k).clear();
 		billto_andAddressfield.get(k).sendKeys(CompAddress);
 	}
 	
@@ -344,8 +264,8 @@ Actions act;
 		waitTimeForElementToClickable(invoicecurrencyfieldandBank.get(i));
 		//invoicecurrencyfield.click();
 		invoicecurrencyfieldandBank.get(i).sendKeys(currency);
-		waitcode();
-		Actions();	
+	//	waitcode();
+	//	Actions();	
 		
 	}
 	
@@ -353,14 +273,14 @@ Actions act;
 	{
 		invoicecurrencyfieldandBank.get(i).click();
 		invoicecurrencyfieldandBank.get(i).sendKeys(country);
-		waitcode();
-		Actions();	
+	//	waitcode();
+	//	Actions();	
 		
 	}	
 	
 	public void ClickOnAddItems()
 	{
-		 waitcode();
+	//	 waitcode();
 		 int numberOfClicks = 9;
 		 for (int j = 0; j < numberOfClicks; j++) {
 				if(addbutton.isDisplayed()==true)
@@ -369,13 +289,13 @@ Actions act;
 	            }
 		 }
 		 scrollToElement(crossicon.get(5));
-		 waitcode();
+		// waitcode();
 		
 	}	
 	
 	public void ClickOnCrossIcon()
 	{
-		 waitcode();
+		// waitcode();
 		 scrollToElement(crossicon.get(0));
 		 int numberOfClicks = 8;
 		 for (int i = 0; i < Math.min(numberOfClicks, crossicon.size()); i++) {
@@ -399,21 +319,19 @@ Actions act;
 		}
 	}
 	
+	public void selecttext()
+	{
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
+	}
 	
 	public void InsertDetailsInUnitCostFields(String cost)
 	{
 		for(int i =0; i<unitcostfield.size();i++)
 		{
+			selecttext();
 			unitcostfield.get(i).clear();
 			unitcostfield.get(i).sendKeys(cost);
-		}
-	}
-	
-	public void InserInvalidtDetailsInUnitCostAndQtyFields()
-	{
-		for(int i =0; i<validation_unitandqty.size();i++)
-		{
-			 validation_unitandqty.get(i).isDisplayed();
 		}
 	}
 	
@@ -421,6 +339,7 @@ Actions act;
 	{
 		for(int i =0; i<quantity.size();i++)
 		{
+			selecttext();
 			quantity.get(i).clear();
 			quantity.get(i).sendKeys(qty);
 		}
@@ -433,7 +352,6 @@ Actions act;
 	
 	public void InsertDiscount(String discount)
 	{
-		discountfield.clear();
 		discountfield.sendKeys(discount);
 	}
 	public void VerifyDiscountValue()
@@ -449,14 +367,9 @@ Actions act;
 	
 	public void InsertTax(String tax)
 	{
-		taxfield.clear();
 		taxfield.sendKeys(tax);
 	}
 	
-	public void ValidationOnDiscountAndTax(int i)
-	{
-		validation_taxandiscount.get(i).isDisplayed();
-	}
 	
 	//////////////SwimPay customer///////////////
 	
@@ -472,23 +385,25 @@ Actions act;
 	@FindBy(xpath="(//*[@type='button'])[9]")
 	private WebElement invoicebutton;
 	
+	
 	public void SelectCustomerRegion(String region)
 	{
 		regionfield.sendKeys(region);
 	}
 	
+	
 	public void SelectAccountID(String account)
 	{
 		accountId.click();
 		accountId.sendKeys(account);
-		waitcode();
-		Actions();
+	//	waitcode();
+	//	Actions();
 	}
 	
-	public boolean ClickOnButtons(int i)
+	
+	public void ClickOnButtons(int i)
 	{
 		buttons.get(i).click();
-		return buttons.get(i).isDisplayed();
 	}
 	
 	public void CreateInvoiceBtn()
@@ -496,121 +411,19 @@ Actions act;
 		invoicebutton.click();
 	}
 	
+	
     /////////////Invoice List////////////
 	
 	@FindBy(xpath="(//*[@class='sidebar-item '])[20]")
 	private WebElement invoicelist;
 	
-	@FindBy(xpath="(//*[@class='sc-gicCDI iVPIRd'])[3]")
-	private WebElement paginationArrow;
-	
 	@FindBy(xpath="//*[@placeholder='Search Reference']")
-	private WebElement searchfield;
-	
-	@FindBy(xpath="(//*[contains(@id,'select-:r')])[2]")
-	private WebElement date;
-	
-	@FindBy(xpath="//*[@type='submit']")
-	private WebElement searchbtn;
-	
-	@FindBy(xpath="//*[text()='Reset Filters']")
-	private WebElement resetfilters;
-	
-	@FindBy(xpath="//*[@class='bi bi-arrow-clockwise fw-bold']")
-	private WebElement refreshicon;
-	
-    @FindBy(xpath="//*[@class='sc-hKMtZM sc-eCYdqJ sc-jSMfEi cLRkKo iOIgTb dBbhDz rdt_TableCell']")
-    private List <WebElement> invoicecoloumn;
-    
-	@FindBy(xpath="//*[text()='There are no records to display']")
-	private WebElement invalidrecords;
+	private WebElement searchfields;
 	
 	public void ClickOnInvoiceListPage()
 	{
 		invoicelist.click();
 	}
-	
-	public void clickOnPagination() {
-	    boolean isPaginationEnabled = true;
-
-	    while (isPaginationEnabled) {
-	        try {
-	            paginationArrow.click();
-	            waitTimeForElementToClickable(paginationArrow);
-	        } catch (Exception e) {
-	            System.out.println("Pagination arrow not clickable or enabled yet.");
-	        }
-	        isPaginationEnabled = paginationArrow.isEnabled();
-	    }
-	}
-	
-	public void EnterReference(String ref)
-	{
-		searchfield.sendKeys(ref);
-	}
-	
-	public boolean ValidateInvalidRecords()
-	{
-		return invalidrecords.isDisplayed();
-	}
-	
-	public void Selectdatetype()
-	{
-		date.click();
-		waitcode();
-		Actions();
-	}
-	
-	public void ClickOnSearchBtn()
-	{
-		searchbtn.click();
-	}
-	
-	public void ClickOnResetFilters()
-	{
-		resetfilters.click();
-	}
-	
-	public void ClickOnRefreshIcon()
-	{
-		refreshicon.click();
-	}
-
-	 WebElement previewbtn;
-	  
-	 //Verify if user is able to click on preview button
-	 public void ClickOnPreviewButton(String Code)
-	 {
-	   	invoicecoloumn.size();
-	    for (WebElement referenceElement : invoicecoloumn) 
-	    {
-	    	String getreferenceElement = referenceElement.getText().toString();
-	    	if (getreferenceElement.contains(Code)) 
-	   		{
-	   		previewbtn = driver.findElement(RelativeLocator.with(By.xpath("//*[contains(@id,':r')]/span")).toRightOf(referenceElement));
-	   		}
-	    }
-	    JavascriptExecutor executor = (JavascriptExecutor) driver;
-	     executor.executeScript("arguments[0].click();", previewbtn);	     	        
-	  }
-	 
-	 WebElement editbutton;
- 
-	 //Verify if user is able to click on edit button
-	 public void ClickOnEditButton(String Code)
-	 {
-	   	invoicecoloumn.size();
-	    for (WebElement referenceElement : invoicecoloumn) 
-	    {
-	    	String getreferenceElement = referenceElement.getText().toString();
-	    	if (getreferenceElement.contains(Code)) 
-	   		{
-	    	   editbutton = driver.findElement(RelativeLocator.with(By.xpath("//*[@id='cell-6-undefined']/div/button[2]/span")).toRightOf(referenceElement));
-	   		}
-	    }
-	    JavascriptExecutor executor = (JavascriptExecutor) driver;
-	     executor.executeScript("arguments[0].click();", editbutton);	     	        
-	  }    
 	
 	
 	

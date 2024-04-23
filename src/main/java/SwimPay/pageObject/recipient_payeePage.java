@@ -21,12 +21,14 @@ public class recipient_payeePage extends abstractComponentsMethods {
 	}
 
 	// Find Add Bank Account button and perform click action
-	@FindBy(xpath = "//button[contains(@class,'mt-2 css-1agp3zg-')]")
+ 	//@FindBy(xpath = "//button[contains(@class,'mt-2 css-1agp3zg-')]")
+	@FindBy(xpath = "(//*[@type='button'])[3]")
 	private WebElement AddRecipientPayee;
 
 	public void addRecipientPayeeBtn() {
 		AddRecipientPayee.click();
 	}
+
 
 	// Find recipient Data list and perform required actions
 	// Find recipient Data from listing

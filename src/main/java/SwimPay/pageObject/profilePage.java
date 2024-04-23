@@ -124,12 +124,14 @@ public class profilePage extends abstractComponentsMethods {
 				}
 				
 				//find Update Password button & perform click action
-				@FindBy(xpath="(//button[contains(@class,'MuiButtonBase-root MuiButton-root ')])[2]")
+				@FindBy(xpath="(//div[@class='col-12']")
 				private WebElement UdpatePassBtn;
-				public void updatePasswordBtn()
+				public void updatePasswordBtn() throws InterruptedException
 				{
+					Thread.sleep(2000);
 					UdpatePassBtn.click();
 				}
+				
 				//find change password Button and click 
 				@FindBy(xpath="//button[@type='submit']")
 				private WebElement changePassSubmitBtn;

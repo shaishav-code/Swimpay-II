@@ -47,6 +47,8 @@ WebDriver driver;
 		}
 	}
 	
+	
+	
 	//perform click on arrow down button according to account name
 	public void clickArrowBtn(String accountName) {
 		for (int i = 0; i < AccountNameList.size(); i++) {
@@ -82,7 +84,7 @@ WebDriver driver;
 	@FindBy(xpath = "//div[@class='sc-jqUVSM hjBMSB rdt_TableRow']//div[3]")
 	private List<WebElement> UserPlatformLoginEmail;
 	
-	@FindBy(xpath = "//div[@class='sc-jqUVSM hjBMSB rdt_TableRow']")
+	@FindBy(xpath = "//div[@class='sc-dmRaPn embYUS']/div[1]/div/div[2]/div")
 	private List<WebElement> DataList;
 	
 	//Find Enable/Disable Button and perform required action 
@@ -177,13 +179,23 @@ WebDriver driver;
 		EnableUserBtn.size();
 		for(int i=0; i<EnableUserBtn.size();i++)
 		{
-			if(EnableUserBtn.contains(indx))
-			{
-				EnableUserBtn.get(indx).click();
-			}
+			 
+			EnableUserBtn.get(indx).click();
+			break;
 		}
 	}
 
+	
+	public void disableBtn(int indx)
+	{
+		DisableUserBtn.size();
+		for(int i=0; i<DisableUserBtn.size();i++)
+		{
+			 
+			DisableUserBtn.get(indx).click();
+			break;
+		}
+	}
 	//===========Account Information section===========//
 	
 	//Find Account information option and perform click action
@@ -211,14 +223,15 @@ WebDriver driver;
 	}
 	
 	//find dispalyed application form details and perform fetch action 
-	@FindBy(xpath="//div[@class='MuiDialogContent-root css-ypiqx9-MuiDialogContent-root']/div")
+	@FindBy(xpath="//div[@class='px-4 result-table mb-3']")
 	private WebElement FormData;
 	//find close form button icon and perform click action 
-	@FindBy(xpath="//button[contains(@class,'css-16e899b')]")
+	@FindBy(xpath="//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/h2/button")
 	private WebElement CloseViewForm;
-	public void applicationFormData()
+	public void applicationFormData() throws InterruptedException
 	{
-		waitTimeForWebElementToAppear(FormData);
+		Thread.sleep(4000);
+		//waitTimeForWebElementToAppear(FormData);
 		System.out.println(FormData.getText());
 	}
 	public void closeApplicationViewForm()
@@ -226,12 +239,19 @@ WebDriver driver;
 		CloseViewForm.click();
 	}
 	
-	@FindBy(xpath="//button[contains(@class,'MuiButton-containedSizeMedium css-1xti34q')]")
+	@FindBy(xpath="//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/div[2]/button[2]")
 	private WebElement YesEnable;
 	public void yesEnable()
 	{
-		waitTimeForWebElementToAppear(YesEnable);
-		YesEnable.click();
+		//waitTimeForWebElementToAppear(YesEnable);
+		try {
+			Thread.sleep(5000);
+			YesEnable.click();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		}
 	
 	@FindBy(xpath="//button[contains(@class,'MuiButton-outlinedSizeMedium css-79xub')]")
@@ -241,5 +261,27 @@ WebDriver driver;
 		waitTimeForWebElementToAppear(NoEnable);
 		NoEnable.click();
 		}
+	
+	
+	
+	// currency tab click    ======New Code
+	@FindBy(id="simple-tab-2")
+	private WebElement CurrencyWalletClick;
+	public void currecnyWalletOpt()
+	{
+		CurrencyWalletClick.click();
+	}
+	
+	
+	//back to account list    ===new code
+	@FindBy(xpath="//div[@id='simple-tabpanel-2']/div/button")
+	private WebElement backAccount;
+	public void backToAccount()
+	{
+		backAccount.click();
+	}
+	
+	
+	
 	
 }

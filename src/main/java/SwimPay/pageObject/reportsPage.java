@@ -69,13 +69,36 @@ public class reportsPage extends abstractComponentsMethods {
 	}
 
 	// Find Date Range field
-	@FindBy(xpath = "(//input[@id='combo-box-demo'])[1]")
+	@FindBy(xpath = "//div[@class='MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-9i3kzy']/div/div/input")
 	private WebElement DateRangeOpt;
 
-	public void dateRange(String Date) {
-		DateRangeOpt.sendKeys(Date + Keys.DOWN + Keys.ENTER);
+	@FindBy(xpath = "(//div[@class='MuiAutocomplete-endAdornment css-2iz2x6'])[1]/button[2]")
+	WebElement dropdownDateRangeOpt;
+	
+	public void dateRange(String Date) throws InterruptedException {
+		
+		String dateRangeOptStr = DateRangeOpt.getAttribute("value").toString();
+		//System.out.println(dateRangeOptStr);
+		if(dateRangeOptStr.equals(Date))
+		{
+			
+		}
+		else
+		{
+			DateRangeOpt.clear();
+			dropdownDateRangeOpt.click();
+//			DateRangeOpt.click();
+			Thread.sleep(2000);
+//			DateRangeOpt.sendKeys(Date);
+			dropdownDateRangeOpt.sendKeys(Keys.DOWN);
+			dropdownDateRangeOpt.sendKeys(Keys.DOWN);
+			Thread.sleep(2000);
+			dropdownDateRangeOpt.sendKeys(Keys.ENTER);
+			Thread.sleep(2000);
+			
+		}	
 	}
-
+	
 	// Find Status Optin field
 	@FindBy(xpath = "(//input[@id='combo-box-demo'])[1]")
 	private WebElement StatusOPt;
@@ -85,19 +108,29 @@ public class reportsPage extends abstractComponentsMethods {
 	}
 
 	// Find Select Seller Option
-	@FindBy(id = "seller-selector")
+	@FindBy(id = "buyer-seller-selector-seller")
 	private WebElement SellerOpt;
 
-	public void sellerOption(String Seller) {
-		SellerOpt.sendKeys(Seller + Keys.DOWN + Keys.ENTER);
+	public void sellerOption(String Seller) throws InterruptedException {
+		SellerOpt.sendKeys(Seller);
+		
+		SellerOpt.sendKeys(Keys.DOWN);
+		Thread.sleep(2000);
+		SellerOpt.sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
+	
 	}
-
+	
 	// Find Select Buyer Option
-	@FindBy(id = "buyer-selector")
+	@FindBy(id = "buyer-seller-selector-buyer")
 	private WebElement BuyerOpt;
 
-	public void buyerOption(String Buyer) {
-		SellerOpt.sendKeys(Buyer + Keys.DOWN + Keys.ENTER);
+	public void buyerOption(String Buyer) throws InterruptedException {
+		BuyerOpt.sendKeys(Buyer);
+		BuyerOpt.sendKeys(Keys.DOWN);
+		Thread.sleep(2000);
+		BuyerOpt.sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
 	}
 
 	// find Submit Button

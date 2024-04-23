@@ -4,7 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import SwimPay.AbstractComponents.abstractComponentsMethods;
+
+
+
 
 
 public class forgotPasswordPage  extends abstractComponentsMethods{
@@ -84,6 +88,16 @@ WebDriver driver;
 	public void backToLogin()
 	{
 		backToLoginOpt.click();
+	}
+	
+	
+	@FindBy(xpath="//div[@class='auth-link d-inline-block']")
+	private WebElement LoginClick;
+	
+	
+	public void loginClick()
+	{
+		LoginClick.click();
 	}
 
 	

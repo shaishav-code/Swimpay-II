@@ -62,13 +62,16 @@ public class searchPage extends abstractComponentsMethods {
 	}
 
 	// Find date Filter
-	@FindBy(xpath = "(//input[@id='select-:r15:'])[1]")
+	@FindBy(xpath = "//*[@class='MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-9i3kzy]/div/div")
 	private WebElement DateFilter;
 
-	public void dateType(String dateType) {
+	public void dateType() {
 		DateFilter.click();
-		
-		DateFilter.sendKeys(dateType + Keys.ARROW_DOWN + Keys.ENTER);
+
+
+
+
+		//DateFilter.sendKeys(dateType + Keys.ARROW_DOWN + Keys.ENTER);
 	}
 
 	// Find From date field
@@ -113,7 +116,7 @@ public class searchPage extends abstractComponentsMethods {
 		}
 	}
 
-//		
+//
 //		//desired Past Date format
 //		int daysToSubtract=fromDate;
 //		LocalDate currentDate=LocalDate.now();
@@ -131,22 +134,26 @@ public class searchPage extends abstractComponentsMethods {
 //				break;
 //			}
 //		}
-//		
+//
 ////		List<WebElement> desiredDate=Dates;
 ////		desiredDate.
 //	}
 
 	// Find To Date field
-	@FindBy(xpath = "(//button[@aria-label='Choose date'])[2]")
+	@FindBy(xpath = "(//input[@type='text'])[2]")
 	private WebElement ToDate;
 
-	public void selectToDate() {
+	public void DateOption(String SettelmentOPtions) {
 		ToDate.click();
+		ToDate.sendKeys(SettelmentOPtions + Keys.ARROW_DOWN + Keys.ENTER);
 	}
 
+
+
 	// Find Status Field
-	@FindBy(xpath = "(//input[@id='select-:r1h:'])[1]")
-	
+
+	@FindBy(xpath = "(//input[@type='text'])[5]")
+
 	private WebElement StatusOpt;
 
 	public void statusOption(String statusOPtions) {
@@ -155,15 +162,32 @@ public class searchPage extends abstractComponentsMethods {
 
 	}
 
+//
+//    @FindBy(xpath= "(//*[@class='MuiAutocomplete-endAdornment css-2iz2x6'])[2]/button")
+//    private List<WebElement> dropdown;
+//
+//    public void Select_Status(String Approved)
+//{
+//	  for(WebElement option:dropdown)
+//	{
+//	  String Status = option.getText();
+//
+//	       if(Status.contains(Approved))
+//		{
+//			option.click();
+//		}
+//	}
+//}
+
 	// Find Search Button for Filter section & perform Click action
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement submitFilter;
 
 	public void FilterSearch() {
-		System.out.println("Filter Search Button Clicked");
-		submitFilter.click();
-		
-		
+	System.out.println("Filter Search Button Clicked");
+	submitFilter.click();
+
+
 	}
 
 	// Find Reset Filter Button option and perform click action
@@ -171,60 +195,68 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement ResetFilter;
 
 	public void resetFilters() {
-		ResetFilter.click();
+	ResetFilter.click();
 	}
 
 	// ====================================================================================//
 	// CONVERSION/PAYEMTNS/TRANSACTIONS SEARCH PAGE ACTIONS
 
-	// Find Sold Currency Option and perform click action
-	@FindBy(xpath = "(//input[@id='currency-select-:r1d:'])[1]")
+	//Find Sold Currency Option and perform click action
+
+	@FindBy(xpath = "(//input[@type='text'])[6]")
 	private WebElement SoldCurrencyOpt;
 
 	public void selectSoldCurrencyOption(String currencySoldName) {
-		SoldCurrencyOpt.click();
-		SoldCurrencyOpt.sendKeys(currencySoldName + Keys.DOWN + Keys.ENTER);
-	}
+    SoldCurrencyOpt.sendKeys(currencySoldName + Keys.ARROW_DOWN + Keys.ENTER);
+    SoldCurrencyOpt.click();
+    }
 
 	// Find Sold Minimum amount field
-	@FindBy(id = "conversion_sold_min_amount")
+	
+	//@FindBy(id = "conversion_sold_min_amount")
+	@FindBy (xpath ="(//*[@type='number'])[1]")
 	private WebElement MinSold;
 
 	public void minimumSoldAmount(String minsold) {
-		MinSold.sendKeys(minsold);
+	MinSold.sendKeys(minsold);
 	}
 
 	// Find Sold Maximum amount field
-	@FindBy(id = "conversion_sold_max_amount")
+	
+	//@FindBy(id = "conversion_sold_max_amount")
+	@FindBy (xpath ="(//*[@type='number'])[2]")
 	private WebElement MaxSold;
 
 	public void maximumSoldAmount(String maxsold) {
-		MaxSold.sendKeys(maxsold);
+	MaxSold.sendKeys(maxsold);
 	}
 
 	// Find Baught Currency Option and perform click action
-	@FindBy(xpath = "(//input[@id='country-select-demo'])[2]")
+	
+	@FindBy(xpath = "(//input[@type='text'])[7]")
 	private WebElement BoughtCurrencyOpt;
 
 	public void selectBoughtCurrencyOption(String currencyBaughtName) {
-		BoughtCurrencyOpt.click();
-		BoughtCurrencyOpt.sendKeys(currencyBaughtName + Keys.DOWN + Keys.ENTER);
+	BoughtCurrencyOpt.click();
+	BoughtCurrencyOpt.sendKeys(currencyBaughtName + Keys.DOWN + Keys.ENTER);
 	}
 
 	// Find Baught Minimum amount field
-	@FindBy(id = "conversion_bought_min_amount")
-	private WebElement MinBaught;
+	
+	@FindBy(xpath="(//*[@type='number'])[3]")
+	private WebElement MinBought;
 
 	public void minimumBaughtAmount(String min_baught) {
-		MaxSold.sendKeys(min_baught);
+	MinBought.sendKeys(min_baught);
 	}
 
-	// Find Baught Maximum amount field
-	@FindBy(id = "conversion_bought_max_amount")
-	private WebElement MaxBaught;
+	// Find Bought Maximum amount field
+	
+	@FindBy(xpath="(//*[@type='number'])[4]")
+	private WebElement MaxBought;
 
-	public void maximumBaughtAmount(String max_baught) {
-		MaxSold.sendKeys(max_baught);
+	public void maximumBaughtAmount(String max_bought) {
+	MaxBought.sendKeys(max_bought);
 	}
 
 	// Find List of reference Number
@@ -232,8 +264,8 @@ public class searchPage extends abstractComponentsMethods {
 	private List<WebElement> References;
 
 	public void referencesNumberSelector(int ref) {
-		References.size();
-		if (ref >= 0 && ref < References.size()) {
+	References.size();
+	if (ref >= 0 && ref < References.size()) {
 			String referenceNumberText = References.get(ref).getText();
 			System.out.println("Selected Reference Number from Data List " + referenceNumberText);
 			Referencefilter_field.sendKeys(referenceNumberText);
@@ -241,14 +273,14 @@ public class searchPage extends abstractComponentsMethods {
 			System.out.println("Invalid reference Number/Reference number not found  " + ref);
 		}
 	}
-//		
+//
 
 	@FindBy(xpath = "//div[@data-tag='allowRowEvents']//a")
 	private List<WebElement> ReferencesNumber;
 
 	// To fecth Data List's reference Numbers
 	public void referencesNumberDataList() {
-		waitTimeForWebElementListToAppear(ReferencesNumber);
+	waitTimeForWebElementListToAppear(ReferencesNumber);
 
 		ReferencesNumber.size();
 		for (int i = 0; i < ReferencesNumber.size(); i++) {
@@ -263,23 +295,26 @@ public class searchPage extends abstractComponentsMethods {
 	}
 
 	// Find Conversion Data from data List
+	
 	@FindBy(xpath = "//div[contains(@class,'rdt_TableRow')]")
 	private List<WebElement> DataList;
 
 	// Find No Data View action
-		@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK']//div")
-		private WebElement NoDatatoDisplay;
+	
+	@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK']//div")
+	private WebElement NoDatatoDisplay;
 
 	// TO Fetch Dispalyed Data List
+	
 	public void DataList()  {
-		int dataSize = DataList.size();
+	int dataSize = DataList.size();
 
-		if (dataSize>0)
+	if (dataSize>0)
 		{
-			for (int i = 0; i < dataSize; i++) {
+		for (int i = 0; i < dataSize; i++) {
 				if(i<DataList.size())
 				{
-				
+
 				//waitTimeForWebElementListToAppear(DataList);
 				System.out.println(DataList.get(i).getText());
 				}
@@ -288,15 +323,17 @@ public class searchPage extends abstractComponentsMethods {
 		else
 		{
 			//waitTimeForWebElementToAppear(NoDatatoDisplay);
-			System.out.println("There are no records to display " + NoDatatoDisplay.getText());
+			//System.out.println("There are no records to display " + NoDatatoDisplay.getText());
+			System.out.println("There are no records to display ");
 		}
 	}
 
 	// Find Refresh Table button element & perform action
+	
 	@FindBy(xpath = "(//i[@role='button'])[2]")
 	private WebElement RefreshTable;
 
 	public void refershTable() {
-		RefreshTable.click();
+	RefreshTable.click();
 	}
 }

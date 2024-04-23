@@ -2,9 +2,6 @@ package SwimPay.positiveTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import SwimPay.pageObject.balancepayIn;
 import SwimPay.testComponents.baseClass;

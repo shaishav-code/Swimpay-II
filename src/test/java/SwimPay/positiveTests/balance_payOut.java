@@ -2,20 +2,18 @@ package SwimPay.positiveTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import SwimPay.pageObject.balancepayOut;
 import SwimPay.testComponents.baseClass;
 
 public class balance_payOut extends baseClass{
 	
-	String email1="qa2@narola.email";
-	String password= "Pass@12345";
+	String email1="qa3@narola.email";
+	String password= "12345678";
+	//String password= "Pass@12345";//qa2 pwd
 	
 	//Verify clicking on Balance payout option from side menu
-	@Test
+	@Test(priority = 1)
 	public void clickBalPayOutOpt()
 	{
 
@@ -31,7 +29,7 @@ public class balance_payOut extends baseClass{
 	
 	
 	//Verify click on country currency option from list
-	@Test
+	@Test(priority = 2)
 	public void balOut_clickCountryCurrencyOpt_fromList()
 	{
 		LoginPage.userEmail(email1);
@@ -46,7 +44,7 @@ public class balance_payOut extends baseClass{
 	}
 
 	//Verify click on pay currency option from balance out currency detail page
-	@Test
+	@Test(priority = 3)
 	public void balOut_clickPayCurrencyOpt()
 	{
 
@@ -62,7 +60,7 @@ public class balance_payOut extends baseClass{
 		PayOut.payCurrencyOptionBtn();
 	}
 	//Verify click on convert currency option from balance out currency detail page
-		@Test
+		@Test(priority = 4)
 		public void balOut_clickConvertCurrencyOpt()
 		{
 			LoginPage.userEmail(email1);
@@ -78,7 +76,7 @@ public class balance_payOut extends baseClass{
 		}
 		
 		//Verify check respective currency active balance from balance out currency details page
-		@Test
+		@Test(priority = 5)
 		public void balPayOut_currencyAvailableBalance()
 		{
 			LoginPage.userEmail(email1);
@@ -94,7 +92,7 @@ public class balance_payOut extends baseClass{
 		}
 		
 		//Verify check balance payout completed transaction data display
-		@Test
+		@Test(priority = 6)
 		public void balPayOut_completeTransactiondisplay()
 		{
 			LoginPage.userEmail(email1);
@@ -111,7 +109,7 @@ public class balance_payOut extends baseClass{
 		}
 		
 		//Verify click on balance payout view statement button 
-		@Test
+		@Test(priority = 7)
 		public void balPayOut_viewStatementOptionBtn()
 		{
 			LoginPage.userEmail(email1);
@@ -127,7 +125,7 @@ public class balance_payOut extends baseClass{
 			PayOut.previewCloseBtn();
 		}
 		//Verify check balance payout completed transaction between dates & display data
-		@Test
+		@Test(priority = 8)
 		public void balPayOut_completeTransactiondisplay_betweenDates()
 		{
 			LoginPage.userEmail(email1);
@@ -152,7 +150,7 @@ public class balance_payOut extends baseClass{
 		}
 		
 		//Verify create balance payout month statement by selcting Month
-		@Test
+		@Test(priority = 9)
 		public void balPayOut_createStatement_byMonth()
 		{
 			LoginPage.userEmail(email1);
@@ -176,7 +174,7 @@ public class balance_payOut extends baseClass{
 		}
 		
 		//Verify create balance payout statement by selecting custome date
-		@Test
+		@Test(priority = 10)
 		public void balPayOut_createStatement_byCustomDate ()
 		{
 

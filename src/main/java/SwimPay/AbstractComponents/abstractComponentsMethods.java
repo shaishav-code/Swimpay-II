@@ -1,7 +1,10 @@
 package SwimPay.AbstractComponents;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,7 +15,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import SwimPay.pageObject.InvoicingPage;
+
 import SwimPay.pageObject.accountInfoPage;
 import SwimPay.pageObject.balancepayIn;
 import SwimPay.pageObject.balancepayOut;
@@ -63,14 +66,6 @@ public class abstractComponentsMethods {
 			}
 		}
 	}
-	
-	public void waitcode() {
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
 
 	// OTP Submit Button Click Action
 	//@FindBy(xpath = "//button[contains(@class,'MuiButtonBase-root MuiButton-root MuiLoadingButton')]")
@@ -79,23 +74,25 @@ public class abstractComponentsMethods {
 	
 	public void otpVerify() 
 	{
-		waitTimeForElementToClickable(OTPVerify);
+	//	waitTimeForElementToClickable(OTPVerify);
 		OTPVerify.click();
 	}
 	@FindBy(xpath="//button[text()='Continue']")
 	private WebElement OTPContinue;
 
 	public void otpSubmitBtn() {
-		waitTimeForElementToClickable(OTPContinue);
+	//	waitTimeForElementToClickable(OTPContinue);
 		OTPContinue.click();
 	}
+	
+	
 
 	// find cancel OTP button and perform required action
 	@FindBy(xpath = "//button[contains(@class,'MuiButton-outlinedError')]")
 	private WebElement OTPCancel;
 
 	public void otpCancelBtn() {
-		waitTimeForElementToClickable(OTPCancel);
+		//waitTimeForElementToClickable(OTPCancel);
 		System.out.println(OTPCancel.getText()+ " Button Clicked");
 		OTPCancel.click();
 	}
@@ -194,7 +191,7 @@ public class abstractComponentsMethods {
 	}
 
 	// Balance option from Menu
-	@FindBy(xpath = "(//a//i[@class='bi bi-calculator link-icon'])[2]")
+	@FindBy(xpath = "(//div[@class='has_sub'])[2]/a")
 	private WebElement BalanceOpt;
 
 	public void balanceOption() {
@@ -222,7 +219,7 @@ public class abstractComponentsMethods {
 	}
 
 	// Payment Option from Side Menu
-	@FindBy(xpath = "(//a[@href='#payment_drop'])[2]")
+	@FindBy(xpath = "(//a[contains(@href,'recipients_payees')])[2]")
 	private WebElement PaymentOption;
 
 	public paymentPage paymentsOption() {
@@ -292,7 +289,7 @@ public class abstractComponentsMethods {
 	}
 
 	// Find Profile button and perform click action
-	@FindBy(xpath = "//a[@href='/profile']")
+	@FindBy(xpath = "//div[@class='topbar']/div/div/a")
 	private WebElement ProfileOpt;
 
 	public profilePage profileOption() {
@@ -344,7 +341,7 @@ public class abstractComponentsMethods {
 	}
 
 	// find No option from leave page pop-up and perform click action
-	@FindBy(xpath = "//button[contains(@class,'css-1rwt2y5-MuiButtonBase-')]")
+	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div[2]/button[1]")
 	private WebElement NoOpt;
 
 	public void noAction() {
@@ -352,20 +349,35 @@ public class abstractComponentsMethods {
 	}
 
 	// Click on Logout Button
-	public WebElement logout() {
-		waitTimeForElementToClickable(logoutBtn);
-		if (logoutBtn.isEnabled()) {
-			
-			logoutBtn.click();
-			System.out.println("Logout Done Successfully");
-			//System.out.println(MsgToaster.getText() + "Logout Done Successfully");
-		} else {
-			driver.close();
-		}
-		return MsgToaster;
+	public void logout() {
+		
+		System.out.println(logoutBtn.isDisplayed());
+		//waitTimeForElementToClickable(logoutBtn);
+		/*
+		 * if (logoutBtn.is) {
+		 * 
+		 * logoutBtn.click(); System.out.println("Logout Done Successfully");
+		 * //System.out.println(MsgToaster.getText() + "Logout Done Successfully"); }
+		 * else { driver.close(); }
+		 */
+	//	return MsgToaster;
 
 	}
+	
+	
+	
+	
 
+	@FindBy(xpath = "//i[@class='bi bi-power text-light fw-bold']")
+	private WebElement logout;
+
+	public void Logout_Click() {
+			
+		logout.click();
+		
+	}
+	
+	
 	public void waitTimeForWebElementToAppear(WebElement eleAppear) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(eleAppear));
@@ -402,7 +414,7 @@ public class abstractComponentsMethods {
 	}
 
 	// find Footer for Scroll view action
-	@FindBy(xpath = "//nav[@class='sc-iIPllB jxflYm rdt_Pagination']//span") //nav[@class='sc-iIPllB jxflYm rdt_Pagination']
+	@FindBy(xpath = "//div[@id='search-wrapper text-black']/div[2]/div/div[3]") 
 	private WebElement footerView;
 
 	// Find No Data View action
@@ -413,8 +425,8 @@ public class abstractComponentsMethods {
 	public void scrollAction() {
 
 		JavascriptExecutor scroll = (JavascriptExecutor) driver;
-		// scroll.executeScript("scrollBy(0,500)");
-		// scroll.executeScript("arguments[0].scrollIntoView();", footerView);
+		 scroll.executeScript("scrollBy(0,500)");
+		 scroll.executeScript("arguments[0].scrollIntoView();", footerView);
 
 		if (footerView.isDisplayed()) {
 			scroll.executeScript("arguments[0].scrollIntoView();", footerView);
@@ -423,6 +435,32 @@ public class abstractComponentsMethods {
 		}
 	}
 
+	
+	
+	
+	
+	// find Footer for Scroll view action
+	@FindBy(xpath = "//div[@class='react-dataTable position-relative']/div[3]/nav") 
+	private WebElement footerViewMaster;
+
+	// Find No Data View action
+	// Find No Data View action
+	@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK']//div")
+	private WebElement NoDatatoDisplay1;
+
+	public void scrollActionMaster() {
+
+		JavascriptExecutor scroll = (JavascriptExecutor) driver;
+		 scroll.executeScript("scrollBy(0,500)");
+		 scroll.executeScript("arguments[0].scrollIntoView();", footerViewMaster);
+
+		if (footerViewMaster.isDisplayed()) {
+			scroll.executeScript("arguments[0].scrollIntoView();", footerViewMaster);
+		} else if (NoDatatoDisplay1.isDisplayed()) {
+			scroll.executeScript("arguments[0].scrollIntoView();", NoDatatoDisplay);
+		}
+	}
+	
 	public void scrollActionTop() {
 		JavascriptExecutor scroll = (JavascriptExecutor) driver;
 		scroll.executeScript("window.scrollTo(1000, 0);");
@@ -533,72 +571,9 @@ public class abstractComponentsMethods {
 		LogoOpt.click();
 	}
 	
-	//Get Title
-	public String GetTitle()
-	{
-		return driver.getTitle();
-	}
 	
-	//Get Title
-	public String GetCurrentURL()
-	{
-		return driver.getCurrentUrl();
-	}
-	
-	//==Selecting Month & Date from Calendar Pop-up==
-	
-	//find Next arrow button and perform click action
-	@FindBy(xpath="//*[@title='Previous month']")
-	private WebElement NextMonthArrow;
-	
-	// find Dates lists from calendar pop-up
-	@FindBy(xpath = "//*[contains(@class,'css-mvmu1r')]//div")
-	private List<WebElement> Dates;
-
-	public void SelectNextMonth(String month) {
-	    String currentMonth = CalendarMonth.getText();
-	    while (!currentMonth.equals(month)) {
-	    	NextMonthArrow.click();
-	        currentMonth = CalendarMonth.getText();
-	        System.out.println("Selected Month is " + currentMonth);
-	    }
-	}
-	
-	public void SelectPreviousMonth(String month) {
-	    String currentMonth = CalendarMonth.getText();
-	    while (!currentMonth.equals(month)) {
-	    	PreviousMonthArrowOpt.click();
-	        currentMonth = CalendarMonth.getText();
-	        System.out.println("Selected Month is " + currentMonth);
-	    }
-	}
-
-
-	public void DateSelect(int indx)
-	{
-		DateLists.size();
-		for(int i=0; i<DateLists.size();i++)
-		{
-			waitTimeForWebElementListToAppear(Dates);
-			Dates.get(indx).click();
-			break;
-		}
-	}
-	
-	public void Actions()
-	{
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
-	}
-	
-	//Invoicing option from Side Menu
-	@FindBy(xpath = "(//*[@class='has_sub'])[4]")
-	private WebElement invoicingpage;
-
-	public InvoicingPage InvoicingOption() {
-		invoicingpage.click();
-		InvoicingPage invoicingPage=new InvoicingPage(driver);
-		return invoicingPage;
+	public void Navigate_Login() {
+		driver.navigate().to("https://demo.swimpay.com/auth/login");
 	}
 	
 }
