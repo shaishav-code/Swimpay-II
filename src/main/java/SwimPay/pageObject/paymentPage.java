@@ -1,6 +1,7 @@
 package SwimPay.pageObject;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -96,11 +97,23 @@ public class paymentPage extends abstractComponentsMethods {
 	}
 
 	// find Payment Purpose field and perform required action
-	@FindBy(xpath = "(//input[@id='select-:re:'])[1]")
+	@FindBy(xpath = "(//div[@class='MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-9i3kzy'])[1]/div/div/input")
 	private WebElement PaymentPurposeField;
+	
+	@FindBy(xpath = "//input[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-b52kj1']")
+	WebElement PaymentPurposeField1;
+	
+	@FindBy(xpath = "")
+	List<WebElement> paymentPur;
 
-	public void paymentPurpiose(String paymentPurpose) {
-		PaymentPurposeField.sendKeys(paymentPurpose + Keys.DOWN + Keys.ENTER);
+	public void paymentPurpiose(String paymentPurpose) throws InterruptedException {
+		PaymentPurposeField.click();
+		pauseRun();
+		PaymentPurposeField1.sendKeys(paymentPurpose);
+		PaymentPurposeField1.sendKeys(Keys.DOWN); 
+		PaymentPurposeField1.sendKeys(Keys.ENTER);
+		Thread.sleep(4000);
+		
 	}
 
 	// find Source of fund field and perform required action

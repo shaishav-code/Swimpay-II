@@ -2,14 +2,13 @@ package SwimPay.negativeTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import SwimPay.pageObject.recipient_payeePage;
 import SwimPay.testComponents.baseClass;
 
 public class recipient_payeeNegative extends baseClass {
-	String email1 = "qa2@narola.email";
-	String password = "Pass@12345";
+	String email1 = "qa3@narola.email";
+	String password = "12345678";
 
 	// Verify submit recipient/payee detail form with blank fields
 	@Test

@@ -2,13 +2,9 @@ package SwimPay.positiveTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import SwimPay.pageObject.dashboardPage;
 import SwimPay.testComponents.baseClass;
-
 
 public class dashboard extends baseClass {
 	String email1 = "qa2@narola.email";

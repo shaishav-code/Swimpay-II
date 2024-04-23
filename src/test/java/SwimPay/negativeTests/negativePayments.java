@@ -3,7 +3,6 @@ package SwimPay.negativeTests;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import SwimPay.pageObject.loginPage;
 import SwimPay.pageObject.paymentPage;
@@ -21,7 +20,7 @@ public class negativePayments extends baseClass{
 	
 	
 	//Verify trying to click next button without providing currency & recipient/payee details
-	@Test(priority=0)
+	@Test(priority = 1)
 	public void payments_currencyAndRecipient_PayeeSubmit_withoutData()
 	{
 
@@ -34,11 +33,10 @@ public class negativePayments extends baseClass{
 		LoginPage.otpSubmitBtn();
 		paymentPage Payments=LoginPage.paymentsOption();
 		Payments.paymentDetailNextButton();
-		
 	}
 	
 	//Verify submit currency & recipient/payee details with Amount as 00
-	@Test(priority=2)
+	@Test(priority = 2)
 	public void payments_currencyAndRecipient_PayeeDataSubmit_withAmount00()
 	{
 		LoginPage.userEmail(email1);
@@ -56,7 +54,7 @@ public class negativePayments extends baseClass{
 		//Payments.messageToaster();
 	}
 	//Verify submit currency & recipient/payee details without selecting recipient/payee
-	@Test(priority=3)
+	@Test(priority = 3)
 	public void payments_currencyAndRecipient_PayeeDataSubmit_withoutSelecting_recipientPayeeOption()
 	{
 
@@ -74,7 +72,7 @@ public class negativePayments extends baseClass{
 	
 	}
 	//Verify click on create payments details submit button without providing payer details
-	@Test(priority=4)
+	@Test(priority = 4)
 	public void payments_createPaymentsSubmit_witoutData()
 	{
 		LoginPage.userEmail(email1);
@@ -93,8 +91,8 @@ public class negativePayments extends baseClass{
 	}
 	
 	//Verify create Payment with providing invalid OTP values
-	@Test(priority=6)
-	public void payments_createPaymentsSubmit_withInvalidOTP()
+	@Test(priority = 5)
+	public void payments_createPaymentsSubmit_withInvalidOTP() throws InterruptedException
 	{
 
 		LoginPage.userEmail(email1);
@@ -121,8 +119,8 @@ public class negativePayments extends baseClass{
 	}
 	
 	//Verify click on cancel button from review process page
-	@Test(priority=5)
-	public void payment_clickCancelBtn_fromReviewProcessStep()
+	@Test(priority = 6)
+	public void payment_clickCancelBtn_fromReviewProcessStep() throws InterruptedException
 	{
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -143,7 +141,7 @@ public class negativePayments extends baseClass{
 	}
 	
 	//Verify payments add recipient/payee detail with selecting "SwimPay Wallet as recipient/payee" option as Yes and submit bank account detail witout select account	
-	@Test
+	@Test(priority = 7)
 		public void paymentsAddRecipientPayee_withSwimPayWalletYes_andSubmitBankDetailsWithoutAccountSelect()
 		{
 			LoginPage.userEmail(email1);

@@ -3,17 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="SwimPay.testComponents.ListenersClass"/>
+    <listener class-name="SwimPay.testComponents.RetryListenerClass"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SwimPay.negativeTests.negativeFXconversion">
+      <class name="SwimPay.negativeTests.negativeFundingAccount">
         <methods>
+          <include name="deleteFundingAccount_withInvalidOTPSubmit"/>
           <include name="tearDown"/>
-          <include name="submitFXConversion_curriencyAmount_bySameCurrencyOpt"/>
-          <include name="submitFxConversionByInvalidOTPSubmit"/>
+          <include name="clickUserAccountNamefromDataList"/>
           <include name="lanuchWebsite"/>
+          <include name="editAndUpdate_fundingAccountDetailsWithInvalidAccountNumberData"/>
+          <include name="clickEdit_andPerformUpdateDataWithvalidData_andInavlidOTPSubmit"/>
         </methods>
-      </class> <!-- SwimPay.negativeTests.negativeFXconversion -->
+      </class> <!-- SwimPay.negativeTests.negativeFundingAccount -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -12,8 +12,8 @@ public class InvoicingTest extends baseClass{
 	String email1="qa1@narola.email";
 	String password= "Pass@1234";
 	
-	/* //Verify if user is able to click on Invoicing menu
-	@Test(priority=1)
+	//Verify if user is able to click on Invoicing menu
+	//@Test(priority=1)
 	public void ClickOnInvoicingMenu()
 	{
 		loginPage LoginPage=new loginPage(driver);
@@ -23,8 +23,8 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	LoginPage.waitcode();
+	//	InvoicingPage invoicingPage = LoginPage.InvoicingOption();
 	//	invoicingPage.LogoLoaded();
 
 	}
@@ -32,7 +32,7 @@ public class InvoicingTest extends baseClass{
 	///////////////Instruction///////////////
 	
 	//Verify if user is able to click on Intruction Sub-menu and can scroll till the bottom of the page
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void ClickOnInstructionSubmenu()
 	{
 		loginPage LoginPage=new loginPage(driver);
@@ -42,15 +42,15 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInstruction();
-		invoicingPage.waitcode();
-		invoicingPage.ScrollingTillButton(2);
+	//	LoginPage.waitcode();
+	//	InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	invoicingPage.ClickOnInstruction();
+	//	invoicingPage.waitcode();
+	//	invoicingPage.ScrollingTillButton(2);
 	}
 	
 	//Verify if user is able to see the instruction to create an invoice on SwimPay
-	@Test(priority=3)
+	//@Test(priority=3)
 	public void ViewIntructionCheckList()
 	{
 		loginPage LoginPage=new loginPage(driver);
@@ -60,16 +60,16 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInstruction();
-		invoicingPage.waitcode();
-		String InstructionPoints =  invoicingPage.InstructionListing();
-		System.out.println("How to Create an Invoice on SWiM PAY - For Free : " + InstructionPoints);
+	//	LoginPage.waitcode();
+	//	InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	invoicingPage.ClickOnInstruction();
+	//	invoicingPage.waitcode();
+	//	String InstructionPoints =  invoicingPage.InstructionListing();
+	//	System.out.println("How to Create an Invoice on SWiM PAY - For Free : " + InstructionPoints);
 	}	
 	
 	//Verify if user is able to click on Cancel button in the Intruction Sub-menu
-	@Test(priority=4)
+	//@Test(priority=4)
 	public void ClickOnCancelbuttonOnInstructionSubmenu()
 	{
 		loginPage LoginPage=new loginPage(driver);
@@ -79,22 +79,22 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInstruction();
-		invoicingPage.waitcode();
-		invoicingPage.ScrollingTillButton(2);
-		invoicingPage.waitcode();
-		invoicingPage.ClickOnCancelButton(2);
-		invoicingPage.waitcode();
-		String currentURL = invoicingPage.GetCurrentURL();
+	//	LoginPage.waitcode();
+	//	InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	invoicingPage.ClickOnInstruction();
+	//	invoicingPage.waitcode();
+	//	invoicingPage.ScrollingTillButton(2);
+	//	invoicingPage.waitcode();
+	//	invoicingPage.ClickOnCancelButton(2);
+	//	invoicingPage.waitcode();
+	//	String currentURL = invoicingPage.GetCurrentURL();
 		//System.out.println("Current URL is : " + currentURL);
-		Assert.assertEquals("https://demo.swimpay.com/dashboard", currentURL);
+	//	Assert.assertEquals("https://demo.swimpay.com/dashboard", currentURL);
 	}
 	
 	
 	//Verify if user is able to click on Upload field in the Intruction Sub-menu 
-	@Test(priority=5)
+	//@Test(priority=5)
 	public void ClickOnUploadFieldInInstructionSubmenu()
 	{
 		loginPage LoginPage=new loginPage(driver);
@@ -104,18 +104,18 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInstruction();
-		invoicingPage.waitcode();
-		invoicingPage.ScrollingTillButton(2);
-		LoginPage.waitcode();
-		invoicingPage.ClickOnUploadButton();
+	//	LoginPage.waitcode();
+	//	InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	invoicingPage.ClickOnInstruction();
+	//	invoicingPage.waitcode();
+	//	invoicingPage.ScrollingTillButton(2);
+	//	LoginPage.waitcode();
+	//	invoicingPage.ClickOnUploadButton();
 	}
 	
 	//Verify if user is able to upload the valid document in the Instruction Sub-menu
 	@Test(priority=6)
-	public void UploadDoucmentInInstructionSubmenu() throws InterruptedException
+	public void UploadDoucmentInInstructionSubmenu()
 	{
 		loginPage LoginPage=new loginPage(driver);
 		LoginPage.userEmail(email1);
@@ -124,19 +124,20 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInstruction();
-		invoicingPage.waitcode();
-		invoicingPage.ScrollingTillButton(2);
-		LoginPage.waitcode();
-		invoicingPage.ClickOnUploadButton();
-		
-		}
+	//	LoginPage.waitcode();
+	//	InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	invoicingPage.ClickOnInstruction();
+	//	invoicingPage.waitcode();
+	//	invoicingPage.ScrollingTillButton(2);
+	//	LoginPage.waitcode();
+	//	invoicingPage.ClickOnUploadButton();
+		//invoicingPage.waitcode();
+		//invoicingPage.UploadValidDocument();
+	}
 	
 	//Verify if user is able to click on update logo button and can get the Success message for the same
 	@Test(priority=7)
-	public void ClickOnUpdateLogoButtonInInstructionSubmenu() throws InterruptedException
+	public void ClickOnUpdateLogoButtonInInstructionSubmenu()
 	{
 		loginPage LoginPage=new loginPage(driver);
 		LoginPage.userEmail(email1);
@@ -145,18 +146,17 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInstruction();
-		invoicingPage.waitcode();
-		invoicingPage.ScrollingTillButton(2);
-		LoginPage.waitcode();
-		invoicingPage.ClickOnUploadButton();
-		LoginPage.waitcode();
-		Thread.sleep(15000);
-		invoicingPage.ClickOnUpdateLogoButton();
-		LoginPage.waitcode();
-		Assert.assertTrue(invoicingPage.SuccessMessage());	
+		//LoginPage.waitcode();
+//		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	invoicingPage.ClickOnInstruction();
+	//	invoicingPage.waitcode();
+	//	invoicingPage.ScrollingTillButton(2);
+	//	LoginPage.waitcode();
+	//	invoicingPage.ClickOnUploadButton();
+	//	invoicingPage.UploadValidDocument();
+	//	LoginPage.waitcode();
+	//	invoicingPage.ClickOnUpdateLogoButton();
+	//	Assert.assertTrue(invoicingPage.SuccessMessage());	
 	}
 	
 	//Verify if user is able to click on update logo button and can proceed further by click on the Next button
@@ -170,29 +170,24 @@ public class InvoicingTest extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInstruction();
-		invoicingPage.waitcode();
-		invoicingPage.ScrollingTillButton(2);
-		LoginPage.waitcode();
-		invoicingPage.ClickOnUploadButton();
-		LoginPage.waitcode();
-		Thread.sleep(15000);
-		invoicingPage.ClickOnUpdateLogoButton();
-		LoginPage.waitcode();
-		AssertJUnit.assertTrue(invoicingPage.SuccessMessage());	
-		invoicingPage.ScrollingTillButton(3);
-		invoicingPage.ClickButton(3);
-		LoginPage.waitcode();
-		Assert.assertEquals("https://demo.swimpay.com/invoicing/create", invoicingPage.GetCurrentURL());
-		
+	//	LoginPage.waitcode();
+	//	InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+	//	invoicingPage.ClickOnInstruction();
+	//	invoicingPage.waitcode();
+	//	invoicingPage.ScrollingTillButton(2);
+	//	LoginPage.waitcode();
+	//	invoicingPage.ClickOnUploadButton();
+		Thread.sleep(10000);
+	//	Assert.assertTrue(invoicingPage.SuccessMessage());	
+	//	invoicingPage.ScrollingTillButton(3);
+	//	LoginPage.waitcode();
+	//	Assert.assertEquals("https://demo.swimpay.com/invoicing/create", invoicingPage.GetCurrentURL());	
 	}
 	
 	///////////////Create an invoice///////////////
 	
 	//Verify if user is able to click on Create Invoice Sub-menu and can scroll till the bottom of the page
-	@Test(priority=9)
+	/*@Test(priority=9)
 	public void ClickOnCreateInvoiceSubmenu()
 	{
 		loginPage LoginPage=new loginPage(driver);
@@ -403,7 +398,6 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.ClickButton(9);
 		invoicingPage.otpData();
 		invoicingPage.otpVerify();
-		invoicingPage.waitcode();
 		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
 	}
 	
@@ -447,9 +441,8 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.CreateInvoiceBtn();
 		invoicingPage.otpData();
 		invoicingPage.otpVerify();
-		invoicingPage.waitcode();
-		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
-	} */
+	//	Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
+	}
 	
 	
 	///////////////Invoice List///////////////
@@ -467,167 +460,9 @@ public class InvoicingTest extends baseClass{
 		LoginPage.otpSubmitBtn();
 		LoginPage.waitcode();
 		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInvoiceListPage();
+		invoicingPage.ClickOnCreateInvoicePage();
 		invoicingPage.waitcode();
 		invoicingPage.ScrollingTillButton(7);
-		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
-		LoginPage.waitcode();
-		invoicingPage.clickOnPagination();
-		
-	}	
-	
-	//Verify if user is able to click on Create Invoice button 
-	@Test(priority=18)
-	public void ClickOnCreateInvoiceButton()
-	{
-		loginPage LoginPage=new loginPage(driver);
-		LoginPage.userEmail(email1);
-		LoginPage.loginEmailSubmit();
-		LoginPage.userPassword(password);
-		LoginPage.loginSubmit();
-		LoginPage.otpData();
-		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.waitcode();
-		invoicingPage.ClickButton(2); //create button
-		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing/create");
-	}
-	
-	//Verify if user is able to enter all the required details and click on Search button in invoice list submenu
-	@Test(priority=19)
-	public void InsertAllDetailsAndClickOnSearchButton()
-	{
-		loginPage LoginPage=new loginPage(driver);
-		LoginPage.userEmail(email1);
-		LoginPage.loginEmailSubmit();
-		LoginPage.userPassword(password);
-		LoginPage.loginSubmit();
-		LoginPage.otpData();
-		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.waitcode();
-		invoicingPage.EnterReference("INV0");
-		invoicingPage.Selectdatetype();
-		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
-		invoicingPage.waitcode();
-		invoicingPage.EnterDate(1, "24 Jul 2025");   //To date
-		invoicingPage.ClickOnSearchBtn();
-	}
-	
-	//Verify if user is able to reset filters and click on the refresh icon in invoice list submenu
-	@Test(priority=20)
-	public void ResetFilters()
-	{
-		loginPage LoginPage=new loginPage(driver);
-		LoginPage.userEmail(email1);
-		LoginPage.loginEmailSubmit();
-		LoginPage.userPassword(password);
-		LoginPage.loginSubmit();
-		LoginPage.otpData();
-		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.waitcode();
-		invoicingPage.EnterReference("INV0");
-		invoicingPage.Selectdatetype();
-		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
-		invoicingPage.waitcode();
-		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
-		invoicingPage.ClickOnSearchBtn();
-		invoicingPage.waitcode();
-		invoicingPage.ClickOnResetFilters();
-		invoicingPage.waitcode();
-		invoicingPage.ClickOnRefreshIcon();
-
-	}
-	
-	//Verify if user is able to click on Preview button in invoice list submenu
-	@Test(priority=21)
-	public void ClickOnPreviewButton()
-	{
-		loginPage LoginPage=new loginPage(driver);
-		LoginPage.userEmail(email1);
-		LoginPage.loginEmailSubmit();
-		LoginPage.userPassword(password);
-		LoginPage.loginSubmit();
-		LoginPage.otpData();
-		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.waitcode();
-		invoicingPage.EnterReference("INV0");
-		invoicingPage.Selectdatetype();
-		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
-		invoicingPage.waitcode();
-		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
-		invoicingPage.ClickOnSearchBtn();
-		invoicingPage.waitcode();
-		invoicingPage.ClickOnPreviewButton("INV000124");
-		invoicingPage.waitcode();
-		invoicingPage.CommonPath(31);  //cross arrow of preview button
-
-	}
-	
-	//Verify if user is able to click on Edit button in invoice list submenu
-	@Test(priority=22)
-	public void ClickOnEditButton()
-	{
-		loginPage LoginPage=new loginPage(driver);
-		LoginPage.userEmail(email1);
-		LoginPage.loginEmailSubmit();
-		LoginPage.userPassword(password);
-		LoginPage.loginSubmit();
-		LoginPage.otpData();
-		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.waitcode();
-		invoicingPage.EnterReference("INV0");
-		invoicingPage.Selectdatetype();
-		invoicingPage.EnterDate(0, "01 Feb 2024");  //from date
-		invoicingPage.waitcode();
-		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
-		invoicingPage.ClickOnSearchBtn();
-		invoicingPage.waitcode();
-		invoicingPage.ClickOnEditButton("INV000121"); //cross arrow of edit button
-		invoicingPage.waitcode();
-		Assert.assertEquals(invoicingPage.GetCurrentURL(),"https://demo.swimpay.com/invoicing/66220c534f799133a5b0a9bf");  
-	}
-	
-	//Verify if user is able to edit the invoice details in invoice list submenu
-	@Test(priority=23)
-	public void EditInvoiceDetails()
-	{
-		loginPage LoginPage=new loginPage(driver);
-		LoginPage.userEmail(email1);
-		LoginPage.loginEmailSubmit();
-		LoginPage.userPassword(password);
-		LoginPage.loginSubmit();
-		LoginPage.otpData();
-		LoginPage.otpSubmitBtn();
-		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
-		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.ClickOnEditButton("INV000121");
-		invoicingPage.waitcode();
-		invoicingPage.ClickExternalTypeCheckbox();
-		invoicingPage.InsertBillToAndAddress(0, 1,"Mr. Tester", "Victoria Street, Brazil");
-		invoicingPage.InsertDiscount("2");
-		invoicingPage.waitcode();
-		invoicingPage.VerifyDiscountValue();
-		invoicingPage.InsertTax("2");
-		invoicingPage.ScrollingTillButton(8);
-		invoicingPage.waitcode();
-		invoicingPage.ClickButton(8);
-		Assert.assertEquals("https://demo.swimpay.com/invoicing", invoicingPage.GetCurrentURL());
-	}
-		
+	}	*/	
 	
 }

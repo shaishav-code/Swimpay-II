@@ -2,9 +2,6 @@ package SwimPay.positiveTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import SwimPay.pageObject.paymentPage;
 import SwimPay.pageObject.recipient_payeePage;
@@ -61,7 +58,7 @@ public class recipient_payee extends baseClass{
 		Recipient_Payee.recipientPayeesubmit();
 	}
 	
-	//Verify submit recipient/payee Bank Account details at add time
+	//Verify submit recipien/payee Bank Account details at add time
 	@Test
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit()
 	{
@@ -95,7 +92,7 @@ public class recipient_payee extends baseClass{
 		Recipient_Payee.getMessage();
 	}
 	
-	//Verify submit recipient/payee Bank Account details at add time with regular payment account option as BSB
+	//Verify submit recipien/payee Bank Account details at add time with regular payment account option as BSB
 	@Test
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit_withRegularPaymentAccountAs_BSBOption()
 	{
@@ -314,7 +311,7 @@ public class recipient_payee extends baseClass{
 	
 	//Verify click on Pay button for requested user from data list & perform payment action
 	@Test
-	public void clickPayButton_fromRecipientPayeeDataList_andCompletePayment()
+	public void clickPayButton_fromRecipientPayeeDataList_andCompletePayment() throws InterruptedException
 	{
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();

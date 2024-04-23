@@ -3,9 +3,6 @@ package SwimPay.positiveTests;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import SwimPay.pageObject.loginPage;
 import SwimPay.pageObject.settingsPage;
@@ -16,7 +13,7 @@ public class settings extends baseClass{
 	String password= "Pass@1234";
 	
 	//Verify updating setting page details
-	@Test
+	@Test(priority = 1)
 	public void updateSettings()
 	{
 		loginPage LoginPage=new loginPage(driver);

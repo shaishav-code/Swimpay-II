@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="BCN Documents menu Functionality">
-<listeners>
-		<listener class-name="swimGDSAutomation.TestComponents.ListenersClass"></listener>
-		<listener class-name="swimGDSAutomation.TestComponents.RetryListenerClass"></listener>
-	</listeners>
-  <test thread-count="5" name="Positive Test cases">
-    <classes>
-      <class name="swimGDSAutomation.PositiveTC.ContactTest"/>
-      <class name="swimGDSAutomation.NegativeTC.NegatiiveContactTest"/>
-      <class name="swimGDSAutomation.PositiveTC.QuotesTest"/>
-      <class name="swimGDSAutomation.NegativeTC.NegativeQuotesTest"/>
-      <class name="swimGDSAutomation.PositiveTC.ManageTradingTermsTest"/>   
-      <class name="swimGDSAutomation.PositiveTC.CreateNewTradingTermsTest"/> 
-      <class name="swimGDSAutomation.PositiveTC.ListTradingTermsTest"/>    
-      <class name="swimGDSAutomation.NegativeTC.NegativeCreateNewTradingTermsTest"/>  
-      <class name="swimGDSAutomation.PositiveTC.UserManualTest"/>   
-      <class name="swimGDSAutomation.PositiveTC.SellerReportsTest"/>   
-      <class name="swimGDSAutomation.PositiveTC.ReadyMadeTest"/>   
-      <class name="swimGDSAutomation.PositiveTC.ReportWriterTest"/>   
-      <class name="swimGDSAutomation.NegativeTC.NegativeReadyMadeTest"/>
-      <class name="swimGDSAutomation.NegativeTC.NegativeReportWriterTest"/> 
-      <class name="swimGDSAutomation.PositiveTC.ManageTEUSlotsTest"/> 
-      <class name="swimGDSAutomation.PositiveTC.ManageTEUSlotsTest"/>
-      <class name="swimGDSAutomation.NegativeTC.NegativeManageTEUSlotsTest"/>
-      <class name="swimGDSAutomation.PositiveTC.StandardDocumentsTest"/>
-      <class name="swimGDSAutomation.NegativeTC.NegativeStandardDocumentsTest"/>  
-      <class name="swimGDSAutomation.PositiveTC.RegisterTest"/>
-      <class name="swimGDSAutomation.NegativeTC.NegativeRegisterTest"/>   
-      <class name="swimGDSAutomation.PositiveTC.ManageVoyageTest"/>
-      <class name="swimGDSAutomation.NegativeTC.NegativeManageVoyagesTest"/>  
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="SwimPay.negativeTests.negativePayments" />
+			<class name="SwimPay.positiveTests.payments" />
+			<!-- <class name="SwimPay.positiveTests.Search"/>
       
-                      
-    </classes>
-  </test> <!-- Test -->
+      <class name="SwimPay.positiveTests.settings"/>
+      <class name="SwimPay.negativeTests.SignUp"/>
+      <class name="SwimPay.positiveTests.profile"/>
+      <class name="SwimPay.negativeTests.negativeLogin"/>
+      <class name="SwimPay.positiveTests.reports"/>
+      <class name="SwimPay.positiveTests.fxConversion"/>
+      <class name="SwimPay.negativeTests.negativeFXconversion"/>
+      <class name="SwimPay.positiveTests.forgot_resetPassword"/>
+      <class name="SwimPay.negativeTests.negativePassword"/>
+      <class name="SwimPay.negativeTests.negativeProfile"/>
+      <class name="SwimPay.positiveTests.userLogin_logout"/>-->
+			<class name="SwimPay.testComponents.baseClass" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

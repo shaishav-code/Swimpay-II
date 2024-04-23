@@ -25,7 +25,6 @@ WebDriver driver;
 	public void viewAccount()
 	{
 		ViewAccountOpt.click();
-		
 	}
 	
 	//Find Add a Recipient/Payee option and perform required action 
