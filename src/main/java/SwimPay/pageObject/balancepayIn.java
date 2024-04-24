@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,7 +25,7 @@ public class balancepayIn extends abstractComponentsMethods {
 	}
 
 	// find balance payin field and perform required action
-	@FindBy(xpath = "//input[@id='outlined-basic']")
+	@FindBy(xpath = "//input[@id='currency-search']")
 	private WebElement Bal_PayIn;
 
 	public void balPayIn(String payin) {
@@ -58,14 +59,12 @@ public class balancepayIn extends abstractComponentsMethods {
 		for (WebElement Country_Name : CountrysName) {
 			String requestCountryName = Country_Name.getText();
 			if (requestCountryName.contains(countryOpt)) {
-				System.out.println(Country_Name.getText()+" is clicked");
+				System.out.println(Country_Name.getText() + " is clicked");
 				Country_Name.click();
 				break;
-				}
+			}
 		}
 	}
-	
-	
 
 	// find Balance data from details page & perform print data action
 	@FindBy(xpath = "//div[@class='price-country']")
@@ -95,7 +94,7 @@ public class balancepayIn extends abstractComponentsMethods {
 	}
 
 	// find complete Transaction from Date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[3]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[1]/div/div/button")
 	private WebElement CompleteTransFromDate;
 
 	public void completeTransaction_fromDate() {
@@ -103,14 +102,13 @@ public class balancepayIn extends abstractComponentsMethods {
 	}
 
 	// find complete Transaction To Date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[4]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[2]/div/div/button")
 	private WebElement CompleteTransToDate;
 
 	public void completeTransaction_toDate() {
 		waitTimeForElementToClickable(CompleteTransToDate);
 		CompleteTransToDate.click();
 	}
-		
 
 	// find No Data Found caption and perform required action
 	@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK'] //div")
@@ -126,26 +124,23 @@ public class balancepayIn extends abstractComponentsMethods {
 			String completeTransaction = CompleteTransactionDataList.get(i).getText();
 			if (completeTransaction.contains(completeTransaction)) {
 				System.out.println("Displayed Completed Transaction Data " + completeTransaction);
-			}
-			else
-			{
+			} else {
 				System.out.println(NoDatafound.getText());
 			}
 		}
 	}
-	
-	//find row per page option and perform required action
-		@FindBy(xpath="(//select[@class='sc-cxabCf kJrhuj'])[1]")
-		private WebElement RowOpt;
-		@FindBy(xpath="(//select[@class='sc-cxabCf kJrhuj'])[1]/option")
-		private List<WebElement> OPtions;
-		public void selectRowsOptions()
-		{
-			RowOpt.click();
-			System.out.println(OPtions.get(4).getText()+ " Row option is selected");
-			OPtions.get(4).click();
-		}
-		
+
+	// find row per page option and perform required action
+	@FindBy(xpath = "(//select[@class='sc-cxabCf kJrhuj'])[1]")
+	private WebElement RowOpt;
+	@FindBy(xpath = "(//select[@class='sc-cxabCf kJrhuj'])[1]/option")
+	private List<WebElement> OPtions;
+
+	public void selectRowsOptions() {
+		RowOpt.click();
+		System.out.println(OPtions.get(4).getText() + " Row option is selected");
+		OPtions.get(4).click();
+	}
 
 	// find statement year field and perform required action
 	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[5]")
@@ -156,57 +151,65 @@ public class balancepayIn extends abstractComponentsMethods {
 	}
 
 	// find create statement button & perform click action
-	@FindBy(xpath = "//button[contains(@class,'css-8fujfr-MuiButtonBase')]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[6]/div[1]/div[2]/button[2]")
 	private WebElement StatementCreateBtn;
 
 	public void statementYearCreateBtn() {
 		waitTimeForElementToClickable(StatementCreateBtn);
 		StatementCreateBtn.click();
 	}
-	
-	//Find statement Month field from pop-up and perform click action 
-	@FindBy(xpath="(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[6]")
+
+	// Find statement Month field from pop-up and perform click action
+	@FindBy(xpath = "(//div[@class='mb-3'])[3]/div/div/div/button")
 	private WebElement SelectStatementMonth;
-	public void selectStatementMonth()
-	{
+
+	public void selectStatementMonth() {
 		SelectStatementMonth.click();
 	}
-	//find statement months from create statement pop-up
+	// find statement months from create statement pop-up
 
-		@FindBy(xpath="//button[contains(@class,'PrivatePickersMonth')]")
-		private List<WebElement> StatementMonths;
-		@FindBy(xpath="//button[contains(@class,'PrivatePickersYear-yearButton')]")
-		private List<WebElement> StatementYears;
-		public void statementMonthSelect(String Month)
-		{
-			StatementMonths.size();
-			for(WebElement monthName:StatementMonths)
-			{
-				String requestedMonth=monthName.getText();
-				if (requestedMonth.contains(Month))
-				{
-					System.out.println("Selected Month is "+ requestedMonth);
-					monthName.click();
-					break;
-				}
+	@FindBy(xpath = "//div[@class='PrivatePickersFadeTransitionGroup-root MuiCalendarPicker-viewTransitionContainer css-5c7sx6']/div/div/button")
+	private List<WebElement> StatementMonths;
+	@FindBy(xpath = "//Button[@class='PrivatePickersYear-yearButton css-m1gykc']")
+	private List<WebElement> StatementYears;
+
+	public void statementMonthSelect(String Month) {
+		StatementMonths.size();
+		for (WebElement monthName : StatementMonths) {
+			String requestedMonth = monthName.getText();
+			
+			// String attributevalue = monthName.getAttribute("tabindex").toString();
+			 //System.out.println(attributevalue);
+			
+		if (requestedMonth.contains(Month)) {
+				System.out.println("Selected Month is " + requestedMonth);
+				monthName.click();
+				break;
 			}
-			}
-		
-		public void selectStatementYear(String year)
-		{
-			StatementYears.size();
-			for(WebElement yearName:StatementYears)
-			{
-				String requestedYear =yearName.getText();
-						if(requestedYear.equals(year))
-						{
-							System.out.println("Selected Year is "+ requestedYear);
-							yearName.click();
-							break;
-						}
-			}
-		
 		}
+	}
+
+	@FindBy(xpath = "//div[@class='PrivatePickersFadeTransitionGroup-root css-1bx5ylf']/div")
+	private WebElement YearClick;
+
+	public void CreatestatementYear(String Yearcreate) throws InterruptedException {
+		//YearClick.click();
+		Thread.sleep(3000);
+
+		for (WebElement CreateStatementyear : StatementYears) {
+
+			String requestedyear1 = CreateStatementyear.getText(); //
+			//System.out.println(Yearcreate);
+		//	System.out.println(requestedyear1);
+
+			if (requestedyear1.equals(Yearcreate)) {
+				CreateStatementyear.click();
+			//	System.out.println(CreateStatementyear);
+				break;
+			}
+		}
+
+	}
 
 //	// find create statement month field and perform required action
 //	@FindBy(xpath = "//input[@id=':r5j:']")
@@ -220,7 +223,7 @@ public class balancepayIn extends abstractComponentsMethods {
 //	}
 
 	// find create statement from date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[7]")
+	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[1]/div[2]/div/div/button")
 	private WebElement StatementFromDateField;
 
 	public void statementMonthFromDate() {
@@ -228,15 +231,16 @@ public class balancepayIn extends abstractComponentsMethods {
 	}
 
 	// find create statement to date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[8]")
+	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[2]/div[2]/div/div/button")
 	private WebElement StatementToDateField;
 
 	public void statementMonthToDate() {
-		StatementToDateField.click();;
+		StatementToDateField.click();
+		;
 	}
 
 	// find Proceed statement button and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'me-2 css-1etaikj-MuiButtonBase')])[5]")
+	@FindBy(xpath = "//div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthLg css-18i3v7t']/div[2]/button[2]")
 	private WebElement StatementProceed;
 
 	public void statementProceedBtn() {
@@ -244,26 +248,36 @@ public class balancepayIn extends abstractComponentsMethods {
 	}
 
 	// find cancel statement button and perform required action
-	@FindBy(xpath = "//button[contains(@class,'css-1azb8y9-MuiButtonBase-')]")
+	@FindBy(xpath = "//div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthLg css-18i3v7t']/div[2]/button[1]")
 	private WebElement StatementCancel;
 
 	public void statementCancelBtn() {
 		StatementCancel.click();
 	}
-	
 
 	// find Statement Months datalist and perform required action (click on View
 	// Button)
-	@FindBy(xpath = "(//div[@class='sc-fLlhyt ifOHjV'])[3]//div[contains(@class,'rdt_TableRow')]")
+
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[6]/div[1]/div[1]/div[2]/div/div/div/button")
+	private WebElement StatementCalClick;
+
+	@FindBy(xpath = "//Button[@class='PrivatePickersYear-yearButton css-m1gykc']")
 	private List<WebElement> StatementMonthsDataList;
 	@FindBy(xpath = "(//div[@class='sc-fLlhyt ifOHjV'])[3]//div[contains(@class,'rdt_TableRow')]//button")
 	private WebElement ViewStatementBtn;
 
-	public void statementMonthViewOptionClickFromList(String statementMonth) {
-		for (WebElement StatementMonth : StatementMonthsDataList) {
-			String requestedMonth = StatementMonth.getText();
-			if (requestedMonth.contains(statementMonth)) {
-				ViewStatementBtn.click();
+	public void statementMonthViewOptionClickFromList(String Year) {
+		StatementCalClick.click();
+
+		for (WebElement Statementyear : StatementMonthsDataList) {
+
+			String requestedyear = Statementyear.getText();
+			// System.out.println(requestedyear);
+
+			if (requestedyear.equals(Year)) {
+				Statementyear.click();
+			//	System.out.println(Statementyear);
+				break;
 			}
 		}
 	}
@@ -307,18 +321,31 @@ public class balancepayIn extends abstractComponentsMethods {
 	public void myCurrencyAccountOption() {
 		MyCurrencyAccount.click();
 	}
-	
-	//find my currency Account details and perform required action
-	@FindBy(xpath="//div[@class='my-5 p-3 balance-account-detail']")
-	private List <WebElement> CurrencyAccountDetails;
-	public void currencyAccountDetails()
-	{
+
+	// find my currency Account details and perform required action
+	@FindBy(xpath = "//div[@class='my-5 p-3 balance-account-detail']")
+	private List<WebElement> CurrencyAccountDetails;
+
+	public void currencyAccountDetails() {
 		CurrencyAccountDetails.size();
-		for(int i=0;i<CurrencyAccountDetails.size();i++)
-		{
-			
-			System.out.println("Currency Account Details >>"
-					+CurrencyAccountDetails.get(i).getText());
+		for (int i = 0; i < CurrencyAccountDetails.size(); i++) {
+
+			System.out.println("Currency Account Details >>" + CurrencyAccountDetails.get(i).getText());
 		}
 	}
-}
+
+	
+
+	
+	
+	
+	//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/h2/button
+	
+	@FindBy(xpath = "//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/h2/button")
+	private WebElement Cancelclick;
+	public void CancelClick() throws InterruptedException {
+		Thread.sleep(2000);
+		Cancelclick.click();
+	}
+		
+	}

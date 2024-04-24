@@ -27,10 +27,9 @@ public class fundingAccounts extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		LoginPage.fundingAccountOption();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Enter Bank Name in Search Field and Then Click on Search icon
@@ -47,8 +46,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.searchBank("Gaurang");
 		FundingAccount.searchBankSubmit();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify click on Add Bank Account button
@@ -63,8 +61,7 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify providing values in My Bank details form section and perform submit
@@ -79,17 +76,15 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
-		// Thread.sleep(3000);
 		FundingAccount.addBankAccountBtn();
 		// FundingAccount.nickname("steve");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify provide data in Bank Account's regular payment details then perform
@@ -106,20 +101,19 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.nickname("steve");
 		FundingAccount.countryOption1("Australia");
-		Thread.sleep(1000);
+		LoginPage.pauseRun2();
 		FundingAccount.PayOut_Click();
 		FundingAccount.BankAccount_Click();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify providing values in My Bank details form section with selecting Bank
@@ -135,15 +129,14 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.bankAccountTypeIndividualOption();
 		FundingAccount.submitBankAccountDetails();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify provide data in Bank Account's regular payment details then perform
@@ -161,9 +154,9 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.bankAccountTypeIndividualOption();
@@ -171,7 +164,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.nickname("steve");
 		FundingAccount.countryOption1("Australia");
 		FundingAccount.PayOut_Click();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.BankAccount_Click();
 		FundingAccount.regularPaymentCheckBox();
 		FundingAccount.transit_swiftBsbNumber();
@@ -181,13 +174,12 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.city("Melbourne");
 		FundingAccount.postCode("3000");
 		FundingAccount.validate_N_createRecipientPayeeBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.reviewMyDetails();
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		LoginPage.Logout();
 	}
 
 	//// Verify add new funding account then click on Edit option after details
@@ -202,12 +194,12 @@ public class fundingAccounts extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.bankAccountTypeIndividualOption();
@@ -225,14 +217,13 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.postCode("3000");
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.reviewMyDetails();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.otpData();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.otpVerify();
 		FundingAccount.editBtn();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify add new funding account then click on Edit & perform edit/update
@@ -247,17 +238,17 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.clickDeleteOptforRequestedUser("steve2");
 		FundingAccount.confirmActionMessagePopup();
 		FundingAccount.yesAction();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		Thread.sleep(4000);
+		LoginPage.pauseRun5();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.bankAccountTypeIndividualOption();
@@ -293,8 +284,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify add new funding account then perform delete action after details saved
@@ -302,7 +292,7 @@ public class fundingAccounts extends baseClass {
 	@Test(priority = 10)
 	public void addNewFunding_deletenewSavedDetails() throws InterruptedException {
 		loginPage LoginPage = new loginPage(driver);
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		LoginPage.userEmail(email2);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -310,24 +300,22 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.clickDeleteOptforRequestedUser("Steveww");
 		FundingAccount.confirmActionMessagePopup();
 		FundingAccount.yesAction();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FundingAccount.addBankAccountBtn();
-		
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.bankAccountTypeIndividualOption();
 		FundingAccount.submitBankAccountDetails();
-		
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FundingAccount.nickname("steve2");
 		FundingAccount.countryOption1("Australia");
 		FundingAccount.PayOut_Click();
@@ -349,10 +337,9 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.yesAction();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		// FundingAccount.getMsg();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify add new funding account then click on Pay option after details saved
@@ -368,9 +355,9 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.bankAccountTypeIndividualOption();
@@ -392,8 +379,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
 		FundingAccount.payBtn();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify clicking on requested users account name from listing and capture
@@ -410,8 +396,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.reviewMyDetails();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify click on requested users account name from data list then click on pay
@@ -428,8 +413,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.payBtn();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 
 	}
 
@@ -447,8 +431,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.editBtn();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	/// Verify click on requested users account name from data list then click on
@@ -466,8 +449,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.deleteBtn();
 		FundingAccount.noAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify click on edit option button for request user from displayed data list
@@ -481,10 +463,9 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
-		Thread.sleep(4000);
+		LoginPage.pauseRun5();
 		FundingAccount.clickEditOptforRequestedUser("steve");
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		LoginPage.Logout();;
 	}
 
 //Verify click on edit option button for request user from displayed data list and edit/update details
@@ -500,7 +481,7 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.clickEditOptforRequestedUser("steve");
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FundingAccount.nickname("Steveww");
 		FundingAccount.countryOption1("Emirates");
 		FundingAccount.submitBankAccountDetails();
@@ -515,16 +496,15 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.pauseRun2();
+		LoginPage.Logout();
 	}
 
 	// Verify click on Pay option button for request user from displayed data list
 	@Test(priority = 18)
 	public void clickPayOptFromDataListForRequestedUser() throws InterruptedException {
 		loginPage LoginPage = new loginPage(driver);
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		LoginPage.userEmail(email2);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -532,10 +512,9 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.clickPayOptforRequestedUser("Gaurang Rana");
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		LoginPage.Logout();
 
 	}
 
@@ -552,7 +531,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		paymentPage PaymentPage = FundingAccount.clickPayOptforRequestedUser("Gaurang Rana");
 		PaymentPage.enterAmount("5");
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		PaymentPage.paymentDetailNextBtn();
 		PaymentPage.referenceNumberValue("0235412");
 		PaymentPage.paymentPurpiose("Transportation fees for goods");
@@ -560,9 +539,8 @@ public class fundingAccounts extends baseClass {
 		PaymentPage.createPayment();
 		PaymentPage.otpData();
 		PaymentPage.otpVerify();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		LoginPage.pauseRun3();
+		LoginPage.Logout();
 	}
 
 	// Verify click on delete option button for request user from data list and
@@ -582,9 +560,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.yesAction();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(2000);
+		LoginPage.Logout();
 	}
 
 }

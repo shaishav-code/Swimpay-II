@@ -191,7 +191,7 @@ public class abstractComponentsMethods {
 	}
 
 	// Balance option from Menu
-	@FindBy(xpath = "(//div[@class='has_sub'])[2]/a")
+	@FindBy(xpath = "(//div[@class='has_sub'])[3]")
 	private WebElement BalanceOpt;
 
 	public void balanceOption() {
@@ -348,21 +348,7 @@ public class abstractComponentsMethods {
 		NoOpt.click();
 	}
 
-	// Click on Logout Button
-	public void logout() {
-		
-		System.out.println(logoutBtn.isDisplayed());
-		//waitTimeForElementToClickable(logoutBtn);
-		/*
-		 * if (logoutBtn.is) {
-		 * 
-		 * logoutBtn.click(); System.out.println("Logout Done Successfully");
-		 * //System.out.println(MsgToaster.getText() + "Logout Done Successfully"); }
-		 * else { driver.close(); }
-		 */
-	//	return MsgToaster;
 
-	}
 	
 	
 	
@@ -375,6 +361,12 @@ public class abstractComponentsMethods {
 			
 		logout.click();
 		
+	}
+	
+	public void Logout() throws InterruptedException {
+		Thread.sleep(3000);
+		logout.click();
+		Thread.sleep(3000);
 	}
 	
 	
@@ -403,8 +395,14 @@ public class abstractComponentsMethods {
 		wait.until(ExpectedConditions.attributeToBe(element, "value", ""));
 	}
 
-	public void pauseRun() throws InterruptedException {
+	public void pauseRun2() throws InterruptedException {
 		Thread.sleep(2000);
+	}
+	public void pauseRun3() throws InterruptedException {
+		Thread.sleep(3000);
+	}
+	public void pauseRun5() throws InterruptedException {
+		Thread.sleep(5000);
 	}
 
 	public void actionClick() {
@@ -498,22 +496,23 @@ public class abstractComponentsMethods {
 	//==Selecting Month & Date from Calendar Pop-up==
 	
 	//find Next arrow button and perform click action
-	@FindBy(xpath="//button[contains(@class,'css-jro82b-MuiButtonBase')]")
+	@FindBy(xpath="//div[@class='css-1mtsuo7 MuiPopperUnstyled-root']/div/div[1]/div/div/div[1]/div[2]/button[2]")
 	private WebElement NextMonthArrowOpt;
 	
 	@FindBy(xpath="//button[@title='Previous month']")
 	private WebElement PreviousMonthArrowOpt;
 	
 	//Find Month and perform required action
-	@FindBy(xpath="//div[@class='css-1v994a0']")
+	@FindBy(xpath="//div[@class='css-1mtsuo7 MuiPopperUnstyled-root']/div/div[1]/div/div/div[1]/div[1]/div")
 	private WebElement CalendarMonth;
 	
 	// find Dates lists from calendar pop-up
-	@FindBy(xpath = "//button[contains(@class,'css-bkrceb-MuiButtonBase-root')]")
+	@FindBy(xpath = "//div[@class='css-1mtsuo7 MuiPopperUnstyled-root']/div/div[1]/div/div/div[2]/div/div[2]/div/div/div")
 	private List<WebElement> DateLists;
 
 	public void selectNextMonth(String month) {
 	    String currentMonth = CalendarMonth.getText();
+	    System.out.println(currentMonth);
 	    while (!currentMonth.equals(month)) {
 	        NextMonthArrowOpt.click();
 	        currentMonth = CalendarMonth.getText();
@@ -531,15 +530,29 @@ public class abstractComponentsMethods {
 	}
 
 
-	public void dateSelect(int indx)
+	public void dateSelect(String indx) throws InterruptedException
 	{
-		DateLists.size();
-		for(int i=0; i<DateLists.size();i++)
+		for(WebElement date : DateLists)
 		{
-			waitTimeForWebElementListToAppear(DateLists);
-			DateLists.get(indx).click();
-			break;
+			String datestr = date.getText();
+			//System.out.println(datestr);
+			if(datestr.equals(indx))
+			{
+				date.click();
+				break;
+			}
 		}
+		
+//		DateLists.size();
+//		Thread.sleep(3000);
+//		System.out.println(DateLists);
+//		for(int i=0; i<DateLists.size();i++)
+//		{
+//			waitTimeForWebElementListToAppear(DateLists);
+//			DateLists.get(indx).click();
+//			System.out.println();
+//			break;
+//		}
 	}
 	
 	
@@ -576,4 +589,52 @@ public class abstractComponentsMethods {
 		driver.navigate().to("https://demo.swimpay.com/auth/login");
 	}
 	
+	
+	
+	// Completed Transaction Scroll PAY IN OUT
+
+		@FindBy(xpath = "(//div[@class='react-dataTable position-relative'])[1]")
+		private WebElement footerViewPayINOUT;
+
+		// Find No Data View action
+		// Find No Data View action
+		@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK']//div")
+		private WebElement NoDatatoDisplayPayINOUT;
+
+		public void scrollActionPayINOUT() {
+
+			JavascriptExecutor scroll = (JavascriptExecutor) driver;
+			scroll.executeScript("scrollBy(0,500)");
+			scroll.executeScript("arguments[0].scrollIntoView();", footerViewPayINOUT);
+
+			if (footerViewPayINOUT.isDisplayed()) {
+				scroll.executeScript("arguments[0].scrollIntoView();", footerViewPayINOUT);
+			} else if (NoDatatoDisplayPayINOUT.isDisplayed()) {
+				scroll.executeScript("arguments[0].scrollIntoView();", NoDatatoDisplayPayINOUT);
+			}
+		}
+	
+		
+		// Statement Transaction Scroll
+
+		@FindBy(xpath = "(//div[@class='react-dataTable position-relative'])[4]")
+		private WebElement footerViewstatementPAYINOUT;
+
+		// Find No Data View action
+		// Find No Data View action
+		@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK']//div")
+		private WebElement NoDatatoDisplayPAYINOUT1;
+
+		public void scrollActionStatementPAYINOUT() {
+
+			JavascriptExecutor scroll = (JavascriptExecutor) driver;
+			scroll.executeScript("scrollBy(0,500)");
+			scroll.executeScript("arguments[0].scrollIntoView();", footerViewstatementPAYINOUT);
+
+			if (footerViewstatementPAYINOUT.isDisplayed()) {
+				scroll.executeScript("arguments[0].scrollIntoView();", footerViewstatementPAYINOUT);
+			} else if (NoDatatoDisplayPAYINOUT1.isDisplayed()) {
+				scroll.executeScript("arguments[0].scrollIntoView();", NoDatatoDisplayPAYINOUT1);
+			}
+		}
 }

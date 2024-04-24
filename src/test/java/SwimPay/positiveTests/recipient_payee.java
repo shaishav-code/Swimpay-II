@@ -12,7 +12,7 @@ public class recipient_payee extends baseClass{
 	String password= "Pass@1234";
 	
 	//Verify clicking on recipient and Payee option from Menu 
-	@Test
+	@Test(priority = 1)
 	public void clickRecipient_payeeOpt()
 	{
 		LoginPage.userEmail(email1);
@@ -25,7 +25,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify clicking on "Add Recipient/Payee" button
-	@Test
+	@Test(priority = 2)
 	public void clickAddNewRecipientPayeeBtn()
 	{
 		LoginPage.userEmail(email1);
@@ -39,7 +39,7 @@ public class recipient_payee extends baseClass{
 	}
 
 	//Verify submit recipient payee provided details at Add time
-	@Test 
+	@Test (priority = 3)
 	public void AddNew_RecipientPayeeDetailsSubmit()
 	{
 		LoginPage.userEmail(email1);
@@ -59,7 +59,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify submit recipien/payee Bank Account details at add time
-	@Test
+	@Test(priority = 4)
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit()
 	{
 		LoginPage.userEmail(email1);
@@ -93,7 +93,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify submit recipien/payee Bank Account details at add time with regular payment account option as BSB
-	@Test
+	@Test(priority = 5)
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit_withRegularPaymentAccountAs_BSBOption()
 	{
 		LoginPage.userEmail(email1);
@@ -124,7 +124,7 @@ public class recipient_payee extends baseClass{
 		Recipient_Payee.getMessage();
 	}
 	//Verify submit recipient/payee Bank Account details at add time with regular payment account option as SWIFT Number
-	@Test
+	@Test(priority = 6)
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit_withRegularPaymentAccountAs_SWIFTOption()
 	{
 
@@ -159,7 +159,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify add new recipient details when Swimpay wallet option is selected yes
-	@Test
+	@Test(priority = 7)
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit_withSwimpayWalletSelectedYes()
 	{
 		LoginPage.userEmail(email1);
@@ -189,7 +189,7 @@ public class recipient_payee extends baseClass{
 		}
 	
 	//Verify add new recipient details when Bank Account Type option is selected as "Individual"
-	@Test
+	@Test(priority = 8)
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit_withIndividualBankType()
 	{
 		LoginPage.userEmail(email1);
@@ -222,7 +222,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify Submitting recipient/payee details with non supporting corridors details
-	@Test
+	@Test(priority = 9)
 	public void AddNew_RecipientPayeeBankAccountDetail_Submit_withNonSupportingCorridor()
 	{
 		LoginPage.userEmail(email1);
@@ -243,7 +243,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify Click on cancel button from account detail submit section and Yes Leave recipient/payee page
-	@Test
+	@Test(priority = 10)
 	public void clickCancelBtnAt_RecipientPayeeBankAccountDetail_page_andYesLeavePage()
 	{
 		LoginPage.userEmail(email1);
@@ -267,7 +267,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify Click on cancel button from account detail submit section then click No option to leave page & continue filling action
-	@Test
+	@Test(priority = 11)
 	public void clickCancelBtnAt_RecipientPayeeBankAccountDetail_page_andDontLeavePage_continueFillform()
 	{
 
@@ -294,7 +294,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify Click on Pay Button for requested user from data list 
-	@Test
+	@Test(priority = 12)
 	public void clickPayButton_fromRecipientPayeeDataList() 
 	{
 		LoginPage.userEmail(email1);
@@ -310,7 +310,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify click on Pay button for requested user from data list & perform payment action
-	@Test
+	@Test(priority = 13)
 	public void clickPayButton_fromRecipientPayeeDataList_andCompletePayment() throws InterruptedException
 	{
 		LoginPage.userEmail(email1);
@@ -335,7 +335,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify click on Edit button for requested user from data list
-	@Test
+	@Test(priority = 14)
 	public void clickEditButton_fromRecipientPayeeDataList()
 	{
 		LoginPage.userEmail(email1);
@@ -350,7 +350,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify click on Edit button for requested user from data list and perform update action without changes provided
-	@Test
+	@Test(priority = 15)
 	public void clickEditButton_fromRecipientPayeeDataList_andUpdateWithoutChanges()
 	{
 		LoginPage.userEmail(email1);
@@ -371,7 +371,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify click on Edit button for requested user from data list and perform update action with valid changes provided
-	@Test
+	@Test(priority = 16)
 	public void clickEditButton_fromRecipientPayeeDataList_andUpdateWithValidChanges()
 	{
 		LoginPage.userEmail("qa2@narola.email");
@@ -405,7 +405,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify click on Delete button for requested user from data list 
-	@Test
+	@Test(priority = 17)
 	public void clickDeleteButton_fromRecipientPayeeDataList()
 	{
 		LoginPage.userEmail(email1);
@@ -422,7 +422,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify click on Delete button for requested user from data list and perform Delete action 
-	@Test
+	@Test(priority = 18)
 	public void clickDeleteButton_fromRecipientPayeeDataList_andPerformDeleteAction()
 	{
 		LoginPage.userEmail(email1);
@@ -442,7 +442,7 @@ public class recipient_payee extends baseClass{
 	}
 	
 	//Verify click on Edit option for SwimPay wallet user and update user detail with non swimpay account option then select Bank Type option
-	@Test
+	@Test(priority = 19)
 	public void clickEditButton_forSwimPayWalletUser_fromRecipientPayeeDataList_andUpdateWithSelectingNonSwimpayWalletUser()
 	{
 		LoginPage.userEmail(email1);

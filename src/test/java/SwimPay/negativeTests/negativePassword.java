@@ -29,7 +29,7 @@ public class negativePassword extends baseClass{
 		forgotPassword.forgotPassword_Email(inavlidemail1);
 		forgotPassword.forgotPassword_EmailSubmit();	
 		forgotPassword.loginClick();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 	}
 	
 	//Verify submitting reset password with invalid data range[FAIL]
@@ -43,7 +43,7 @@ public class negativePassword extends baseClass{
 		forgotPassword.otpData();
 		forgotPassword.otpSubmitBtn();
 		forgotPassword.resetPassword(invalidRangePassword, invalidRangePassword);
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		forgotPassword.resetPasswordSubmit();
 		//forgotPassword.messageToaster();
 		forgotPassword.backToLogin();

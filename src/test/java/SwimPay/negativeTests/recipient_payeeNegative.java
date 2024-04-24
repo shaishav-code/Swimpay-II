@@ -8,10 +8,10 @@ import SwimPay.testComponents.baseClass;
 
 public class recipient_payeeNegative extends baseClass {
 	String email1 = "qa3@narola.email";
-	String password = "12345678";
+	String password = "Pass@1234";
 
 	// Verify submit recipient/payee detail form with blank fields
-	@Test
+	@Test(priority = 1)
 	public void addNew_RecipientPayeedetailsSubmit_asBlank() {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -27,7 +27,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 
 	// Verify submit recipient/payee detail form with white space value in field
-	@Test
+	@Test(priority = 2)
 	public void addNew_RecipientPayeedetailsSubmit_withWhiteSpaceValues() {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -47,7 +47,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 
 	// Verify click on Validate recipient/payee button from Bank Account details section without selecting Regular payment option checkbox
-	@Test
+	@Test(priority = 3)
 	public void addNew_recipientPayee_BankAccountDetailsSubmit_withoutPaymentCheckboxSelected() {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -71,7 +71,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 
 	// Verify submitting add new recipient/payee bank account details with blank form fields
-	@Test
+	@Test(priority = 4)
 	public void addNew_recipientPayee_BankAccountDetailsSubmit_withBlankFormfields() {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -94,7 +94,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 
 	// Verify submitting add new recipient/payee bank account details with providing invalid range data values in fields
-	@Test
+	@Test(priority = 5)
 	public void addNew_recipientPayee_BankAccountDetailsSubmit_withInvalidRangeDataValue() {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -125,7 +125,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 
 	// Verify submitting add new recipient/payee bank account details with providing invalid format data values in fields
-	@Test
+	@Test(priority = 6)
 	public void addNew_recipientPayee_BankAccountDetailsSubmit_withInvalidFormatDataValue() {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -162,7 +162,7 @@ public class recipient_payeeNegative extends baseClass {
 	
 
 	// Verify submit & create recipient/payee with provding & submitting invalid OTP value
-	@Test
+	@Test(priority = 7)
 	public void addNew_recipientPayee_withProvidingAndSubmtting_invalidOTP() {
 
 		LoginPage.userEmail(email1);
@@ -196,7 +196,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 
 	// Verify submit & create recipient/payee with provding OTP value & click cancel button
-	@Test
+	@Test(priority = 8)
 	public void addNew_recipientPayee_withProvidingOTPValue_andClickingonCancelOTP() {
 
 		LoginPage.userEmail(email1);
@@ -229,7 +229,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 	
 	// Verify submitting add new recipient/payee bank account details with providing invalid format data values in fields
-		@Test
+		@Test(priority = 9)
 		public void addNew_recipientPayee_BankAccountDetailsSubmit_withInvalidDataValue() {
 			LoginPage.userEmail(email1);
 			LoginPage.loginEmailSubmit();
@@ -260,7 +260,7 @@ public class recipient_payeeNegative extends baseClass {
 		}
 		
 		//Verify click on Edit button for requested user from data list and perform update action with invalid changes provided
-		@Test
+		@Test(priority = 10)
 		public void clickEditButton_fromRecipientPayeeDataList_andUpdateWith_inValidChanges()
 		{
 			LoginPage.userEmail(email1);
@@ -282,7 +282,7 @@ public class recipient_payeeNegative extends baseClass {
 		}
 
 //Verify Click on Edit button for requested user from data list and update without changes with invalid OTP submit
-		@Test 
+		@Test (priority = 11)
 		public void clickEditButton_fromRecipientPayeeDataList_andUpdateWithoutChanges_andInvalidOTPSubmit()
 		{
 			LoginPage.userEmail(email1);
@@ -306,7 +306,7 @@ public class recipient_payeeNegative extends baseClass {
 		}
 		
 //Verify click on Edit button for requested user from data list and perform update action with providing valid changes and invalid OTP submit
-		@Test
+		@Test(priority = 12)
 		public void clickEditButton_fromRecipientPayeeDataList_andUpdateWithValidChanges_andInvalidOTPSubmit() throws InterruptedException 
 		{
 
@@ -322,7 +322,7 @@ public class recipient_payeeNegative extends baseClass {
 			Recipient_Payee.recipientPayeeNickname("SWIFT TestUser");
 			Recipient_Payee.recipientPayee_country("Australia");
 			Recipient_Payee.AccountHoldersName("SWIFT UserTest");
-			Recipient_Payee.pauseRun();
+			Recipient_Payee.pauseRun3();
 			Recipient_Payee.recipientPayeesubmit();
 			//Recipient_Payee.transit_swiftBsbNumber();
 			Recipient_Payee.accountNumber("321526378");
@@ -330,7 +330,7 @@ public class recipient_payeeNegative extends baseClass {
 			Recipient_Payee.address("C-101 Central Bom. Infotech Park. Modern Mill Compound Mahalaxmi, Mumbai,Mumbai,400011,India");
 			Recipient_Payee.city("Mumbai");
 //			Recipient_Payee.state("Gujarat");
-			Recipient_Payee.pauseRun();
+			Recipient_Payee.pauseRun2();
 			Recipient_Payee.postCode("0005");
 			
 			Recipient_Payee.validate_N_createRecipientPayeeBtn();
@@ -345,7 +345,7 @@ public class recipient_payeeNegative extends baseClass {
 
 //Verify click on Edit button for requested user from data list and perform update action with providing valid changes with entering valid OTP and perform cancel OTP action
 	
-	@Test
+	@Test(priority = 13)
 	public void clickEditButton_fromRecipientPayeeDataList_andUpdateWithValidChanges_otpValueCancel() 
 	{
 
@@ -380,7 +380,7 @@ public class recipient_payeeNegative extends baseClass {
 	}
 	
 	//Verify click on Delete button for requested user from data list and perform Delete action with submitting invalid OTP
-		@Test
+		@Test(priority = 14)
 		public void clickDeleteButton_fromRecipientPayeeDataList_andPerformDeleteAction()
 		{
 			LoginPage.userEmail(email1);

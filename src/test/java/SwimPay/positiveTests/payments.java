@@ -33,9 +33,7 @@ public class payments extends baseClass {
 		LoginPage.otpSubmitBtn();
 		Thread.sleep(2000);
 		LoginPage.paymentsOption();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify submit currency & recipient/payee details
@@ -224,7 +222,7 @@ public class payments extends baseClass {
 		Payments.address("Vibrant Milestone, opp. to KLE Hospital");
 		Payments.city("Banglore");
 		Payments.postCode("5374");
-		Payments.pauseRun();
+		Payments.pauseRun2();
 		Payments.validate_N_createRecipientPayeeBtn();
 		Payments.validate_N_createRecipientPayeeBtn();
 		Payments.otpData();

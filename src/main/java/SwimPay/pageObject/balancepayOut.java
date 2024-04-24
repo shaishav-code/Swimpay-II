@@ -44,15 +44,23 @@ public class balancepayOut extends abstractComponentsMethods {
 			}
 		}
 	}
+	
+	
+	@FindBy(xpath = "//div[@class='price-country']/div[2]")
+	private WebElement CountryName_Print;
+	
 
 	// cature country name from list and perform click action on country price tab
 	// option from data list
 	public void countryOPtionClick(String country_payOutOpt) {
 		CountrysName.size();
+	System.out.println(CountryName_Print);
 		for (WebElement Country_Name : CountrysName) {
 			String requestCountryName = Country_Name.getText();
+			
+			System.out.println(requestCountryName);
 			if (requestCountryName.contains(country_payOutOpt)) {
-				System.out.println(Country_Name.getText()+" is Clicked");
+				//System.out.println(Country_Name.getText()+" is Clicked");
 				Country_Name.click();
 				break;
 			}
@@ -87,7 +95,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// find payout complete Transaction from Date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[3]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[1]/div/div/button")
 	private WebElement CompletePayOutTransFromDate;
 
 	public void completePayOutTransaction_fromDate() {
@@ -95,7 +103,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// find complete Transaction To Date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[4]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[2]/div/div/button")
 	private WebElement CompletePayOutTransToDate;
 
 	public void completePayOutTransaction_toDate() {
@@ -150,7 +158,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// find create statement button & perform click action
-	@FindBy(xpath = "//button[contains(@class,'css-8fujfr-MuiButtonBase')]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[6]/div[1]/div[2]/button[2]")
 	private WebElement StatementCreateBtn;
 
 	public void statementYearCreateBtn() {
@@ -158,7 +166,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// find create statement month field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[6]")
+	@FindBy(xpath = "(//div[@class='mb-3'])[3]/div/div/div/button")
 	private WebElement StatementPayOutMonthField;
 
 	public void payOut_statementMonth() {
@@ -166,9 +174,9 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// perform Month and Year Selection action from calendar Pop-up
-	@FindBy(xpath = "//button[contains(@class,'PrivatePickersMonth')]")
+	@FindBy(xpath = "//div[@class='PrivatePickersFadeTransitionGroup-root MuiCalendarPicker-viewTransitionContainer css-5c7sx6']/div/div/button")
 	private List<WebElement> StatementMonths;
-	@FindBy(xpath = "//button[contains(@class,'PrivatePickersYear-yearButton')]")
+	@FindBy(xpath = "//Button[@class='PrivatePickersYear-yearButton css-m1gykc']")
 	private List<WebElement> StatementYears;
 
 	public void statementMonthSelect(String Month) {
@@ -198,7 +206,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	
 	// find create statement from date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[7]")
+	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[1]/div[2]/div/div/button")
 	private WebElement StatementPayOutFromDateField;
 
 	public void payOut_statementMonthFromDate() {
@@ -206,7 +214,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// find create statement to date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[8]")
+	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[2]/div[2]/div/div/button")
 	private WebElement StatementPayOutToDateField;
 
 	public void payOut_statementMonthToDate() {
@@ -214,7 +222,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// find Proceed statement button and perform required action
-	@FindBy(xpath = "//button[@id=':ri:']")
+	@FindBy(xpath = "//div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthLg css-18i3v7t']/div[2]/button[2]")
 	private WebElement StatementProceed;
 
 	public void statementProceedBtn() {
@@ -223,7 +231,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	// find cancel statement button and perform required action
-	@FindBy(xpath = "//button[contains(@class,'css-1azb8y9-MuiButtonBase-')]")
+	@FindBy(xpath = "//div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthLg css-18i3v7t']/div[2]/button[1]")
 	private WebElement StatementCancel;
 
 	public void statementCancelBtn() {
@@ -232,17 +240,28 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	// find Statement Months datalist and perform required action (click on View
 	// Button)
-	@FindBy(xpath = "(//div[@class='sc-fLlhyt ifOHjV'])[3]//div[contains(@class,'rdt_TableRow')]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[6]/div[1]/div[1]/div[2]/div/div/div/button")
+	private WebElement StatementCalClickPayOut;
+	
+	
+	
+	@FindBy(xpath = "//Button[@class='PrivatePickersYear-yearButton css-m1gykc']")
 	private List<WebElement> StatementMonthsDataList;
 	@FindBy(xpath = "(//div[@class='sc-fLlhyt ifOHjV'])[3]//div[contains(@class,'rdt_TableRow')]//button")
 	private WebElement ViewStatementBtn;
 
-	public void statementMonthViewOptionClickFromList(String statementMonth) {
-		for (WebElement StatementMonth : StatementMonthsDataList) {
-			String requestedMonth = StatementMonth.getText();
-			if (requestedMonth.contains(statementMonth)) {
-				System.out.println(requestedMonth+ "  month option is clicked for view statement");
-				ViewStatementBtn.click();
+	public void statementMonthViewOptionClickFromList(String yearPayout) {
+		StatementCalClickPayOut.click();
+		
+		for (WebElement StatementyearPayout : StatementMonthsDataList) {
+
+			String requestedyear = StatementyearPayout.getText();
+			// System.out.println(requestedyear);
+
+			if (requestedyear.equals(yearPayout)) {
+				StatementyearPayout.click();
+				System.out.println(StatementyearPayout);
+				break;
 			}
 		}
 	}
@@ -286,11 +305,18 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 
 	//find refresh statementi table icon and peform click action 
-	@FindBy(xpath="(//i[@class='bi bi-arrow-clockwise fw-bold'])[3]")
+	@FindBy(xpath="(//div[@class='react-dataTable position-relative'])[4]/div[1]/div[2]/i")
 	private WebElement RefreshStatement;
 	public void refreshStatement()
 	{
 		RefreshStatement.click();
 	}
 	
+	
+	@FindBy(xpath = "//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/h2/button")
+	private WebElement Cancelclick;
+	public void CancelClick() throws InterruptedException {
+		Thread.sleep(2000);
+		Cancelclick.click();
+	}
 }

@@ -27,8 +27,9 @@
         <class name="SwimPay.positiveTests.fundingAccounts"/>
          <class name="SwimPay.positiveTests.settings"/>
           <class name="SwimPay.positiveTests.reports"/>
-              <class name="SwimPay.positiveTests.profile"/>-->
-              <class name="SwimPay.positiveTests.payments"/>
+              <class name="SwimPay.positiveTests.profile"/>
+              <class name="SwimPay.positiveTests.payments"/>-->
+               <class name="SwimPay.positiveTests.balance_payOut"/>
       
     </classes>
   </test> <!-- Test -->

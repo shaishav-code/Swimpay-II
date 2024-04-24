@@ -33,15 +33,13 @@ public class negativeFXconversion extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fxConversionPage FX_Convresion = LoginPage.fxConversionOption();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FX_Convresion.sellCurrency(Currency1);
 		FX_Convresion.buyCurrency(Currency4);
 		FX_Convresion.amountValue("00");
 		FX_Convresion.getQuote();
 		FX_Convresion.messageToaster();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify submitting fx conversion currencies & account detail section with buy
@@ -57,16 +55,14 @@ public class negativeFXconversion extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fxConversionPage FX_Convresion = LoginPage.fxConversionOption();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FX_Convresion.sellCurrency(Currency2);
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FX_Convresion.buyCurrency(Currency2);
 		FX_Convresion.amountValue("10");
 		FX_Convresion.getQuote();
 		FX_Convresion.messageToaster();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 
 	}
 
@@ -82,7 +78,7 @@ public class negativeFXconversion extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fxConversionPage FX_Convresion = LoginPage.fxConversionOption();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FX_Convresion.sellCurrency(Currency1);
 		FX_Convresion.buyCurrency(Currency2);
 		FX_Convresion.amountValue("10");
@@ -91,10 +87,10 @@ public class negativeFXconversion extends baseClass {
 		FX_Convresion.convertBtn();
 		FX_Convresion.invalid_OTP_Value();
 		FX_Convresion.otpVerify();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FX_Convresion.otpCancelBtn();
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
+		
 	}
 
 	// Verify try to fx conversion without selecting terms checkbox
@@ -109,14 +105,12 @@ public class negativeFXconversion extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fxConversionPage FX_Convresion = LoginPage.fxConversionOption();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FX_Convresion.sellCurrency(Currency1);
 		FX_Convresion.buyCurrency(Currency4);
 		FX_Convresion.amountValue("10");
 		FX_Convresion.getQuote();
 		FX_Convresion.convertBtn();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 }

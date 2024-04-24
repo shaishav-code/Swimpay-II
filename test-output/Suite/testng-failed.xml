@@ -7,16 +7,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SwimPay.negativeTests.negativeFundingAccount">
+      <class name="SwimPay.positiveTests.balance_payOut">
         <methods>
-          <include name="deleteFundingAccount_withInvalidOTPSubmit"/>
+          <include name="balPayOut_createStatement_byCustomDate"/>
           <include name="tearDown"/>
-          <include name="clickUserAccountNamefromDataList"/>
           <include name="lanuchWebsite"/>
-          <include name="editAndUpdate_fundingAccountDetailsWithInvalidAccountNumberData"/>
-          <include name="clickEdit_andPerformUpdateDataWithvalidData_andInavlidOTPSubmit"/>
+          <include name="balPayOut_createStatement_byMonth"/>
         </methods>
-      </class> <!-- SwimPay.negativeTests.negativeFundingAccount -->
+      </class> <!-- SwimPay.positiveTests.balance_payOut -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

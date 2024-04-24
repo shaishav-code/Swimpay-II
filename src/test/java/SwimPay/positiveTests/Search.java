@@ -62,7 +62,7 @@ public class Search extends baseClass{
 		SearchPage.DateOption("Settlement Date");
 		SearchPage.statusOption("Approved");
 		//SearchPage.Select_Status("Approved");
-		LoginPage.pauseRun();
+		LoginPage.pauseRun3();
 		SearchPage.scrollAction();
 		LoginPage.Logout_Click();
 		Thread.sleep(4000);
@@ -81,7 +81,7 @@ public class Search extends baseClass{
 		LoginPage.otpSubmitBtn();
 		searchPage SearchPage=LoginPage.searchOption();
 		SearchPage.conversionOption();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun3();
 		SearchPage.resetFilters();
 		LoginPage.Logout_Click();
 		Thread.sleep(4000);
@@ -102,9 +102,9 @@ public class Search extends baseClass{
 		searchPage SearchPage=LoginPage.searchOption();
 		SearchPage.conversionOption();
 		SearchPage.referencesNumberSelector(2);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		SearchPage.DataList();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.resetFilters();
@@ -125,9 +125,9 @@ public class Search extends baseClass{
 		LoginPage.otpSubmitBtn();
 		searchPage SearchPage=LoginPage.searchOption();
 		SearchPage.conversionOption();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		SearchPage.selectSoldCurrencyOption("CAD");
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		SearchPage.minimumSoldAmount("10");
 		SearchPage.maximumSoldAmount("20");
 		SearchPage.selectBoughtCurrencyOption("HKD");
@@ -236,7 +236,7 @@ public class Search extends baseClass{
 		LoginPage.otpSubmitBtn();
 		searchPage SearchPage=LoginPage.searchOption();
 		SearchPage.conversionOption();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		SearchPage.maximumBaughtAmount("500");
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
@@ -364,7 +364,7 @@ public class Search extends baseClass{
 		searchPage SearchPage=LoginPage.searchOption();
 		SearchPage.paymentOption();
 		//SearchPage.statusOption("Approved");
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		LoginPage.Logout_Click();
@@ -596,7 +596,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		LoginPage.Logout_Click();
 		Thread.sleep(4000);
 	}

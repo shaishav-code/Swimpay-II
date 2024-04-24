@@ -27,9 +27,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.addBankAccountBtn();
 		FundingAccount.submitBankAccountDetails();
 		FundingAccount.errorMsgDisplay();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify click on "Validate My Account" button without selecting priority
@@ -47,16 +45,15 @@ public class negativeFundingAccount extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.errorMsgDisplay();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.pauseRun2();
+		LoginPage.Logout();
 	}
 
 	// Verify click on "Validate My Account" button without providing values in
@@ -73,21 +70,20 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun3();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.nickname("steve");
 		FundingAccount.countryOption1("Australia");
 		FundingAccount.PayOut_Click();
 		FundingAccount.BankAccount_Click();
 		FundingAccount.ReviewMyAccount_Click();
 		FundingAccount.fieldserrorsDisplay();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
+		LoginPage.Logout();
 	}
 
 	// Verify provide data in Bank Account's regular payment details then perform
@@ -104,13 +100,13 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.nickname("steve");
 		FundingAccount.countryOption1("Australia");
 		FundingAccount.PayOut_Click();
@@ -126,13 +122,12 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.reviewMyDetails();
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.invalid_OTP_Value();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.otpVerify();
 		// FundingAccount.messageToaster();
 		FundingAccount.otpCancelBtn();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
+
 	}
 
 	// Verify submit funding bank account detail form with invalid format values in
@@ -148,20 +143,19 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.nickname("steve");
 		FundingAccount.countryOption1("Australia");
 		FundingAccount.submitBankAccountDetails();
 		FundingAccount.errorMsgDisplay();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
+
 	}
 
 	// Verify creating funding account with providing invalid data in form fields
@@ -176,13 +170,13 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		Thread.sleep(5000);
+		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.nickname("steve");
 		FundingAccount.countryOption1("Australia");
 		FundingAccount.PayOut_Click();
@@ -197,9 +191,8 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.postCode("35004545");
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.fieldserrorsDisplay();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
+
 	}
 
 	// Verify click on Edit button for requested user from data list then, try to
@@ -224,9 +217,8 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.postCode("c124");
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.fieldserrorsDisplay();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
+
 	}
 
 	// Verify click on Edit button for requested user from data list then, try to
@@ -254,9 +246,8 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.invalid_OTP_Value();
 		FundingAccount.otpVerify();
 		FundingAccount.otpCancelBtn();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
+
 	}
 
 	// Verify click on delete button for request user from list and perform delete
@@ -276,9 +267,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.invalid_OTP_Value();
 		FundingAccount.otpVerify();
 		FundingAccount.otpCancelBtn();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify edit requested user details with invalid account number
@@ -299,9 +288,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		LoginPage.Logout();
 	}
 
 	// Verify try to clicking on invalid users account name from listing
@@ -315,12 +302,9 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		FundingAccount.accountNameClickFromDataList("Chetan");
-		Thread.sleep(2000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
-
+		LoginPage.Logout();
 	}
 
 }

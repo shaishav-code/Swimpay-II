@@ -23,7 +23,7 @@ public class forgot_resetPassword extends baseClass{
 		loginPage LoginPage=new loginPage(driver);
 		forgotPasswordPage forgotPassword= LoginPage.forgotPassword();
 		forgotPassword.loginClick();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		
 	}
 	
@@ -33,13 +33,13 @@ public class forgot_resetPassword extends baseClass{
 	{
 		loginPage LoginPage=new loginPage(driver);
 		forgotPasswordPage forgotPassword= LoginPage.forgotPassword();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		forgotPassword.forgotPassword_Email(email2);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun3();
 		forgotPassword.forgotPassword_EmailSubmit();
 		forgotPassword.otpData();
 		forgotPassword.otpSubmitBtn();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		forgotPassword.backToLogin();
 		}
 	
@@ -48,18 +48,18 @@ public class forgot_resetPassword extends baseClass{
 	public void ResetPassword() throws InterruptedException
 	{
 		loginPage LoginPage=new loginPage(driver);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		forgotPasswordPage forgotPassword= LoginPage.forgotPassword();
 		//forgotPassword.loginClick();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		forgotPassword.forgotPassword_Email(email2);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		forgotPassword.forgotPassword_EmailSubmit();
 		forgotPassword.otpData();
 		forgotPassword.otpSubmitBtn();
 		forgotPassword.resetPassword(password, password);
 		forgotPassword.resetPasswordSubmit();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		forgotPassword.backToLogin();
 	}
 	
@@ -68,9 +68,9 @@ public class forgot_resetPassword extends baseClass{
 	public void backToLoginPageFromForgotPasswordPage() throws InterruptedException 
 	{
 		loginPage LoginPage=new loginPage(driver);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		forgotPasswordPage forgotPassword= LoginPage.forgotPassword();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		
 	}
 }

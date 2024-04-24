@@ -35,7 +35,7 @@ public class userLogin_logout extends baseClass{
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun5();
 		
 	
 	

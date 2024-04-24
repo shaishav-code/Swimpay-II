@@ -9,7 +9,7 @@ import SwimPay.testComponents.baseClass;
 public class accountInfo extends baseClass {
 
 	String email1 = "qa3@narola.email";
-	String password = "12345678";
+	String password = "Pass@1234";
 
 	// Verify clicking on Account info option from menu
 	@Test(priority = 1)
@@ -21,13 +21,13 @@ public class accountInfo extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		LoginPage.accountInformationOption();
-	
+		LoginPage.Logout();
 	}
 
 	// Verify find requested account name from data list and perform click action on
 	// account name
 	@Test(priority = 2)
-	public void findrequestedAccountName_andClick() {
+	public void findrequestedAccountName_andClick() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -36,13 +36,13 @@ public class accountInfo extends baseClass {
 		LoginPage.otpSubmitBtn();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
-	
+		LoginPage.Logout();
 	}
 
 	// Verify find requested account name from data list and perform click action on
 	// arrow down icon - No such functionality now
 	//@Test(priority = 3)
-	public void findrequestedAccountName_andClickArrowDownIcon() {
+	public void findrequestedAccountName_andClickArrowDownIcon() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -51,13 +51,13 @@ public class accountInfo extends baseClass {
 		LoginPage.otpSubmitBtn();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.clickArrowBtn("NISL00052");
-		
+		LoginPage.Logout();
 	}
 
 	// Verify find requested account name from data list and perform click action on
 	// arrow down icon then capture displayed currency datas
 	@Test(priority = 3)
-	public void findrequestedAccountName_andClickArrowDownIcon_captureDisplayedcurrencyData() {
+	public void findrequestedAccountName_andClickArrowDownIcon_captureDisplayedcurrencyData() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -69,13 +69,13 @@ public class accountInfo extends baseClass {
 		AccountInfo.currecnyWalletOpt();
 		AccountInfo.scrollBy();
 		AccountInfo.backToAccount();
-		
+		LoginPage.Logout();
 	}
 
 	// Verify click on user according to requested last name from data list of
 	// account information section
 	@Test(priority = 4)
-	public void clickRequestedLastNameFromDataListFromAccountInformationSection() {
+	public void clickRequestedLastNameFromDataListFromAccountInformationSection() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -85,13 +85,13 @@ public class accountInfo extends baseClass {
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.lastNameClickFromDataList("Lockman");
-		
+		LoginPage.Logout();
 	}
 
 	// Verify click on user according to requested first name from data list of
 	// account information section
 	@Test(priority = 5)
-	public void clickRequestedFirstNameFromDataListFromAccountInformationSection() {
+	public void clickRequestedFirstNameFromDataListFromAccountInformationSection() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -101,12 +101,12 @@ public class accountInfo extends baseClass {
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.firstNameClickFromDataList("Kuldeep");
-		
+		LoginPage.Logout();
 	}
 
 	// Verify click on account information option from Account details section
 	@Test(priority = 6)
-	public void clickAccountInformationOpt_fromAccountDetailsSection() {
+	public void clickAccountInformationOpt_fromAccountDetailsSection() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -116,13 +116,13 @@ public class accountInfo extends baseClass {
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.accountInformationOpt();
-		
+		LoginPage.Logout();
 	}
 
 	// Verify click on display application form button from account information page
 	// of account section
 	@Test(priority = 7)
-	public void clickDisplayApplicationFormBtn_fromAccountInformationPage() {
+	public void clickDisplayApplicationFormBtn_fromAccountInformationPage() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -134,7 +134,7 @@ public class accountInfo extends baseClass {
 		AccountInfo.accountInformationOpt();
 		AccountInfo.displayApplicationFormBtn();
 		AccountInfo.closeApplicationViewForm();
-		
+		LoginPage.Logout();
 		   
 	}
 
@@ -155,15 +155,15 @@ public class accountInfo extends baseClass {
 		AccountInfo.accountInformationOpt();
 		AccountInfo.displayApplicationFormBtn();
 		AccountInfo.applicationFormData();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		AccountInfo.closeApplicationViewForm();
-		LoginPage.Logout_Click();
+		LoginPage.Logout();
 	}
 
 	// Verify click on Enable user/Disable user from data list according to
 	// requested user of user list of Accounts and perform disable user
 	@Test(priority = 9)
-	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup() {
+	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -176,7 +176,7 @@ public class accountInfo extends baseClass {
 		AccountInfo.yesEnable();
 		LoginPage.otpData();
 		LoginPage.otpCancelBtn();
-	
+		LoginPage.Logout();
 	}
 
 	// Verify click on Enable user/Disable user from data list according to requested user of user list of Accounts and perform click on No option from Pop-up
@@ -192,9 +192,9 @@ public class accountInfo extends baseClass {
 		AccountInfo.accountNameClick("NISL00052");
 	//	AccountInfo.clickEnable_DisableBtnOpt("qa4@narola.email");
 		AccountInfo.disableBtn(0);
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		AccountInfo.noEnable();
-		
+		LoginPage.Logout();
 	}
 
 }

@@ -45,12 +45,12 @@ public class negativeLogin extends baseClass {
 	public void invalid_OTP_userLogin() throws InterruptedException
 	{
 		loginPage LoginPage = new loginPage(driver);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		LoginPage.userEmail(email2);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password1);
 		LoginPage.loginSubmit();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		LoginPage.invalid_OTP_Value();
 		LoginPage.otpSubmitBtn();
 		LoginPage.messageToaster();
@@ -61,9 +61,9 @@ public class negativeLogin extends baseClass {
 	public void blankEmailSubmit() throws InterruptedException
 	{
 		loginPage LoginPage = new loginPage(driver);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		LoginPage.loginEmailSubmit();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		//LoginPage.messageToaster();
 		
 	}
@@ -73,11 +73,11 @@ public class negativeLogin extends baseClass {
 	public void sensativeEmailLogin() throws InterruptedException
 	{
 		loginPage LoginPage = new loginPage(driver);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		LoginPage.userEmail(invalidCaseEmail);
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		LoginPage.loginEmailSubmit();
-		LoginPage.pauseRun();
+		LoginPage.pauseRun2();
 		LoginPage.messageToaster();
 		
 	}
