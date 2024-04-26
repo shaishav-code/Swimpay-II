@@ -21,7 +21,7 @@ public class accountInfo extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		LoginPage.accountInformationOption();
-		LoginPage.Logout();
+	
 	}
 
 	// Verify find requested account name from data list and perform click action on
@@ -36,7 +36,7 @@ public class accountInfo extends baseClass {
 		LoginPage.otpSubmitBtn();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
-		LoginPage.Logout();
+	
 	}
 
 	// Verify find requested account name from data list and perform click action on
@@ -51,7 +51,7 @@ public class accountInfo extends baseClass {
 		LoginPage.otpSubmitBtn();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.clickArrowBtn("NISL00052");
-		LoginPage.Logout();
+		
 	}
 
 	// Verify find requested account name from data list and perform click action on
@@ -69,7 +69,7 @@ public class accountInfo extends baseClass {
 		AccountInfo.currecnyWalletOpt();
 		AccountInfo.scrollBy();
 		AccountInfo.backToAccount();
-		LoginPage.Logout();
+	
 	}
 
 	// Verify click on user according to requested last name from data list of
@@ -85,7 +85,7 @@ public class accountInfo extends baseClass {
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.lastNameClickFromDataList("Lockman");
-		LoginPage.Logout();
+		
 	}
 
 	// Verify click on user according to requested first name from data list of
@@ -101,7 +101,7 @@ public class accountInfo extends baseClass {
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.firstNameClickFromDataList("Kuldeep");
-		LoginPage.Logout();
+		
 	}
 
 	// Verify click on account information option from Account details section
@@ -116,7 +116,7 @@ public class accountInfo extends baseClass {
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.accountInformationOpt();
-		LoginPage.Logout();
+		
 	}
 
 	// Verify click on display application form button from account information page
@@ -134,7 +134,7 @@ public class accountInfo extends baseClass {
 		AccountInfo.accountInformationOpt();
 		AccountInfo.displayApplicationFormBtn();
 		AccountInfo.closeApplicationViewForm();
-		LoginPage.Logout();
+	
 		   
 	}
 
@@ -157,7 +157,7 @@ public class accountInfo extends baseClass {
 		AccountInfo.applicationFormData();
 		LoginPage.pauseRun3();
 		AccountInfo.closeApplicationViewForm();
-		LoginPage.Logout();
+		
 	}
 
 	// Verify click on Enable user/Disable user from data list according to
@@ -176,7 +176,7 @@ public class accountInfo extends baseClass {
 		AccountInfo.yesEnable();
 		LoginPage.otpData();
 		LoginPage.otpCancelBtn();
-		LoginPage.Logout();
+		
 	}
 
 	// Verify click on Enable user/Disable user from data list according to requested user of user list of Accounts and perform click on No option from Pop-up
@@ -194,7 +194,7 @@ public class accountInfo extends baseClass {
 		AccountInfo.disableBtn(0);
 		LoginPage.pauseRun3();
 		AccountInfo.noEnable();
-		LoginPage.Logout();
+		
 	}
 
 }

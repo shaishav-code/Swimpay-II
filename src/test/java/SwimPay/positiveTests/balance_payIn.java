@@ -1,5 +1,6 @@
 package SwimPay.positiveTests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
@@ -25,7 +26,7 @@ public class balance_payIn extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		LoginPage.pauseRun3();
-		LoginPage.Logout();
+
 	}
 
 	// Verify clicking on balance payin option
@@ -39,7 +40,7 @@ public class balance_payIn extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		LoginPage.balanePayInOption();
-		LoginPage.Logout();
+
 	}
 
 	// Verify entering values in find by field
@@ -55,7 +56,6 @@ public class balance_payIn extends baseClass {
 		balancepayIn PayIn = LoginPage.balanePayInOption();
 		PayIn.balPayIn("australia");
 		PayIn.countryPriceDataList();
-		LoginPage.Logout();
 
 	}
 
@@ -71,7 +71,6 @@ public class balance_payIn extends baseClass {
 		LoginPage.balanceOption();
 		balancepayIn PayIn = LoginPage.balanePayInOption();
 		PayIn.countryOPtionClick("Australia Dollar");
-		LoginPage.Logout();
 
 	}
 
@@ -90,7 +89,6 @@ public class balance_payIn extends baseClass {
 		balancepayIn PayIn = LoginPage.balanePayInOption();
 		PayIn.countryOPtionClick("Australia Dollar");
 		PayIn.countryBalanceData_inDetailsPage();
-		LoginPage.Logout();
 
 	}
 
@@ -107,7 +105,6 @@ public class balance_payIn extends baseClass {
 		balancepayIn PayIn = LoginPage.balanePayInOption();
 		PayIn.countryOPtionClick("Hong Kong Dollar");
 		PayIn.payCurrencyOptionBtn();
-		LoginPage.Logout();
 
 	}
 
@@ -124,7 +121,6 @@ public class balance_payIn extends baseClass {
 		balancepayIn PayIn = LoginPage.balanePayInOption();
 		PayIn.countryOPtionClick("Hong Kong Dollar");
 		PayIn.convertCurrencyOptionBtn();
-		LoginPage.Logout();
 
 	}
 
@@ -141,7 +137,6 @@ public class balance_payIn extends baseClass {
 		balancepayIn PayIn = LoginPage.balanePayInOption();
 		PayIn.countryOPtionClick("Hong Kong Dollar");
 		PayIn.addCurrencyOptionBtn();
-		LoginPage.Logout();
 
 	}
 
@@ -159,7 +154,6 @@ public class balance_payIn extends baseClass {
 		balancepayIn PayIn = LoginPage.balanePayInOption();
 		PayIn.countryOPtionClick("Hong Kong Dollar");
 		PayIn.myCurrencyAccountOption();
-		LoginPage.Logout();
 
 	}
 
@@ -177,7 +171,6 @@ public class balance_payIn extends baseClass {
 		PayIn.countryOPtionClick("Australia Dollar");
 		PayIn.myCurrencyAccountOption();
 		PayIn.currencyAccountDetails();
-		LoginPage.Logout();
 
 	}
 
@@ -201,11 +194,6 @@ public class balance_payIn extends baseClass {
 		LoginPage.pauseRun3();
 		PayIn.completeTransaction_toDate();
 		PayIn.dateSelect("24");
-		LoginPage.Logout();
-
-		// PayIn.selectRowsOptions();
-		// PayIn.completeTransactionsDatas();
-
 	}
 
 	// Verify click on view statement option and preview displayed statement
@@ -222,11 +210,10 @@ public class balance_payIn extends baseClass {
 		PayIn.countryOPtionClick("Australia Dollar");
 		PayIn.scrollActionStatementPAYINOUT();
 		PayIn.statementMonthViewOptionClickFromList("2023");
-		LoginPage.Logout();
 
 	}
 
-	// Verify Create new Statement request
+	// Verify Create new Statement request in Balance payIn
 	@Test(priority = 13)
 	public void balPayin_createStatementRequest() throws InterruptedException {
 		LoginPage.userEmail(email1);
@@ -251,8 +238,115 @@ public class balance_payIn extends baseClass {
 		PayIn.statementProceedBtn();
 		LoginPage.pauseRun3();
 		PayIn.CancelClick();
-		LoginPage.Logout();
 
 	}
+	////// new testcase added by gjp//////
+	
+	// Verify if the user is able to view the new currencies changed from Pay Out to Pay In. ( new currencies has been added)
+		@Test(priority = 14)
+		public void balPayin_clickCountryCurrencyOpt_fromList_NewCurrencyPrint() throws InterruptedException {
+			LoginPage.userEmail(email1);
+			LoginPage.loginEmailSubmit();
+			LoginPage.userPassword(password);
+			LoginPage.loginSubmit();
+			LoginPage.otpData();
+			LoginPage.otpSubmitBtn();
+			LoginPage.balanceOption();
+			balancepayIn PayIn = LoginPage.balanePayInOption();
+			PayIn.PrintCountry();
+
+		}
+	
+	
+		// Verify if the user is able to click on the new currencies changed from Pay Out to Pay In and view the details.
+		@Test(priority = 15)
+		public void balPayin_clickCountryCurrencyOpt_fromList_NewCurrencyClick() throws InterruptedException {
+			LoginPage.userEmail(email1);
+			LoginPage.loginEmailSubmit();
+			LoginPage.userPassword(password);
+			LoginPage.loginSubmit();
+			LoginPage.otpData();
+			LoginPage.otpSubmitBtn();
+			LoginPage.balanceOption();
+			balancepayIn PayIn = LoginPage.balanePayInOption();
+			PayIn.countryOPtionClick("South African Rand");
+
+		}
+
+	// Verify search pending transaction payin  by Settlement Date
+	@Test(priority = 16)
+	public void balPayin_PendingTransactionsByDate() throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.balanceOption();
+		balancepayIn PayIn = LoginPage.balanePayInOption();
+		PayIn.countryOPtionClick("Australia Dollar");
+		// PayIn.scrollActionPayINOUT();
+		PayIn.pendingSettlement_fromDate();
+		PayIn.selectNextMonth("May 2024");
+		LoginPage.pauseRun3();
+		PayIn.dateSelect("25");
+		LoginPage.pauseRun3();
+		PayIn.pendingSettlement_toDate();
+		PayIn.selectNextMonth("June 2024");
+		PayIn.dateSelect("30");
+	}
+	
+	
+	// Verify search auto converted transaction pay in by Settlement Date
+		@Test(priority = 17)
+		public void balPayin_AutoConvertedTransactionsByDate() throws InterruptedException {
+			LoginPage.userEmail(email1);
+			LoginPage.loginEmailSubmit();
+			LoginPage.userPassword(password);
+			LoginPage.loginSubmit();
+			LoginPage.otpData();
+			LoginPage.otpSubmitBtn();
+			LoginPage.balanceOption();
+			balancepayIn PayIn = LoginPage.balanePayInOption();
+			PayIn.countryOPtionClick("Australia Dollar");
+			PayIn.scrollActionPayINOUT();
+			PayIn.autoConvertedSettlement_fromDate();
+			PayIn.selectPreviousMonth("March 2024");
+			LoginPage.pauseRun3();
+			PayIn.dateSelect("25");
+			LoginPage.pauseRun3();
+			PayIn.autoConvertedSettlement_toDate();
+			PayIn.selectNextMonth("May 2024");
+			PayIn.dateSelect("30");
+		}
+		
+		
+		// Verify request CSV file report in Balance Payin
+		@Test(priority = 18)
+		public void balPayin_RequestCSVFile() throws InterruptedException {
+			LoginPage.userEmail(email1);
+			LoginPage.loginEmailSubmit();
+			LoginPage.userPassword(password);
+			LoginPage.loginSubmit();
+			LoginPage.otpData();
+			LoginPage.otpSubmitBtn();
+			LoginPage.balanceOption();
+			balancepayIn PayIn = LoginPage.balanePayInOption();
+			PayIn.countryOPtionClick("Australia Dollar");
+			PayIn.scrollActionStatementPAYINOUT();
+			PayIn.statementYearReqBtn();
+			PayIn.requestStatementMonthFromDate();
+			PayIn.selectPreviousMonth("March 2024");
+			PayIn.dateSelect("3");
+			PayIn.requestStatementMonthToDate();
+			PayIn.dateSelect("20");
+			PayIn.statementProceedBtn();
+			LoginPage.pauseRun3();
+		//	PayIn.getMsg();
+			Assert.assertTrue(PayIn.SuccessMessage());	
+		}
+		
+		
+		
 
 }

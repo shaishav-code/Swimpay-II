@@ -13,7 +13,7 @@ import SwimPay.testComponents.baseClass;
 public class fundingAccounts extends baseClass {
 
 	String email2 = "qa3@narola.email";
-	String password = "12345678";
+	String password = "Pass@1234";
 	// String curr1="Australia";
 
 	// Click on Funding Account option from Menu
@@ -29,7 +29,7 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.pauseRun2();
 		LoginPage.fundingAccountOption();
-		LoginPage.Logout();
+		 
 	}
 
 	// Enter Bank Name in Search Field and Then Click on Search icon
@@ -46,7 +46,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.searchBank("Gaurang");
 		FundingAccount.searchBankSubmit();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify click on Add Bank Account button
@@ -61,7 +61,7 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify providing values in My Bank details form section and perform submit
@@ -78,13 +78,13 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
 		// FundingAccount.nickname("steve");
-		LoginPage.pauseRun2();
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
-		LoginPage.pauseRun2();
+		LoginPage.pauseRun3();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify provide data in Bank Account's regular payment details then perform
@@ -101,19 +101,19 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.addBankAccountBtn();
-		LoginPage.pauseRun2();
+		LoginPage.pauseRun3();
 		FundingAccount.countryOption("Australia");
 		LoginPage.pauseRun5();
 		FundingAccount.currency("Aud");
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.submitBankAccountDetails();
-		LoginPage.pauseRun2();
+		LoginPage.pauseRun3();
 		FundingAccount.nickname("steve");
 		FundingAccount.countryOption1("Australia");
-		LoginPage.pauseRun2();
+		LoginPage.pauseRun3();
 		FundingAccount.PayOut_Click();
 		FundingAccount.BankAccount_Click();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify providing values in My Bank details form section with selecting Bank
@@ -136,7 +136,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.myBankAccountCountry("Australia");
 		FundingAccount.bankAccountTypeIndividualOption();
 		FundingAccount.submitBankAccountDetails();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify provide data in Bank Account's regular payment details then perform
@@ -179,7 +179,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		LoginPage.Logout();
+		 
 	}
 
 	//// Verify add new funding account then click on Edit option after details
@@ -223,7 +223,7 @@ public class fundingAccounts extends baseClass {
 		LoginPage.pauseRun3();
 		FundingAccount.otpVerify();
 		FundingAccount.editBtn();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify add new funding account then click on Edit & perform edit/update
@@ -284,7 +284,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify add new funding account then perform delete action after details saved
@@ -300,7 +300,7 @@ public class fundingAccounts extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
-		LoginPage.pauseRun2();
+		LoginPage.pauseRun3();
 		FundingAccount.clickDeleteOptforRequestedUser("Steveww");
 		FundingAccount.confirmActionMessagePopup();
 		FundingAccount.yesAction();
@@ -339,7 +339,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.otpVerify();
 		LoginPage.pauseRun3();
 		// FundingAccount.getMsg();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify add new funding account then click on Pay option after details saved
@@ -379,7 +379,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
 		FundingAccount.payBtn();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify clicking on requested users account name from listing and capture
@@ -396,7 +396,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.reviewMyDetails();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify click on requested users account name from data list then click on pay
@@ -413,7 +413,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.payBtn();
-		LoginPage.Logout();
+		 
 
 	}
 
@@ -431,7 +431,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.editBtn();
-		LoginPage.Logout();
+		 
 	}
 
 	/// Verify click on requested users account name from data list then click on
@@ -449,7 +449,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.accountNameClickFromDataList("steve");
 		FundingAccount.deleteBtn();
 		FundingAccount.noAction();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify click on edit option button for request user from displayed data list
@@ -465,7 +465,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		LoginPage.pauseRun5();
 		FundingAccount.clickEditOptforRequestedUser("steve");
-		LoginPage.Logout();;
+		 ;
 	}
 
 //Verify click on edit option button for request user from displayed data list and edit/update details
@@ -497,7 +497,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
 		LoginPage.pauseRun2();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify click on Pay option button for request user from displayed data list
@@ -514,7 +514,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		LoginPage.pauseRun2();
 		FundingAccount.clickPayOptforRequestedUser("Gaurang Rana");
-		LoginPage.Logout();
+		 
 
 	}
 
@@ -540,7 +540,7 @@ public class fundingAccounts extends baseClass {
 		PaymentPage.otpData();
 		PaymentPage.otpVerify();
 		LoginPage.pauseRun3();
-		LoginPage.Logout();
+		 
 	}
 
 	// Verify click on delete option button for request user from data list and
@@ -560,7 +560,7 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.yesAction();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		LoginPage.Logout();
+
 	}
 
 }

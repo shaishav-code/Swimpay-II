@@ -32,9 +32,7 @@ public class reports extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		LoginPage.reportsOption();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 
 	}
 
@@ -52,14 +50,11 @@ public class reports extends baseClass {
 		reportsPage ReportPage = LoginPage.reportsOption();
 		ReportPage.invoiceMap();
 		ReportPage.dataNumberSelector(3);
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
-
+		 
 	}
 
 	// Verify search Report Invoice Map data by Seller Name
@@ -75,13 +70,11 @@ public class reports extends baseClass {
 		reportsPage ReportPage = LoginPage.reportsOption();
 		ReportPage.invoiceMap();
 		ReportPage.sellerOption(sellerName);
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// verify Search Report Invoice by Buyer Name
@@ -97,14 +90,11 @@ public class reports extends baseClass {
 		reportsPage ReportPage = LoginPage.reportsOption();
 		ReportPage.invoiceMap();
 		ReportPage.buyerOption(buyerName);
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// verify search Report Invoice map by Date Range
@@ -120,13 +110,11 @@ public class reports extends baseClass {
 		reportsPage ReportPage = LoginPage.reportsOption();
 		ReportPage.invoiceMap();
 		ReportPage.dateRange(dateRange2);
-		Thread.sleep(2000);
+		LoginPage.pauseRun3();
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// Verify click on BOL-CSV option
@@ -140,11 +128,9 @@ public class reports extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		reportsPage ReportPage = LoginPage.reportsOption();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		ReportPage.bolCsv();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// Verify search BOL_CSV data by BCN number
@@ -164,9 +150,7 @@ public class reports extends baseClass {
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 
 	}
 
@@ -186,9 +170,7 @@ public class reports extends baseClass {
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// Verify search report BOL_CSV data by buyer name
@@ -207,9 +189,7 @@ public class reports extends baseClass {
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// Verify search report BOL_CSV by date range of Date BOL Received
@@ -228,9 +208,7 @@ public class reports extends baseClass {
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// Verify search report BOL_CSV by date range of Date Buyer Notice Received
@@ -249,9 +227,7 @@ public class reports extends baseClass {
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// Verify search report BOL_CSV by date range of Date Seller Notice Received
@@ -270,9 +246,7 @@ public class reports extends baseClass {
 		ReportPage.submit();
 		ReportPage.scrollActionMaster();
 		ReportPage.reportDataList();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 }

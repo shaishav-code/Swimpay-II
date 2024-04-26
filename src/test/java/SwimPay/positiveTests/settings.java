@@ -14,7 +14,7 @@ public class settings extends baseClass{
 	
 	//Verify updating setting page details
 	@Test(priority = 1)
-	public void updateSettings()
+	public void updateSettings() throws InterruptedException
 	{
 		loginPage LoginPage=new loginPage(driver);
 		LoginPage.userEmail(email1);
@@ -47,6 +47,7 @@ public class settings extends baseClass{
 		SettingPage.swimMaster_subAccount_PayOut("0");
 		SettingPage.updateSettings();
 		SettingPage.messageToaster();
+		
 	}
 
 }

@@ -31,9 +31,9 @@ public class payments extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		LoginPage.paymentsOption();
-		LoginPage.Logout();
+		
 	}
 
 	// Verify submit currency & recipient/payee details

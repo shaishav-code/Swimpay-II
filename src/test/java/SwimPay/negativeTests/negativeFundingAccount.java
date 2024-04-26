@@ -11,7 +11,7 @@ public class negativeFundingAccount extends baseClass {
 
 	String email3 = "qa3@narola.email";
 
-	String password = "12345678";
+	String password = "Pass@1234";
 
 	// Verify submit funding bank account detail form with blank fields
 	@Test(priority = 1)
@@ -27,7 +27,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.addBankAccountBtn();
 		FundingAccount.submitBankAccountDetails();
 		FundingAccount.errorMsgDisplay();
-		LoginPage.Logout();
+	
 	}
 
 	// Verify click on "Validate My Account" button without selecting priority
@@ -53,7 +53,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.errorMsgDisplay();
 		LoginPage.pauseRun2();
-		LoginPage.Logout();
+
 	}
 
 	// Verify click on "Validate My Account" button without providing values in
@@ -83,7 +83,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.BankAccount_Click();
 		FundingAccount.ReviewMyAccount_Click();
 		FundingAccount.fieldserrorsDisplay();
-		LoginPage.Logout();
+		
 	}
 
 	// Verify provide data in Bank Account's regular payment details then perform
@@ -126,7 +126,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.otpVerify();
 		// FundingAccount.messageToaster();
 		FundingAccount.otpCancelBtn();
-		LoginPage.Logout();
+		
 
 	}
 
@@ -154,7 +154,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.countryOption1("Australia");
 		FundingAccount.submitBankAccountDetails();
 		FundingAccount.errorMsgDisplay();
-		LoginPage.Logout();
+		
 
 	}
 
@@ -191,8 +191,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.postCode("35004545");
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.fieldserrorsDisplay();
-		LoginPage.Logout();
-
+		
 	}
 
 	// Verify click on Edit button for requested user from data list then, try to
@@ -217,7 +216,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.postCode("c124");
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.fieldserrorsDisplay();
-		LoginPage.Logout();
+		
 
 	}
 
@@ -246,7 +245,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.invalid_OTP_Value();
 		FundingAccount.otpVerify();
 		FundingAccount.otpCancelBtn();
-		LoginPage.Logout();
+		
 
 	}
 
@@ -267,7 +266,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.invalid_OTP_Value();
 		FundingAccount.otpVerify();
 		FundingAccount.otpCancelBtn();
-		LoginPage.Logout();
+	
 	}
 
 	// Verify edit requested user details with invalid account number
@@ -288,7 +287,7 @@ public class negativeFundingAccount extends baseClass {
 		FundingAccount.validate_N_createRecipientPayeeBtn();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		LoginPage.Logout();
+		
 	}
 
 	// Verify try to clicking on invalid users account name from listing
@@ -304,7 +303,7 @@ public class negativeFundingAccount extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		LoginPage.pauseRun2();
 		FundingAccount.accountNameClickFromDataList("Chetan");
-		LoginPage.Logout();
+	
 	}
 
 }

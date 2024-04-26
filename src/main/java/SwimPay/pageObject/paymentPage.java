@@ -108,7 +108,7 @@ public class paymentPage extends abstractComponentsMethods {
 
 	public void paymentPurpiose(String paymentPurpose) throws InterruptedException {
 		PaymentPurposeField.click();
-		pauseRun2();
+		Thread.sleep(2000);
 		PaymentPurposeField1.sendKeys(paymentPurpose);
 		PaymentPurposeField1.sendKeys(Keys.DOWN); 
 		PaymentPurposeField1.sendKeys(Keys.ENTER);

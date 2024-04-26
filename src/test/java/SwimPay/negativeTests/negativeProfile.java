@@ -94,8 +94,7 @@ public class negativeProfile extends baseClass {
 		ProfilePage.otpData();
 		ProfilePage.otpVerify();
 		ProfilePage.messageToaster();
-
-		LoginPage.Logout();
+	
 
 	}
 
@@ -115,7 +114,7 @@ public class negativeProfile extends baseClass {
 		ProfilePage.newPassword("Pass@15234");
 		ProfilePage.confirmPassword("Pass@1224");
 		ProfilePage.errorMsgDisplay();
-		LoginPage.Logout();
+		
 
 	}
 }

@@ -54,17 +54,27 @@ public class balancepayOut extends abstractComponentsMethods {
 	// option from data list
 	public void countryOPtionClick(String country_payOutOpt) {
 		CountrysName.size();
-	System.out.println(CountryName_Print);
+//	System.out.println(CountryName_Print);
 		for (WebElement Country_Name : CountrysName) {
 			String requestCountryName = Country_Name.getText();
 			
 			System.out.println(requestCountryName);
 			if (requestCountryName.contains(country_payOutOpt)) {
-				//System.out.println(Country_Name.getText()+" is Clicked");
+				System.out.println(Country_Name.getText()+" is Clicked");
 				Country_Name.click();
 				break;
 			}
 		}
+	}
+	
+	
+	public void PrintCountry()
+	{
+		CountrysName.size();
+		System.out.println(CountrysName.size());
+		for (WebElement element : CountrysName) {
+            System.out.println(element.getText());
+        }
 	}
 
 	// find Balance data from details page & perform print data action
@@ -79,15 +89,15 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	// find Pending Transaction settlement from Date field and perform required
 	// action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[1]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[1]/div/div/button")
 	private WebElement PendingPayOutSettleFromDate;
 
-	public void pendingPayOutSettlement_fromDate(String fromDate) {
+	public void pendingPayOutSettlement_fromDate() {
 		PendingPayOutSettleFromDate.click();;
 	}
 
 	// find payout Pending Transaction settlement To Date field and perform required action
-	@FindBy(xpath = "(//button[contains(@class,'css-1yq5fb3-MuiButtonBase')])[2]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[2]/div/div/button")
 	private WebElement PendingPayOutSettleToDate;
 
 	public void pendingPayOUtSettlement_toDate() {
@@ -109,6 +119,24 @@ public class balancepayOut extends abstractComponentsMethods {
 	public void completePayOutTransaction_toDate() {
 		CompletePayOutTransToDate.click();;
 	}
+	
+	
+	// find Auto COnverted transaction settlement from Date field and perform required
+			// action
+			@FindBy(xpath = "//div[@class='content2-container']/div/div[5]/div[2]/div[1]/div/div/button")
+			private WebElement AutoConvertedFromDate;
+
+			public void autoConvertedSettlement_fromDate() {
+				AutoConvertedFromDate.click();
+			}
+
+			// find Auto COnverted transaction  settlement To Date field and perform required action
+			@FindBy(xpath = "//div[@class='content2-container']/div/div[5]/div[2]/div[2]/div/div/button")
+			private WebElement AutoConvertedToDate;
+
+			public void autoConvertedSettlement_toDate() {
+				AutoConvertedToDate.click();
+			}
 
 	// find No Data Found caption and perform required action
 	@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK'] //div")
@@ -312,6 +340,48 @@ public class balancepayOut extends abstractComponentsMethods {
 		RefreshStatement.click();
 	}
 	
+	
+	@FindBy(xpath = "//div[contains(text(),'Your request is being processed.')]")
+	private WebElement SuccessMsg;
+	
+	
+	public void getMsg() {
+		waitTimeForWebElementToAppear(SuccessMsg);
+		System.out.println(SuccessMsg.getText());
+	}
+		
+	
+	public boolean SuccessMessage()
+	{
+		waitcode();
+	 	return SuccessMsg.isDisplayed();
+	}
+	
+	// find Req  statement from date field and perform required action
+		@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div/div[1]/div[2]/div/div/button")
+		private WebElement ReqStatementFromDateField;
+
+		public void requestStatementMonthFromDate() {
+			ReqStatementFromDateField.click();
+		}
+		
+		
+		// find Req  statement to date field and perform required action
+			@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div/div[2]/div[2]/div/div/button")
+			private WebElement ReqStatementToDateField;
+
+			public void requestStatementMonthToDate() {
+				ReqStatementToDateField.click();
+			}
+			
+	// find Request CSV File Report
+			@FindBy(xpath = "//div[@class='content2-container']/div/div[6]/div[1]/div[2]/button[1]")
+			private WebElement StatementReqBtn;
+
+			public void statementYearReqBtn() {
+				waitTimeForElementToClickable(StatementReqBtn);
+				StatementReqBtn.click();
+			}
 	
 	@FindBy(xpath = "//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/h2/button")
 	private WebElement Cancelclick;

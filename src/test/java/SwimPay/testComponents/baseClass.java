@@ -30,18 +30,18 @@ public class baseClass {
 
 	public WebDriver driver;
 	public loginPage LoginPage;
-	String email3= "qa3@narola.email";
-	String password3= "12345678";
+	String email3 = "qa3@narola.email";
+	String password3 = "12345678";
 
 	public WebDriver invokeDriver() {
-		 WebDriverManager.chromedriver().setup();
-         WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
 	}
 
-	@BeforeClass(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public loginPage lanuchWebsite() throws InterruptedException {
 		driver = invokeDriver();
 		LoginPage = new loginPage(driver);
@@ -52,13 +52,16 @@ public class baseClass {
 
 	// Closing browser once Test Methods completed
 
-	@AfterClass
+	@AfterMethod
+
 	public void tearDown() throws InterruptedException {
-		 abstractComponentsMethods AbstarctPage=new abstractComponentsMethods(driver);
-		//AbstarctPage.Logout_Click(); 
-		 Thread.sleep(3000);
-		//driver.quit();
-	
+		abstractComponentsMethods AbstarctPage = new abstractComponentsMethods(driver);
+		 AbstarctPage.Logout();
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//	    wait.until(ExpectedConditions.urlContains("http://192.168.100.141:3500/auth/login"));
+//		System.out.println(driver.getCurrentUrl());
+		driver.quit();
+
 	}
 
 	public String getScreenshots(String testCaseName, WebDriver driver) throws IOException {
@@ -68,9 +71,8 @@ public class baseClass {
 		FileUtils.copyFile(source, file);
 		return System.getProperty("user.dir") + "//Reports" + testCaseName + ".png";
 	}
-	
-	
-	//====Login logout========///
+
+	// ====Login logout========///
 	public void loginLogout_Admin() {
 		LoginPage.userEmail(email3);
 		LoginPage.loginEmailSubmit();
@@ -79,15 +81,13 @@ public class baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 	}
-	
-	
+
 	@FindBy(xpath = "//i[@class='bi bi-power text-light fw-bold']")
 	private WebElement logout;
 
 	public void Logout_Click(WebDriver driver) {
-			
-		 logout.click();
 
-		
+		logout.click();
+
 	}
 }

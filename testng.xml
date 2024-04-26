@@ -1,36 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<listeners>
+	<listeners>
 		<listener class-name="SwimPay.testComponents.ListenersClass"></listener>
-		
-	<listener class-name="SwimPay.testComponents.RetryListenerClass"></listener>
+
+		<listener class-name="SwimPay.testComponents.RetryListenerClass"></listener>
 	</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-    <!-- Negative TestCases-->
-    <!--  <class name="SwimPay.negativeTests.negativeLogin"/> 
-      <class name="SwimPay.negativeTests.negativePassword"/> 
-        <class name="SwimPay.negativeTests.SignUp"/>
-        
-        <class name="SwimPay.negativeTests.negativeFundingAccount"/>
-         <class name="SwimPay.negativeTests.negativeFXconversion"/>
-          <class name="SwimPay.negativeTests.negativeProfile"/>-->
-         
-         
-    
-    <!-- Positive TestCases   -->
-   <!--   <class name="SwimPay.positiveTests.userLogin_logout"/>  
-       <class name="SwimPay.positiveTests.forgot_resetPassword"/> 
-        <class name="SwimPay.positiveTests.accountInfo"/> 
-        
-        <class name="SwimPay.positiveTests.fundingAccounts"/>
-         <class name="SwimPay.positiveTests.settings"/>
-          <class name="SwimPay.positiveTests.reports"/>
-              <class name="SwimPay.positiveTests.profile"/>
-              <class name="SwimPay.positiveTests.payments"/>-->
-               <class name="SwimPay.positiveTests.balance_payOut"/>
-      
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test thread-count="5" name="Test">
+		<classes>
+
+			<class name="SwimPay.negativeTests.NegativeInvoicingTest" />
+			<class name="SwimPay.positiveTests.InvoicingTest" />
+
+			<class name="SwimPay.positiveTests.settings" />
+			<class name="SwimPay.positiveTests.reports" />
+			<class name="SwimPay.positiveTests.payments" />
+			<class name="SwimPay.positiveTests.balance_payOut" />
+			<class name="SwimPay.positiveTests.balance_payIn" />
+			<class name="SwimPay.positiveTests.dashboard" />
+			<class name="SwimPay.positiveTests.accountInfo" />
+			<class name="SwimPay.positiveTests.Search" />
+			<class name="SwimPay.negativeTests.SignUp" />
+
+
+			<class name="SwimPay.positiveTests.userLogin_logout" />
+			<class name="SwimPay.negativeTests.negativeLogin" />
+
+			<class name="SwimPay.positiveTests.forgot_resetPassword" />
+			<class name="SwimPay.negativeTests.negativePassword" />
+
+
+			<class name="SwimPay.positiveTests.Bulk_Payment" />
+			<class name="SwimPay.negativeTests.negativeBulkPayment" />
+
+
+			<class name="SwimPay.positiveTests.fxConversion" />
+			<class name="SwimPay.negativeTests.negativeFXconversion" />
+
+
+			<class name="SwimPay.positiveTests.fundingAccounts" />
+			<class name="SwimPay.negativeTests.negativeFundingAccount" />
+
+			<class name="SwimPay.negativeTests.negativeProfile" />
+			<class name="SwimPay.positiveTests.profile" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

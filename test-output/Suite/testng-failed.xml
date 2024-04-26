@@ -7,14 +7,158 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SwimPay.positiveTests.balance_payOut">
+      <class name="SwimPay.positiveTests.fxConversion">
         <methods>
-          <include name="balPayOut_createStatement_byCustomDate"/>
+          <include name="tearDown"/>
+          <include name="fxConversion_clickPayLaterOpt"/>
+          <include name="fxConversion_clickMakePaymentOpt"/>
+          <include name="fxConversion_clickRequoteOpt"/>
+          <include name="lanuchWebsite"/>
+          <include name="fxConversion_clickViewDashboardOpt"/>
+          <include name="fxConversion_clickMakeAnotherconversionOpt"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.fxConversion -->
+      <class name="SwimPay.negativeTests.negativeFundingAccount">
+        <methods>
+          <include name="deleteFundingAccount_withInvalidOTPSubmit"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
-          <include name="balPayOut_createStatement_byMonth"/>
+          <include name="clickEdit_andPerformUpdateDataWithInvalidData"/>
+          <include name="editAndUpdate_fundingAccountDetailsWithInvalidAccountNumberData"/>
+          <include name="clickEdit_andPerformUpdateDataWithvalidData_andInavlidOTPSubmit"/>
+        </methods>
+      </class> <!-- SwimPay.negativeTests.negativeFundingAccount -->
+      <class name="SwimPay.positiveTests.InvoicingTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="ClickOnCreateInvoiceSubmenu"/>
+          <include name="ClickOnInvoiceListSubmenu"/>
+          <include name="UploadDoucmentInInstructionSubmenu"/>
+          <include name="ClickOnCancelbuttonOnInstructionSubmenu"/>
+          <include name="CreateAnInvoiceForSwimPayCustomer"/>
+          <include name="InsertCostAndQuantitydetails"/>
+          <include name="InsertAllDetailsAndClickOnNextButtonInCreateInvoiceSubmenu"/>
+          <include name="ClickOnUpdateLogoButtonInInstructionSubmenu"/>
+          <include name="EditInvoiceDetails"/>
+          <include name="ResetFilters"/>
+          <include name="ClickOnEditButton"/>
+          <include name="ClickOnUploadFieldInInstructionSubmenu"/>
+          <include name="ClickOnPreviewButton"/>
+          <include name="InsertPurchaseOrderAndDueDate"/>
+          <include name="ViewIntructionCheckList"/>
+          <include name="InsertAllDetailsAndClickOnSearchButton"/>
+          <include name="InsertNotes_Discount_Tax_details"/>
+          <include name="InsertExternalCompanyDetails"/>
+          <include name="ClickOnNextButton"/>
+          <include name="lanuchWebsite"/>
+          <include name="AddAndDeleteItemFields"/>
+          <include name="ClickOnCreateInvoiceButton"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.InvoicingTest -->
+      <class name="SwimPay.negativeTests.SignUp">
+        <methods>
+          <include name="submitOnboarding_with_Nonformat"/>
+          <include name="tearDown"/>
+          <include name="lanuchWebsite"/>
+          <include name="submitBlankOnBoardingAccount"/>
+        </methods>
+      </class> <!-- SwimPay.negativeTests.SignUp -->
+      <class name="SwimPay.positiveTests.profile">
+        <methods>
+          <include name="tearDown"/>
+          <include name="profileOptClick"/>
+          <include name="lanuchWebsite"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.profile -->
+      <class name="SwimPay.positiveTests.forgot_resetPassword">
+        <methods>
+          <include name="tearDown"/>
+          <include name="clickForgotPasswordOpt"/>
+          <include name="submitForgotPasswordEmail"/>
+          <include name="ResetPassword"/>
+          <include name="lanuchWebsite"/>
+          <include name="backToLoginPageFromForgotPasswordPage"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.forgot_resetPassword -->
+      <class name="SwimPay.positiveTests.Search">
+        <methods>
+          <include name="resetFilter_whileNoFiltersApplied"/>
+          <include name="searchTranactionByCurrencyType"/>
+          <include name="conversionData_minMaxSold"/>
+          <include name="conversion_minMax_soldBaught"/>
+          <include name="searchTransactionByReferecneNumber"/>
+          <include name="searchTransactionnByMinMaxAmount"/>
+          <include name="searchPaymentByDateType"/>
+          <include name="conversion_minBaught"/>
+          <include name="searchPaymentByMinMaxAmount"/>
+          <include name="conversionData_MaximumSold"/>
+          <include name="searchPaymentByFilters"/>
+          <include name="searchPaymentBYReferenceNumber"/>
+          <include name="searchPaymentByStatus"/>
+          <include name="SearchConversionByStatus"/>
+          <include name="searchTransactionByStatusFilter"/>
+          <include name="conversion_maxBaught"/>
+          <include name="tearDown"/>
+          <include name="searchPaymentByCurrency"/>
+          <include name="searchPayment"/>
+          <include name="searchTransactionByDateType"/>
+          <include name="searchTransactionOption"/>
+          <include name="conversionData_minimumSold"/>
+          <include name="coversion_minMaxBaught"/>
+          <include name="searchPaymentByMaxAmount"/>
+          <include name="searchTransactionByMinAmount"/>
+          <include name="clickOnSearch"/>
+          <include name="SearchConversionByReferenceNumber"/>
+          <include name="searchPaymentByMinAmmount"/>
+          <include name="searchTransactionByMaxAmount"/>
+          <include name="applyFilers_resetFilters"/>
+          <include name="lanuchWebsite"/>
+          <include name="soldFrom_ToBaughtCurrency"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.Search -->
+      <class name="SwimPay.positiveTests.balance_payOut">
+        <methods>
+          <include name="tearDown"/>
+          <include name="balPayOut_currencyAvailableBalance"/>
+          <include name="lanuchWebsite"/>
         </methods>
       </class> <!-- SwimPay.positiveTests.balance_payOut -->
+      <class name="SwimPay.positiveTests.userLogin_logout">
+        <methods>
+          <include name="tearDown"/>
+          <include name="lanuchWebsite"/>
+          <include name="showHidePassword"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.userLogin_logout -->
+      <class name="SwimPay.negativeTests.negativePassword">
+        <methods>
+          <include name="resetPassword_withWhiteSpaceData"/>
+          <include name="invalidEmailSubmit"/>
+          <include name="tearDown"/>
+          <include name="invalidPasswordValueRangeFormat"/>
+          <include name="misMatchNew_ConfirmPasswordValue"/>
+          <include name="lanuchWebsite"/>
+          <include name="wrongOTP_for_forgotPasswordEmail_Submit"/>
+        </methods>
+      </class> <!-- SwimPay.negativeTests.negativePassword -->
+      <class name="SwimPay.negativeTests.negativeProfile">
+        <methods>
+          <include name="tearDown"/>
+          <include name="profileChangePasswordByMis_MatchPasswordValues"/>
+          <include name="lanuchWebsite"/>
+          <include name="profileChangePasswordBy_providingWrongOldPassword"/>
+        </methods>
+      </class> <!-- SwimPay.negativeTests.negativeProfile -->
+      <class name="SwimPay.negativeTests.negativeLogin">
+        <methods>
+          <include name="tearDown"/>
+          <include name="blankEmailSubmit"/>
+          <include name="lanuchWebsite"/>
+          <include name="sensativeEmailLogin"/>
+          <include name="invalidUserPasswordLogin"/>
+          <include name="invalid_OTP_userLogin"/>
+        </methods>
+      </class> <!-- SwimPay.negativeTests.negativeLogin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

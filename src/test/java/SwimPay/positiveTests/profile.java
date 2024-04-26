@@ -12,8 +12,8 @@ public class profile extends baseClass {
 
 	String email1 = "qa3@narola.email";
 
-	String password = "Pass@12345";
-	String password1 = "Pass@1234";
+	String password = "Pass@1234";
+	String password1 = "Pass@12345";
 	String contact1 = "16871231132";
 	String contact2 = "16871231121";
 
@@ -28,9 +28,7 @@ public class profile extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		LoginPage.profileOption();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 
 	}
 
@@ -46,9 +44,7 @@ public class profile extends baseClass {
 		LoginPage.otpSubmitBtn();
 		profilePage ProfilePage = LoginPage.profileOption();
 		ProfilePage.updateContactInfoBtn();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 	// Verify update profile contact numbers
@@ -182,9 +178,7 @@ public class profile extends baseClass {
 		// ProfilePage.otpSubmitBtn();
 		ProfilePage.otpVerify();
 		ProfilePage.messageToaster();
-		Thread.sleep(3000);
-		LoginPage.Logout_Click();
-		Thread.sleep(3000);
+		 
 	}
 
 }

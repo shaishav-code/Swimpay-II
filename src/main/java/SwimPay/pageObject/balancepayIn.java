@@ -52,18 +52,33 @@ public class balancepayIn extends abstractComponentsMethods {
 		}
 	}
 
+	
+	@FindBy(xpath = "//div[@class='price-country']/div[2]")
+	private WebElement CountryName_PrintPayIn;
+	
 	// cature country name from list and perform click action on country price tab
 	// option from data list
 	public void countryOPtionClick(String countryOpt) {
 		CountrysName.size();
+		//System.out.println(CountryName_PrintPayIn);
 		for (WebElement Country_Name : CountrysName) {
 			String requestCountryName = Country_Name.getText();
+			System.out.println(requestCountryName);
 			if (requestCountryName.contains(countryOpt)) {
 				System.out.println(Country_Name.getText() + " is clicked");
 				Country_Name.click();
 				break;
 			}
 		}
+	}
+	
+	public void PrintCountry()
+	{
+		CountrysName.size();
+		System.out.println(CountrysName.size());
+		for (WebElement element : CountrysName) {
+            System.out.println(element.getText());
+        }
 	}
 
 	// find Balance data from details page & perform print data action
@@ -78,19 +93,19 @@ public class balancepayIn extends abstractComponentsMethods {
 
 	// find Pending Transaction settlement from Date field and perform required
 	// action
-	@FindBy(xpath = "(//input[contains(@class,'css-19qh8xo-MuiInputBase')])[1]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[1]/div/div/button")
 	private WebElement PendingSettleFromDate;
 
-	public void pendingSettlement_fromDate(String fromDate) {
-		PendingSettleFromDate.sendKeys(fromDate);
+	public void pendingSettlement_fromDate() {
+		PendingSettleFromDate.click();
 	}
 
 	// find Pending Transaction settlement To Date field and perform required action
-	@FindBy(xpath = "(//input[contains(@class,'css-19qh8xo-MuiInputBase')])[2]")
+	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[2]/div/div/button")
 	private WebElement PendingSettleToDate;
 
-	public void pendingSettlement_toDate(String toDate) {
-		PendingSettleToDate.sendKeys(toDate);
+	public void pendingSettlement_toDate() {
+		PendingSettleToDate.click();
 	}
 
 	// find complete Transaction from Date field and perform required action
@@ -110,6 +125,24 @@ public class balancepayIn extends abstractComponentsMethods {
 		CompleteTransToDate.click();
 	}
 
+	// find Auto COnverted transaction settlement from Date field and perform required
+		// action
+		@FindBy(xpath = "//div[@class='content2-container']/div/div[5]/div[2]/div[1]/div/div/button")
+		private WebElement AutoConvertedFromDate;
+
+		public void autoConvertedSettlement_fromDate() {
+			AutoConvertedFromDate.click();
+		}
+
+		// find Auto COnverted transaction  settlement To Date field and perform required action
+		@FindBy(xpath = "//div[@class='content2-container']/div/div[5]/div[2]/div[2]/div/div/button")
+		private WebElement AutoConvertedToDate;
+
+		public void autoConvertedSettlement_toDate() {
+			AutoConvertedToDate.click();
+		}
+	
+	
 	// find No Data Found caption and perform required action
 	@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK'] //div")
 	private WebElement NoDatafound;
@@ -159,6 +192,15 @@ public class balancepayIn extends abstractComponentsMethods {
 		StatementCreateBtn.click();
 	}
 
+	
+	// find Request CSV File Report
+		@FindBy(xpath = "//div[@class='content2-container']/div/div[6]/div[1]/div[2]/button[1]")
+		private WebElement StatementReqBtn;
+
+		public void statementYearReqBtn() {
+			waitTimeForElementToClickable(StatementReqBtn);
+			StatementReqBtn.click();
+		}
 	// Find statement Month field from pop-up and perform click action
 	@FindBy(xpath = "(//div[@class='mb-3'])[3]/div/div/div/button")
 	private WebElement SelectStatementMonth;
@@ -221,6 +263,7 @@ public class balancepayIn extends abstractComponentsMethods {
 //	public void statementMonth(String month) {
 //		StatementMonthField.sendKeys(month);
 //	}
+	
 
 	// find create statement from date field and perform required action
 	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[1]/div[2]/div/div/button")
@@ -231,14 +274,36 @@ public class balancepayIn extends abstractComponentsMethods {
 	}
 
 	// find create statement to date field and perform required action
-	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[2]/div[2]/div/div/button")
-	private WebElement StatementToDateField;
+		@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[2]/div[2]/div/div/button")
+		private WebElement StatementToDateField;
 
-	public void statementMonthToDate() {
-		StatementToDateField.click();
-		;
+		public void statementMonthToDate() {
+			StatementToDateField.click();
+			;
+		}
+
+	
+	
+	
+	// find Req  statement from date field and perform required action
+	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div/div[1]/div[2]/div/div/button")
+	private WebElement ReqStatementFromDateField;
+
+	public void requestStatementMonthFromDate() {
+		ReqStatementFromDateField.click();
 	}
+	
+	
+	// find Req  statement to date field and perform required action
+		@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div/div[2]/div[2]/div/div/button")
+		private WebElement ReqStatementToDateField;
 
+		public void requestStatementMonthToDate() {
+			ReqStatementToDateField.click();
+		}
+	
+	
+	
 	// find Proceed statement button and perform required action
 	@FindBy(xpath = "//div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthLg css-18i3v7t']/div[2]/button[2]")
 	private WebElement StatementProceed;
@@ -333,13 +398,6 @@ public class balancepayIn extends abstractComponentsMethods {
 			System.out.println("Currency Account Details >>" + CurrencyAccountDetails.get(i).getText());
 		}
 	}
-
-	
-
-	
-	
-	
-	//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/h2/button
 	
 	@FindBy(xpath = "//div[@class='MuiDialog-root MuiModal-root css-126xj0f']/div[3]/div/h2/button")
 	private WebElement Cancelclick;
@@ -347,5 +405,35 @@ public class balancepayIn extends abstractComponentsMethods {
 		Thread.sleep(2000);
 		Cancelclick.click();
 	}
+	
+	
+	@FindBy(xpath = "//div[contains(text(),'Your request is being processed.')]")
+	private WebElement SuccessMsg;
+	
+	
+	public void getMsg() {
+		waitTimeForWebElementToAppear(SuccessMsg);
+		System.out.println(SuccessMsg.getText());
+	}
 		
+	
+	public boolean SuccessMessage()
+	{
+		waitcode();
+	 	return SuccessMsg.isDisplayed();
+	}
+	
+	
+	//no country
+	
+	
+	
+	@FindBy(xpath = "//div[@class='py-1']/div")
+	private WebElement msg;
+	public void Msg() {
+		waitTimeForWebElementToAppear(msg);
+		System.out.println(msg.getText());
+	}
+	
+	
 	}

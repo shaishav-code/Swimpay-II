@@ -10,7 +10,7 @@ public class Search extends baseClass{
 
 	
 	String email2= "qa3@narola.email";
-	String password= "12345678";
+	String password= "Pass@1234";
 	
 	//Check clicking  on Search Option from Menu
 	    @Test(priority = 1)
@@ -23,8 +23,7 @@ public class Search extends baseClass{
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		LoginPage.searchOption();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	//Verify Search Conversion By Reference Number
@@ -42,8 +41,7 @@ public class Search extends baseClass{
 		SearchPage.referencesNumberSelector(3);
 		SearchPage.FilterSearch();
 		SearchPage.referencesNumberDataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	//Verify Search Conversion Data with Status
@@ -64,8 +62,7 @@ public class Search extends baseClass{
 		//SearchPage.Select_Status("Approved");
 		LoginPage.pauseRun3();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
  }
 
 	//Verify Click on Reset Filter while no filters applied
@@ -83,8 +80,7 @@ public class Search extends baseClass{
 		SearchPage.conversionOption();
 		LoginPage.pauseRun3();
 		SearchPage.resetFilters();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 		
 	}
 
@@ -108,8 +104,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.resetFilters();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	//Verify Search Conversion Data with Sold & bought currency
@@ -135,8 +130,7 @@ public class Search extends baseClass{
 		SearchPage.maximumBaughtAmount("1000");
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
       }
 
 	//Search Conversion Data with Minimun Sold filter
@@ -156,8 +150,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	//Search Conversion Data with Maximum Sold filter
@@ -177,8 +170,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 		}
 
    //Search Conversion Data with Minimum & Maximum Sold Filter
@@ -199,8 +191,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		//SearchPage.scrollBy();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	//Verify Conversion  Minimum Bought
@@ -220,8 +211,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Conversion Search Max Bought
@@ -241,8 +231,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify conversion Search Min_Max Baught
@@ -263,8 +252,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Conversion Search Sold & baught (min& max)
@@ -287,8 +275,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	//=========PAYMENT OPTION TESTS==========
@@ -306,8 +293,7 @@ public class Search extends baseClass{
 		LoginPage.otpSubmitBtn();
 		searchPage SearchPage=LoginPage.searchOption();
 		SearchPage.paymentOption();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Payment data using Reference number
@@ -347,8 +333,7 @@ public class Search extends baseClass{
 		//SearchPage.dateType("Payment");
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 	    //Verify Search Payment by Status filters
 	  @Test(priority = 17)
@@ -367,8 +352,7 @@ public class Search extends baseClass{
 		LoginPage.pauseRun2();
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Search Payment by Min Amount
@@ -388,8 +372,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //verify search Payment by Max Amount filter
@@ -408,8 +391,7 @@ public class Search extends baseClass{
 		SearchPage.maximumSoldAmount("300");
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Search Payment by Min & Max Amount filter
@@ -429,8 +411,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 		}
 
 	    //Verify Search Payment by Select Currency Option filter
@@ -450,8 +431,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 	   //Verify Search Payment By Applying applicable filters
     	@Test(priority = 22)
@@ -493,8 +473,7 @@ public class Search extends baseClass{
 		LoginPage.otpSubmitBtn();
 		searchPage SearchPage=LoginPage.searchOption();
 		SearchPage.transactionsOption();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 
 	}
 
@@ -514,8 +493,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
     	//Verify Search Transaction by Date Type filter
@@ -534,8 +512,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Search Transaction by Status Filter
@@ -554,8 +531,7 @@ public class Search extends baseClass{
 		//SearchPage.statusOption("Pending");
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Search Transaction By Minimum Amount
@@ -575,8 +551,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Search Transaction By Max Amount
@@ -597,8 +572,7 @@ public class Search extends baseClass{
 		SearchPage.DataList();
 		SearchPage.scrollAction();
 		LoginPage.pauseRun2();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	   //verify search Transaction By Amount Filter (Min & Max)
@@ -619,8 +593,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 
 	    //Verify Transaction by Currency Filter
@@ -640,7 +613,6 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.DataList();
 		SearchPage.scrollAction();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		 
 	}
 }

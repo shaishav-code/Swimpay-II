@@ -1,8 +1,10 @@
 package SwimPay.positiveTests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
+import SwimPay.pageObject.balancepayIn;
 import SwimPay.pageObject.balancepayOut;
 import SwimPay.testComponents.baseClass;
 
@@ -23,7 +25,7 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		LoginPage.balanePayOutOption();
-		LoginPage.Logout();
+
 	}
 
 	// Verify click on country currency option from list
@@ -37,9 +39,9 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Vietnamese Đồng");
+		PayOut.countryOPtionClick("Argentine Peso");
 		LoginPage.pauseRun2();
-		LoginPage.Logout();
+
 	}
 
 	// Verify click on pay currency option from balance out currency detail page
@@ -54,9 +56,9 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.payCurrencyOptionBtn();
-		LoginPage.Logout();
+
 	}
 
 	// Verify click on convert currency option from balance out currency detail page
@@ -70,9 +72,9 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.convertCurrencyOptionBtn();
-		LoginPage.Logout();
+
 	}
 
 	// Verify check respective currency active balance from balance out currency
@@ -87,9 +89,9 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.countryBalanceData_inDetailsPage();
-		LoginPage.Logout();
+
 	}
 
 	// Verify check balance payout completed transaction data display
@@ -103,11 +105,11 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.scrollActionPayINOUT();
 		LoginPage.pauseRun2();
 		PayOut.completePayOutTransactionsDatas();
-		LoginPage.Logout();
+
 	}
 
 	// Verify click on balance payout view statement button
@@ -121,10 +123,10 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.scrollActionStatementPAYINOUT();
 		PayOut.statementMonthViewOptionClickFromList("2023");
-		LoginPage.Logout();
+
 		// PayOut.previewCloseBtn();
 	}
 
@@ -140,18 +142,13 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.scrollActionPayINOUT();
 		PayOut.completePayOutTransaction_fromDate();
 		PayOut.selectNextMonth("March 2024");
 		PayOut.dateSelect("14");
 		PayOut.completePayOutTransaction_toDate();
 		PayOut.dateSelect("15");
-		LoginPage.Logout();
-//			PayOut.scrollBy();
-//			PayOut.selectRowsOptions();
-//			PayOut.completePayOutTransactionsDatas();
-//			
 	}
 
 	// Verify create balance payout month statement by selcting Month
@@ -165,7 +162,7 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.scrollActionStatementPAYINOUT();
 		PayOut.statementYearCreateBtn();
 		PayOut.payOut_statementMonth();
@@ -175,7 +172,6 @@ public class balance_payOut extends baseClass {
 		LoginPage.pauseRun5();
 		PayOut.previewCloseBtn();
 		PayOut.refreshStatement();
-		LoginPage.Logout();
 //		PayOut.balOutStatementDataList();
 
 	}
@@ -192,7 +188,7 @@ public class balance_payOut extends baseClass {
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
-		PayOut.countryOPtionClick("Nepalese Rupee");
+		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.statementYearCreateBtn();
 		PayOut.payOut_statementMonthFromDate();
 		PayOut.dateSelect("2");
@@ -202,7 +198,111 @@ public class balance_payOut extends baseClass {
 		LoginPage.pauseRun5();
 		PayOut.previewCloseBtn();
 		PayOut.refreshStatement();
-		LoginPage.Logout();
 
 	}
+
+	//////new testcase added by gjp//////
+
+	// Verify if the user is able to view the new currencies changed from Pay Out to
+	// Pay In. ( new currencies has been added)
+	@Test(priority = 11)
+	public void balPayin_clickCountryCurrencyOpt_fromList_NewCurrencyPrint() throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.balanceOption();
+		balancepayOut PayOut = LoginPage.balanePayOutOption();
+		PayOut.PrintCountry();
+
+	}
+
+	// Verify if the user is able to click on the new currencies changed from Pay
+	// Out to Pay In and view the details.
+	@Test(priority = 12)
+	public void balPayin_clickCountryCurrencyOpt_fromList_NewCurrencyClick() throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.balanceOption();
+		balancepayOut PayOut = LoginPage.balanePayOutOption();
+		PayOut.countryOPtionClick("Vietnamese Đồng");
+
+	}
+
+	// Verify search pending transaction payout by Settlement Date
+	@Test(priority = 13)
+	public void balPayOut_PendingTransactionsByDate() throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.balanceOption();
+		balancepayOut PayOut = LoginPage.balanePayOutOption();
+		PayOut.countryOPtionClick("Brazilian Real");
+		// PayIn.scrollActionPayINOUT();
+		PayOut.pendingPayOutSettlement_fromDate();
+		PayOut.selectNextMonth("May 2024");
+		LoginPage.pauseRun3();
+		PayOut.dateSelect("25");
+		LoginPage.pauseRun3();
+		PayOut.pendingPayOUtSettlement_toDate();
+		PayOut.selectNextMonth("June 2024");
+		PayOut.dateSelect("30");
+	}
+
+	// Verify search auto converted transaction payout by Settlement Date
+	@Test(priority = 14)
+	public void balPayOut_AutoConvertedTransactionsByDate() throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.balanceOption();
+		balancepayOut PayOut = LoginPage.balanePayOutOption();
+		PayOut.countryOPtionClick("Brazilian Real");
+		PayOut.scrollActionPayINOUT();
+		PayOut.autoConvertedSettlement_fromDate();
+		PayOut.selectPreviousMonth("March 2024");
+		LoginPage.pauseRun3();
+		PayOut.dateSelect("25");
+		LoginPage.pauseRun3();
+		PayOut.autoConvertedSettlement_toDate();
+		PayOut.selectNextMonth("May 2024");
+		PayOut.dateSelect("30");
+	}
+
+	// Verify request CSV file report in payout
+	@Test(priority = 15)
+	public void balPayin_RequestCSVFile() throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.balanceOption();
+		balancepayOut PayOut = LoginPage.balanePayOutOption();
+		PayOut.countryOPtionClick("Brazilian Real");
+		PayOut.scrollActionStatementPAYINOUT();
+		PayOut.statementYearReqBtn();
+		PayOut.requestStatementMonthFromDate();
+		PayOut.selectPreviousMonth("March 2024");
+		PayOut.dateSelect("3");
+		PayOut.requestStatementMonthToDate();
+		PayOut.dateSelect("20");
+		PayOut.statementProceedBtn();
+		LoginPage.pauseRun3();
+		Assert.assertTrue(PayOut.SuccessMessage());
+	}
+
 }
