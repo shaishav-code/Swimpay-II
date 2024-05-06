@@ -24,6 +24,7 @@ public class profilePage extends abstractComponentsMethods {
 	private WebElement UpdateContactInfoBtn;
 	public void updateContactInfoBtn()
 	{
+		waitTimeForWebElementToAppear(UpdateContactInfoBtn);
 		UpdateContactInfoBtn.click();
 	}
 	

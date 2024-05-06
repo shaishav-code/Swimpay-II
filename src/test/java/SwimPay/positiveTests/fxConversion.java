@@ -368,8 +368,7 @@ public class fxConversion extends baseClass {
 		FX_Convresion.viewDashboardOpt();
 
 	}
-	// ======================================================New Change Code By
-	// VRS==================================================================
+	// ===========================New Change Code By VRS==============================================
 
 	// Verify User click the Convert FROM a Pay OUT Currency perform Click action
 
@@ -532,7 +531,6 @@ public class fxConversion extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fxConversionPage FX_Convresion = LoginPage.fxConversionOption();
-		LoginPage.pauseRun2();
 		FX_Convresion.Click_convertPayoutcurrency();
 		LoginPage.pauseRun2();
 		FX_Convresion.ClickCurrncyName("New Taiwan Dollar (TWD)");
@@ -626,6 +624,7 @@ public class fxConversion extends baseClass {
 		FX_Convresion.convertBtn();
 		FX_Convresion.otpData();
 		FX_Convresion.otpVerify();
+		
 		FX_Convresion.conversionSuccessmessage();
 		FX_Convresion.makePayment();
 	}
@@ -664,7 +663,7 @@ public class fxConversion extends baseClass {
 	// Verify click on make another conversion option PayOut currency page after
 	// conversion done
 
-	@Test(priority = 29)
+	@Test(priority = 28)
 	public void PayOutclickMakeAnotherconversionOpt() throws InterruptedException {
 		loginPage LoginPage = new loginPage(driver);
 		LoginPage.userEmail(email3);
@@ -694,7 +693,7 @@ public class fxConversion extends baseClass {
 	// Verify click on view dashboard option for PayOut currency page after
 	// conversion done
 
-	@Test(priority = 30)
+	@Test(priority = 29)
 	public void fxConversionPayOut_clickViewDashboardOpt() throws InterruptedException {
 		loginPage LoginPage = new loginPage(driver);
 		LoginPage.userEmail(email3);

@@ -25,6 +25,7 @@ public class reportsPage extends abstractComponentsMethods {
 	private WebElement InvoiceMapOpt;
 
 	public void invoiceMap() {
+		waitTimeForWebElementToAppear(InvoiceMapOpt);
 		InvoiceMapOpt.click();
 	}
 
@@ -33,6 +34,7 @@ public class reportsPage extends abstractComponentsMethods {
 	private WebElement Bol_CsvOpt;
 
 	public void bolCsv() {
+		waitTimeForWebElementToAppear(Bol_CsvOpt);
 		Bol_CsvOpt.click();
 	}
 

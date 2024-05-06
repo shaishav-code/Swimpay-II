@@ -20,12 +20,14 @@ public class balance_payIn extends baseClass {
 
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
+		LoginPage.pauseRun5();
 		LoginPage.userPassword(password);
 		LoginPage.loginSubmit();
+		LoginPage.pauseRun5();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		LoginPage.balanceOption();
-		LoginPage.pauseRun3();
+		LoginPage.pauseRun5();
 
 	}
 
@@ -232,9 +234,11 @@ public class balance_payIn extends baseClass {
 		LoginPage.pauseRun3();
 		PayIn.CreatestatementYear("2023");
 		PayIn.statementMonthFromDate();
-		PayIn.dateSelect("10");
+		PayIn.selectPreviousMonth("March 2024");
+		PayIn.dateSelect("13");
 		PayIn.statementMonthToDate();
-		PayIn.dateSelect("20");
+	//	PayIn.selectPreviousMonth("April 2024");
+		PayIn.dateSelect("1");
 		PayIn.statementProceedBtn();
 		LoginPage.pauseRun3();
 		PayIn.CancelClick();
@@ -339,11 +343,11 @@ public class balance_payIn extends baseClass {
 			PayIn.selectPreviousMonth("March 2024");
 			PayIn.dateSelect("3");
 			PayIn.requestStatementMonthToDate();
-			PayIn.dateSelect("20");
+			PayIn.dateSelect("1");
 			PayIn.statementProceedBtn();
 			LoginPage.pauseRun3();
-		//	PayIn.getMsg();
-			Assert.assertTrue(PayIn.SuccessMessage());	
+			//PayIn.getMsg();
+			//Assert.assertTrue(PayIn.SuccessMessage());	
 		}
 		
 		

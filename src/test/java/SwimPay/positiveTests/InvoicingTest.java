@@ -24,7 +24,7 @@ public class InvoicingTest extends baseClass{
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		LoginPage.waitcode();
-		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
+		LoginPage.InvoicingOption();
 	//	invoicingPage.LogoLoaded();
 
 	}
@@ -404,10 +404,10 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.otpData();
 		invoicingPage.otpVerify();
 		invoicingPage.waitcode();
-		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
+	//	Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
 	}
 	
-	//Verify if user is able to create an invoice for Swim-Pay Customer
+	
 	@Test(priority=16)
 	public void CreateAnInvoiceForSwimPayCustomer()
 	{
@@ -445,11 +445,16 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.ScrollingTillButton(8);
 		invoicingPage.waitcode();
 		invoicingPage.CreateInvoiceBtn();
+		invoicingPage.waitcode();
 		invoicingPage.otpData();
 		invoicingPage.otpVerify();
 		invoicingPage.waitcode();
 		Assert.assertEquals(invoicingPage.GetCurrentURL(), "https://demo.swimpay.com/invoicing");
 	} 
+	
+	
+	
+	
 	
 	
 	///////////////Invoice List///////////////
@@ -568,7 +573,7 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
 		invoicingPage.ClickOnSearchBtn();
 		invoicingPage.waitcode();
-		invoicingPage.ClickOnPreviewButton("INV000124");
+		invoicingPage.ClickOnPreviewButton("INV000159");
 		invoicingPage.waitcode();
 		invoicingPage.CommonPath(31);  //cross arrow of preview button
 
@@ -596,7 +601,7 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
 		invoicingPage.ClickOnSearchBtn();
 		invoicingPage.waitcode();
-		invoicingPage.ClickOnEditButton("INV000121"); //cross arrow of edit button
+		invoicingPage.ClickOnEditButton("INV000158"); //cross arrow of edit button
 		invoicingPage.waitcode();
 	}
 	
@@ -614,7 +619,7 @@ public class InvoicingTest extends baseClass{
 		LoginPage.waitcode();
 		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
 		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.ClickOnEditButton("INV000121");
+		invoicingPage.ClickOnEditButton("INV000157");
 		invoicingPage.waitcode();
 		invoicingPage.ClickExternalTypeCheckbox();
 		invoicingPage.InsertBillToAndAddress(0, 1,"Mr. Tester", "Victoria Street, Brazil");

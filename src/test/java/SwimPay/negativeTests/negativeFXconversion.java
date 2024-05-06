@@ -190,7 +190,9 @@ public class negativeFXconversion extends baseClass {
 		loginPage LoginPage = new loginPage(driver);
 		LoginPage.userEmail(email3);
 		LoginPage.loginEmailSubmit();
+		LoginPage.pauseRun2();
 		LoginPage.userPassword(password);
+		LoginPage.pauseRun2();
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
@@ -206,7 +208,7 @@ public class negativeFXconversion extends baseClass {
 		FX_Convresion.happyCheckbox();
 		FX_Convresion.convertBtn();
 		FX_Convresion.invalid_OTP_Value();
-		FX_Convresion.otpSubmitBtn();
+		FX_Convresion.otpVerify();
 		FX_Convresion.messageToaster();
 		FX_Convresion.otpCancelBtn();
 	}

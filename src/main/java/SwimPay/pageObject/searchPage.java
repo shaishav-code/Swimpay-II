@@ -29,6 +29,7 @@ public class searchPage extends abstractComponentsMethods {
 
 	// click on Conversion category OPtion
 	public void conversionOption() {
+		waitTimeForWebElementToAppear(ConversionOPt);
 		ConversionOPt.click();
 	}
 
@@ -38,6 +39,7 @@ public class searchPage extends abstractComponentsMethods {
 
 	// Click on Payments category option
 	public void paymentOption() {
+		waitTimeForWebElementToAppear(PaymentsOPt);
 		PaymentsOPt.click();
 	}
 
@@ -47,6 +49,7 @@ public class searchPage extends abstractComponentsMethods {
 
 	// Click on Transactiom category option
 	public void transactionsOption() {
+		waitTimeForWebElementToAppear(TransactionsOpt);
 		TransactionsOpt.click();
 	}
 
@@ -57,6 +60,7 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement Referencefilter_field;
 
 	public void reference_field(String referenceValue) {
+		waitTimeForWebElementToAppear(Referencefilter_field);
 		Referencefilter_field.sendKeys(referenceValue);
 
 	}
@@ -66,12 +70,10 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement DateFilter;
 
 	public void dateType() {
+		waitTimeForWebElementToAppear(DateFilter);
 		DateFilter.click();
 
-
-
-
-		//DateFilter.sendKeys(dateType + Keys.ARROW_DOWN + Keys.ENTER);
+		// DateFilter.sendKeys(dateType + Keys.ARROW_DOWN + Keys.ENTER);
 	}
 
 	// Find From date field
@@ -92,6 +94,7 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement datePicker;
 
 	public void selectFromDate(int fromDate) {
+		waitTimeForWebElementToAppear(FromDate);
 		FromDate.click();
 
 		// Calculate the desired past date
@@ -109,6 +112,7 @@ public class searchPage extends abstractComponentsMethods {
 
 		for (WebElement date : dates) {
 			if (date.getText().equals(pastDateFormatted)) {
+				waitTimeForWebElementToAppear(date);
 				date.click();
 				System.out.println("Selected Date is >> " + pastDateFormatted);
 				break;
@@ -144,11 +148,10 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement ToDate;
 
 	public void DateOption(String SettelmentOPtions) {
+		waitTimeForWebElementToAppear(ToDate);
 		ToDate.click();
 		ToDate.sendKeys(SettelmentOPtions + Keys.ARROW_DOWN + Keys.ENTER);
 	}
-
-
 
 	// Find Status Field
 
@@ -157,6 +160,7 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement StatusOpt;
 
 	public void statusOption(String statusOPtions) {
+		waitTimeForWebElementToAppear(StatusOpt);
 		StatusOpt.click();
 		StatusOpt.sendKeys(statusOPtions + Keys.ARROW_DOWN + Keys.ENTER);
 
@@ -184,9 +188,9 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement submitFilter;
 
 	public void FilterSearch() {
-	System.out.println("Filter Search Button Clicked");
-	submitFilter.click();
-
+		waitTimeForWebElementToAppear(submitFilter);
+		System.out.println("Filter Search Button Clicked");
+		submitFilter.click();
 
 	}
 
@@ -195,77 +199,85 @@ public class searchPage extends abstractComponentsMethods {
 	private WebElement ResetFilter;
 
 	public void resetFilters() {
-	ResetFilter.click();
+		waitTimeForWebElementToAppear(ResetFilter);
+		ResetFilter.click();
 	}
 
 	// ====================================================================================//
 	// CONVERSION/PAYEMTNS/TRANSACTIONS SEARCH PAGE ACTIONS
 
-	//Find Sold Currency Option and perform click action
+	// Find Sold Currency Option and perform click action
 
 	@FindBy(xpath = "(//input[@type='text'])[6]")
 	private WebElement SoldCurrencyOpt;
 
 	public void selectSoldCurrencyOption(String currencySoldName) {
-    SoldCurrencyOpt.sendKeys(currencySoldName + Keys.ARROW_DOWN + Keys.ENTER);
-    SoldCurrencyOpt.click();
-    }
+		waitTimeForWebElementToAppear(SoldCurrencyOpt);
+		SoldCurrencyOpt.sendKeys(currencySoldName + Keys.ARROW_DOWN + Keys.ENTER);
+		SoldCurrencyOpt.click();
+	}
 
 	// Find Sold Minimum amount field
-	
-	//@FindBy(id = "conversion_sold_min_amount")
-	@FindBy (xpath ="(//*[@type='number'])[1]")
+
+	// @FindBy(id = "conversion_sold_min_amount")
+	@FindBy(xpath = "(//*[@type='number'])[1]")
 	private WebElement MinSold;
 
 	public void minimumSoldAmount(String minsold) {
-	MinSold.sendKeys(minsold);
+		waitTimeForWebElementToAppear(MinSold);
+		MinSold.sendKeys(minsold);
 	}
 
 	// Find Sold Maximum amount field
-	
-	//@FindBy(id = "conversion_sold_max_amount")
-	@FindBy (xpath ="(//*[@type='number'])[2]")
+
+	// @FindBy(id = "conversion_sold_max_amount")
+	@FindBy(xpath = "(//*[@type='number'])[2]")
 	private WebElement MaxSold;
 
 	public void maximumSoldAmount(String maxsold) {
-	MaxSold.sendKeys(maxsold);
+		waitTimeForWebElementToAppear(MaxSold);
+		MaxSold.sendKeys(maxsold);
 	}
 
 	// Find Baught Currency Option and perform click action
-	
+
 	@FindBy(xpath = "(//input[@type='text'])[7]")
 	private WebElement BoughtCurrencyOpt;
 
 	public void selectBoughtCurrencyOption(String currencyBaughtName) {
-	BoughtCurrencyOpt.click();
-	BoughtCurrencyOpt.sendKeys(currencyBaughtName + Keys.DOWN + Keys.ENTER);
+		waitTimeForWebElementToAppear(BoughtCurrencyOpt);
+		BoughtCurrencyOpt.click();
+		BoughtCurrencyOpt.sendKeys(currencyBaughtName + Keys.DOWN + Keys.ENTER);
 	}
 
 	// Find Baught Minimum amount field
-	
-	@FindBy(xpath="(//*[@type='number'])[3]")
+
+	@FindBy(xpath = "(//*[@type='number'])[3]")
 	private WebElement MinBought;
 
 	public void minimumBaughtAmount(String min_baught) {
-	MinBought.sendKeys(min_baught);
+		waitTimeForWebElementToAppear(MinBought);
+		MinBought.sendKeys(min_baught);
 	}
 
 	// Find Bought Maximum amount field
-	
-	@FindBy(xpath="(//*[@type='number'])[4]")
+
+	@FindBy(xpath = "(//*[@type='number'])[4]")
 	private WebElement MaxBought;
 
 	public void maximumBaughtAmount(String max_bought) {
-	MaxBought.sendKeys(max_bought);
+		waitTimeForWebElementToAppear(MaxBought);
+		MaxBought.sendKeys(max_bought);
 	}
 
 	// Find List of reference Number
 	@FindBy(xpath = "//div[@data-tag='allowRowEvents']//a")
 	private List<WebElement> References;
 
-	public void referencesNumberSelector(int ref) {
-	References.size();
-	if (ref >= 0 && ref < References.size()) {
+	public void referencesNumberSelector(int ref) throws InterruptedException {
+		Thread.sleep(5000);
+		References.size();
+		if (ref >= 0 && ref < References.size()) {
 			String referenceNumberText = References.get(ref).getText();
 			System.out.println("Selected Reference Number from Data List " + referenceNumberText);
 			Referencefilter_field.sendKeys(referenceNumberText);
@@ -279,9 +291,9 @@ public class searchPage extends abstractComponentsMethods {
 	private List<WebElement> ReferencesNumber;
 
 	// To fecth Data List's reference Numbers
-	public void referencesNumberDataList() {
-	waitTimeForWebElementListToAppear(ReferencesNumber);
-
+	public void referencesNumberDataList() throws InterruptedException {
+		waitTimeForWebElementListToAppear(ReferencesNumber);
+		Thread.sleep(5000);
 		ReferencesNumber.size();
 		for (int i = 0; i < ReferencesNumber.size(); i++) {
 			String referenceDataListText = ReferencesNumber.get(i).getText();
@@ -295,45 +307,44 @@ public class searchPage extends abstractComponentsMethods {
 	}
 
 	// Find Conversion Data from data List
-	
+
 	@FindBy(xpath = "//div[contains(@class,'rdt_TableRow')]")
 	private List<WebElement> DataList;
 
 	// Find No Data View action
-	
+
 	@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK']//div")
 	private WebElement NoDatatoDisplay;
 
 	// TO Fetch Dispalyed Data List
-	
-	public void DataList()  {
-	int dataSize = DataList.size();
 
-	if (dataSize>0)
-		{
-		for (int i = 0; i < dataSize; i++) {
-				if(i<DataList.size())
-				{
+	public void DataList() throws InterruptedException {
+		Thread.sleep(5000);
+		int dataSize = DataList.size();
 
-				//waitTimeForWebElementListToAppear(DataList);
-				System.out.println(DataList.get(i).getText());
+		if (dataSize > 0) {
+			for (int i = 0; i < dataSize; i++) {
+				if (i < DataList.size()) {
+
+					// waitTimeForWebElementListToAppear(DataList);
+					System.out.println(DataList.get(i).getText());
 				}
 			}
-		}
-		else
-		{
-			//waitTimeForWebElementToAppear(NoDatatoDisplay);
-			//System.out.println("There are no records to display " + NoDatatoDisplay.getText());
+		} else {
+			// waitTimeForWebElementToAppear(NoDatatoDisplay);
+			// System.out.println("There are no records to display " +
+			// NoDatatoDisplay.getText());
 			System.out.println("There are no records to display ");
 		}
 	}
 
 	// Find Refresh Table button element & perform action
-	
+
 	@FindBy(xpath = "(//i[@role='button'])[2]")
 	private WebElement RefreshTable;
 
 	public void refershTable() {
-	RefreshTable.click();
+		waitTimeForWebElementToAppear(RefreshTable);
+		RefreshTable.click();
 	}
 }

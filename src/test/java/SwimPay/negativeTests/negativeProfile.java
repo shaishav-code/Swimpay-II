@@ -71,7 +71,7 @@ public class negativeProfile extends baseClass {
 		ProfilePage.newPassword("123456789");
 		ProfilePage.confirmPassword("123456789");
 		ProfilePage.errorMsgDisplay();
-		LoginPage.Logout();
+		
 		// ProfilePage.ChangePasswordSubmit();
 	}
 

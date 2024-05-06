@@ -24,6 +24,7 @@ public class dashboardPage extends abstractComponentsMethods{
 	private WebElement ViewAccountOpt;
 	public void viewAccount()
 	{
+		waitTimeForWebElementToAppear(ViewAccountOpt);
 		ViewAccountOpt.click();
 
 	}
@@ -34,6 +35,7 @@ public class dashboardPage extends abstractComponentsMethods{
 	private WebElement AddRecipent_Payee_opt;
 	public void addRecipientPayee()
 	{
+		waitTimeForWebElementToAppear(AddRecipent_Payee_opt);
 	AddRecipent_Payee_opt.click();
 	}
 
@@ -43,6 +45,7 @@ public class dashboardPage extends abstractComponentsMethods{
 	private WebElement CreatePaymentOpt;
 	public void createPayment()
 	{
+		waitTimeForWebElementToAppear(CreatePaymentOpt);
 	CreatePaymentOpt.click();
 	}
 
@@ -52,6 +55,7 @@ public class dashboardPage extends abstractComponentsMethods{
 	private WebElement MakeConversionOpt;
 	public void makeConversion()
 	{
+		waitTimeForWebElementToAppear(MakeConversionOpt);
 		MakeConversionOpt.click();
 	}
 
@@ -67,7 +71,8 @@ public class dashboardPage extends abstractComponentsMethods{
 
 	// perform action to find To do Item Tab contains item according to requested tab name
 
-	public void requestedToDoItemContains(String requestedToDo) {
+	public void requestedToDoItemContains(String requestedToDo) throws InterruptedException {
+		Thread.sleep(15000);
 	ToDoTabsTitle.size();
 	for (int i = 0; i < ToDoTabsTitle.size(); i++) {
 	String ToDoTabTitle = ToDoTabsTitle.get(i).getText();
@@ -85,7 +90,8 @@ public class dashboardPage extends abstractComponentsMethods{
 		}
 	}
 
-	public void requestedToDoItemContainsClick(String requestedToDo) {
+	public void requestedToDoItemContainsClick(String requestedToDo) throws InterruptedException {
+		Thread.sleep(15000);
 		ToDoTabsTitle.size();
 		for (int i = 0; i < ToDoTabsTitle.size(); i++) {
 			String ToDoTabTitle = ToDoTabsTitle.get(i).getText();
@@ -116,7 +122,8 @@ public class dashboardPage extends abstractComponentsMethods{
 	@FindBy(xpath = "(//button[@data-role='none'])[2]")
 	private WebElement CurrencySlideButton;
 
-	public void currencyFixPanelClick(String currencyClick) {
+	public void currencyFixPanelClick(String currencyClick) throws InterruptedException {
+		Thread.sleep(15000);
 		boolean currencyFound = false;
 		CurrencyFixedPanel.size();
 		for (int i = 0; i < CurrencyFixedPanel.size(); i++) {

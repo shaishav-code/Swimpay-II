@@ -313,8 +313,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		LoginPage.pauseRun5();
 		}
 
 	    //Verify Search Payment By Date Type Filter
@@ -454,8 +453,7 @@ public class Search extends baseClass{
 		SearchPage.FilterSearch();
 		SearchPage.scrollAction();
 		SearchPage.DataList();
-		LoginPage.Logout_Click();
-		Thread.sleep(4000);
+		
 		}
 
 	    //=======SEARCH TRANSACTION SECTION TEST======

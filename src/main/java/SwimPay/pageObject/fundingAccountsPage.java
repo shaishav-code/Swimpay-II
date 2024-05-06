@@ -25,6 +25,7 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	private WebElement SearchBox;
 
 	public void searchBank(String bankName) {
+		waitTimeForWebElementToAppear(SearchBox);
 		SearchBox.sendKeys(bankName);
 	}
 
@@ -41,6 +42,7 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	private WebElement AddBankAccOpt;
 
 	public void addBankAccountBtn() {
+		waitTimeForWebElementToAppear(AddBankAccOpt);
 		AddBankAccOpt.click();
 	}
 
@@ -64,7 +66,8 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	private List<WebElement> AccountNames;
 
 	// click requested user from data list
-	public void accountNameClickFromDataList(String userName) {
+	public void accountNameClickFromDataList(String userName) throws InterruptedException {
+		waitTimeForWebElementListToAppear(AccountNames);
 		AccountNames.size();
 		for (WebElement userAccountName : AccountNames) {
 			String requestedUserName = userAccountName.getText();
@@ -79,7 +82,8 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	}
 
 	// perform click on pay button for requested user
-	public paymentPage clickPayOptforRequestedUser(String reqUser) {
+	public paymentPage clickPayOptforRequestedUser(String reqUser) throws InterruptedException {
+		Thread.sleep(15000);
 		for (int i = 0; i < FundingDataList.size(); i++) {
 			String requestedUser = AccountNames.get(i).getText();
 			if (requestedUser.equals(reqUser)) {
@@ -98,7 +102,8 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	}
 
 	// perform click on Delete button for requested user
-	public void clickDeleteOptforRequestedUser(String reqUserDelete) {
+	public void clickDeleteOptforRequestedUser(String reqUserDelete) throws InterruptedException {
+		waitTimeForWebElementListToAppear(FundingDataList);
 		for (int i = 0; i < FundingDataList.size(); i++) {
 			String requestedUser = AccountNames.get(i).getText();
 			if (requestedUser.equals(reqUserDelete)) {
@@ -115,7 +120,8 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	}
 
 	/// perform click on Edit button for requested user
-	public void clickEditOptforRequestedUser(String reqUserEdit) {
+	public void clickEditOptforRequestedUser(String reqUserEdit) throws InterruptedException {
+		waitTimeForWebElementListToAppear(FundingDataList);
 		for (int i = 0; i < FundingDataList.size(); i++) {
 			String requestedUser = AccountNames.get(i).getText();
 			if (requestedUser.equals(reqUserEdit)) {

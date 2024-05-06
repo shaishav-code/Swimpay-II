@@ -1,0 +1,1109 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1457856 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (arena.cpp:191), pid=64088, tid=46500
+#
+# JRE version: OpenJDK Runtime Environment Temurin-17.0.10+7 (17.0.10+7) (build 17.0.10+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.10+7 (17.0.10+7, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages org.testng.remote.RemoteTestNG -serport 51147 -protocol json -d C:\Users\pgargi\eclipse-workspace\SwimPay-Allan-main\SwimPay-Allan-main\test-output C:\Users\pgargi\eclipse-workspace\SwimPay-Allan-main\SwimPay-Allan-main\testng.xml
+
+Host: Intel(R) Core(TM) i3-3220 CPU @ 3.30GHz, 2 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Thu May  2 19:43:04 2024 India Standard Time elapsed time: 6313.998725 seconds (0d 1h 45m 13s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002120808ebc0):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=46500, stack(0x0000001617a00000,0x0000001617b00000)]
+
+
+Current CompileTask:
+C2:6313998 9252       4       io.github.bonigarcia.wdm.config.Config::<init> (1685 bytes)
+
+Stack: [0x0000001617a00000,0x0000001617b00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67d2c9]
+V  [jvm.dll+0x834afa]
+V  [jvm.dll+0x8365be]
+V  [jvm.dll+0x836c23]
+V  [jvm.dll+0x2477ff]
+V  [jvm.dll+0xac514]
+V  [jvm.dll+0xacb5c]
+V  [jvm.dll+0x2aed1f]
+V  [jvm.dll+0x584b67]
+V  [jvm.dll+0x2228a2]
+V  [jvm.dll+0x21b5cd]
+V  [jvm.dll+0x219201]
+V  [jvm.dll+0x1a502d]
+V  [jvm.dll+0x2290de]
+V  [jvm.dll+0x2272ac]
+V  [jvm.dll+0x7e9bb7]
+V  [jvm.dll+0x7e3fba]
+V  [jvm.dll+0x67c1b5]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000021209440eb0, length=359, elements={
+0x0000021265c5c270, 0x000002127fcaa2b0, 0x000002127fcabdd0, 0x000002120808c280,
+0x000002120808cb50, 0x000002120808d510, 0x000002120808ded0, 0x000002120808ebc0,
+0x00000212080fa8a0, 0x00000212080ff670, 0x00000212081ffb90, 0x000002120821e830,
+0x0000021208c2a6b0, 0x00000212085cbef0, 0x00000212085cc910, 0x00000212096bec80,
+0x00000212085cd330, 0x00000212096be770, 0x00000212085caab0, 0x00000212096bd330,
+0x00000212085cb9e0, 0x00000212096bfbb0, 0x00000212085cafc0, 0x0000021209315390,
+0x00000212093158a0, 0x0000021209318120, 0x0000021209319050, 0x000002120931a490,
+0x00000212093167d0, 0x0000021209315db0, 0x0000021209319f80, 0x0000021209319a70,
+0x0000021209318630, 0x000002120931bde0, 0x00000212093171f0, 0x000002120931a9a0,
+0x00000212096c00c0, 0x00000212096bf6a0, 0x00000212096bf190, 0x000002120931b8d0,
+0x0000021209319560, 0x00000212085cce20, 0x00000212092c39d0, 0x00000212092c6c70,
+0x00000212092c6250, 0x00000212092c7180, 0x00000212092c8fe0, 0x00000212092c7690,
+0x00000212092c94f0, 0x00000212092c4900, 0x00000212092c8ad0, 0x0000021209317700,
+0x00000212092c9a00, 0x00000212092c2590, 0x00000212092c5320, 0x0000021209314460,
+0x00000212092c4e10, 0x00000212085cd840, 0x00000212092c9f10, 0x00000212092c7ba0,
+0x00000212092c2aa0, 0x00000212092c6760, 0x00000212092c3ee0, 0x00000212096be260,
+0x0000021209c76470, 0x0000021209c787e0, 0x0000021209c77dc0, 0x0000021209c773a0,
+0x0000021209c778b0, 0x0000021209c79200, 0x0000021209c78cf0, 0x0000021209c731d0,
+0x0000021209c74610, 0x0000021209c76980, 0x0000021209c736e0, 0x0000021209c722a0,
+0x0000021209c75540, 0x0000021209c75f60, 0x0000021209c727b0, 0x0000021209c75030,
+0x0000021209c74b20, 0x0000021209c71d90, 0x0000021209c72cc0, 0x00000212092c85c0,
+0x00000212096bd840, 0x0000021209317c10, 0x00000212092db9a0, 0x00000212092daa70,
+0x00000212092dbeb0, 0x00000212092da560, 0x0000021209c782d0, 0x0000021209c73bf0,
+0x0000021209c76e90, 0x00000212092dcde0, 0x00000212092c43f0, 0x00000212096c05d0,
+0x00000212096bce20, 0x0000021209318b40, 0x0000021209f79c70, 0x0000021209f7bad0,
+0x0000021209f7a690, 0x0000021209f7b5c0, 0x00000212081add00, 0x00000212081af650,
+0x00000212081aa550, 0x00000212081afb60, 0x00000212081ab480, 0x00000212081aa040,
+0x00000212081b0580, 0x00000212081ad7f0, 0x00000212081b19c0, 0x0000021209f78d40,
+0x00000212099ab260, 0x00000212099aea10, 0x00000212099ac6a0, 0x00000212099aef20,
+0x00000212099adff0, 0x00000212099ac190, 0x00000212099ad0c0, 0x00000212099aa840,
+0x00000212099aa330, 0x0000021208b41cd0, 0x0000021208b3ea30, 0x0000021208b3e010,
+0x0000021208b40380, 0x0000021208b3f450, 0x0000021208b3c1b0, 0x0000021208b421e0,
+0x0000021208b3b280, 0x0000021209c75a50, 0x000002120ade8b90, 0x000002120ade9ac0,
+0x000002120ade3070, 0x000002120ade95b0, 0x000002120adea4e0, 0x000002120ade6d30,
+0x000002120ade3a90, 0x000002120ade53e0, 0x000002120ade8680, 0x00000212081b0070,
+0x00000212081ad2e0, 0x00000212081ae210, 0x00000212081aaa60, 0x00000212081aaf70,
+0x00000212081ab990, 0x00000212099adae0, 0x00000212099a7ab0, 0x00000212099a9400,
+0x00000212099acbb0, 0x00000212099a7fc0, 0x00000212099ae500, 0x0000021209f7a180,
+0x0000021209f7aba0, 0x0000021208b3d0e0, 0x0000021208b3fe70, 0x00000212092c5830,
+0x00000212092c80b0, 0x000002120ade90a0, 0x000002120ade7750, 0x000002120ade44b0,
+0x000002120ade6310, 0x000002120ade6820, 0x0000021208b3ef40, 0x0000021208b3e520,
+0x00000212099a8ef0, 0x00000212081abea0, 0x00000212081b0a90, 0x00000212081b14b0,
+0x00000212081af140, 0x000002120ade58f0, 0x000002120ade49c0, 0x000002120ade9fd0,
+0x000002120ade5e00, 0x0000021208b3c6c0, 0x0000021208b40da0, 0x0000021208b3b790,
+0x0000021208b3cbd0, 0x0000021208b426f0, 0x00000212099abc80, 0x00000212099aad50,
+0x00000212092dc8d0, 0x00000212092daf80, 0x00000212081acdd0, 0x000002120adea9f0,
+0x000002120ade7c60, 0x00000212099ab770, 0x0000021209f7b0b0, 0x0000021209f79760,
+0x0000021209f7bfe0, 0x0000021208b412b0, 0x00000212085cc400, 0x00000212085cdd50,
+0x00000212085ce260, 0x00000212085cb4d0, 0x00000212092dd2f0, 0x000002120931b3c0,
+0x000002120b00d2c0, 0x000002120b00aa40, 0x000002120b00f630, 0x000002120b010f80,
+0x000002120b00a020, 0x000002120b0119a0, 0x000002120b00c390, 0x000002120b00e700,
+0x000002120b00af50, 0x000002120b012de0, 0x000002120b00cdb0, 0x000002120b011490,
+0x000002120b00b460, 0x000002120b015150, 0x000002120b013d10, 0x000002120b015660,
+0x000002120b016590, 0x000002120b0179d0, 0x000002120b016aa0, 0x000002120b018e10,
+0x0000021208b417c0, 0x0000021208b40890, 0x0000021208b3f960, 0x0000021208b3db00,
+0x000002120b0123c0, 0x000002120b00d7d0, 0x000002120b00f120, 0x000002120b00c8a0,
+0x000002120b010050, 0x000002120b013800, 0x000002120b014220, 0x000002120b014730,
+0x000002120b017ee0, 0x00000212099af430, 0x00000212099a9910, 0x00000212081ae720,
+0x00000212081b0fa0, 0x000002120ade8170, 0x0000021209314970, 0x000002120b00ec10,
+0x000002120b015b70, 0x000002120b00e1f0, 0x000002120b00fb40, 0x000002120b00a530,
+0x000002120b0174c0, 0x000002120b0128d0, 0x000002120b014c40, 0x000002120b0132f0,
+0x000002120b00dce0, 0x00000212099a84d0, 0x000002120ade7240, 0x00000212081aec30,
+0x00000212081ac3b0, 0x00000212092dd800, 0x000002120b016fb0, 0x0000021209c71880,
+0x00000212099ad5d0, 0x000002120b0214a0, 0x000002120b020570, 0x000002120b01cdc0,
+0x000002120b01b470, 0x000002120b01e200, 0x000002120b01d7e0, 0x000002120b01fb50,
+0x000002120b020a80, 0x000002120b0219b0, 0x000002120b01e710, 0x0000021209c50d40,
+0x0000021209c4d590, 0x0000021209c4f900, 0x0000021209c4cb70, 0x0000021209c4fe10,
+0x0000021209c4daa0, 0x0000021209c49de0, 0x0000021209c4eee0, 0x0000021209c4b730,
+0x0000021209c4a2f0, 0x0000021209c590e0, 0x0000021209c52690, 0x0000021209c56860,
+0x0000021209c56d70, 0x0000021209c53ad0, 0x0000021209c4c660, 0x0000021209c544f0,
+0x0000021209c54a00, 0x0000021209c57ca0, 0x000002120b0183f0, 0x000002120b019830,
+0x000002120ade4ed0, 0x0000021208b3d5f0, 0x000002120b01d2d0, 0x0000021209f7c4f0,
+0x00000212099a89e0, 0x00000212099a9e20, 0x00000212092da050, 0x000002120b01f130,
+0x000002120b01af60, 0x000002120b018900, 0x000002120b019320, 0x0000021209e8c9b0,
+0x0000021209e8e300, 0x0000021209e8ba80, 0x0000021209e8f740, 0x0000021209e8bf90,
+0x0000021209e90b80, 0x0000021209e89710, 0x0000021209e8cec0, 0x0000021209e94330,
+0x0000021209e8e810, 0x0000021209e91ab0, 0x0000021209e929e0, 0x0000021209e924d0,
+0x0000021209e8ddf0, 0x0000021209e8a130, 0x0000021209e8a640, 0x0000021209e94840,
+0x0000021209e96bb0, 0x0000021209c4d080, 0x0000021209c4e4c0, 0x0000021209c4bc40,
+0x0000021209c50320, 0x0000021209c51760, 0x0000021209c52180, 0x0000021209c4dfb0,
+0x0000021209c4a800, 0x0000021209c50830, 0x0000021209c498d0, 0x0000021209c4c150,
+0x0000021209c51c70, 0x0000021209c4e9d0, 0x0000021209c4f3f0, 0x0000021209c4ad10,
+0x0000021209c4b220, 0x0000021209c51250, 0x0000021209c52ba0, 0x0000021209c53fe0,
+0x0000021209c54f10, 0x0000021209c581b0, 0x0000021209c55420, 0x0000021209c55e40,
+0x0000021209c55930, 0x0000021209c56350, 0x0000021209c57280, 0x0000021209c57790,
+0x0000021209c535c0, 0x0000021209e8b060, 0x0000021209e90160, 0x0000021209e8d8e0,
+0x0000021209e8c4a0, 0x0000021209e8ed20, 0x0000021209e88cf0, 0x0000021209e90670,
+0x0000021209e89200, 0x0000021209e8ab50, 0x0000021209e8d3d0, 0x0000021209e8b570,
+0x0000021209e8fc50, 0x0000021209e91090, 0x0000021209e8f230, 0x0000021209e89c20,
+0x0000021209e94d50, 0x0000021209e97ae0, 0x0000021209e915a0
+}
+
+Java Threads: ( => current thread )
+  0x0000021265c5c270 JavaThread "Forwarding newSession on session null to remote" [_thread_blocked, id=99040, stack(0x0000001616d00000,0x0000001616e00000)]
+  0x000002127fcaa2b0 JavaThread "Reference Handler" daemon [_thread_blocked, id=119028, stack(0x0000001617400000,0x0000001617500000)]
+  0x000002127fcabdd0 JavaThread "Finalizer" daemon [_thread_blocked, id=68724, stack(0x0000001617500000,0x0000001617600000)]
+  0x000002120808c280 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=119416, stack(0x0000001617600000,0x0000001617700000)]
+  0x000002120808cb50 JavaThread "Attach Listener" daemon [_thread_blocked, id=89140, stack(0x0000001617700000,0x0000001617800000)]
+  0x000002120808d510 JavaThread "Service Thread" daemon [_thread_blocked, id=89716, stack(0x0000001617800000,0x0000001617900000)]
+  0x000002120808ded0 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=72812, stack(0x0000001617900000,0x0000001617a00000)]
+=>0x000002120808ebc0 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=46500, stack(0x0000001617a00000,0x0000001617b00000)]
+  0x00000212080fa8a0 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=95036, stack(0x0000001617b00000,0x0000001617c00000)]
+  0x00000212080ff670 JavaThread "Sweeper thread" daemon [_thread_blocked, id=47312, stack(0x0000001617c00000,0x0000001617d00000)]
+  0x00000212081ffb90 JavaThread "Notification Thread" daemon [_thread_blocked, id=59208, stack(0x0000001617d00000,0x0000001617e00000)]
+  0x000002120821e830 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=115660, stack(0x0000001617f00000,0x0000001618000000)]
+  0x0000021208c2a6b0 JavaThread "ReaderThread" [_thread_in_native, id=89460, stack(0x0000001618100000,0x0000001618200000)]
+  0x00000212085cbef0 JavaThread "HttpClient-2-SelectorManager" daemon [_thread_in_native, id=49096, stack(0x0000001618e00000,0x0000001618f00000)]
+  0x00000212085cc910 JavaThread "HttpClient-4-SelectorManager" daemon [_thread_in_native, id=94972, stack(0x0000001619100000,0x0000001619200000)]
+  0x00000212096bec80 JavaThread "HttpClient-8-SelectorManager" daemon [_thread_in_native, id=5416, stack(0x0000001619300000,0x0000001619400000)]
+  0x00000212085cd330 JavaThread "HttpClient-10-SelectorManager" daemon [_thread_in_native, id=45928, stack(0x0000001619000000,0x0000001619100000)]
+  0x00000212096be770 JavaThread "HttpClient-12-SelectorManager" daemon [_thread_in_native, id=72372, stack(0x0000001618d00000,0x0000001618e00000)]
+  0x00000212085caab0 JavaThread "HttpClient-14-SelectorManager" daemon [_thread_in_native, id=8924, stack(0x0000001619500000,0x0000001619600000)]
+  0x00000212096bd330 JavaThread "HttpClient-16-SelectorManager" daemon [_thread_in_native, id=40984, stack(0x0000001618c00000,0x0000001618d00000)]
+  0x00000212085cb9e0 JavaThread "HttpClient-18-SelectorManager" daemon [_thread_in_native, id=82104, stack(0x0000001619400000,0x0000001619500000)]
+  0x00000212096bfbb0 JavaThread "HttpClient-20-SelectorManager" daemon [_thread_in_native, id=92132, stack(0x0000001619800000,0x0000001619900000)]
+  0x00000212085cafc0 JavaThread "HttpClient-22-SelectorManager" daemon [_thread_in_native, id=36796, stack(0x0000001619200000,0x0000001619300000)]
+  0x0000021209315390 JavaThread "HttpClient-24-SelectorManager" daemon [_thread_in_native, id=41064, stack(0x0000001618f00000,0x0000001619000000)]
+  0x00000212093158a0 JavaThread "HttpClient-26-SelectorManager" daemon [_thread_in_native, id=54196, stack(0x0000001618b00000,0x0000001618c00000)]
+  0x0000021209318120 JavaThread "HttpClient-28-SelectorManager" daemon [_thread_in_native, id=114604, stack(0x0000001619b00000,0x0000001619c00000)]
+  0x0000021209319050 JavaThread "HttpClient-30-SelectorManager" daemon [_thread_in_native, id=102704, stack(0x0000001619d00000,0x0000001619e00000)]
+  0x000002120931a490 JavaThread "HttpClient-32-SelectorManager" daemon [_thread_in_native, id=47576, stack(0x0000001619f00000,0x000000161a000000)]
+  0x00000212093167d0 JavaThread "HttpClient-34-SelectorManager" daemon [_thread_in_native, id=43348, stack(0x0000001619a00000,0x0000001619b00000)]
+  0x0000021209315db0 JavaThread "HttpClient-36-SelectorManager" daemon [_thread_in_native, id=29776, stack(0x0000001619e00000,0x0000001619f00000)]
+  0x0000021209319f80 JavaThread "HttpClient-40-SelectorManager" daemon [_thread_in_native, id=117216, stack(0x0000001619c00000,0x0000001619d00000)]
+  0x0000021209319a70 JavaThread "HttpClient-42-SelectorManager" daemon [_thread_in_native, id=55364, stack(0x000000161a100000,0x000000161a200000)]
+  0x0000021209318630 JavaThread "HttpClient-52-SelectorManager" daemon [_thread_in_native, id=105300, stack(0x000000161a000000,0x000000161a100000)]
+  0x000002120931bde0 JavaThread "HttpClient-58-SelectorManager" daemon [_thread_in_native, id=19404, stack(0x000000161a200000,0x000000161a300000)]
+  0x00000212093171f0 JavaThread "HttpClient-60-SelectorManager" daemon [_thread_in_native, id=32036, stack(0x0000001619900000,0x0000001619a00000)]
+  0x000002120931a9a0 JavaThread "HttpClient-64-SelectorManager" daemon [_thread_in_native, id=53568, stack(0x000000161a400000,0x000000161a500000)]
+  0x00000212096c00c0 JavaThread "HttpClient-66-SelectorManager" daemon [_thread_in_native, id=90264, stack(0x000000161a600000,0x000000161a700000)]
+  0x00000212096bf6a0 JavaThread "HttpClient-68-SelectorManager" daemon [_thread_in_native, id=111832, stack(0x000000161a800000,0x000000161a900000)]
+  0x00000212096bf190 JavaThread "HttpClient-70-SelectorManager" daemon [_thread_in_native, id=118800, stack(0x000000161a300000,0x000000161a400000)]
+  0x000002120931b8d0 JavaThread "HttpClient-72-SelectorManager" daemon [_thread_in_native, id=110532, stack(0x000000161a700000,0x000000161a800000)]
+  0x0000021209319560 JavaThread "HttpClient-74-SelectorManager" daemon [_thread_in_native, id=44336, stack(0x000000161aa00000,0x000000161ab00000)]
+  0x00000212085cce20 JavaThread "HttpClient-80-SelectorManager" daemon [_thread_in_native, id=19024, stack(0x000000161a900000,0x000000161aa00000)]
+  0x00000212092c39d0 JavaThread "HttpClient-84-SelectorManager" daemon [_thread_in_native, id=111924, stack(0x000000161af00000,0x000000161b000000)]
+  0x00000212092c6c70 JavaThread "HttpClient-88-SelectorManager" daemon [_thread_in_native, id=59792, stack(0x000000161ae00000,0x000000161af00000)]
+  0x00000212092c6250 JavaThread "HttpClient-90-SelectorManager" daemon [_thread_in_native, id=40936, stack(0x000000161a500000,0x000000161a600000)]
+  0x00000212092c7180 JavaThread "HttpClient-96-SelectorManager" daemon [_thread_in_native, id=89992, stack(0x0000001619600000,0x0000001619700000)]
+  0x00000212092c8fe0 JavaThread "HttpClient-98-SelectorManager" daemon [_thread_in_native, id=74092, stack(0x000000161ab00000,0x000000161ac00000)]
+  0x00000212092c7690 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=101444, stack(0x0000001618600000,0x0000001618700000)]
+  0x00000212092c94f0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=107288, stack(0x0000001618700000,0x0000001618800000)]
+  0x00000212092c4900 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=70828, stack(0x0000001618900000,0x0000001618a00000)]
+  0x00000212092c8ad0 JavaThread "HttpClient-100-SelectorManager" daemon [_thread_in_native, id=55948, stack(0x000000161b300000,0x000000161b400000)]
+  0x0000021209317700 JavaThread "HttpClient-102-SelectorManager" daemon [_thread_in_native, id=81732, stack(0x000000161bd00000,0x000000161be00000)]
+  0x00000212092c9a00 JavaThread "HttpClient-106-SelectorManager" daemon [_thread_in_native, id=64464, stack(0x000000161ba00000,0x000000161bb00000)]
+  0x00000212092c2590 JavaThread "HttpClient-112-SelectorManager" daemon [_thread_in_native, id=105308, stack(0x000000161b400000,0x000000161b500000)]
+  0x00000212092c5320 JavaThread "HttpClient-116-SelectorManager" daemon [_thread_in_native, id=80196, stack(0x000000161b500000,0x000000161b600000)]
+  0x0000021209314460 JavaThread "HttpClient-118-SelectorManager" daemon [_thread_in_native, id=118028, stack(0x000000161b700000,0x000000161b800000)]
+  0x00000212092c4e10 JavaThread "HttpClient-124-SelectorManager" daemon [_thread_in_native, id=93040, stack(0x000000161b800000,0x000000161b900000)]
+  0x00000212085cd840 JavaThread "HttpClient-128-SelectorManager" daemon [_thread_in_native, id=102280, stack(0x000000161b900000,0x000000161ba00000)]
+  0x00000212092c9f10 JavaThread "HttpClient-132-SelectorManager" daemon [_thread_in_native, id=54796, stack(0x000000161bc00000,0x000000161bd00000)]
+  0x00000212092c7ba0 JavaThread "HttpClient-142-SelectorManager" daemon [_thread_in_native, id=75840, stack(0x000000161be00000,0x000000161bf00000)]
+  0x00000212092c2aa0 JavaThread "HttpClient-148-SelectorManager" daemon [_thread_in_native, id=53356, stack(0x000000161b000000,0x000000161b100000)]
+  0x00000212092c6760 JavaThread "HttpClient-150-SelectorManager" daemon [_thread_in_native, id=77052, stack(0x000000161b600000,0x000000161b700000)]
+  0x00000212092c3ee0 JavaThread "HttpClient-154-SelectorManager" daemon [_thread_in_native, id=62832, stack(0x000000161bf00000,0x000000161c000000)]
+  0x00000212096be260 JavaThread "HttpClient-156-SelectorManager" daemon [_thread_in_native, id=112500, stack(0x000000161bb00000,0x000000161bc00000)]
+  0x0000021209c76470 JavaThread "HttpClient-162-SelectorManager" daemon [_thread_in_native, id=37968, stack(0x000000161c500000,0x000000161c600000)]
+  0x0000021209c787e0 JavaThread "HttpClient-164-SelectorManager" daemon [_thread_in_native, id=104788, stack(0x000000161c200000,0x000000161c300000)]
+  0x0000021209c77dc0 JavaThread "HttpClient-172-SelectorManager" daemon [_thread_in_native, id=97916, stack(0x0000001618400000,0x0000001618500000)]
+  0x0000021209c773a0 JavaThread "HttpClient-176-SelectorManager" daemon [_thread_in_native, id=104156, stack(0x000000161c600000,0x000000161c700000)]
+  0x0000021209c778b0 JavaThread "HttpClient-178-SelectorManager" daemon [_thread_in_native, id=59756, stack(0x000000161c800000,0x000000161c900000)]
+  0x0000021209c79200 JavaThread "HttpClient-180-SelectorManager" daemon [_thread_in_native, id=112956, stack(0x000000161c900000,0x000000161ca00000)]
+  0x0000021209c78cf0 JavaThread "HttpClient-182-SelectorManager" daemon [_thread_in_native, id=108996, stack(0x000000161c000000,0x000000161c100000)]
+  0x0000021209c731d0 JavaThread "HttpClient-184-SelectorManager" daemon [_thread_in_native, id=118316, stack(0x000000161c400000,0x000000161c500000)]
+  0x0000021209c74610 JavaThread "HttpClient-186-SelectorManager" daemon [_thread_in_native, id=90832, stack(0x000000161ca00000,0x000000161cb00000)]
+  0x0000021209c76980 JavaThread "HttpClient-188-SelectorManager" daemon [_thread_in_native, id=39140, stack(0x000000161c700000,0x000000161c800000)]
+  0x0000021209c736e0 JavaThread "HttpClient-190-SelectorManager" daemon [_thread_in_native, id=120336, stack(0x000000161cd00000,0x000000161ce00000)]
+  0x0000021209c722a0 JavaThread "HttpClient-194-SelectorManager" daemon [_thread_in_native, id=65408, stack(0x000000161d000000,0x000000161d100000)]
+  0x0000021209c75540 JavaThread "HttpClient-196-SelectorManager" daemon [_thread_in_native, id=117232, stack(0x000000161c300000,0x000000161c400000)]
+  0x0000021209c75f60 JavaThread "HttpClient-200-SelectorManager" daemon [_thread_in_native, id=100336, stack(0x000000161d100000,0x000000161d200000)]
+  0x0000021209c727b0 JavaThread "HttpClient-210-SelectorManager" daemon [_thread_in_native, id=98988, stack(0x0000001616c00000,0x0000001616d00000)]
+  0x0000021209c75030 JavaThread "HttpClient-212-SelectorManager" daemon [_thread_in_native, id=53040, stack(0x000000161cf00000,0x000000161d000000)]
+  0x0000021209c74b20 JavaThread "HttpClient-218-SelectorManager" daemon [_thread_in_native, id=115596, stack(0x000000161d400000,0x000000161d500000)]
+  0x0000021209c71d90 JavaThread "HttpClient-220-SelectorManager" daemon [_thread_in_native, id=113316, stack(0x000000161cc00000,0x000000161cd00000)]
+  0x0000021209c72cc0 JavaThread "HttpClient-230-SelectorManager" daemon [_thread_in_native, id=92152, stack(0x000000161c100000,0x000000161c200000)]
+  0x00000212092c85c0 JavaThread "HttpClient-240-SelectorManager" daemon [_thread_in_native, id=24952, stack(0x000000161d200000,0x000000161d300000)]
+  0x00000212096bd840 JavaThread "HttpClient-242-SelectorManager" daemon [_thread_in_native, id=109560, stack(0x000000161d600000,0x000000161d700000)]
+  0x0000021209317c10 JavaThread "HttpClient-246-SelectorManager" daemon [_thread_in_native, id=119712, stack(0x000000161cb00000,0x000000161cc00000)]
+  0x00000212092db9a0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=114324, stack(0x000000161ac00000,0x000000161ad00000)]
+  0x00000212092daa70 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=72880, stack(0x000000161ad00000,0x000000161ae00000)]
+  0x00000212092dbeb0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=69276, stack(0x000000161b200000,0x000000161b300000)]
+  0x00000212092da560 JavaThread "HttpClient-256-SelectorManager" daemon [_thread_in_native, id=119660, stack(0x000000161d900000,0x000000161da00000)]
+  0x0000021209c782d0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=67544, stack(0x0000001618500000,0x0000001618600000)]
+  0x0000021209c73bf0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=119304, stack(0x0000001618800000,0x0000001618900000)]
+  0x0000021209c76e90 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=84052, stack(0x0000001618a00000,0x0000001618b00000)]
+  0x00000212092dcde0 JavaThread "HttpClient-258-SelectorManager" daemon [_thread_in_native, id=102120, stack(0x000000161db00000,0x000000161dc00000)]
+  0x00000212092c43f0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=70040, stack(0x000000161e200000,0x000000161e300000)]
+  0x00000212096c05d0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=31516, stack(0x000000161e300000,0x000000161e400000)]
+  0x00000212096bce20 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=103728, stack(0x000000161e400000,0x000000161e500000)]
+  0x0000021209318b40 JavaThread "HttpClient-260-SelectorManager" daemon [_thread_in_native, id=44864, stack(0x000000161ce00000,0x000000161cf00000)]
+  0x0000021209f79c70 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=56872, stack(0x000000161eb00000,0x000000161ec00000)]
+  0x0000021209f7bad0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=102660, stack(0x000000161ec00000,0x000000161ed00000)]
+  0x0000021209f7a690 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=105364, stack(0x000000161ed00000,0x000000161ee00000)]
+  0x0000021209f7b5c0 JavaThread "HttpClient-262-SelectorManager" daemon [_thread_in_native, id=101732, stack(0x000000161f200000,0x000000161f300000)]
+  0x00000212081add00 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=103600, stack(0x000000161f600000,0x000000161f700000)]
+  0x00000212081af650 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=50524, stack(0x000000161f700000,0x000000161f800000)]
+  0x00000212081aa550 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=84064, stack(0x000000161f800000,0x000000161f900000)]
+  0x00000212081afb60 JavaThread "HttpClient-264-SelectorManager" daemon [_thread_in_native, id=105260, stack(0x000000161fd00000,0x000000161fe00000)]
+  0x00000212081ab480 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=106564, stack(0x0000001620000000,0x0000001620100000)]
+  0x00000212081aa040 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=51384, stack(0x0000001620200000,0x0000001620300000)]
+  0x00000212081b0580 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=40088, stack(0x0000001620300000,0x0000001620400000)]
+  0x00000212081ad7f0 JavaThread "HttpClient-266-SelectorManager" daemon [_thread_in_native, id=14916, stack(0x0000001620800000,0x0000001620900000)]
+  0x00000212081b19c0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=71556, stack(0x0000001620c00000,0x0000001620d00000)]
+  0x0000021209f78d40 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=65740, stack(0x0000001620d00000,0x0000001620e00000)]
+  0x00000212099ab260 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=118860, stack(0x0000001620e00000,0x0000001620f00000)]
+  0x00000212099aea10 JavaThread "HttpClient-268-SelectorManager" daemon [_thread_in_native, id=87712, stack(0x0000001621300000,0x0000001621400000)]
+  0x00000212099ac6a0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=83324, stack(0x0000001621700000,0x0000001621800000)]
+  0x00000212099aef20 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=63504, stack(0x0000001621800000,0x0000001621900000)]
+  0x00000212099adff0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=95752, stack(0x0000001621900000,0x0000001621a00000)]
+  0x00000212099ac190 JavaThread "HttpClient-270-SelectorManager" daemon [_thread_in_native, id=79668, stack(0x0000001621d00000,0x0000001621e00000)]
+  0x00000212099ad0c0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=93960, stack(0x0000001622300000,0x0000001622400000)]
+  0x00000212099aa840 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=112572, stack(0x0000001622400000,0x0000001622500000)]
+  0x00000212099aa330 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=64392, stack(0x0000001622500000,0x0000001622600000)]
+  0x0000021208b41cd0 JavaThread "HttpClient-272-SelectorManager" daemon [_thread_in_native, id=100620, stack(0x0000001622900000,0x0000001622a00000)]
+  0x0000021208b3ea30 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=82912, stack(0x0000001622d00000,0x0000001622e00000)]
+  0x0000021208b3e010 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=51836, stack(0x0000001622e00000,0x0000001622f00000)]
+  0x0000021208b40380 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=82752, stack(0x0000001622f00000,0x0000001623000000)]
+  0x0000021208b3f450 JavaThread "HttpClient-274-SelectorManager" daemon [_thread_in_native, id=73064, stack(0x0000001623300000,0x0000001623400000)]
+  0x0000021208b3c1b0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=98976, stack(0x0000001623700000,0x0000001623800000)]
+  0x0000021208b421e0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=54576, stack(0x0000001623900000,0x0000001623a00000)]
+  0x0000021208b3b280 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=44932, stack(0x0000001623a00000,0x0000001623b00000)]
+  0x0000021209c75a50 JavaThread "HttpClient-276-SelectorManager" daemon [_thread_in_native, id=83444, stack(0x000000161de00000,0x000000161df00000)]
+  0x000002120ade8b90 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=91364, stack(0x000000161d700000,0x000000161d800000)]
+  0x000002120ade9ac0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=29348, stack(0x000000161dc00000,0x000000161dd00000)]
+  0x000002120ade3070 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=68176, stack(0x000000161dd00000,0x000000161de00000)]
+  0x000002120ade95b0 JavaThread "HttpClient-278-SelectorManager" daemon [_thread_in_native, id=117420, stack(0x000000161d800000,0x000000161d900000)]
+  0x000002120adea4e0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=53672, stack(0x000000161e700000,0x000000161e800000)]
+  0x000002120ade6d30 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=112852, stack(0x000000161e800000,0x000000161e900000)]
+  0x000002120ade3a90 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=18044, stack(0x000000161e900000,0x000000161ea00000)]
+  0x000002120ade53e0 JavaThread "HttpClient-280-SelectorManager" daemon [_thread_in_native, id=37288, stack(0x000000161f100000,0x000000161f200000)]
+  0x000002120ade8680 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=75460, stack(0x000000161f500000,0x000000161f600000)]
+  0x00000212081b0070 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=112772, stack(0x000000161fa00000,0x000000161fb00000)]
+  0x00000212081ad2e0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=78416, stack(0x000000161fb00000,0x000000161fc00000)]
+  0x00000212081ae210 JavaThread "HttpClient-282-SelectorManager" daemon [_thread_in_native, id=101216, stack(0x0000001620400000,0x0000001620500000)]
+  0x00000212081aaa60 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=108672, stack(0x0000001620600000,0x0000001620700000)]
+  0x00000212081aaf70 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=113628, stack(0x0000001620700000,0x0000001620800000)]
+  0x00000212081ab990 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=6608, stack(0x0000001620b00000,0x0000001620c00000)]
+  0x00000212099adae0 JavaThread "HttpClient-284-SelectorManager" daemon [_thread_in_native, id=85752, stack(0x0000001621400000,0x0000001621500000)]
+  0x00000212099a7ab0 JavaThread "HttpClient-285-SelectorManager" daemon [_thread_in_native, id=34672, stack(0x0000001621b00000,0x0000001621c00000)]
+  0x00000212099a9400 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=31192, stack(0x0000001621e00000,0x0000001621f00000)]
+  0x00000212099acbb0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=47684, stack(0x0000001621f00000,0x0000001622000000)]
+  0x00000212099a7fc0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=73940, stack(0x0000001622000000,0x0000001622100000)]
+  0x00000212099ae500 JavaThread "HttpClient-286-SelectorManager" daemon [_thread_in_native, id=57244, stack(0x0000001622200000,0x0000001622300000)]
+  0x0000021209f7a180 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=116032, stack(0x0000001622600000,0x0000001622700000)]
+  0x0000021209f7aba0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=69472, stack(0x0000001622700000,0x0000001622800000)]
+  0x0000021208b3d0e0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=56644, stack(0x0000001622800000,0x0000001622900000)]
+  0x0000021208b3fe70 JavaThread "HttpClient-288-SelectorManager" daemon [_thread_in_native, id=93508, stack(0x0000001624600000,0x0000001624700000)]
+  0x00000212092c5830 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=113016, stack(0x000000161b100000,0x000000161b200000)]
+  0x00000212092c80b0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=46700, stack(0x000000161d300000,0x000000161d400000)]
+  0x000002120ade90a0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=105948, stack(0x000000161da00000,0x000000161db00000)]
+  0x000002120ade7750 JavaThread "HttpClient-290-SelectorManager" daemon [_thread_in_native, id=45576, stack(0x000000161f000000,0x000000161f100000)]
+  0x000002120ade44b0 JavaThread "HttpClient-291-SelectorManager" daemon [_thread_in_native, id=91592, stack(0x000000161f900000,0x000000161fa00000)]
+  0x000002120ade6310 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=84344, stack(0x000000161fe00000,0x000000161ff00000)]
+  0x000002120ade6820 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=107248, stack(0x000000161ff00000,0x0000001620000000)]
+  0x0000021208b3ef40 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=83160, stack(0x0000001620100000,0x0000001620200000)]
+  0x0000021208b3e520 JavaThread "HttpClient-292-SelectorManager" daemon [_thread_in_native, id=93520, stack(0x0000001621200000,0x0000001621300000)]
+  0x00000212099a8ef0 JavaThread "HttpClient-294-SelectorManager" daemon [_thread_in_native, id=59916, stack(0x0000001623500000,0x0000001623600000)]
+  0x00000212081abea0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=98120, stack(0x000000161d500000,0x000000161d600000)]
+  0x00000212081b0a90 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=74112, stack(0x000000161e100000,0x000000161e200000)]
+  0x00000212081b14b0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=119568, stack(0x000000161ea00000,0x000000161eb00000)]
+  0x00000212081af140 JavaThread "HttpClient-298-SelectorManager" daemon [_thread_in_native, id=107176, stack(0x0000001621a00000,0x0000001621b00000)]
+  0x000002120ade58f0 JavaThread "HttpClient-299-SelectorManager" daemon [_thread_in_native, id=71484, stack(0x000000161df00000,0x000000161e000000)]
+  0x000002120ade49c0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=89104, stack(0x000000161e000000,0x000000161e100000)]
+  0x000002120ade9fd0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=75036, stack(0x000000161e500000,0x000000161e600000)]
+  0x000002120ade5e00 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=51508, stack(0x000000161e600000,0x000000161e700000)]
+  0x0000021208b3c6c0 JavaThread "HttpClient-300-SelectorManager" daemon [_thread_in_native, id=78072, stack(0x0000001621500000,0x0000001621600000)]
+  0x0000021208b40da0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=79480, stack(0x0000001622b00000,0x0000001622c00000)]
+  0x0000021208b3b790 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=52900, stack(0x0000001622c00000,0x0000001622d00000)]
+  0x0000021208b3cbd0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=50632, stack(0x0000001623000000,0x0000001623100000)]
+  0x0000021208b426f0 JavaThread "HttpClient-302-SelectorManager" daemon [_thread_in_native, id=51060, stack(0x0000001623400000,0x0000001623500000)]
+  0x00000212099abc80 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=91720, stack(0x000000161f300000,0x000000161f400000)]
+  0x00000212099aad50 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=82144, stack(0x000000161f400000,0x000000161f500000)]
+  0x00000212092dc8d0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=98596, stack(0x000000161fc00000,0x000000161fd00000)]
+  0x00000212092daf80 JavaThread "HttpClient-304-SelectorManager" daemon [_thread_in_native, id=80696, stack(0x0000001620a00000,0x0000001620b00000)]
+  0x00000212081acdd0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=101156, stack(0x0000001620f00000,0x0000001621000000)]
+  0x000002120adea9f0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=109364, stack(0x0000001624100000,0x0000001624200000)]
+  0x000002120ade7c60 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=53900, stack(0x0000001624200000,0x0000001624300000)]
+  0x00000212099ab770 JavaThread "HttpClient-306-SelectorManager" daemon [_thread_in_native, id=66216, stack(0x0000001616b00000,0x0000001616c00000)]
+  0x0000021209f7b0b0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=89360, stack(0x0000001623200000,0x0000001623300000)]
+  0x0000021209f79760 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=109920, stack(0x0000001623600000,0x0000001623700000)]
+  0x0000021209f7bfe0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=115208, stack(0x0000001623800000,0x0000001623900000)]
+  0x0000021208b412b0 JavaThread "HttpClient-308-SelectorManager" daemon [_thread_in_native, id=111824, stack(0x0000001624900000,0x0000001624a00000)]
+  0x00000212085cc400 JavaThread "HttpClient-309-SelectorManager" daemon [_thread_in_native, id=34144, stack(0x0000001623b00000,0x0000001623c00000)]
+  0x00000212085cdd50 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=75200, stack(0x0000001624d00000,0x0000001624e00000)]
+  0x00000212085ce260 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=75280, stack(0x0000001624e00000,0x0000001624f00000)]
+  0x00000212085cb4d0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=56604, stack(0x0000001624f00000,0x0000001625000000)]
+  0x00000212092dd2f0 JavaThread "HttpClient-310-SelectorManager" daemon [_thread_in_native, id=104956, stack(0x0000001625500000,0x0000001625600000)]
+  0x000002120931b3c0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=116444, stack(0x0000001625800000,0x0000001625900000)]
+  0x000002120b00d2c0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=63000, stack(0x0000001625900000,0x0000001625a00000)]
+  0x000002120b00aa40 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=104188, stack(0x0000001625a00000,0x0000001625b00000)]
+  0x000002120b00f630 JavaThread "HttpClient-312-SelectorManager" daemon [_thread_in_native, id=82212, stack(0x0000001626000000,0x0000001626100000)]
+  0x000002120b010f80 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=14276, stack(0x0000001621000000,0x0000001621100000)]
+  0x000002120b00a020 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=27316, stack(0x0000001621600000,0x0000001621700000)]
+  0x000002120b0119a0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=118080, stack(0x0000001621c00000,0x0000001621d00000)]
+  0x000002120b00c390 JavaThread "HttpClient-314-SelectorManager" daemon [_thread_in_native, id=102948, stack(0x0000001623c00000,0x0000001623d00000)]
+  0x000002120b00e700 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=19764, stack(0x0000001624400000,0x0000001624500000)]
+  0x000002120b00af50 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=86620, stack(0x0000001624500000,0x0000001624600000)]
+  0x000002120b012de0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=87864, stack(0x0000001624700000,0x0000001624800000)]
+  0x000002120b00cdb0 JavaThread "HttpClient-316-SelectorManager" daemon [_thread_in_native, id=107672, stack(0x0000001622100000,0x0000001622200000)]
+  0x000002120b011490 JavaThread "HttpClient-317-SelectorManager" daemon [_thread_in_native, id=39544, stack(0x0000001625300000,0x0000001625400000)]
+  0x000002120b00b460 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=97888, stack(0x0000001625400000,0x0000001625500000)]
+  0x000002120b015150 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=61388, stack(0x0000001625600000,0x0000001625700000)]
+  0x000002120b013d10 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=102804, stack(0x0000001625700000,0x0000001625800000)]
+  0x000002120b015660 JavaThread "HttpClient-318-SelectorManager" daemon [_thread_in_native, id=62688, stack(0x0000001626200000,0x0000001626300000)]
+  0x000002120b016590 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=75768, stack(0x0000001626700000,0x0000001626800000)]
+  0x000002120b0179d0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=95984, stack(0x0000001626800000,0x0000001626900000)]
+  0x000002120b016aa0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=32264, stack(0x0000001626900000,0x0000001626a00000)]
+  0x000002120b018e10 JavaThread "HttpClient-320-SelectorManager" daemon [_thread_in_native, id=63188, stack(0x0000001626f00000,0x0000001627000000)]
+  0x0000021208b417c0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=56256, stack(0x0000001621100000,0x0000001621200000)]
+  0x0000021208b40890 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=49448, stack(0x0000001622a00000,0x0000001622b00000)]
+  0x0000021208b3f960 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=115624, stack(0x0000001623100000,0x0000001623200000)]
+  0x0000021208b3db00 JavaThread "UrlChecker-22" daemon [_thread_blocked, id=111120, stack(0x0000001623d00000,0x0000001623e00000)]
+  0x000002120b0123c0 JavaThread "HttpClient-322-SelectorManager" daemon [_thread_in_native, id=63096, stack(0x0000001624300000,0x0000001624400000)]
+  0x000002120b00d7d0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=39644, stack(0x0000001620500000,0x0000001620600000)]
+  0x000002120b00f120 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=85452, stack(0x0000001624c00000,0x0000001624d00000)]
+  0x000002120b00c8a0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=114840, stack(0x0000001625000000,0x0000001625100000)]
+  0x000002120b010050 JavaThread "HttpClient-324-SelectorManager" daemon [_thread_in_native, id=70076, stack(0x0000001625d00000,0x0000001625e00000)]
+  0x000002120b013800 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=105840, stack(0x0000001626100000,0x0000001626200000)]
+  0x000002120b014220 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=115104, stack(0x0000001626400000,0x0000001626500000)]
+  0x000002120b014730 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=42548, stack(0x0000001626500000,0x0000001626600000)]
+  0x000002120b017ee0 JavaThread "HttpClient-326-SelectorManager" daemon [_thread_in_native, id=79268, stack(0x0000001627300000,0x0000001627400000)]
+  0x00000212099af430 JavaThread "HttpClient-327-SelectorManager" daemon [_thread_in_native, id=118580, stack(0x0000001627600000,0x0000001627700000)]
+  0x00000212099a9910 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=38304, stack(0x0000001627800000,0x0000001627900000)]
+  0x00000212081ae720 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=51516, stack(0x0000001627900000,0x0000001627a00000)]
+  0x00000212081b0fa0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=55488, stack(0x0000001627a00000,0x0000001627b00000)]
+  0x000002120ade8170 JavaThread "HttpClient-328-SelectorManager" daemon [_thread_in_native, id=105756, stack(0x0000001627e00000,0x0000001627f00000)]
+  0x0000021209314970 JavaThread "HttpClient-330-SelectorManager" daemon [_thread_in_native, id=116252, stack(0x0000001628a00000,0x0000001628b00000)]
+  0x000002120b00ec10 JavaThread "HttpClient-332-SelectorManager" daemon [_thread_in_native, id=75104, stack(0x000000161ef00000,0x000000161f000000)]
+  0x000002120b015b70 JavaThread "HttpClient-340-SelectorManager" daemon [_thread_in_native, id=73112, stack(0x0000001625b00000,0x0000001625c00000)]
+  0x000002120b00e1f0 JavaThread "HttpClient-347-SelectorManager" daemon [_thread_in_native, id=92288, stack(0x0000001620900000,0x0000001620a00000)]
+  0x000002120b00fb40 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=55968, stack(0x0000001623f00000,0x0000001624000000)]
+  0x000002120b00a530 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=35884, stack(0x0000001624800000,0x0000001624900000)]
+  0x000002120b0174c0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=111952, stack(0x0000001624a00000,0x0000001624b00000)]
+  0x000002120b0128d0 JavaThread "HttpClient-348-SelectorManager" daemon [_thread_in_native, id=56780, stack(0x0000001626300000,0x0000001626400000)]
+  0x000002120b014c40 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=91344, stack(0x000000161ee00000,0x000000161ef00000)]
+  0x000002120b0132f0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=62328, stack(0x0000001623e00000,0x0000001623f00000)]
+  0x000002120b00dce0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=14624, stack(0x0000001625100000,0x0000001625200000)]
+  0x00000212099a84d0 JavaThread "HttpClient-350-SelectorManager" daemon [_thread_in_native, id=35756, stack(0x0000001627200000,0x0000001627300000)]
+  0x000002120ade7240 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=120292, stack(0x0000001627c00000,0x0000001627d00000)]
+  0x00000212081aec30 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=119236, stack(0x0000001627d00000,0x0000001627e00000)]
+  0x00000212081ac3b0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=43188, stack(0x0000001627f00000,0x0000001628000000)]
+  0x00000212092dd800 JavaThread "HttpClient-352-SelectorManager" daemon [_thread_in_native, id=100360, stack(0x0000001628400000,0x0000001628500000)]
+  0x000002120b016fb0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=43004, stack(0x0000001628800000,0x0000001628900000)]
+  0x0000021209c71880 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=102264, stack(0x0000001628900000,0x0000001628a00000)]
+  0x00000212099ad5d0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=77860, stack(0x0000001628b00000,0x0000001628c00000)]
+  0x000002120b0214a0 JavaThread "HttpClient-354-SelectorManager" daemon [_thread_in_native, id=60952, stack(0x0000001628f00000,0x0000001629000000)]
+  0x000002120b020570 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=104000, stack(0x0000001629300000,0x0000001629400000)]
+  0x000002120b01cdc0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=47940, stack(0x0000001629400000,0x0000001629500000)]
+  0x000002120b01b470 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=99088, stack(0x0000001629500000,0x0000001629600000)]
+  0x000002120b01e200 JavaThread "HttpClient-356-SelectorManager" daemon [_thread_in_native, id=25280, stack(0x0000001629b00000,0x0000001629c00000)]
+  0x000002120b01d7e0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=103344, stack(0x0000001629e00000,0x0000001629f00000)]
+  0x000002120b01fb50 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=103220, stack(0x0000001629f00000,0x000000162a000000)]
+  0x000002120b020a80 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=36112, stack(0x000000162a000000,0x000000162a100000)]
+  0x000002120b0219b0 JavaThread "HttpClient-358-SelectorManager" daemon [_thread_in_native, id=52208, stack(0x0000001626600000,0x0000001626700000)]
+  0x000002120b01e710 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=118804, stack(0x000000162a600000,0x000000162a700000)]
+  0x0000021209c50d40 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=77220, stack(0x000000162a700000,0x000000162a800000)]
+  0x0000021209c4d590 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=59896, stack(0x000000162a800000,0x000000162a900000)]
+  0x0000021209c4f900 JavaThread "HttpClient-360-SelectorManager" daemon [_thread_in_native, id=42180, stack(0x000000162ad00000,0x000000162ae00000)]
+  0x0000021209c4cb70 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=69508, stack(0x000000162b000000,0x000000162b100000)]
+  0x0000021209c4fe10 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=99148, stack(0x000000162b200000,0x000000162b300000)]
+  0x0000021209c4daa0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=87064, stack(0x000000162b300000,0x000000162b400000)]
+  0x0000021209c49de0 JavaThread "HttpClient-362-SelectorManager" daemon [_thread_in_native, id=62764, stack(0x000000162b900000,0x000000162ba00000)]
+  0x0000021209c4eee0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=98540, stack(0x000000162bc00000,0x000000162bd00000)]
+  0x0000021209c4b730 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=30764, stack(0x000000162bd00000,0x000000162be00000)]
+  0x0000021209c4a2f0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=95744, stack(0x000000162be00000,0x000000162bf00000)]
+  0x0000021209c590e0 JavaThread "HttpClient-364-SelectorManager" daemon [_thread_in_native, id=121068, stack(0x000000162c400000,0x000000162c500000)]
+  0x0000021209c52690 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=121260, stack(0x000000162c800000,0x000000162c900000)]
+  0x0000021209c56860 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=121264, stack(0x000000162c900000,0x000000162ca00000)]
+  0x0000021209c56d70 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=121268, stack(0x000000162ca00000,0x000000162cb00000)]
+  0x0000021209c53ad0 JavaThread "HttpClient-366-SelectorManager" daemon [_thread_in_native, id=121504, stack(0x0000001619700000,0x0000001619800000)]
+  0x0000021209c4c660 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=119864, stack(0x0000001625200000,0x0000001625300000)]
+  0x0000021209c544f0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=121800, stack(0x0000001625e00000,0x0000001625f00000)]
+  0x0000021209c54a00 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=120880, stack(0x000000162a900000,0x000000162aa00000)]
+  0x0000021209c57ca0 JavaThread "HttpClient-368-SelectorManager" daemon [_thread_in_native, id=122500, stack(0x0000001626e00000,0x0000001626f00000)]
+  0x000002120b0183f0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=105700, stack(0x0000001627100000,0x0000001627200000)]
+  0x000002120b019830 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=112800, stack(0x0000001628000000,0x0000001628100000)]
+  0x000002120ade4ed0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=72604, stack(0x0000001628100000,0x0000001628200000)]
+  0x0000021208b3d5f0 JavaThread "HttpClient-370-SelectorManager" daemon [_thread_in_native, id=123024, stack(0x0000001628e00000,0x0000001628f00000)]
+  0x000002120b01d2d0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=123344, stack(0x0000001629200000,0x0000001629300000)]
+  0x0000021209f7c4f0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=123348, stack(0x000000162cd00000,0x000000162ce00000)]
+  0x00000212099a89e0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=123784, stack(0x000000162cf00000,0x000000162d000000)]
+  0x00000212099a9e20 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=123788, stack(0x000000162d000000,0x000000162d100000)]
+  0x00000212092da050 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=123792, stack(0x000000162d500000,0x000000162d600000)]
+  0x000002120b01f130 JavaThread "HttpClient-374-SelectorManager" daemon [_thread_in_native, id=122944, stack(0x0000001629a00000,0x0000001629b00000)]
+  0x000002120b01af60 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=96420, stack(0x0000001626d00000,0x0000001626e00000)]
+  0x000002120b018900 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=122868, stack(0x0000001629800000,0x0000001629900000)]
+  0x000002120b019320 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=122708, stack(0x000000162a100000,0x000000162a200000)]
+  0x0000021209e8c9b0 JavaThread "HttpClient-376-SelectorManager" daemon [_thread_in_native, id=86356, stack(0x000000162a300000,0x000000162a400000)]
+  0x0000021209e8e300 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=121940, stack(0x000000162ae00000,0x000000162af00000)]
+  0x0000021209e8ba80 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=122236, stack(0x000000162af00000,0x000000162b000000)]
+  0x0000021209e8f740 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=24908, stack(0x000000162b100000,0x000000162b200000)]
+  0x0000021209e8bf90 JavaThread "HttpClient-378-SelectorManager" daemon [_thread_in_native, id=123456, stack(0x0000001625c00000,0x0000001625d00000)]
+  0x0000021209e90b80 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=124008, stack(0x0000001625f00000,0x0000001626000000)]
+  0x0000021209e89710 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=123996, stack(0x0000001627000000,0x0000001627100000)]
+  0x0000021209e8cec0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=8520, stack(0x0000001627500000,0x0000001627600000)]
+  0x0000021209e94330 JavaThread "HttpClient-380-SelectorManager" daemon [_thread_in_native, id=101320, stack(0x0000001627700000,0x0000001627800000)]
+  0x0000021209e8e810 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=125340, stack(0x0000001628300000,0x0000001628400000)]
+  0x0000021209e91ab0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=125344, stack(0x0000001628500000,0x0000001628600000)]
+  0x0000021209e929e0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=125348, stack(0x0000001628600000,0x0000001628700000)]
+  0x0000021209e924d0 JavaThread "HttpClient-382-SelectorManager" daemon [_thread_in_native, id=124704, stack(0x0000001629900000,0x0000001629a00000)]
+  0x0000021209e8ddf0 JavaThread "HttpClient-383-SelectorManager" daemon [_thread_in_native, id=73692, stack(0x0000001628c00000,0x0000001628d00000)]
+  0x0000021209e8a130 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=89144, stack(0x000000162a200000,0x000000162a300000)]
+  0x0000021209e8a640 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=121952, stack(0x000000162a400000,0x000000162a500000)]
+  0x0000021209e94840 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=12436, stack(0x000000162bf00000,0x000000162c000000)]
+  0x0000021209e96bb0 JavaThread "HttpClient-384-SelectorManager" daemon [_thread_in_native, id=125940, stack(0x000000162c500000,0x000000162c600000)]
+  0x0000021209c4d080 JavaThread "HttpClient-388-SelectorManager" daemon [_thread_in_native, id=124040, stack(0x0000001628700000,0x0000001628800000)]
+  0x0000021209c4e4c0 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=123292, stack(0x0000001629100000,0x0000001629200000)]
+  0x0000021209c4bc40 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=125200, stack(0x0000001629600000,0x0000001629700000)]
+  0x0000021209c50320 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=63532, stack(0x0000001629700000,0x0000001629800000)]
+  0x0000021209c51760 JavaThread "HttpClient-389-SelectorManager" daemon [_thread_in_native, id=122840, stack(0x000000162ab00000,0x000000162ac00000)]
+  0x0000021209c52180 JavaThread "HttpClient-397-SelectorManager" daemon [_thread_in_native, id=125128, stack(0x000000162aa00000,0x000000162ab00000)]
+  0x0000021209c4dfb0 JavaThread "JdkHttpClient-396-2" daemon [_thread_blocked, id=102228, stack(0x0000001624000000,0x0000001624100000)]
+  0x0000021209c4a800 JavaThread "JdkHttpClient-396-3" daemon [_thread_blocked, id=125180, stack(0x0000001624b00000,0x0000001624c00000)]
+  0x0000021209c50830 JavaThread "UrlChecker-31" daemon [_thread_blocked, id=35776, stack(0x0000001627400000,0x0000001627500000)]
+  0x0000021209c498d0 JavaThread "Keep-Alive-Timer" daemon [_thread_blocked, id=124128, stack(0x0000001626c00000,0x0000001626d00000)]
+  0x0000021209c4c150 JavaThread "HttpClient-398-SelectorManager" daemon [_thread_in_native, id=101344, stack(0x0000001627b00000,0x0000001627c00000)]
+  0x0000021209c51c70 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=89448, stack(0x0000001628d00000,0x0000001628e00000)]
+  0x0000021209c4e9d0 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=52180, stack(0x0000001629000000,0x0000001629100000)]
+  0x0000021209c4f3f0 JavaThread "JdkHttpClient-397-0" daemon [_thread_blocked, id=124840, stack(0x0000001629c00000,0x0000001629d00000)]
+  0x0000021209c4ad10 JavaThread "JdkHttpClient-397-1" daemon [_thread_blocked, id=121908, stack(0x0000001629d00000,0x0000001629e00000)]
+  0x0000021209c4b220 JavaThread "HttpClient-399-SelectorManager" daemon [_thread_in_native, id=95692, stack(0x000000162a500000,0x000000162a600000)]
+  0x0000021209c51250 JavaThread "JdkHttpClient-398-0" daemon [_thread_blocked, id=123912, stack(0x0000001628200000,0x0000001628300000)]
+  0x0000021209c52ba0 JavaThread "JdkHttpClient-398-1" daemon [_thread_blocked, id=124132, stack(0x000000162b600000,0x000000162b700000)]
+  0x0000021209c53fe0 JavaThread "HttpClient-400-SelectorManager" daemon [_thread_in_native, id=125004, stack(0x000000162ac00000,0x000000162ad00000)]
+  0x0000021209c54f10 JavaThread "JdkHttpClient-399-0" daemon [_thread_blocked, id=123392, stack(0x000000162b800000,0x000000162b900000)]
+  0x0000021209c581b0 JavaThread "JdkHttpClient-399-1" daemon [_thread_blocked, id=95500, stack(0x000000162ba00000,0x000000162bb00000)]
+  0x0000021209c55420 JavaThread "JdkHttpClient-399-2" daemon [_thread_blocked, id=123616, stack(0x000000162bb00000,0x000000162bc00000)]
+  0x0000021209c55e40 JavaThread "HttpClient-401-SelectorManager" daemon [_thread_in_native, id=124488, stack(0x000000162b400000,0x000000162b500000)]
+  0x0000021209c55930 JavaThread "JdkHttpClient-400-0" daemon [_thread_blocked, id=119896, stack(0x000000162c100000,0x000000162c200000)]
+  0x0000021209c56350 JavaThread "JdkHttpClient-400-1" daemon [_thread_blocked, id=125164, stack(0x000000162c200000,0x000000162c300000)]
+  0x0000021209c57280 JavaThread "JdkHttpClient-400-2" daemon [_thread_blocked, id=125252, stack(0x000000162c300000,0x000000162c400000)]
+  0x0000021209c57790 JavaThread "HttpClient-402-SelectorManager" daemon [_thread_in_native, id=123464, stack(0x000000162b500000,0x000000162b600000)]
+  0x0000021209c535c0 JavaThread "JdkHttpClient-401-0" daemon [_thread_blocked, id=119812, stack(0x000000162c700000,0x000000162c800000)]
+  0x0000021209e8b060 JavaThread "JdkHttpClient-401-1" daemon [_thread_blocked, id=94324, stack(0x000000162cb00000,0x000000162cc00000)]
+  0x0000021209e90160 JavaThread "HttpClient-403-SelectorManager" daemon [_thread_in_native, id=122584, stack(0x000000162b700000,0x000000162b800000)]
+  0x0000021209e8d8e0 JavaThread "JdkHttpClient-402-0" daemon [_thread_blocked, id=83312, stack(0x000000162ce00000,0x000000162cf00000)]
+  0x0000021209e8c4a0 JavaThread "JdkHttpClient-402-1" daemon [_thread_blocked, id=123516, stack(0x000000162d100000,0x000000162d200000)]
+  0x0000021209e8ed20 JavaThread "HttpClient-404-SelectorManager" daemon [_thread_in_native, id=121512, stack(0x000000162c000000,0x000000162c100000)]
+  0x0000021209e88cf0 JavaThread "JdkHttpClient-403-0" daemon [_thread_blocked, id=65832, stack(0x000000162d300000,0x000000162d400000)]
+  0x0000021209e90670 JavaThread "JdkHttpClient-403-1" daemon [_thread_blocked, id=55056, stack(0x000000162d400000,0x000000162d500000)]
+  0x0000021209e89200 JavaThread "HttpClient-405-SelectorManager" daemon [_thread_in_native, id=116456, stack(0x000000162c600000,0x000000162c700000)]
+  0x0000021209e8ab50 JavaThread "JdkHttpClient-404-0" daemon [_thread_blocked, id=36852, stack(0x000000162d700000,0x000000162d800000)]
+  0x0000021209e8d3d0 JavaThread "JdkHttpClient-404-1" daemon [_thread_blocked, id=32004, stack(0x000000162d800000,0x000000162d900000)]
+  0x0000021209e8b570 JavaThread "HttpClient-406-SelectorManager" daemon [_thread_in_native, id=41492, stack(0x000000162cc00000,0x000000162cd00000)]
+  0x0000021209e8fc50 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=122656, stack(0x000000162d600000,0x000000162d700000)]
+  0x0000021209e91090 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=78184, stack(0x000000162d900000,0x000000162da00000)]
+  0x0000021209e8f230 JavaThread "HttpClient-407-SelectorManager" daemon [_thread_in_native, id=121968, stack(0x000000162d200000,0x000000162d300000)]
+  0x0000021209e89c20 JavaThread "External Process Output Forwarder - C:\Users\pgargi\.cache\selenium\chromedriver\win64\124.0.6367.91\chromedriver.exe" daemon [_thread_in_native, id=29976, stack(0x000000162da00000,0x000000162db00000)]
+  0x0000021209e94d50 JavaThread "Driver Service Executor" daemon [_thread_blocked, id=64096, stack(0x000000162db00000,0x000000162dc00000)]
+  0x0000021209e97ae0 JavaThread "Driver Service Executor" daemon [_thread_in_native, id=124200, stack(0x000000162dc00000,0x000000162dd00000)]
+  0x0000021209e915a0 JavaThread "UrlChecker-32" daemon [_thread_blocked, id=122220, stack(0x000000162dd00000,0x000000162de00000)]
+
+Other Threads:
+  0x0000021208045030 VMThread "VM Thread" [stack: 0x0000001617300000,0x0000001617400000] [id=55844]
+  0x0000021208202080 WatcherThread [stack: 0x0000001617e00000,0x0000001617f00000] [id=90032]
+  0x0000021265cc80f0 GCTaskThread "GC Thread#0" [stack: 0x0000001616e00000,0x0000001616f00000] [id=84488]
+  0x0000021208685900 GCTaskThread "GC Thread#1" [stack: 0x0000001618200000,0x0000001618300000] [id=84672]
+  0x0000021265cd8ec0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001616f00000,0x0000001617000000] [id=87684]
+  0x0000021265cda1c0 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001617000000,0x0000001617100000] [id=109300]
+  0x0000021265cfdf00 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000001617100000,0x0000001617200000] [id=76160]
+  0x0000021208a54920 ConcurrentGCThread "G1 Refine#1" [stack: 0x0000001618300000,0x0000001618400000] [id=78944]
+  0x0000021265cfea70 ConcurrentGCThread "G1 Service" [stack: 0x0000001617200000,0x0000001617300000] [id=60824]
+
+Threads with active compile tasks:
+C2 CompilerThread0  6314055 9252       4       io.github.bonigarcia.wdm.config.Config::<init> (1685 bytes)
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000701800000, size: 4072 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) not mapped
+Compressed class space mapped at: 0x0000000800000000-0x0000000840000000, reserved size: 1073741824
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x40000000
+
+GC Precious Log:
+ CPUs: 2 total, 2 available
+ Memory: 16280M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (Zero based)
+ Heap Region Size: 2M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 256M
+ Heap Max Capacity: 4072M
+ Pre-touch: Disabled
+ Parallel Workers: 2
+ Concurrent Workers: 1
+ Concurrent Refinement Workers: 2
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 75776K, used 32936K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 1 survivors (2048K)
+ Metaspace       used 37448K, committed 37760K, reserved 1114112K
+  class space    used 3811K, committed 3968K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x0000000701800000, 0x0000000701a00000, 0x0000000701a00000|100%| O|  |TAMS 0x0000000701a00000, 0x0000000701800000| Untracked 
+|   1|0x0000000701a00000, 0x0000000701c00000, 0x0000000701c00000|100%| O|  |TAMS 0x0000000701c00000, 0x0000000701a00000| Untracked 
+|   2|0x0000000701c00000, 0x0000000701e00000, 0x0000000701e00000|100%| O|  |TAMS 0x0000000701e00000, 0x0000000701c00000| Untracked 
+|   3|0x0000000701e00000, 0x0000000702000000, 0x0000000702000000|100%| O|  |TAMS 0x0000000701e00000, 0x0000000701e00000| Untracked 
+|   4|0x0000000702000000, 0x0000000702200000, 0x0000000702200000|100%| O|  |TAMS 0x0000000702200000, 0x0000000702000000| Untracked 
+|   5|0x0000000702200000, 0x0000000702400000, 0x0000000702400000|100%| O|  |TAMS 0x0000000702400000, 0x0000000702200000| Untracked 
+|   6|0x0000000702400000, 0x0000000702600000, 0x0000000702600000|100%| O|  |TAMS 0x0000000702600000, 0x0000000702400000| Untracked 
+|   7|0x0000000702600000, 0x0000000702800000, 0x0000000702800000|100%| O|  |TAMS 0x0000000702800000, 0x0000000702600000| Untracked 
+|   8|0x0000000702800000, 0x0000000702a00000, 0x0000000702a00000|100%| O|  |TAMS 0x0000000702800000, 0x0000000702800000| Untracked 
+|   9|0x0000000702a00000, 0x0000000702c00000, 0x0000000702c00000|100%| O|  |TAMS 0x0000000702a00000, 0x0000000702a00000| Untracked 
+|  10|0x0000000702c00000, 0x0000000702e00000, 0x0000000702e00000|100%| O|  |TAMS 0x0000000702c00000, 0x0000000702c00000| Untracked 
+|  11|0x0000000702e00000, 0x0000000703000000, 0x0000000703000000|100%| O|  |TAMS 0x0000000702e00000, 0x0000000702e00000| Untracked 
+|  12|0x0000000703000000, 0x0000000703200000, 0x0000000703200000|100%| O|  |TAMS 0x0000000703000000, 0x0000000703000000| Untracked 
+|  13|0x0000000703200000, 0x0000000703400000, 0x0000000703400000|100%| O|  |TAMS 0x0000000703200000, 0x0000000703200000| Untracked 
+|  14|0x0000000703400000, 0x0000000703600000, 0x0000000703600000|100%| O|  |TAMS 0x0000000703400000, 0x0000000703400000| Untracked 
+|  15|0x0000000703600000, 0x000000070362a200, 0x0000000703800000|  8%| O|  |TAMS 0x0000000703600000, 0x0000000703600000| Untracked 
+|  16|0x0000000703800000, 0x0000000703800000, 0x0000000703a00000|  0%| F|  |TAMS 0x0000000703800000, 0x0000000703800000| Untracked 
+|  17|0x0000000703a00000, 0x0000000703a00000, 0x0000000703c00000|  0%| F|  |TAMS 0x0000000703a00000, 0x0000000703a00000| Untracked 
+|  18|0x0000000703c00000, 0x0000000703c00000, 0x0000000703e00000|  0%| F|  |TAMS 0x0000000703c00000, 0x0000000703c00000| Untracked 
+|  19|0x0000000703e00000, 0x0000000703e00000, 0x0000000704000000|  0%| F|  |TAMS 0x0000000703e00000, 0x0000000703e00000| Untracked 
+|  20|0x0000000704000000, 0x0000000704000000, 0x0000000704200000|  0%| F|  |TAMS 0x0000000704000000, 0x0000000704000000| Untracked 
+|  21|0x0000000704200000, 0x0000000704400000, 0x0000000704400000|100%| S|CS|TAMS 0x0000000704200000, 0x0000000704200000| Complete 
+|  22|0x0000000704400000, 0x0000000704400000, 0x0000000704600000|  0%| F|  |TAMS 0x0000000704400000, 0x0000000704400000| Untracked 
+|  23|0x0000000704600000, 0x0000000704600000, 0x0000000704800000|  0%| F|  |TAMS 0x0000000704600000, 0x0000000704600000| Untracked 
+|  24|0x0000000704800000, 0x0000000704800000, 0x0000000704a00000|  0%| F|  |TAMS 0x0000000704800000, 0x0000000704800000| Untracked 
+|  25|0x0000000704a00000, 0x0000000704a00000, 0x0000000704c00000|  0%| F|  |TAMS 0x0000000704a00000, 0x0000000704a00000| Untracked 
+|  26|0x0000000704c00000, 0x0000000704c00000, 0x0000000704e00000|  0%| F|  |TAMS 0x0000000704c00000, 0x0000000704c00000| Untracked 
+|  27|0x0000000704e00000, 0x0000000704e00000, 0x0000000705000000|  0%| F|  |TAMS 0x0000000704e00000, 0x0000000704e00000| Untracked 
+|  28|0x0000000705000000, 0x0000000705000000, 0x0000000705200000|  0%| F|  |TAMS 0x0000000705000000, 0x0000000705000000| Untracked 
+|  29|0x0000000705200000, 0x0000000705200000, 0x0000000705400000|  0%| F|  |TAMS 0x0000000705200000, 0x0000000705200000| Untracked 
+|  30|0x0000000705400000, 0x0000000705400000, 0x0000000705600000|  0%| F|  |TAMS 0x0000000705400000, 0x0000000705400000| Untracked 
+|  31|0x0000000705600000, 0x0000000705600000, 0x0000000705800000|  0%| F|  |TAMS 0x0000000705600000, 0x0000000705600000| Untracked 
+|  32|0x0000000705800000, 0x0000000705800000, 0x0000000705a00000|  0%| F|  |TAMS 0x0000000705800000, 0x0000000705800000| Untracked 
+|  33|0x0000000705a00000, 0x0000000705a00000, 0x0000000705c00000|  0%| F|  |TAMS 0x0000000705a00000, 0x0000000705a00000| Untracked 
+|  47|0x0000000707600000, 0x0000000707600000, 0x0000000707800000|  0%| F|  |TAMS 0x0000000707600000, 0x0000000707600000| Untracked 
+|  48|0x0000000707800000, 0x0000000707800000, 0x0000000707a00000|  0%| F|  |TAMS 0x0000000707800000, 0x0000000707800000| Untracked 
+| 127|0x0000000711600000, 0x000000071167b2c0, 0x0000000711800000| 24%| E|  |TAMS 0x0000000711600000, 0x0000000711600000| Complete 
+
+Card table byte_map: [0x0000021278b10000,0x0000021279310000] _byte_map_base: 0x0000021275304000
+
+Marking Bits (Prev, Next): (CMBitMap*) 0x0000021265cc8710, (CMBitMap*) 0x0000021265cc8750
+ Prev Bits: [0x0000021279b10000, 0x000002127dab0000)
+ Next Bits: [0x0000021200000000, 0x0000021203fa0000)
+
+Polling page: 0x0000021263a60000
+
+Metaspace:
+
+Usage:
+  Non-class:     32.85 MB used.
+      Class:      3.72 MB used.
+       Both:     36.57 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,      33.00 MB ( 52%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,       3.88 MB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,      36.88 MB (  3%) committed. 
+
+Chunk freelists:
+   Non-Class:  14.51 MB
+       Class:  12.07 MB
+        Both:  26.58 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 58.69 MB
+CDS: off
+MetaspaceReclaimPolicy: balanced
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - new_chunks_are_fully_committed: 0.
+ - uncommit_free_chunks: 1.
+ - use_allocation_guard: 0.
+ - handle_deallocations: 1.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 6.
+num_arena_births: 406.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 590.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 6.
+num_chunks_taken_from_freelist: 1250.
+num_chunk_merges: 3.
+num_chunk_splits: 736.
+num_chunks_enlarged: 463.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=120064Kb used=7035Kb max_used=7035Kb free=113028Kb
+ bounds [0x0000021270dd0000, 0x00000212714b0000, 0x0000021278310000]
+CodeHeap 'profiled nmethods': size=120000Kb used=15671Kb max_used=15671Kb free=104328Kb
+ bounds [0x0000021269310000, 0x000002126a270000, 0x0000021270840000]
+CodeHeap 'non-nmethods': size=5696Kb used=1279Kb max_used=1339Kb free=4416Kb
+ bounds [0x0000021270840000, 0x0000021270ab0000, 0x0000021270dd0000]
+ total_blobs=8141 nmethods=7550 adapters=503
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 6313.469 Thread 0x00000212080fa8a0 nmethod 9242 0x000002126a25d790 code [0x000002126a25d940, 0x000002126a25db68]
+Event: 6313.470 Thread 0x00000212080fa8a0 9243       3       java.util.GregorianCalendar::isLeapYear (127 bytes)
+Event: 6313.470 Thread 0x00000212080fa8a0 nmethod 9243 0x000002126a25dc90 code [0x000002126a25de80, 0x000002126a25e4c8]
+Event: 6313.473 Thread 0x000002120808ebc0 9244       4       io.github.bonigarcia.wdm.managers.ChromeDriverManager::getDriverManagerType (4 bytes)
+Event: 6313.473 Thread 0x000002120808ebc0 nmethod 9244 0x00000212714ac390 code [0x00000212714ac500, 0x00000212714ac578]
+Event: 6313.492 Thread 0x00000212080fa8a0 9245       3       java.util.Random::next (47 bytes)
+Event: 6313.492 Thread 0x00000212080fa8a0 nmethod 9245 0x000002126a25e610 code [0x000002126a25e7c0, 0x000002126a25ea48]
+Event: 6313.493 Thread 0x000002120808ebc0 9246       4       java.security.AccessControlContext::combine (205 bytes)
+Event: 6313.507 Thread 0x000002120808ebc0 nmethod 9246 0x00000212714ac690 code [0x00000212714ac840, 0x00000212714acfd8]
+Event: 6313.718 Thread 0x00000212080fa8a0 9247       3       java.util.stream.ReferencePipeline::reduce (12 bytes)
+Event: 6313.718 Thread 0x00000212080fa8a0 nmethod 9247 0x000002126a25eb90 code [0x000002126a25ed80, 0x000002126a25f3d8]
+Event: 6313.718 Thread 0x00000212080fa8a0 9248       3       java.util.stream.ReduceOps::makeRef (17 bytes)
+Event: 6313.719 Thread 0x00000212080fa8a0 nmethod 9248 0x000002126a25f610 code [0x000002126a25f7e0, 0x000002126a25fc88]
+Event: 6313.719 Thread 0x00000212080fa8a0 9249       3       java.util.stream.ReduceOps$2::<init> (11 bytes)
+Event: 6313.719 Thread 0x00000212080fa8a0 nmethod 9249 0x000002126a25fe10 code [0x000002126a25ffc0, 0x000002126a260258]
+Event: 6313.852 Thread 0x00000212080fa8a0 9250       1       org.testng.internal.BaseTestMethod::getInvocationCount (2 bytes)
+Event: 6313.852 Thread 0x00000212080fa8a0 nmethod 9250 0x00000212714ad390 code [0x00000212714ad520, 0x00000212714ad5f8]
+Event: 6313.860 Thread 0x000002120808ebc0 9251       4       java.util.concurrent.ConcurrentHashMap::putAll (63 bytes)
+Event: 6313.889 Thread 0x000002120808ebc0 nmethod 9251 0x00000212714ad690 code [0x00000212714ad880, 0x00000212714ae3d8]
+Event: 6313.889 Thread 0x000002120808ebc0 9252       4       io.github.bonigarcia.wdm.config.Config::<init> (1685 bytes)
+
+GC Heap History (20 events):
+Event: 5163.120 GC heap before
+{Heap before GC invocations=61 (full 0):
+ garbage-first heap   total 75776K, used 60652K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 18 young (36864K), 2 survivors (4096K)
+ Metaspace       used 37209K, committed 37568K, reserved 1114112K
+  class space    used 3802K, committed 3968K, reserved 1048576K
+}
+Event: 5163.125 GC heap after
+{Heap after GC invocations=62 (full 0):
+ garbage-first heap   total 75776K, used 29141K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 37209K, committed 37568K, reserved 1114112K
+  class space    used 3802K, committed 3968K, reserved 1048576K
+}
+Event: 5232.846 GC heap before
+{Heap before GC invocations=62 (full 0):
+ garbage-first heap   total 75776K, used 57813K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 17 young (34816K), 2 survivors (4096K)
+ Metaspace       used 37232K, committed 37568K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5232.853 GC heap after
+{Heap after GC invocations=63 (full 0):
+ garbage-first heap   total 75776K, used 29847K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 37232K, committed 37568K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5335.017 GC heap before
+{Heap before GC invocations=63 (full 0):
+ garbage-first heap   total 75776K, used 58519K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 17 young (34816K), 2 survivors (4096K)
+ Metaspace       used 37235K, committed 37568K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5335.021 GC heap after
+{Heap after GC invocations=64 (full 0):
+ garbage-first heap   total 75776K, used 30497K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 37235K, committed 37568K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5406.609 GC heap before
+{Heap before GC invocations=64 (full 0):
+ garbage-first heap   total 75776K, used 59169K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 17 young (34816K), 2 survivors (4096K)
+ Metaspace       used 37241K, committed 37568K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5406.612 GC heap after
+{Heap after GC invocations=65 (full 0):
+ garbage-first heap   total 75776K, used 30043K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 37241K, committed 37568K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5492.020 GC heap before
+{Heap before GC invocations=65 (full 0):
+ garbage-first heap   total 75776K, used 58715K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 17 young (34816K), 2 survivors (4096K)
+ Metaspace       used 37260K, committed 37632K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5492.024 GC heap after
+{Heap after GC invocations=66 (full 0):
+ garbage-first heap   total 75776K, used 30273K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 37260K, committed 37632K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5548.947 GC heap before
+{Heap before GC invocations=66 (full 0):
+ garbage-first heap   total 75776K, used 58945K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 17 young (34816K), 2 survivors (4096K)
+ Metaspace       used 37276K, committed 37632K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5548.955 GC heap after
+{Heap after GC invocations=67 (full 0):
+ garbage-first heap   total 75776K, used 31701K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 3 young (6144K), 3 survivors (6144K)
+ Metaspace       used 37276K, committed 37632K, reserved 1114112K
+  class space    used 3803K, committed 3968K, reserved 1048576K
+}
+Event: 5615.118 GC heap before
+{Heap before GC invocations=67 (full 0):
+ garbage-first heap   total 75776K, used 56277K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 16 young (32768K), 3 survivors (6144K)
+ Metaspace       used 37311K, committed 37632K, reserved 1114112K
+  class space    used 3807K, committed 3968K, reserved 1048576K
+}
+Event: 5615.125 GC heap after
+{Heap after GC invocations=68 (full 0):
+ garbage-first heap   total 75776K, used 32568K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 37311K, committed 37632K, reserved 1114112K
+  class space    used 3807K, committed 3968K, reserved 1048576K
+}
+Event: 5775.427 GC heap before
+{Heap before GC invocations=68 (full 0):
+ garbage-first heap   total 75776K, used 59192K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 16 young (32768K), 2 survivors (4096K)
+ Metaspace       used 37391K, committed 37760K, reserved 1114112K
+  class space    used 3808K, committed 3968K, reserved 1048576K
+}
+Event: 5775.431 GC heap after
+{Heap after GC invocations=69 (full 0):
+ garbage-first heap   total 75776K, used 33241K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 37391K, committed 37760K, reserved 1114112K
+  class space    used 3808K, committed 3968K, reserved 1048576K
+}
+Event: 6249.732 GC heap before
+{Heap before GC invocations=69 (full 0):
+ garbage-first heap   total 75776K, used 59865K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 15 young (30720K), 2 survivors (4096K)
+ Metaspace       used 37425K, committed 37760K, reserved 1114112K
+  class space    used 3811K, committed 3968K, reserved 1048576K
+}
+Event: 6249.735 GC heap after
+{Heap after GC invocations=70 (full 0):
+ garbage-first heap   total 75776K, used 32930K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 37425K, committed 37760K, reserved 1114112K
+  class space    used 3811K, committed 3968K, reserved 1048576K
+}
+Event: 6313.898 GC heap before
+{Heap before GC invocations=70 (full 0):
+ garbage-first heap   total 75776K, used 61602K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 15 young (30720K), 1 survivors (2048K)
+ Metaspace       used 37448K, committed 37760K, reserved 1114112K
+  class space    used 3811K, committed 3968K, reserved 1048576K
+}
+Event: 6313.901 GC heap after
+{Heap after GC invocations=71 (full 0):
+ garbage-first heap   total 75776K, used 32936K [0x0000000701800000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 37448K, committed 37760K, reserved 1114112K
+  class space    used 3811K, committed 3968K, reserved 1048576K
+}
+
+Dll operation events (8 events):
+Event: 0.017 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\java.dll
+Event: 0.893 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\net.dll
+Event: 0.898 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\nio.dll
+Event: 0.921 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\zip.dll
+Event: 1.172 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\jimage.dll
+Event: 1.993 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\extnet.dll
+Event: 5.367 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\verify.dll
+Event: 6.346 Loaded shared library C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\sunmscapi.dll
+
+Deoptimization events (20 events):
+Event: 6311.867 Thread 0x0000021209c4c150 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000021271262c10 relative=0x0000000000000170
+Event: 6311.867 Thread 0x0000021209c4c150 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000021271262c10 method=sun.nio.ch.SocketChannelImpl.translateReadyOps(IILsun/nio/ch/SelectionKeyImpl;)Z @ 34 c2
+Event: 6311.867 Thread 0x0000021209c4c150 DEOPT PACKING pc=0x0000021271262c10 sp=0x0000001627bfed10
+Event: 6311.867 Thread 0x0000021209c4c150 DEOPT UNPACKING pc=0x00000212708969a3 sp=0x0000001627bfec20 mode 2
+Event: 6311.868 Thread 0x0000021209c4c150 Uncommon trap: trap_request=0xffffffb5 fr.pc=0x0000021271020640 relative=0x00000000000009e0
+Event: 6311.868 Thread 0x0000021209c4c150 Uncommon trap: reason=unloaded action=reinterpret pc=0x0000021271020640 method=sun.nio.ch.SocketChannelImpl.read(Ljava/nio/ByteBuffer;)I @ 194 c2
+Event: 6311.868 Thread 0x0000021209c4c150 DEOPT PACKING pc=0x0000021271020640 sp=0x0000001627bfedb0
+Event: 6311.868 Thread 0x0000021209c4c150 DEOPT UNPACKING pc=0x00000212708969a3 sp=0x0000001627bfed58 mode 2
+Event: 6311.868 Thread 0x0000021209c4c150 Uncommon trap: trap_request=0xffffffde fr.pc=0x0000021271312b48 relative=0x00000000000041a8
+Event: 6311.868 Thread 0x0000021209c4c150 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000021271312b48 method=jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read()V @ 238 c2
+Event: 6311.868 Thread 0x0000021209c4c150 DEOPT PACKING pc=0x0000021271312b48 sp=0x0000001627bfee30
+Event: 6311.868 Thread 0x0000021209c4c150 DEOPT UNPACKING pc=0x00000212708969a3 sp=0x0000001627bfee40 mode 2
+Event: 6311.868 Thread 0x0000021209c4ad10 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000021270fc99e8 relative=0x00000000000001c8
+Event: 6311.868 Thread 0x0000021209c4ad10 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000021270fc99e8 method=java.util.concurrent.CompletableFuture.postFire(Ljava/util/concurrent/CompletableFuture;I)Ljava/util/concurrent/CompletableFuture; @ 8 c2
+Event: 6311.868 Thread 0x0000021209c4ad10 DEOPT PACKING pc=0x0000021270fc99e8 sp=0x0000001629dff160
+Event: 6311.868 Thread 0x0000021209c4ad10 DEOPT UNPACKING pc=0x00000212708969a3 sp=0x0000001629dff128 mode 2
+Event: 6311.869 Thread 0x0000021265c5c270 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000021271231834 relative=0x0000000000000094
+Event: 6311.869 Thread 0x0000021265c5c270 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000021271231834 method=java.util.concurrent.CompletableFuture.reportGet(Ljava/lang/Object;)Ljava/lang/Object; @ 16 c2
+Event: 6311.869 Thread 0x0000021265c5c270 DEOPT PACKING pc=0x0000021271231834 sp=0x0000001616dfd330
+Event: 6311.869 Thread 0x0000021265c5c270 DEOPT UNPACKING pc=0x00000212708969a3 sp=0x0000001616dfd258 mode 2
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 6313.717 Thread 0x0000021209c50830 Exception <a 'java/net/ConnectException'{0x0000000704bdd728}: Connection refused: no further information> (0x0000000704bdd728) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.717 Thread 0x0000021209c50830 Exception <a 'java/net/SocketException'{0x0000000704bdd950}: Socket is not connected: shutdown> (0x0000000704bdd950) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.737 Thread 0x0000021208b3db00 Exception <a 'java/net/ConnectException'{0x00000007078b20d0}: Connection refused: no further information> (0x00000007078b20d0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.737 Thread 0x0000021208b3db00 Exception <a 'java/net/SocketException'{0x00000007078b2408}: Socket is not connected: shutdown> (0x00000007078b2408) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.754 Thread 0x0000021265c5c270 Exception <a 'java/net/SocketException'{0x00000007049e0708}: Socket is not connected: shutdown> (0x00000007049e0708) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.754 Thread 0x0000021265c5c270 Exception <a 'java/net/SocketException'{0x00000007049e0f70}: Socket is not connected: shutdown> (0x00000007049e0f70) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.768 Thread 0x0000021209c50830 Exception <a 'java/net/ConnectException'{0x00000007044046d8}: Connection refused: no further information> (0x00000007044046d8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.768 Thread 0x0000021209c50830 Exception <a 'java/net/SocketException'{0x0000000704404a10}: Socket is not connected: shutdown> (0x0000000704404a10) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.781 Thread 0x0000021209c50830 Exception <a 'java/net/ConnectException'{0x0000000704405b38}: Connection refused: no further information> (0x0000000704405b38) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.781 Thread 0x0000021209c50830 Exception <a 'java/net/SocketException'{0x00000007044060e0}: Socket is not connected: shutdown> (0x00000007044060e0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.815 Thread 0x0000021209c50830 Exception <a 'java/net/ConnectException'{0x0000000704407210}: Connection refused: no further information> (0x0000000704407210) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.815 Thread 0x0000021209c50830 Exception <a 'java/net/SocketException'{0x0000000704407548}: Socket is not connected: shutdown> (0x0000000704407548) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.903 Thread 0x0000021209c50830 Exception <a 'java/net/ConnectException'{0x0000000711600ac0}: Connection refused: no further information> (0x0000000711600ac0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.903 Thread 0x0000021209c50830 Exception <a 'java/net/SocketException'{0x0000000711600df8}: Socket is not connected: shutdown> (0x0000000711600df8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.905 Thread 0x0000021265c5c270 Exception <a 'java/net/SocketException'{0x000000071161f148}: Socket is not connected: shutdown> (0x000000071161f148) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.905 Thread 0x0000021265c5c270 Exception <a 'java/net/SocketException'{0x000000071161f9b0}: Socket is not connected: shutdown> (0x000000071161f9b0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.948 Thread 0x0000021209e915a0 Exception <a 'java/net/ConnectException'{0x0000000711677c70}: Connection refused: no further information> (0x0000000711677c70) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.948 Thread 0x0000021209e915a0 Exception <a 'java/net/SocketException'{0x0000000711677fa8}: Socket is not connected: shutdown> (0x0000000711677fa8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.979 Thread 0x0000021209e915a0 Exception <a 'java/net/ConnectException'{0x00000007116790b8}: Connection refused: no further information> (0x00000007116790b8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 6313.979 Thread 0x0000021209e915a0 Exception <a 'java/net/SocketException'{0x00000007116793f0}: Socket is not connected: shutdown> (0x00000007116793f0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+
+VM Operations (20 events):
+Event: 6133.222 Executing VM operation: HandshakeAllThreads
+Event: 6133.222 Executing VM operation: HandshakeAllThreads done
+Event: 6189.626 Executing VM operation: Cleanup
+Event: 6189.626 Executing VM operation: Cleanup done
+Event: 6193.312 Executing VM operation: HandshakeAllThreads
+Event: 6193.313 Executing VM operation: HandshakeAllThreads done
+Event: 6217.501 Executing VM operation: Cleanup
+Event: 6217.502 Executing VM operation: Cleanup done
+Event: 6249.731 Executing VM operation: G1CollectForAllocation
+Event: 6249.735 Executing VM operation: G1CollectForAllocation done
+Event: 6253.428 Executing VM operation: HandshakeAllThreads
+Event: 6253.428 Executing VM operation: HandshakeAllThreads done
+Event: 6311.918 Executing VM operation: Cleanup
+Event: 6311.918 Executing VM operation: Cleanup done
+Event: 6312.923 Executing VM operation: Cleanup
+Event: 6312.923 Executing VM operation: Cleanup done
+Event: 6313.521 Executing VM operation: HandshakeAllThreads
+Event: 6313.521 Executing VM operation: HandshakeAllThreads done
+Event: 6313.897 Executing VM operation: G1CollectForAllocation
+Event: 6313.901 Executing VM operation: G1CollectForAllocation done
+
+Events (20 events):
+Event: 6313.507 Thread 0x0000021209e8f230 Thread added: 0x0000021209e8f230
+Event: 6313.507 Thread 0x0000021209e8fc50 Thread added: 0x0000021209e8fc50
+Event: 6313.508 Thread 0x0000021209e91090 Thread added: 0x0000021209e91090
+Event: 6313.609 Thread 0x0000021209e8ab50 Thread added: 0x0000021209e8ab50
+Event: 6313.610 Thread 0x0000021209e8d3d0 Thread added: 0x0000021209e8d3d0
+Event: 6313.693 Thread 0x0000021209e89c20 Thread added: 0x0000021209e89c20
+Event: 6313.694 Thread 0x0000021209e89c20 Thread exited: 0x0000021209e89c20
+Event: 6313.704 Thread 0x0000021209e8f230 Thread exited: 0x0000021209e8f230
+Event: 6313.717 Thread 0x0000021209e91090 Thread exited: 0x0000021209e91090
+Event: 6313.717 Thread 0x0000021209e8fc50 Thread exited: 0x0000021209e8fc50
+Event: 6313.756 Thread 0x0000021209e8b570 Thread added: 0x0000021209e8b570
+Event: 6313.767 Thread 0x0000021209e8f230 Thread added: 0x0000021209e8f230
+Event: 6313.767 Thread 0x0000021209e8fc50 Thread added: 0x0000021209e8fc50
+Event: 6313.767 Thread 0x0000021209e91090 Thread added: 0x0000021209e91090
+Event: 6313.840 Thread 0x0000021209e8f230 Thread exited: 0x0000021209e8f230
+Event: 6313.911 Thread 0x0000021209e8f230 Thread added: 0x0000021209e8f230
+Event: 6313.921 Thread 0x0000021209e89c20 Thread added: 0x0000021209e89c20
+Event: 6313.921 Thread 0x0000021209e94d50 Thread added: 0x0000021209e94d50
+Event: 6313.921 Thread 0x0000021209e97ae0 Thread added: 0x0000021209e97ae0
+Event: 6313.930 Thread 0x0000021209e915a0 Thread added: 0x0000021209e915a0
+
+
+Dynamic libraries:
+0x00007ff7a8fa0000 - 0x00007ff7a8fae000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\javaw.exe
+0x00007ff8b7250000 - 0x00007ff8b7448000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8b67a0000 - 0x00007ff8b685d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8b4cc0000 - 0x00007ff8b4fb6000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8af280000 - 0x00007ff8af310000 	C:\Windows\SYSTEM32\apphelp.dll
+0x00007ff8b4900000 - 0x00007ff8b4a00000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff8a9800000 - 0x00007ff8a9817000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\jli.dll
+0x00007ff8b6ed0000 - 0x00007ff8b706e000 	C:\Windows\System32\USER32.dll
+0x00007ff8b5050000 - 0x00007ff8b5072000 	C:\Windows\System32\win32u.dll
+0x00007ff8b5d10000 - 0x00007ff8b5d3b000 	C:\Windows\System32\GDI32.dll
+0x00007ff8b4b50000 - 0x00007ff8b4c67000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8b51e0000 - 0x00007ff8b527d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8a87b0000 - 0x00007ff8a87cb000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\VCRUNTIME140.dll
+0x00007ff8a19d0000 - 0x00007ff8a1c6a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5\COMCTL32.dll
+0x00007ff8b60e0000 - 0x00007ff8b617e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff8b6990000 - 0x00007ff8b69c2000 	C:\Windows\System32\IMM32.DLL
+0x00007ff8b00f0000 - 0x00007ff8b00fc000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\vcruntime140_1.dll
+0x00007ff8903d0000 - 0x00007ff89045d000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\msvcp140.dll
+0x00007ff879990000 - 0x00007ff87a5f2000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\server\jvm.dll
+0x00007ff8b5d40000 - 0x00007ff8b5df0000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8b7170000 - 0x00007ff8b7210000 	C:\Windows\System32\sechost.dll
+0x00007ff8b6860000 - 0x00007ff8b6985000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff8b4b20000 - 0x00007ff8b4b47000 	C:\Windows\System32\bcrypt.dll
+0x00007ff8b4760000 - 0x00007ff8b47ab000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ff89da70000 - 0x00007ff89da79000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff8b5ca0000 - 0x00007ff8b5d0b000 	C:\Windows\System32\WS2_32.dll
+0x00007ff89da40000 - 0x00007ff89da67000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff8a5eb0000 - 0x00007ff8a5eba000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8b4740000 - 0x00007ff8b4752000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ff8b25f0000 - 0x00007ff8b2602000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff8b04c0000 - 0x00007ff8b04ca000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\jimage.dll
+0x00007ff8a33f0000 - 0x00007ff8a35d4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff8a3380000 - 0x00007ff8a33b4000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff8b4fc0000 - 0x00007ff8b5042000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff8af820000 - 0x00007ff8af845000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\java.dll
+0x00007ff8aee70000 - 0x00007ff8aee88000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\zip.dll
+0x00007ff8b5280000 - 0x00007ff8b59eb000 	C:\Windows\System32\SHELL32.dll
+0x00007ff8b27f0000 - 0x00007ff8b2f8e000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ff8b69d0000 - 0x00007ff8b6d23000 	C:\Windows\System32\combase.dll
+0x00007ff8b4260000 - 0x00007ff8b428e000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007ff8b5e00000 - 0x00007ff8b5ecd000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ff8b5a00000 - 0x00007ff8b5aad000 	C:\Windows\System32\SHCORE.dll
+0x00007ff8b7070000 - 0x00007ff8b70c5000 	C:\Windows\System32\shlwapi.dll
+0x00007ff8b4830000 - 0x00007ff8b4855000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ff8ae9d0000 - 0x00007ff8ae9e9000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\net.dll
+0x00007ff8b0e70000 - 0x00007ff8b0f7a000 	C:\Windows\SYSTEM32\WINHTTP.dll
+0x00007ff8b3fc0000 - 0x00007ff8b402a000 	C:\Windows\system32\mswsock.dll
+0x00007ff8ab280000 - 0x00007ff8ab296000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\nio.dll
+0x00007ff8b3cf0000 - 0x00007ff8b3dbb000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007ff8b3cb0000 - 0x00007ff8b3ceb000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ff8b59f0000 - 0x00007ff8b59f8000 	C:\Windows\System32\NSI.dll
+0x00007ff8af610000 - 0x00007ff8af61a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ff8b1a30000 - 0x00007ff8b1ab0000 	C:\Windows\System32\fwpuclnt.dll
+0x00007ff8af110000 - 0x00007ff8af119000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\extnet.dll
+0x00007ff8b41c0000 - 0x00007ff8b41d8000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00007ff8b38f0000 - 0x00007ff8b3924000 	C:\Windows\system32\rsaenh.dll
+0x00007ff8b47f0000 - 0x00007ff8b481e000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ff8b41b0000 - 0x00007ff8b41bc000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x00007ff8b19a0000 - 0x00007ff8b19b7000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007ff8b1980000 - 0x00007ff8b199d000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x00007ff8b04b0000 - 0x00007ff8b04c0000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\verify.dll
+0x00007ff8af130000 - 0x00007ff8af13e000 	C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\sunmscapi.dll
+0x00007ff8b5080000 - 0x00007ff8b51dd000 	C:\Windows\System32\CRYPT32.dll
+0x00007ff8b42d0000 - 0x00007ff8b42f8000 	C:\Windows\SYSTEM32\ncrypt.dll
+0x00007ff8b4290000 - 0x00007ff8b42cb000 	C:\Windows\SYSTEM32\NTASN1.dll
+0x00007ff89aed0000 - 0x00007ff89aed7000 	C:\Windows\system32\wshunix.dll
+0x00007ff89e740000 - 0x00007ff89e757000 	C:\Windows\system32\napinsp.dll
+0x00007ff89e760000 - 0x00007ff89e77b000 	C:\Windows\system32\pnrpnsp.dll
+0x00007ff89e780000 - 0x00007ff89e795000 	C:\Windows\system32\wshbth.dll
+0x00007ff8b16f0000 - 0x00007ff8b170d000 	C:\Windows\system32\NLAapi.dll
+0x00007ff89e820000 - 0x00007ff89e832000 	C:\Windows\System32\winrnr.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5;C:\Users\pgargi\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.testng.remote.RemoteTestNG -serport 51147 -protocol json -d C:\Users\pgargi\eclipse-workspace\SwimPay-Allan-main\SwimPay-Allan-main\test-output C:\Users\pgargi\eclipse-workspace\SwimPay-Allan-main\SwimPay-Allan-main\testng.xml
+java_class_path (initial): C:\Users\pgargi\eclipse\configuration\org.eclipse.osgi\527\0\.cp\lib\testng-remote.jar;C:\Users\pgargi\eclipse-workspace\SwimPay-Allan-main\SwimPay-Allan-main\target\test-classes;C:\Users\pgargi\eclipse-workspace\SwimPay-Allan-main\SwimPay-Allan-main\target\classes;C:\Users\pgargi\eclipse\plugins\org.testng_7.4.0.r202105021533.jar;C:\Users\pgargi\eclipse\plugins\com.beust.jcommander_1.78.0.jar;C:\Users\pgargi\eclipse\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar;C:\Users\pgargi\eclipse\plugins\org.yaml.snakeyaml_1.21.0.jar;C:\Users\pgargi\eclipse\plugins\org.webjars.jquery_3.5.1.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-java\4.20.0\selenium-java-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-api\4.20.0\selenium-api-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.20.0\selenium-chrome-driver-4.20.0.jar;C:\Users\pgargi\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.20.0\selenium-chromium-driver-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-json\4.20.0\selenium-json-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.20.0\selenium-manager-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.20.0\selenium-devtools-v122-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.20.0\selenium-devtools-v123-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.20.0\selenium-devtools-v124-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.20.0\selenium-devtools-v85-4.20.0.jar;C:\Users\pgargi\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.20.0\selenium-edge-driver-4.20.0.jar;C:\Users\pgarg
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4269801472                                {product} {ergonomic}
+   size_t MaxNewSize                               = 2560622592                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5826188                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916026                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916026                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 4269801472                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17.0.5
+PATH=C:/Users/pgargi/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143/jre/bin/server;C:/Users/pgargi/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk-17.0.5;C:\Program Files\Java\jdk-17.0.5\bin;C:\Program Files\Git\cmd;C:\Users\pgargi\Maven\apache-maven-3.9.1\bin;C:\Users\pgargi\Maven\apache-maven-3.9.1;%M@_HOME%\bin;C:\Program Files\nodejs\;C:\Users\pgargi\AppData\Local\Android\Sdk\tools\bin;C:\Users\pgargi\AppData\Local\Android\Sdk\tools;C:\Users\pgargi\AppData\Local\Android\Sdk\platform-tools;C:\wamp64\bin\php\php7.4.33\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pgargi\AppData\Local\Microsoft\WindowsApps;C:\Users\pgargi\AppData\Roaming\npm;C:\Users\pgargi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\nodejs\;;C:\Users\pgargi\eclipse;
+USERNAME=pgargi
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+TMP=C:\Users\pgargi\AppData\Local\Temp
+TEMP=C:\Users\pgargi\AppData\Local\Temp
+
+
+
+Periodic native trim disabled
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+OS uptime: 28 days 2:56 hours
+
+CPU: total 2 (initial active 2) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9 microcode 0x21, cx8, cmov, fxsr, ht, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, tsc, tscinvbit, avx, erms, clmul, vzeroupper, clflush
+Processor Information for all 2 processors :
+  Max Mhz: 3300, Current Mhz: 3300, Mhz Limit: 3300
+
+Memory: 4k page, system-wide physical 16280M (1485M free)
+TotalPageFile size 44818M (AvailPageFile size 2M)
+current process WorkingSet (physical memory assigned to process): 211M, peak: 266M
+current process commit charge ("private bytes"): 248M, peak: 364M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.10+7) for windows-amd64 JRE (17.0.10+7), built on Jan 16 2024 23:25:11 by "admin" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.

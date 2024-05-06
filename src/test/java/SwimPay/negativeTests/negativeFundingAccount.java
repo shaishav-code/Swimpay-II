@@ -262,7 +262,9 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.clickDeleteOptforRequestedUser("steve");
+		LoginPage.pauseRun5();
 		FundingAccount.yesAction();
+		LoginPage.pauseRun5();
 		FundingAccount.invalid_OTP_Value();
 		FundingAccount.otpVerify();
 		FundingAccount.otpCancelBtn();
@@ -281,6 +283,7 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		FundingAccount.clickEditOptforRequestedUser("steve");
+		LoginPage.pauseRun5();
 		FundingAccount.submitBankAccountDetails();
 		FundingAccount.accountNumber("551");
 		FundingAccount.validate_N_createRecipientPayeeBtn();

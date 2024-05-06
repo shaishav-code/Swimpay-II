@@ -28,7 +28,6 @@ public class negativePassword extends baseClass{
 		forgotPasswordPage forgotPassword= LoginPage.forgotPassword();
 		forgotPassword.forgotPassword_Email(inavlidemail1);
 		forgotPassword.forgotPassword_EmailSubmit();	
-		forgotPassword.loginClick();
 		LoginPage.pauseRun2();
 	}
 	
@@ -46,7 +45,7 @@ public class negativePassword extends baseClass{
 		LoginPage.pauseRun2();
 		forgotPassword.resetPasswordSubmit();
 		//forgotPassword.messageToaster();
-		forgotPassword.backToLogin();
+	//	forgotPassword.backToLogin();
 	}
 	
 	//Verify submitting reset password with invalid data range[FAIL]
@@ -62,7 +61,7 @@ public class negativePassword extends baseClass{
 		forgotPassword.resetPassword(password, password2);
 		forgotPassword.resetPasswordSubmit();
 		//forgotPassword.messageToaster();
-		forgotPassword.backToLogin();
+	//	forgotPassword.backToLogin();
 	}
 	
 	
@@ -77,7 +76,7 @@ public class negativePassword extends baseClass{
 		forgotPassword.invalid_OTP_Value();
 		forgotPassword.otpSubmitBtn();
 		forgotPassword.messageToaster();
-		forgotPassword.backToLogin();
+	//	forgotPassword.backToLogin();
 	}
 	
 	//Try to Reset Password with White Space values

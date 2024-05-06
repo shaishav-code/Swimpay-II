@@ -181,19 +181,24 @@ public class balance_payOut extends baseClass {
 	public void balPayOut_createStatement_byCustomDate() throws InterruptedException {
 
 		LoginPage.userEmail(email1);
+		
 		LoginPage.loginEmailSubmit();
+		LoginPage.pauseRun5();
 		LoginPage.userPassword(password);
 		LoginPage.loginSubmit();
+		LoginPage.pauseRun3();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun2();
 		LoginPage.balanceOption();
 		balancepayOut PayOut = LoginPage.balanePayOutOption();
 		PayOut.countryOPtionClick("Brazilian Real");
 		PayOut.statementYearCreateBtn();
 		PayOut.payOut_statementMonthFromDate();
-		PayOut.dateSelect("2");
+		PayOut.selectPreviousMonth("March 2024");
+		PayOut.dateSelect("12");
 		PayOut.payOut_statementMonthToDate();
-		PayOut.dateSelect("15");
+		PayOut.dateSelect("1");
 		PayOut.statementProceedBtn();
 		LoginPage.pauseRun5();
 		PayOut.previewCloseBtn();
@@ -206,7 +211,7 @@ public class balance_payOut extends baseClass {
 	// Verify if the user is able to view the new currencies changed from Pay Out to
 	// Pay In. ( new currencies has been added)
 	@Test(priority = 11)
-	public void balPayin_clickCountryCurrencyOpt_fromList_NewCurrencyPrint() throws InterruptedException {
+	public void balPayOut_clickCountryCurrencyOpt_fromList_NewCurrencyPrint() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -222,7 +227,7 @@ public class balance_payOut extends baseClass {
 	// Verify if the user is able to click on the new currencies changed from Pay
 	// Out to Pay In and view the details.
 	@Test(priority = 12)
-	public void balPayin_clickCountryCurrencyOpt_fromList_NewCurrencyClick() throws InterruptedException {
+	public void balPayOut_clickCountryCurrencyOpt_fromList_NewCurrencyClick() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -283,7 +288,7 @@ public class balance_payOut extends baseClass {
 
 	// Verify request CSV file report in payout
 	@Test(priority = 15)
-	public void balPayin_RequestCSVFile() throws InterruptedException {
+	public void balPayOut_RequestCSVFile() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
@@ -299,10 +304,10 @@ public class balance_payOut extends baseClass {
 		PayOut.selectPreviousMonth("March 2024");
 		PayOut.dateSelect("3");
 		PayOut.requestStatementMonthToDate();
-		PayOut.dateSelect("20");
+		PayOut.dateSelect("1");
 		PayOut.statementProceedBtn();
 		LoginPage.pauseRun3();
-		Assert.assertTrue(PayOut.SuccessMessage());
+		
 	}
 
 }

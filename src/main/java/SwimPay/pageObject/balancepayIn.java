@@ -59,6 +59,7 @@ public class balancepayIn extends abstractComponentsMethods {
 	// cature country name from list and perform click action on country price tab
 	// option from data list
 	public void countryOPtionClick(String countryOpt) {
+		waitTimeForWebElementListToAppear(CountrysName);
 		CountrysName.size();
 		//System.out.println(CountryName_PrintPayIn);
 		for (WebElement Country_Name : CountrysName) {
@@ -74,6 +75,7 @@ public class balancepayIn extends abstractComponentsMethods {
 	
 	public void PrintCountry()
 	{
+		waitTimeForWebElementListToAppear(CountrysName);
 		CountrysName.size();
 		System.out.println(CountrysName.size());
 		for (WebElement element : CountrysName) {
@@ -96,33 +98,39 @@ public class balancepayIn extends abstractComponentsMethods {
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[1]/div/div/button")
 	private WebElement PendingSettleFromDate;
 
-	public void pendingSettlement_fromDate() {
+	public void pendingSettlement_fromDate() throws InterruptedException {
+		waitTimeForWebElementToAppear(PendingSettleFromDate);
 		PendingSettleFromDate.click();
+		pauseRun5();
 	}
 
 	// find Pending Transaction settlement To Date field and perform required action
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[2]/div/div/button")
 	private WebElement PendingSettleToDate;
 
-	public void pendingSettlement_toDate() {
+	public void pendingSettlement_toDate() throws InterruptedException {
 		PendingSettleToDate.click();
+		pauseRun5();
 	}
 
 	// find complete Transaction from Date field and perform required action
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[1]/div/div/button")
 	private WebElement CompleteTransFromDate;
 
-	public void completeTransaction_fromDate() {
+	public void completeTransaction_fromDate() throws InterruptedException {
+		waitTimeForWebElementToAppear(CompleteTransFromDate);
 		CompleteTransFromDate.click();
+		pauseRun5();
 	}
 
 	// find complete Transaction To Date field and perform required action
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[2]/div/div/button")
 	private WebElement CompleteTransToDate;
 
-	public void completeTransaction_toDate() {
+	public void completeTransaction_toDate() throws InterruptedException {
 		waitTimeForElementToClickable(CompleteTransToDate);
 		CompleteTransToDate.click();
+		pauseRun5();
 	}
 
 	// find Auto COnverted transaction settlement from Date field and perform required
@@ -130,16 +138,20 @@ public class balancepayIn extends abstractComponentsMethods {
 		@FindBy(xpath = "//div[@class='content2-container']/div/div[5]/div[2]/div[1]/div/div/button")
 		private WebElement AutoConvertedFromDate;
 
-		public void autoConvertedSettlement_fromDate() {
+		public void autoConvertedSettlement_fromDate() throws InterruptedException {
+			waitTimeForWebElementToAppear(AutoConvertedFromDate);
 			AutoConvertedFromDate.click();
+			pauseRun5();
 		}
 
 		// find Auto COnverted transaction  settlement To Date field and perform required action
 		@FindBy(xpath = "//div[@class='content2-container']/div/div[5]/div[2]/div[2]/div/div/button")
 		private WebElement AutoConvertedToDate;
 
-		public void autoConvertedSettlement_toDate() {
+		public void autoConvertedSettlement_toDate() throws InterruptedException {
+			waitTimeForWebElementToAppear(AutoConvertedToDate);
 			AutoConvertedToDate.click();
+			pauseRun5();
 		}
 	
 	
@@ -181,6 +193,7 @@ public class balancepayIn extends abstractComponentsMethods {
 
 	public void statementYear(String year) {
 		StatementYearField.sendKeys(year);
+		pauseRun5();
 	}
 
 	// find create statement button & perform click action
@@ -190,6 +203,7 @@ public class balancepayIn extends abstractComponentsMethods {
 	public void statementYearCreateBtn() {
 		waitTimeForElementToClickable(StatementCreateBtn);
 		StatementCreateBtn.click();
+		pauseRun5();
 	}
 
 	
@@ -200,6 +214,7 @@ public class balancepayIn extends abstractComponentsMethods {
 		public void statementYearReqBtn() {
 			waitTimeForElementToClickable(StatementReqBtn);
 			StatementReqBtn.click();
+			pauseRun5();
 		}
 	// Find statement Month field from pop-up and perform click action
 	@FindBy(xpath = "(//div[@class='mb-3'])[3]/div/div/div/button")
@@ -207,6 +222,7 @@ public class balancepayIn extends abstractComponentsMethods {
 
 	public void selectStatementMonth() {
 		SelectStatementMonth.click();
+		pauseRun5();
 	}
 	// find statement months from create statement pop-up
 
@@ -235,8 +251,8 @@ public class balancepayIn extends abstractComponentsMethods {
 	private WebElement YearClick;
 
 	public void CreatestatementYear(String Yearcreate) throws InterruptedException {
-		//YearClick.click();
-		Thread.sleep(3000);
+	
+		pauseRun5();
 
 		for (WebElement CreateStatementyear : StatementYears) {
 
@@ -271,6 +287,7 @@ public class balancepayIn extends abstractComponentsMethods {
 
 	public void statementMonthFromDate() {
 		StatementFromDateField.click();
+		pauseRun5();
 	}
 
 	// find create statement to date field and perform required action
@@ -279,7 +296,8 @@ public class balancepayIn extends abstractComponentsMethods {
 
 		public void statementMonthToDate() {
 			StatementToDateField.click();
-			;
+			pauseRun5();
+			
 		}
 
 	
@@ -291,6 +309,7 @@ public class balancepayIn extends abstractComponentsMethods {
 
 	public void requestStatementMonthFromDate() {
 		ReqStatementFromDateField.click();
+		pauseRun5();
 	}
 	
 	
@@ -300,6 +319,7 @@ public class balancepayIn extends abstractComponentsMethods {
 
 		public void requestStatementMonthToDate() {
 			ReqStatementToDateField.click();
+			pauseRun5();
 		}
 	
 	
@@ -310,6 +330,7 @@ public class balancepayIn extends abstractComponentsMethods {
 
 	public void statementProceedBtn() {
 		StatementProceed.click();
+		pauseRun5();
 	}
 
 	// find cancel statement button and perform required action
@@ -318,6 +339,7 @@ public class balancepayIn extends abstractComponentsMethods {
 
 	public void statementCancelBtn() {
 		StatementCancel.click();
+		pauseRun5();
 	}
 
 	// find Statement Months datalist and perform required action (click on View

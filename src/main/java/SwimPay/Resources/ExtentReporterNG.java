@@ -7,7 +7,7 @@ public class ExtentReporterNG {
 	static ExtentReports extentReport;
 
 	public static ExtentReports getReporterObject() {
-		String dirPath = System.getProperty("user.dir") + "//reports//Gargi//Regression2_26_April.html";
+		String dirPath = System.getProperty("user.dir") + "//reports//Gargi//Regression7_3May.html";
 		ExtentSparkReporter sparkReport = new ExtentSparkReporter(dirPath);
 		sparkReport.config().setReportName("Swim-Pay Automation results");
 		sparkReport.config().setDocumentTitle("Swim-Pay Automation Project");

@@ -20,8 +20,9 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		LoginPage.accountInformationOption();
-	
+
 	}
 
 	// Verify find requested account name from data list and perform click action on
@@ -34,14 +35,15 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
-	
+
 	}
 
 	// Verify find requested account name from data list and perform click action on
 	// arrow down icon - No such functionality now
-	//@Test(priority = 3)
+	/////////// @Test(priority = 3)
 	public void findrequestedAccountName_andClickArrowDownIcon() throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
@@ -49,27 +51,30 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.clickArrowBtn("NISL00052");
-		
+
 	}
 
 	// Verify find requested account name from data list and perform click action on
 	// arrow down icon then capture displayed currency datas
 	@Test(priority = 3)
-	public void findrequestedAccountName_andClickArrowDownIcon_captureDisplayedcurrencyData() throws InterruptedException {
+	public void findrequestedAccountName_andClickArrowDownIcon_captureDisplayedcurrencyData()
+			throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.currecnyWalletOpt();
 		AccountInfo.scrollBy();
 		AccountInfo.backToAccount();
-	
+
 	}
 
 	// Verify click on user according to requested last name from data list of
@@ -82,10 +87,11 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.lastNameClickFromDataList("Lockman");
-		
+
 	}
 
 	// Verify click on user according to requested first name from data list of
@@ -98,10 +104,11 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.firstNameClickFromDataList("Kuldeep");
-		
+
 	}
 
 	// Verify click on account information option from Account details section
@@ -113,10 +120,11 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.accountInformationOpt();
-		
+
 	}
 
 	// Verify click on display application form button from account information page
@@ -129,13 +137,13 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.accountInformationOpt();
 		AccountInfo.displayApplicationFormBtn();
 		AccountInfo.closeApplicationViewForm();
-	
-		   
+
 	}
 
 	// Verify click on display application form button from account information page
@@ -150,6 +158,7 @@ public class accountInfo extends baseClass {
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.accountInformationOpt();
@@ -157,44 +166,112 @@ public class accountInfo extends baseClass {
 		AccountInfo.applicationFormData();
 		LoginPage.pauseRun3();
 		AccountInfo.closeApplicationViewForm();
-		
+
 	}
 
 	// Verify click on Enable user/Disable user from data list according to
 	// requested user of user list of Accounts and perform disable user
 	@Test(priority = 9)
-	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup() throws InterruptedException {
+	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup()
+			throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
 		AccountInfo.disableEnableBtn(1);
 		AccountInfo.yesEnable();
 		LoginPage.otpData();
 		LoginPage.otpCancelBtn();
-		
+
 	}
 
-	// Verify click on Enable user/Disable user from data list according to requested user of user list of Accounts and perform click on No option from Pop-up
+	// Verify click on Enable user/Disable user from data list according to
+	// requested user of user list of Accounts and perform click on No option from
+	// Pop-up
 	@Test(priority = 10)
-	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickNoOptFromPopup() throws InterruptedException {
+	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickNoOptFromPopup()
+			throws InterruptedException {
 		LoginPage.userEmail(email1);
 		LoginPage.loginEmailSubmit();
 		LoginPage.userPassword(password);
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
 		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
 		AccountInfo.accountNameClick("NISL00052");
-	//	AccountInfo.clickEnable_DisableBtnOpt("qa4@narola.email");
+		// AccountInfo.clickEnable_DisableBtnOpt("qa4@narola.email");
 		AccountInfo.disableBtn(0);
 		LoginPage.pauseRun3();
 		AccountInfo.noEnable();
-		
+
+	}
+
+	// ========Need to Add TC Code updated by GJP======
+
+	// Verify click on Enable user/Disable user from data list according to
+	// requested user of user list of Accounts and perform enable user and click on
+	// yes option and then after disable this user
+
+	@Test(priority = 11)
+	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup_VerifyUSer_EnableUserAgain()
+			throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
+		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
+		AccountInfo.accountNameClick("NISL00052");
+		AccountInfo.disableEnableBtn(1);
+		AccountInfo.yesEnable();
+		LoginPage.otpData();
+		LoginPage.otpVerify();
+		LoginPage.pauseRun3();
+		LoginPage.messageToaster();
+		AccountInfo.disableBtn(1);
+		AccountInfo.yesEnable();
+		LoginPage.otpData();
+		LoginPage.otpVerify();
+		LoginPage.pauseRun3();
+		AccountInfo.disableEnableBtn(1);
+		AccountInfo.yesEnable();
+		LoginPage.otpData();
+		LoginPage.otpVerify();
+		LoginPage.pauseRun3();
+//		LoginPage.messageToaster();
+
+	}
+
+	// Verify click on Enable user/Disable user from data list according to
+	// requested user of user list of Accounts and perform click on Yes option from
+	// Pop-up and click on Submit button
+	@Test(priority = 12)
+	public void clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup_VerifyUser_YesOptionClick()
+			throws InterruptedException {
+		LoginPage.userEmail(email1);
+		LoginPage.loginEmailSubmit();
+		LoginPage.userPassword(password);
+		LoginPage.loginSubmit();
+		LoginPage.otpData();
+		LoginPage.otpSubmitBtn();
+		LoginPage.pauseRun5();
+		accountInfoPage AccountInfo = LoginPage.accountInformationOption();
+		AccountInfo.accountNameClick("NISL00052");
+		AccountInfo.disableBtn(1);
+		AccountInfo.yesEnable();
+		LoginPage.otpData();
+		LoginPage.otpVerify();
+		LoginPage.pauseRun3();
+		LoginPage.messageToaster();
+
 	}
 
 }

@@ -45,6 +45,7 @@ public class abstractComponentsMethods {
 
 	// Provide Values for OTP fields
 	public void invalid_OTP_Value() {
+		waitTimeForWebElementListToAppear(loginOTP);
 		for (int i = 0; i < loginOTP.size(); i++) {
 			if (loginOTP.equals(loginOTP)) {
 				String otpValue = "111222";
@@ -76,7 +77,7 @@ public class abstractComponentsMethods {
 	private WebElement OTPVerify;
 
 	public void otpVerify() {
-		// waitTimeForElementToClickable(OTPVerify);
+		waitTimeForElementToClickable(OTPVerify);
 		OTPVerify.click();
 	}
 
@@ -84,7 +85,7 @@ public class abstractComponentsMethods {
 	private WebElement OTPContinue;
 
 	public void otpSubmitBtn() {
-		// waitTimeForElementToClickable(OTPContinue);
+		waitTimeForElementToClickable(OTPContinue);
 		OTPContinue.click();
 	}
 
@@ -93,7 +94,7 @@ public class abstractComponentsMethods {
 	private WebElement OTPCancel;
 
 	public void otpCancelBtn() {
-		// waitTimeForElementToClickable(OTPCancel);
+		waitTimeForElementToClickable(OTPCancel);
 		System.out.println(OTPCancel.getText() + " Button Clicked");
 		OTPCancel.click();
 	}
@@ -120,7 +121,7 @@ public class abstractComponentsMethods {
 
 	public void errorMsgDisplay() {
 		if (ErrorMessageDisplay.isDisplayed()) {
-			// waitTimeForWebElementToAppear(ErrorMessageDisplay);
+			waitTimeForWebElementToAppear(ErrorMessageDisplay);
 			System.out.println(ErrorMessageDisplay.getText());
 		} else {
 			System.out.println("No Message displayed");
@@ -132,6 +133,7 @@ public class abstractComponentsMethods {
 	private List<WebElement> ErrorMessageDisplays;
 
 	public void errorsDisplay() {
+		waitTimeForWebElementListToAppear(ErrorMessageDisplays);
 		for (int i = 0; i < ErrorMessageDisplays.size(); i++) {
 			String errorMessage = ErrorMessageDisplays.get(i).getText();
 			if (errorMessage.contains(errorMessage)) {
@@ -148,6 +150,7 @@ public class abstractComponentsMethods {
 	private List<WebElement> FieldsErrorMessageDisplays;
 
 	public void fieldserrorsDisplay() {
+		waitTimeForWebElementListToAppear(FieldsErrorMessageDisplays);
 		for (int i = 0; i < FieldsErrorMessageDisplays.size(); i++) {
 			String errorMessage = FieldsErrorMessageDisplays.get(i).getText();
 			if (errorMessage.contains(errorMessage)) {
@@ -166,6 +169,7 @@ public class abstractComponentsMethods {
 	private WebElement DashboardOpt;
 
 	public dashboardPage dashboardOption() {
+		waitTimeForWebElementToAppear(DashboardOpt);
 		DashboardOpt.click();
 		dashboardPage Dashboard = new dashboardPage(driver);
 		return Dashboard;
@@ -176,6 +180,7 @@ public class abstractComponentsMethods {
 	private WebElement FundingAccountOpt;
 
 	public fundingAccountsPage fundingAccountOption() {
+		waitTimeForWebElementToAppear(FundingAccountOpt);
 		FundingAccountOpt.click();
 		fundingAccountsPage FundingAccount = new fundingAccountsPage(driver);
 		return FundingAccount;
@@ -187,6 +192,7 @@ public class abstractComponentsMethods {
 	private WebElement BalanceOpt;
 
 	public void balanceOption() {
+		waitTimeForWebElementToAppear(BalanceOpt);
 		BalanceOpt.click();
 	}
 
@@ -195,6 +201,7 @@ public class abstractComponentsMethods {
 	private WebElement Bal_PayInOpy;
 
 	public balancepayIn balanePayInOption() {
+		waitTimeForWebElementToAppear(Bal_PayInOpy);
 		Bal_PayInOpy.click();
 		balancepayIn BalPayIn = new balancepayIn(driver);
 		return BalPayIn;
@@ -205,6 +212,7 @@ public class abstractComponentsMethods {
 	private WebElement Bal_PayOutOpy;
 
 	public balancepayOut balanePayOutOption() {
+		waitTimeForWebElementToAppear(Bal_PayOutOpy);
 		Bal_PayOutOpy.click();
 		balancepayOut BalPayOut = new balancepayOut(driver);
 		return BalPayOut;
@@ -215,6 +223,7 @@ public class abstractComponentsMethods {
 	private WebElement PaymentOption;
 
 	public paymentPage paymentsOption() {
+		waitTimeForWebElementToAppear(PaymentOption);
 		PaymentOption.click();
 		paymentPage Payments = new paymentPage(driver);
 		return Payments;
@@ -225,6 +234,7 @@ public class abstractComponentsMethods {
 	private WebElement FxConversionOpt;
 
 	public fxConversionPage fxConversionOption() {
+		waitTimeForWebElementToAppear(FxConversionOpt);
 		FxConversionOpt.click();
 		fxConversionPage FX_Conversion = new fxConversionPage(driver);
 		return FX_Conversion;
@@ -235,6 +245,7 @@ public class abstractComponentsMethods {
 	private WebElement Recipient_PayeeOpt;
 
 	public recipient_payeePage Recipients_PayeesOptions() {
+		waitTimeForWebElementToAppear(Recipient_PayeeOpt);
 		Recipient_PayeeOpt.click();
 		recipient_payeePage Recipient_Payee = new recipient_payeePage(driver);
 		return Recipient_Payee;
@@ -245,6 +256,7 @@ public class abstractComponentsMethods {
 	private WebElement AccountInfoOpt;
 
 	public accountInfoPage accountInformationOption() {
+		waitTimeForWebElementToAppear(AccountInfoOpt);
 		AccountInfoOpt.click();
 		accountInfoPage AccountInfo = new accountInfoPage(driver);
 		return AccountInfo;
@@ -256,6 +268,7 @@ public class abstractComponentsMethods {
 
 	// click on Search option from Menu
 	public searchPage searchOption() {
+		waitTimeForWebElementToAppear(SearchOpt);
 		SearchOpt.click();
 		searchPage SearchPage = new searchPage(driver);
 		return SearchPage;
@@ -266,6 +279,7 @@ public class abstractComponentsMethods {
 	private WebElement ReportsOpt;
 
 	public reportsPage reportsOption() {
+		waitTimeForWebElementToAppear(ReportsOpt);
 		ReportsOpt.click();
 		reportsPage ReportPage = new reportsPage(driver);
 		return ReportPage;
@@ -275,6 +289,7 @@ public class abstractComponentsMethods {
 	private WebElement SettingOPt;
 
 	public settingsPage settingOption() {
+		waitTimeForWebElementToAppear(SettingOPt);
 		SettingOPt.click();
 		settingsPage SettingPage = new settingsPage(driver);
 		return SettingPage;
@@ -285,6 +300,7 @@ public class abstractComponentsMethods {
 	private WebElement ProfileOpt;
 
 	public profilePage profileOption() {
+		waitTimeForWebElementToAppear(ProfileOpt);
 		ProfileOpt.click();
 		profilePage ProfilePage = new profilePage(driver);
 		return ProfilePage;
@@ -306,6 +322,7 @@ public class abstractComponentsMethods {
 	}
 
 	public void getMessage() {
+		waitTimeForWebElementToAppear(successMessage);
 		scrollActionTop();
 
 		if (successMessage.isDisplayed()) {
@@ -337,31 +354,49 @@ public class abstractComponentsMethods {
 	private WebElement NoOpt;
 
 	public void noAction() {
+		waitTimeForWebElementToAppear(NoOpt);
 		NoOpt.click();
 	}
 
 	@FindBy(xpath = "//i[@class='bi bi-power text-light fw-bold']")
 	private WebElement logout;
 
-	public void Logout_Click() {
-
-		logout.click();
-
-	}
-
 	public void Logout() throws InterruptedException {
-		Thread.sleep(3000);
-		logout.click();
-		Thread.sleep(4000);
+		// waitTimeForWebElementToAppear(logout);
+		try {
+			if (logout.isDisplayed()) {
+				Thread.sleep(3000);
+				logout.click();
+				// System.out.println("Logout Display");
+				driver.quit();
+			} else {
+				Thread.sleep(5000);
+				logout.sendKeys(Keys.ESCAPE);
+				System.out.println("Escapre is clicked");
+				if (logout.isDisplayed()) {
+					Thread.sleep(3000);
+					logout.click();
+					System.out.println("afetr escape click then Logout clicked");
+					driver.quit();
+				} else {
+					System.out.println("Already Logout");
+				}
+
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+		driver.quit();
 	}
 
 	public void waitTimeForWebElementToAppear(WebElement eleAppear) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(120));
 		wait.until(ExpectedConditions.visibilityOf(eleAppear));
 	}
 
 	public void waitTimeForWebElementListToAppear(List<WebElement> eleListAppear) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(120));
 		wait.until(ExpectedConditions.visibilityOfAllElements(eleListAppear));
 	}
 
@@ -380,20 +415,40 @@ public class abstractComponentsMethods {
 		wait.until(ExpectedConditions.attributeToBe(element, "value", ""));
 	}
 
-	public void pauseRun2() throws InterruptedException {
-		Thread.sleep(2000);
+	public void pauseRun2() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	public void pauseRun3() throws InterruptedException {
-		Thread.sleep(3000);
+	public void pauseRun3() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	public void pauseRun5() throws InterruptedException {
-		Thread.sleep(5000);
+	public void pauseRun5() {
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	public void pauseRun25() throws InterruptedException {
-		Thread.sleep(25000);
+	public void pauseRun25() {
+		try {
+			Thread.sleep(25000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void actionClick() {
@@ -497,6 +552,7 @@ public class abstractComponentsMethods {
 	private List<WebElement> DateLists;
 
 	public void selectNextMonth(String month) {
+
 		String currentMonth = CalendarMonth.getText();
 		System.out.println(currentMonth);
 		while (!currentMonth.equals(month)) {
@@ -505,9 +561,7 @@ public class abstractComponentsMethods {
 			System.out.println("Selected Month is " + currentMonth);
 		}
 	}
-	
-	
-	
+
 	public void selectPreviousMonth(String month) {
 		String currentMonth = CalendarMonth.getText();
 		while (!currentMonth.equals(month)) {
@@ -608,15 +662,13 @@ public class abstractComponentsMethods {
 			scroll.executeScript("arguments[0].scrollIntoView();", NoDatatoDisplayPAYINOUT1);
 		}
 	}
-	
-	
+
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[1]/div/input")
 	private WebElement CalendarMonthString;
 
-	public void selectNextMonth1(String mon) throws InterruptedException
-	{
+	public void selectNextMonth1(String mon) throws InterruptedException {
 		Thread.sleep(2000);
-		//CalendarMonthString.click();
+		// CalendarMonthString.click();
 		CalendarMonthString.clear();
 		Thread.sleep(5000);
 		CalendarMonthString.sendKeys("258549");
@@ -626,7 +678,7 @@ public class abstractComponentsMethods {
 
 	public void waitcode() {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -652,28 +704,40 @@ public class abstractComponentsMethods {
 	private WebElement invoicingpage;
 
 	public InvoicingPage InvoicingOption() {
+		waitTimeForWebElementToAppear(invoicingpage);
 		invoicingpage.click();
 		InvoicingPage invoicingPage = new InvoicingPage(driver);
 		return invoicingPage;
 	}
-	
-	
-	//////////////////Code Viraj//////////////////
-	// Bulk payment option from Side Menu
-	
-		  @FindBy(xpath ="(//*[@href='/bulkpayments'])[2]")
-		   private WebElement BulkPayment;
-		    
-		    public BulkPaymentPage Bulkpaymentformenu() {
-		    	BulkPayment.click();
-		    	BulkPaymentPage BulkpaymentOption = new BulkPaymentPage(driver);
-				return  BulkpaymentOption;
-		    }
-	   		
 
-	  
-	
-	
-	
-	
+	////////////////// Code Viraj//////////////////
+	// Bulk payment option from Side Menu
+
+	@FindBy(xpath = "(//*[@href='/bulkpayments'])[2]")
+	private WebElement BulkPayment;
+
+	public BulkPaymentPage Bulkpaymentformenu() {
+		waitTimeForWebElementToAppear(BulkPayment);
+		BulkPayment.click();
+		BulkPaymentPage BulkpaymentOption = new BulkPaymentPage(driver);
+		return BulkpaymentOption;
+	}
+
+	@FindBy(xpath = "//div[@class='sc-ivTmOn fwKvpK']//div")
+	private WebElement NoDatatoDisplay5;
+
+	public void scrollActionBulk(WebElement ele) {
+
+		JavascriptExecutor scroll = (JavascriptExecutor) driver;
+		// scroll.executeScript("scrollBy(0,1000)");
+		scroll.executeScript("arguments[0].scrollIntoView();", ele);
+
+		/*
+		 * if (footerView.isDisplayed()) {
+		 * scroll.executeScript("arguments[0].scrollIntoView();", footerView); } else if
+		 * (NoDatatoDisplay.isDisplayed()) {
+		 * scroll.executeScript("arguments[0].scrollIntoView();", NoDatatoDisplay); }
+		 */
+	}
+
 }

@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="SwimPay.testComponents.ListenersClass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SwimPay.negativeTests.negativeBalancepayIn">
+      <class name="SwimPay.positiveTests.profile">
         <methods>
           <include name="tearDown"/>
-          <include name="balPayinInvalid_completedTransactionsByDate"/>
+          <include name="profileOptClick"/>
+          <include name="changePassword"/>
+          <include name="lanuchWebsite"/>
+          <include name="profile_updateContactInfoClick"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.profile -->
+      <class name="SwimPay.negativeTests.negativeFundingAccount">
+        <methods>
+          <include name="addNew_submitMyBankDetailFormData_withBlankFields"/>
+          <include name="tearDown"/>
+          <include name="addNewFunding_submitBankAccountDetailForm_withInvalidValues"/>
+          <include name="addNew_ValidateAccount_withoutSelectPaymentCheckBox"/>
+          <include name="addNewFunding_withInvalidValueProvideAndSubmit"/>
+          <include name="addNew_submitAndValdiateBankAccountDetails_withoutDataProvideInPaymentFormFields"/>
+          <include name="lanuchWebsite"/>
+          <include name="addNew_submitAndValdiateBankAccountDetails_withInvalidOTPSubmit"/>
+        </methods>
+      </class> <!-- SwimPay.negativeTests.negativeFundingAccount -->
+      <class name="SwimPay.positiveTests.fundingAccounts">
+        <methods>
+          <include name="tearDown"/>
+          <include name="clickPayOptFromDataListForRequestedUser"/>
+          <include name="clickUsersAccountNameFromDataList_andClickDeleteBtnFromDetailPage"/>
+          <include name="clickUsersAccountNameFromDataList_andClickPayBtnFromDetailPage"/>
+          <include name="clickUsersAccountNameFromDataList_andClickEditBtnFromDetailPage"/>
+          <include name="clickPayOptFromDataListForRequestedUser_andPerformPayment"/>
+          <include name="addNewFunding_andClickPayOpt"/>
+          <include name="clickEditOptForRequestedUser"/>
+          <include name="clickUserAccountNamefromDataList"/>
+          <include name="addNewFunding_deletenewSavedDetails"/>
+          <include name="clickDeleteOptForRequestedUserFromDataList_andPerformDeleteAction"/>
+          <include name="clickEditOptFromDataListForRequestedUser_andEditUpdateDetails"/>
           <include name="lanuchWebsite"/>
         </methods>
-      </class> <!-- SwimPay.negativeTests.negativeBalancepayIn -->
+      </class> <!-- SwimPay.positiveTests.fundingAccounts -->
+      <class name="SwimPay.negativeTests.negativeBulkPayment">
+        <methods>
+          <include name="tearDown"/>
+          <include name="PopUpMesaageCancle"/>
+          <include name="lanuchWebsite"/>
+          <include name="MultiPay"/>
+        </methods>
+      </class> <!-- SwimPay.negativeTests.negativeBulkPayment -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

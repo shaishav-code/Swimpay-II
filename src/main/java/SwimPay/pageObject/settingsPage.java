@@ -22,6 +22,7 @@ public class settingsPage extends abstractComponentsMethods {
 	private WebElement FX_FEE_Field;
 
 	public void FxFeeAllConversion(String fee) {
+		waitTimeForWebElementToAppear(FX_FEE_Field);
 		FX_FEE_Field.click();
 		clearField(FX_FEE_Field);
 		FX_FEE_Field.sendKeys(fee);

@@ -23,7 +23,9 @@ public class fundingAccounts extends baseClass {
 		loginPage LoginPage = new loginPage(driver);
 		LoginPage.userEmail(email2);
 		LoginPage.loginEmailSubmit();
+		LoginPage.pauseRun5();
 		LoginPage.userPassword(password);
+		LoginPage.pauseRun5();
 		LoginPage.loginSubmit();
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
@@ -560,6 +562,35 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.yesAction();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
+		LoginPage.pauseRun5();
+		FundingAccount.addBankAccountBtn();
+		LoginPage.pauseRun3();
+		FundingAccount.countryOption("Australia");
+		LoginPage.pauseRun5();
+		FundingAccount.currency("Aud");
+		FundingAccount.myBankAccountCountry("Australia");
+		FundingAccount.bankAccountTypeIndividualOption();
+		FundingAccount.submitBankAccountDetails();
+		FundingAccount.nickname("steve");
+		FundingAccount.countryOption1("Australia");
+		FundingAccount.PayOut_Click();
+		LoginPage.pauseRun3();
+		FundingAccount.BankAccount_Click();
+		FundingAccount.regularPaymentCheckBox();
+		FundingAccount.transit_swiftBsbNumber();
+		FundingAccount.accountNumber("051671247");
+		FundingAccount.bankName("National Australia Bank Limited (NAB");
+		FundingAccount.address("Level 4, 800 Bourke Street, Docklands, VIC, Australia");
+		FundingAccount.city("Melbourne");
+		FundingAccount.postCode("3000");
+		FundingAccount.validate_N_createRecipientPayeeBtn();
+		LoginPage.pauseRun3();
+		FundingAccount.reviewMyDetails();
+		FundingAccount.CreateMyAccont_click();
+		FundingAccount.otpData();
+		FundingAccount.otpVerify();
+		 
+		
 
 	}
 

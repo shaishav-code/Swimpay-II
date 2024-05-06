@@ -13,7 +13,7 @@ import SwimPay.testComponents.baseClass;
 public class forgot_resetPassword extends baseClass{
 	String email1="qa1@narola.email";
 	String email2= "qa2@narola.email";
-	String password= "12345678";
+	String password= "Pass@1234";
 	
 	
 	//Verify clicking on forgot password option
@@ -21,8 +21,8 @@ public class forgot_resetPassword extends baseClass{
 	public void clickForgotPasswordOpt() throws InterruptedException 
 	{
 		loginPage LoginPage=new loginPage(driver);
+		LoginPage.pauseRun2();
 		forgotPasswordPage forgotPassword= LoginPage.forgotPassword();
-		forgotPassword.loginClick();
 		LoginPage.pauseRun2();
 		
 	}
@@ -40,7 +40,7 @@ public class forgot_resetPassword extends baseClass{
 		forgotPassword.otpData();
 		forgotPassword.otpSubmitBtn();
 		LoginPage.pauseRun2();
-		forgotPassword.backToLogin();
+	
 		}
 	
 	//Verify reset password with valid specified format 
@@ -52,15 +52,15 @@ public class forgot_resetPassword extends baseClass{
 		forgotPasswordPage forgotPassword= LoginPage.forgotPassword();
 		//forgotPassword.loginClick();
 		LoginPage.pauseRun2();
-		forgotPassword.forgotPassword_Email(email2);
+		forgotPassword.forgotPassword_Email(email1);
 		LoginPage.pauseRun2();
 		forgotPassword.forgotPassword_EmailSubmit();
 		forgotPassword.otpData();
 		forgotPassword.otpSubmitBtn();
 		forgotPassword.resetPassword(password, password);
 		forgotPassword.resetPasswordSubmit();
-		LoginPage.pauseRun2();
-		forgotPassword.backToLogin();
+//		LoginPage.pauseRun2();
+//		forgotPassword.backToLogin();
 	}
 	
 	//Verify clicking on back to login option from forgot or reset password page

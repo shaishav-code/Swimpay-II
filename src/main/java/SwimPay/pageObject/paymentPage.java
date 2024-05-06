@@ -37,6 +37,7 @@ public class paymentPage extends abstractComponentsMethods {
 	private WebElement AmountFieldOpt;
 
 	public void enterAmount(String amount) {
+		waitTimeForWebElementToAppear(AmountFieldOpt);
 		AmountFieldOpt.sendKeys(amount);
 	}
 

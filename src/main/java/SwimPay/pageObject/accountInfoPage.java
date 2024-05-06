@@ -38,8 +38,11 @@ WebDriver driver;
 	private List<WebElement> ArrowDownBtn;
 	
 	//Perform click action on Account name 
-	public void accountNameClick(String accountname) {
+	public void accountNameClick(String accountname) throws InterruptedException {
+	Thread.sleep(15000);
+	
 		for (int i = 0; i < AccountNameList.size(); i++) {
+			
 			String accountName = AccountNameList.get(i).getText();
 			if (accountName.contains(accountname)) {
 				AccountNameList.get(i).click();

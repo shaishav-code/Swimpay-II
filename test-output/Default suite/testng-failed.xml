@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SwimPay.negativeTests.negativeBalancepayIn">
+      <class name="SwimPay.positiveTests.forgot_resetPassword">
         <methods>
           <include name="tearDown"/>
-          <include name="balPayinInvalid_completedTransactionsByDate"/>
+          <include name="ResetPassword"/>
           <include name="lanuchWebsite"/>
         </methods>
-      </class> <!-- SwimPay.negativeTests.negativeBalancepayIn -->
+      </class> <!-- SwimPay.positiveTests.forgot_resetPassword -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,7 +16,7 @@ public class negativeLogin extends baseClass {
 	String email2= "qa1@narola.email";
 	String invalidCaseEmail="QA2@narola.email";
 	String password= "123456789";
-	String password1= "Pass@1234";
+	String password1= "Pass@12345";
 
 	//Login with Invalid (unregistered) User Email
 	@Test(priority = 1)

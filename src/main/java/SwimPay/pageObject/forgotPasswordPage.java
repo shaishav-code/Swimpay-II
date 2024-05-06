@@ -66,6 +66,7 @@ WebDriver driver;
 	//Submit Reset Password values (click button)
 	public void resetPasswordSubmit()
 	{
+		waitTimeForWebElementToAppear(submitResetPassword);
 		if(submitResetPassword.isEnabled())
 		{
 		submitResetPassword.click();
@@ -87,6 +88,7 @@ WebDriver driver;
 	//Click on Back to Login Button 
 	public void backToLogin()
 	{
+		waitTimeForWebElementToAppear(backToLoginOpt);
 		backToLoginOpt.click();
 	}
 	

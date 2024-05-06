@@ -5,8 +5,8 @@ import SwimPay.pageObject.BulkPaymentPage;
 import SwimPay.testComponents.baseClass;
 
 public class Bulk_Payment extends baseClass {
-	String email1 = "qa2@narola.email";
-	String password = "Pass@12345";
+	String email1 = "qa3@narola.email";
+	String password = "Pass@1234";
 
 //================== Verify clicking on Bulk payment option from menu =================================
 
@@ -431,9 +431,9 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Extranal_Recipients();
-		Thread.sleep(3000);
+		LoginPage.pauseRun3();
 		BulkPayment.Cancel_button();
 	}
 
@@ -450,7 +450,7 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Wallet_to_Wattet();
 
 	}
@@ -482,10 +482,10 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Wallet_to_Wattet();
 		BulkPayment.selectAlternativeCurrencyOption1("CAD");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Amount_To_Pay();
 
 	}
@@ -501,10 +501,10 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Wallet_to_Wattet();
 		BulkPayment.selectAlternativeCurrencyOption1("CAD");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Amount_To_Pay();
 		BulkPayment.Mandatoryreference_Click();
 	}
@@ -520,10 +520,10 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Wallet_to_Wattet();
 		BulkPayment.selectAlternativeCurrencyOption1("CAD");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Amount_To_Pay();
 		BulkPayment.Mandatoryreference_Click();
 		BulkPayment.selectReasonCodeOption1("Transfer to own account");
@@ -541,14 +541,14 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Wallet_to_Wattet();
 		BulkPayment.selectAlternativeCurrencyOption1("CAD");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Amount_To_Pay();
 		BulkPayment.Mandatoryreference_Click();
 		BulkPayment.selectReasonCodeOption1("Transfer to own account");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click_PayNow();
 		BulkPayment.otpData();
 		BulkPayment.otpVerify();
@@ -567,14 +567,14 @@ public class Bulk_Payment extends baseClass {
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
 		BulkPayment.Click__Wallet_to_Wattet();
 		BulkPayment.selectAlternativeCurrencyOption1("CAD");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Amount_To_Pay();
 		BulkPayment.Mandatoryreference_Click();
 		BulkPayment.selectReasonCodeOption1("Transfer to own account");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click_PayNow();
 		BulkPayment.otpData();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.otpCancelBtn();
 	}
 
@@ -589,17 +589,17 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Wallet_to_Wattet();
 		BulkPayment.selectAlternativeCurrencyOption1("CAD");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Amount_To_Pay();
 		BulkPayment.Mandatoryreference_Click();
 		BulkPayment.selectReasonCodeOption1("Transfer to own account");
 		BulkPayment.Click_Paylater1();
 		BulkPayment.otpData();
 		BulkPayment.Click_PaylaterAccpect1();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 
 	}
 
@@ -614,10 +614,10 @@ public class Bulk_Payment extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		BulkPaymentPage BulkPayment = LoginPage.Bulkpaymentformenu();
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Click__Wallet_to_Wattet();
 		BulkPayment.selectAlternativeCurrencyOption1("CAD");
-		Thread.sleep(2000);
+		LoginPage.pauseRun2();
 		BulkPayment.Amount_To_Pay();
 		BulkPayment.Mandatoryreference_Click();
 		BulkPayment.selectReasonCodeOption1("Transfer to own account");

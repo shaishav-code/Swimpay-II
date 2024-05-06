@@ -21,7 +21,6 @@ import org.openqa.selenium.support.PageFactory;
 import SwimPay.AbstractComponents.abstractComponentsMethods;
 
 public class InvoicingPage extends abstractComponentsMethods{
-
 	WebDriver driver;
 	Actions act;
 		
@@ -137,9 +136,68 @@ public class InvoicingPage extends abstractComponentsMethods{
 			waitTimeForElementToClickable(fileupload);
 			fileupload.sendKeys("C:\\Users\\psejal\\Desktop\\11.jfif");
 		}
-	
 		
+		public void uploadDocument(String filePath) {
+		    waitTimeForElementToClickable(fileupload);
+		    waitcode();
+		    fileupload.sendKeys(filePath);
+		}
 
+		public void MacFileUpload()
+		{
+	            try {
+	            Robot robot = new Robot();
+
+	            // Ensure some delay to let the system catch up
+	            robot.delay(1000);
+
+	            // Open Go To Folder
+	            robot.keyPress(KeyEvent.VK_META);
+	            robot.keyPress(KeyEvent.VK_SHIFT);
+	            robot.keyPress(KeyEvent.VK_G);
+	            robot.delay(100);
+	            robot.keyRelease(KeyEvent.VK_G);
+	            robot.keyRelease(KeyEvent.VK_SHIFT);
+	            robot.keyRelease(KeyEvent.VK_META);
+
+	            robot.delay(500);
+
+	            // Paste the clipboard content - Command ⌘ + V
+	            robot.keyPress(KeyEvent.VK_META);
+	            robot.keyPress(KeyEvent.VK_V);
+	            robot.delay(100);
+	            robot.keyRelease(KeyEvent.VK_V);
+	            robot.keyRelease(KeyEvent.VK_META);
+
+	            robot.delay(500);
+
+	            // Press Enter to confirm the file path in Go To Folder dialog
+	            robot.keyPress(KeyEvent.VK_ENTER);
+	            robot.delay(100);
+	            robot.keyRelease(KeyEvent.VK_ENTER);
+	            robot.delay(1000);
+
+	            // Press Enter to confirm the Open button in file dialog
+	            robot.keyPress(KeyEvent.VK_ENTER);
+	            robot.delay(100);
+	            robot.keyRelease(KeyEvent.VK_ENTER);
+
+	        }
+	            catch (AWTException e) {
+	            e.printStackTrace();
+	        }
+		}
+		
+		public void UploadValidDocument()
+		{
+			waitcode();
+			File file = new File("/Users/c100-96/Downloads/image_P2.png");
+			StringSelection stringSelection = new StringSelection(file.getAbsolutePath());
+		    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		    MacFileUpload();
+			
+		}
+		
 		public boolean ClickOnUpdateLogoButton()
 		{
 			if(updatelogobutton.isDisplayed())
@@ -163,6 +221,11 @@ public class InvoicingPage extends abstractComponentsMethods{
 		
 		public boolean ValidateOverSizeDocument()
 		{
+			waitcode();
+//			File file = new File("/Users/c100-96/Downloads/image_P2.png"); //
+//			StringSelection stringSelection = new StringSelection(file.getAbsolutePath());
+//		    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+//		    MacFileUpload();
 			return oversizevalidation.isDisplayed();
 		}
 		
@@ -429,11 +492,15 @@ public class InvoicingPage extends abstractComponentsMethods{
 			Actions();
 		}
 		
-		public boolean ClickOnButtons(int i)
+		public void ClickOnButtons(int i)
 		{
 			buttons.get(i).click();
+		}
+		public boolean DisplayButtons(int i)
+		{
 			return buttons.get(i).isDisplayed();
 		}
+		
 		
 		public void CreateInvoiceBtn()
 		{
@@ -503,6 +570,11 @@ public class InvoicingPage extends abstractComponentsMethods{
 			date.click();
 			waitcode();
 			Actions();
+		}
+		
+		public boolean DisplaySearchBtn()
+		{
+			return searchbtn.isEnabled();
 		}
 		
 		public void ClickOnSearchBtn()

@@ -7,8 +7,8 @@ import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-import java.time.Duration;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -34,10 +34,11 @@ public class baseClass {
 	String password3 = "12345678";
 
 	public WebDriver invokeDriver() {
+
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		return driver;
 	}
 
@@ -56,11 +57,14 @@ public class baseClass {
 
 	public void tearDown() throws InterruptedException {
 		abstractComponentsMethods AbstarctPage = new abstractComponentsMethods(driver);
-		 AbstarctPage.Logout();
+		AbstarctPage.Logout();
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //	    wait.until(ExpectedConditions.urlContains("http://192.168.100.141:3500/auth/login"));
 //		System.out.println(driver.getCurrentUrl());
-		driver.quit();
+//		 if (driver != null) {
+//	            driver.quit(); // Quit the browser session
+//	        }
+//	driver.quit();
 
 	}
 

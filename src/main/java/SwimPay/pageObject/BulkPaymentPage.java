@@ -39,7 +39,8 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	@FindBy(xpath = "//div[@data-tag='allowRowEvents']//a")
 	private List<WebElement> References;
 
-	public void referencesNumberSelector(int ref) {
+	public void referencesNumberSelector(int ref) throws InterruptedException {
+		Thread.sleep(15000);
 		References.size();
 		if (ref >= 0 && ref < References.size()) {
 			String referenceNumberText = References.get(ref).getText();
@@ -85,6 +86,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	private WebElement InvalidFromDate;
 
 	public void ClickInvalidFromDate() {
+		waitTimeForWebElementToAppear(InvalidFromDate);
 		InvalidFromDate.click();
 		InvalidFromDate.sendKeys("@@@@@");
 		InvalidFromDate.clear();
@@ -225,6 +227,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	private WebElement NextPagearrow;
 
 	public void ClickNextPagearrow() {
+		waitTimeForWebElementToAppear(NextPagearrow);
 		NextPagearrow.click();
 
 	}
@@ -273,6 +276,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	private WebElement Extranal_payment;
 
 	public void Click__Extranal_Recipients() {
+		waitTimeForWebElementToAppear(Extranal_payment);
 		Extranal_payment.click();
 	}
 
@@ -420,7 +424,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	private WebElement ActionMultiPay;
 
 	public void Click_MultiPAy() throws InterruptedException {
-		scrollAction(ActionMultiPay);
+		scrollActionBulk(ActionMultiPay);
 		Thread.sleep(2000);
 		ActionMultiPay.click();
 	}
@@ -478,6 +482,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	private WebElement Wallet_to_Wattet_payment;
 
 	public void Click__Wallet_to_Wattet() {
+		waitTimeForWebElementToAppear(Wallet_to_Wattet_payment);
 		Wallet_to_Wattet_payment.click();
 	}
 

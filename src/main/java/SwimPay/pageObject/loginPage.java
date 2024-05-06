@@ -56,8 +56,8 @@ public class loginPage extends abstractComponentsMethods{
 	public void invokeURL() 
 	{
 		driver.get("https://demo.swimpay.com/");
-		//driver.get("http://192.168.100.141:3600/auth/login");
-		//driver.get("http://192.168.100.141:3500/auth/login");
+//		//driver.get("http://192.168.100.141:3600/auth/login");
+//		//driver.get("http://192.168.100.141:3500/auth/login");
 	}
 	
 	//Entering User Email in Email field
@@ -132,6 +132,7 @@ public class loginPage extends abstractComponentsMethods{
 	}
 	
 		
+	
 	
 	
 	

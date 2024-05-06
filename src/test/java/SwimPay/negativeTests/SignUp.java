@@ -32,7 +32,7 @@ public class SignUp extends baseClass {
 		OnBoadring.AccountNumber(account1);
 		OnBoadring.VerifyButton();
 		OnBoadring.messageToaster();
-		driver.navigate().back();
+		//driver.navigate().back();
 
 	}
 
@@ -45,7 +45,7 @@ public class SignUp extends baseClass {
 		OnBoadring.next_Click();
 		OnBoadring.AccountNumber(" ");
 		OnBoadring.VerifyButton();
-		driver.navigate().back();
+	//	driver.navigate().back();
 		//OnBoadring.messageToaster();
 
 	}

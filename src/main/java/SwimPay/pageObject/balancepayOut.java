@@ -52,7 +52,8 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	// cature country name from list and perform click action on country price tab
 	// option from data list
-	public void countryOPtionClick(String country_payOutOpt) {
+	public void countryOPtionClick(String country_payOutOpt) throws InterruptedException {
+	Thread.sleep(15000);
 		CountrysName.size();
 //	System.out.println(CountryName_Print);
 		for (WebElement Country_Name : CountrysName) {
@@ -68,8 +69,9 @@ public class balancepayOut extends abstractComponentsMethods {
 	}
 	
 	
-	public void PrintCountry()
+	public void PrintCountry() throws InterruptedException
 	{
+	Thread.sleep(15000);
 		CountrysName.size();
 		System.out.println(CountrysName.size());
 		for (WebElement element : CountrysName) {
@@ -92,16 +94,18 @@ public class balancepayOut extends abstractComponentsMethods {
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[1]/div/div/button")
 	private WebElement PendingPayOutSettleFromDate;
 
-	public void pendingPayOutSettlement_fromDate() {
-		PendingPayOutSettleFromDate.click();;
+	public void pendingPayOutSettlement_fromDate() throws InterruptedException {
+		PendingPayOutSettleFromDate.click();
+		pauseRun3();
 	}
 
 	// find payout Pending Transaction settlement To Date field and perform required action
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[3]/div[2]/div[2]/div/div/button")
 	private WebElement PendingPayOutSettleToDate;
 
-	public void pendingPayOUtSettlement_toDate() {
+	public void pendingPayOUtSettlement_toDate() throws InterruptedException {
 		PendingPayOutSettleToDate.click();
+		pauseRun3();
 	}
 
 	// find payout complete Transaction from Date field and perform required action
@@ -110,6 +114,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void completePayOutTransaction_fromDate() {
 		CompletePayOutTransFromDate.click();
+		pauseRun3();
 	}
 
 	// find complete Transaction To Date field and perform required action
@@ -118,6 +123,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void completePayOutTransaction_toDate() {
 		CompletePayOutTransToDate.click();;
+		pauseRun3();
 	}
 	
 	
@@ -128,6 +134,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 			public void autoConvertedSettlement_fromDate() {
 				AutoConvertedFromDate.click();
+				pauseRun3();
 			}
 
 			// find Auto COnverted transaction  settlement To Date field and perform required action
@@ -136,6 +143,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 			public void autoConvertedSettlement_toDate() {
 				AutoConvertedToDate.click();
+				pauseRun3();
 			}
 
 	// find No Data Found caption and perform required action
@@ -183,6 +191,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void payOut_statementYear() {
 		StatementPayOutYearField.click();
+		pauseRun3();
 	}
 
 	// find create statement button & perform click action
@@ -191,6 +200,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void statementYearCreateBtn() {
 		StatementCreateBtn.click();
+		pauseRun3();
 	}
 
 	// find create statement month field and perform required action
@@ -199,6 +209,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void payOut_statementMonth() {
 		StatementPayOutMonthField.click();
+		pauseRun3();
 	}
 
 	// perform Month and Year Selection action from calendar Pop-up
@@ -239,14 +250,16 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void payOut_statementMonthFromDate() {
 		StatementPayOutFromDateField.click();
+		pauseRun3();
 	}
 
 	// find create statement to date field and perform required action
 	@FindBy(xpath = "//div[@class='MuiDialogContent-root css-1ty026z']/div/div[3]/div[2]/div[2]/div/div/button")
 	private WebElement StatementPayOutToDateField;
 
-	public void payOut_statementMonthToDate() {
+	public void payOut_statementMonthToDate() throws InterruptedException {
 		StatementPayOutToDateField.click();
+		pauseRun5();
 	}
 
 	// find Proceed statement button and perform required action
@@ -256,6 +269,7 @@ public class balancepayOut extends abstractComponentsMethods {
 	public void statementProceedBtn() {
 		
 		StatementProceed.click();
+		pauseRun3();
 	}
 
 	// find cancel statement button and perform required action
@@ -264,6 +278,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void statementCancelBtn() {
 		StatementCancel.click();
+		pauseRun3();
 	}
 
 	// find Statement Months datalist and perform required action (click on View
@@ -312,6 +327,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void backToBalancesBtn() {
 		BackToBalances.click();
+		pauseRun3();
 	}
 
 	// Find pay currency Option and perform click action
@@ -320,6 +336,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 	public void payCurrencyOptionBtn() {
 		PayCurrencyBtnOpt.click();
+		pauseRun3();
 	}
 
 	
@@ -372,6 +389,7 @@ public class balancepayOut extends abstractComponentsMethods {
 
 			public void requestStatementMonthToDate() {
 				ReqStatementToDateField.click();
+pauseRun5();
 			}
 			
 	// find Request CSV File Report

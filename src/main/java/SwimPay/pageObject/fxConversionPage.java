@@ -27,6 +27,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement sell_currency_textbox;
 
 	public void sellCurrency(String curency) throws InterruptedException {
+	waitTimeForWebElementToAppear(sell_currency_textbox);
 		sell_currency_textbox.sendKeys(curency + Keys.DOWN + Keys.ENTER);
 		Thread.sleep(3000);
 	}
@@ -36,6 +37,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	WebElement buy_currency_textbox;
 
 	public void buyCurrency(String currencyBuy) throws InterruptedException {
+		waitTimeForWebElementToAppear(buy_currency_textbox);
 		buy_currency_textbox.sendKeys(currencyBuy + Keys.DOWN + Keys.ENTER);
 		Thread.sleep(3000);
 	}
@@ -48,6 +50,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement AmounToOpt;
 
 	public void amountToOption() {
+		waitTimeForWebElementToAppear(AmounToOpt);
 		AmounToOpt.click();
 	}
 
@@ -59,10 +62,12 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement AmountSellOpt;
 
 	public void amountToBuy() {
+		waitTimeForWebElementToAppear(AmountBuyOpt);
 		AmountBuyOpt.click();
 	}
 
 	public void amountToSell() {
+		waitTimeForWebElementToAppear(AmountSellOpt);
 		AmountSellOpt.click();
 	}
 
@@ -71,6 +76,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement AmountValueBox;
 
 	public void amountValue(String amount) {
+		waitTimeForWebElementToAppear(AmountValueBox);
 		AmountValueBox.sendKeys(amount);
 	}
 
@@ -79,6 +85,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement cancle_btn;
 
 	public void cancelBtn() {
+		waitTimeForWebElementToAppear(cancle_btn);
 		cancle_btn.click();
 	}
 
@@ -87,6 +94,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement getQuoteBtnOpt;
 
 	public void getQuote() {
+		waitTimeForWebElementToAppear(getQuoteBtnOpt);
 		getQuoteBtnOpt.click();
 	}
 
@@ -95,6 +103,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement i_am_happy_checkbox;
 
 	public void happyCheckbox() {
+		waitTimeForWebElementToAppear(i_am_happy_checkbox);
 		i_am_happy_checkbox.click();
 	}
 
@@ -103,6 +112,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement back_btn;
 
 	public void backBtn() {
+		waitTimeForWebElementToAppear(back_btn);
 		back_btn.click();
 	}
 
@@ -111,6 +121,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement cancel_btn;
 
 	public void cancelBtn_process() {
+		waitTimeForWebElementToAppear(cancel_btn);
 		cancel_btn.click();
 	}
 
@@ -119,6 +130,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement requote_btn;
 
 	public void requoteBtn() {
+		waitTimeForWebElementToAppear(requote_btn);
 		requote_btn.click();
 	}
 
@@ -127,6 +139,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement convert_btn;
 
 	public void convertBtn() {
+		waitTimeForWebElementToAppear(convert_btn);
 		if (convert_btn.isEnabled()) {
 			convert_btn.click();
 		} else {
@@ -139,6 +152,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement RequoteResultMsg;
 
 	public void requoteResultMsg() {
+		waitTimeForWebElementToAppear(RequoteResultMsg);
 		System.out.println(RequoteResultMsg.getText());
 	}
 
@@ -147,6 +161,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement make_payment_btn;
 
 	public void makePayment() {
+		waitTimeForWebElementToAppear(make_payment_btn);
 		make_payment_btn.click();
 	}
 
@@ -155,6 +170,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement pay_later_btn;
 
 	public void payLater() {
+		waitTimeForWebElementToAppear(pay_later_btn);
 		pay_later_btn.click();
 	}
 
@@ -163,6 +179,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement make_another_conversion_btn;
 
 	public void makeAnotherConversion() {
+		waitTimeForWebElementToAppear(make_another_conversion_btn);
 		make_another_conversion_btn.click();
 	}
 
@@ -171,6 +188,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement view_dashboard_btn;
 
 	public void viewDashboardOpt() {
+		waitTimeForWebElementToAppear(view_dashboard_btn);
 		view_dashboard_btn.click();
 	}
 
@@ -191,6 +209,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement convertPayoutcurrencyOption;
 
 	public void Click_convertPayoutcurrency() {
+		waitTimeForWebElementToAppear(convertPayoutcurrencyOption);
 		convertPayoutcurrencyOption.click();
 
 	}
@@ -201,6 +220,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement CurrncyName;
 
 	public void ClickCurrncyName(String currencySellName) {
+		waitTimeForWebElementToAppear(CurrncyName);
 		CurrncyName.click();
 		CurrncyName.sendKeys(currencySellName + Keys.ARROW_DOWN + Keys.ENTER);
 
@@ -212,6 +232,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement BuyCurrncyName;
 
 	public void ClickBuyCurrncyName(String BuycurrencyName) {
+		waitTimeForWebElementToAppear(BuyCurrncyName);
 		BuyCurrncyName.click();
 
 		BuyCurrncyName.sendKeys(BuycurrencyName + Keys.ARROW_DOWN + Keys.ENTER);
@@ -223,6 +244,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement AmountToopenDropDown;
 
 	public void SelectAmountToopenDropDown() {
+		waitTimeForWebElementToAppear(AmountToopenDropDown);
 		AmountToopenDropDown.click();
 	}
 
@@ -230,6 +252,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement AmountToBuyOpt;
 
 	public void SelectamountToBuy() {
+		waitTimeForWebElementToAppear(AmountBuyOpt);
 		AmountToBuyOpt.click();
 	}
 
@@ -239,6 +262,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement Amount;
 
 	public void Write_amount(String amount) {
+		waitTimeForWebElementToAppear(AmountValueBox);
 		AmountValueBox.sendKeys(amount);
 	}
 
@@ -248,6 +272,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement cancle_Button;
 
 	public void cancelButton() {
+		waitTimeForWebElementToAppear(cancle_btn);
 		cancle_btn.click();
 	}
 
@@ -257,6 +282,7 @@ public class fxConversionPage extends abstractComponentsMethods {
 	private WebElement getQuoteButton;
 
 	public void ClickgetQuoteButton() {
+		waitTimeForWebElementToAppear(getQuoteButton);
 		getQuoteButton.click();
 	}
 }
