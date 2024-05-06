@@ -573,7 +573,7 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
 		invoicingPage.ClickOnSearchBtn();
 		invoicingPage.waitcode();
-		invoicingPage.ClickOnPreviewButton("INV000159");
+		invoicingPage.ClickOnPreviewButton("INV000161");
 		invoicingPage.waitcode();
 		invoicingPage.CommonPath(31);  //cross arrow of preview button
 
@@ -601,7 +601,7 @@ public class InvoicingTest extends baseClass{
 		invoicingPage.EnterDate(1, "24 Jul 2025");   //Till date
 		invoicingPage.ClickOnSearchBtn();
 		invoicingPage.waitcode();
-		invoicingPage.ClickOnEditButton("INV000158"); //cross arrow of edit button
+		invoicingPage.ClickOnEditButton("INV000161"); //cross arrow of edit button
 		invoicingPage.waitcode();
 	}
 	
@@ -619,7 +619,7 @@ public class InvoicingTest extends baseClass{
 		LoginPage.waitcode();
 		InvoicingPage invoicingPage = LoginPage.InvoicingOption();
 		invoicingPage.ClickOnInvoiceListPage();
-		invoicingPage.ClickOnEditButton("INV000157");
+		invoicingPage.ClickOnEditButton("INV000162");
 		invoicingPage.waitcode();
 		invoicingPage.ClickExternalTypeCheckbox();
 		invoicingPage.InsertBillToAndAddress(0, 1,"Mr. Tester", "Victoria Street, Brazil");

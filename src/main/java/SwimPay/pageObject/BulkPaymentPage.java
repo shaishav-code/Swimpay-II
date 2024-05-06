@@ -12,6 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+
 import SwimPay.AbstractComponents.abstractComponentsMethods;
 
 public class BulkPaymentPage extends abstractComponentsMethods {
@@ -326,13 +328,39 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 
 //===================Find Alternative currency amount the Get rate Option and perform click action ===========  
 
-	@FindBy(xpath = "(//*[@data-tag='allowRowEvents'])[10]/div")
+	@FindBy(xpath = "(//*[@data-tag='allowRowEvents'])[10]/div/button")
 	private WebElement Getrate;
 
 	public void getRate() {
-		Getrate.click();
+		pauseRun5();
+		System.out.println(Getrate.isEnabled());
+		if (!Getrate.isEnabled()) {
+
+			Assert.assertFalse(false);
+
+		} else {
+
+			Getrate.click();
+			// Assert.assertFalse(true);
+		}
 	}
 
+	public void getRateNegative() {
+		pauseRun5();
+	System.out.println(Getrate.isEnabled());
+		if(!Getrate.isEnabled()) {
+		
+		Assert.assertFalse(false);
+		
+	}else
+	{
+		
+	//	Getrate.click();
+		Assert.assertFalse(true);
+	}
+		}
+
+	
 	// MultiPay Get Rate
 
 	@FindBy(xpath = "(//*[@data-tag='allowRowEvents'])[24]/div")

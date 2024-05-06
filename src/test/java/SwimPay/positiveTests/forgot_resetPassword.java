@@ -13,7 +13,7 @@ import SwimPay.testComponents.baseClass;
 public class forgot_resetPassword extends baseClass{
 	String email1="qa1@narola.email";
 	String email2= "qa2@narola.email";
-	String password= "Pass@1234";
+	String password= "Pass@12345";
 	
 	
 	//Verify clicking on forgot password option

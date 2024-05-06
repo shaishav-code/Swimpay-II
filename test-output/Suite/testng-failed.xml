@@ -6,52 +6,45 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SwimPay.positiveTests.profile">
-        <methods>
-          <include name="tearDown"/>
-          <include name="profileOptClick"/>
-          <include name="changePassword"/>
-          <include name="lanuchWebsite"/>
-          <include name="profile_updateContactInfoClick"/>
-        </methods>
-      </class> <!-- SwimPay.positiveTests.profile -->
       <class name="SwimPay.negativeTests.negativeFundingAccount">
         <methods>
-          <include name="addNew_submitMyBankDetailFormData_withBlankFields"/>
           <include name="tearDown"/>
-          <include name="addNewFunding_submitBankAccountDetailForm_withInvalidValues"/>
-          <include name="addNew_ValidateAccount_withoutSelectPaymentCheckBox"/>
-          <include name="addNewFunding_withInvalidValueProvideAndSubmit"/>
           <include name="addNew_submitAndValdiateBankAccountDetails_withoutDataProvideInPaymentFormFields"/>
           <include name="lanuchWebsite"/>
-          <include name="addNew_submitAndValdiateBankAccountDetails_withInvalidOTPSubmit"/>
         </methods>
       </class> <!-- SwimPay.negativeTests.negativeFundingAccount -->
-      <class name="SwimPay.positiveTests.fundingAccounts">
+      <class name="SwimPay.negativeTests.NegativeInvoicingTest">
         <methods>
           <include name="tearDown"/>
-          <include name="clickPayOptFromDataListForRequestedUser"/>
-          <include name="clickUsersAccountNameFromDataList_andClickDeleteBtnFromDetailPage"/>
-          <include name="clickUsersAccountNameFromDataList_andClickPayBtnFromDetailPage"/>
-          <include name="clickUsersAccountNameFromDataList_andClickEditBtnFromDetailPage"/>
-          <include name="clickPayOptFromDataListForRequestedUser_andPerformPayment"/>
-          <include name="addNewFunding_andClickPayOpt"/>
-          <include name="clickEditOptForRequestedUser"/>
-          <include name="clickUserAccountNamefromDataList"/>
-          <include name="addNewFunding_deletenewSavedDetails"/>
-          <include name="clickDeleteOptForRequestedUserFromDataList_andPerformDeleteAction"/>
-          <include name="clickEditOptFromDataListForRequestedUser_andEditUpdateDetails"/>
+          <include name="InsertNotes_Discount_Tax_details"/>
           <include name="lanuchWebsite"/>
         </methods>
-      </class> <!-- SwimPay.positiveTests.fundingAccounts -->
-      <class name="SwimPay.negativeTests.negativeBulkPayment">
+      </class> <!-- SwimPay.negativeTests.NegativeInvoicingTest -->
+      <class name="SwimPay.positiveTests.accountInfo">
         <methods>
           <include name="tearDown"/>
-          <include name="PopUpMesaageCancle"/>
+          <include name="clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup_VerifyUSer_EnableUserAgain"/>
+          <include name="clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup"/>
           <include name="lanuchWebsite"/>
-          <include name="MultiPay"/>
         </methods>
-      </class> <!-- SwimPay.negativeTests.negativeBulkPayment -->
+      </class> <!-- SwimPay.positiveTests.accountInfo -->
+      <class name="SwimPay.positiveTests.Bulk_Payment">
+        <methods>
+          <include name="tearDown"/>
+          <include name="PayLetter"/>
+          <include name="PaynowVerify"/>
+          <include name="PaynowCalncel"/>
+          <include name="Multipay"/>
+          <include name="MultipayAmount"/>
+          <include name="mandatoryreference"/>
+          <include name="Cancel"/>
+          <include name="lanuchWebsite"/>
+          <include name="GetRate"/>
+          <include name="ReasonCode"/>
+          <include name="Accpect"/>
+          <include name="Pay"/>
+        </methods>
+      </class> <!-- SwimPay.positiveTests.Bulk_Payment -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

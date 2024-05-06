@@ -64,7 +64,7 @@ public class baseClass {
 //		 if (driver != null) {
 //	            driver.quit(); // Quit the browser session
 //	        }
-//	driver.quit();
+	driver.quit();
 
 	}
 

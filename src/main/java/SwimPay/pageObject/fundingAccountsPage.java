@@ -213,6 +213,7 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	private WebElement bankaccount;
 
 	public void BankAccount_Click() {
+		waitTimeForWebElementToAppear(bankaccount);
 		bankaccount.click(); // clearField(CountryOpt);
 	}
 
@@ -220,6 +221,7 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	private WebElement payout;
 
 	public void PayOut_Click() {
+		waitTimeForWebElementToAppear(payout);
 		payout.click();
 		// clearField(CountryOpt);
 

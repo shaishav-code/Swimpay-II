@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import SwimPay.pageObject.BulkPaymentPage;
 import SwimPay.pageObject.InvoicingPage;
+import SwimPay.pageObject.NewChange_PaymentPage;
 import SwimPay.pageObject.accountInfoPage;
 import SwimPay.pageObject.balancepayIn;
 import SwimPay.pageObject.balancepayOut;
@@ -57,7 +58,7 @@ public class abstractComponentsMethods {
 	}
 
 	public void otpData() {
-		waitTimeForWebElementListToAppear(loginOTP);
+		
 		loginOTP.size();
 		loginOTP.get(0).click();
 		for (int i = 0; i < loginOTP.size(); i++) {
@@ -150,7 +151,7 @@ public class abstractComponentsMethods {
 	private List<WebElement> FieldsErrorMessageDisplays;
 
 	public void fieldserrorsDisplay() {
-		waitTimeForWebElementListToAppear(FieldsErrorMessageDisplays);
+		//waitTimeForWebElementListToAppear(FieldsErrorMessageDisplays);
 		for (int i = 0; i < FieldsErrorMessageDisplays.size(); i++) {
 			String errorMessage = FieldsErrorMessageDisplays.get(i).getText();
 			if (errorMessage.contains(errorMessage)) {
@@ -739,5 +740,16 @@ public class abstractComponentsMethods {
 		 * scroll.executeScript("arguments[0].scrollIntoView();", NoDatatoDisplay); }
 		 */
 	}
+	
+	// PAyment option from Side Menu
+	
+			@FindBy(xpath = "//*[@class='sidebar-container']/div[2]/div[5]/a")
+			private WebElement Paymentopt;
+
+			public NewChange_PaymentPage PaymentOptions() {
+				Paymentopt.click();
+				NewChange_PaymentPage New_Change_Payment =new NewChange_PaymentPage(driver);
+			return New_Change_Payment;
+			}
 
 }

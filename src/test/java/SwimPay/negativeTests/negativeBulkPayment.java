@@ -34,8 +34,7 @@ public class negativeBulkPayment extends baseClass {
 
 	}
 
-	// =========== Verify click on the user amount pay field the special characters
-	// allow ================
+	// ===== Verify click on the user amount pay field the special character allow ================
 	@Test(priority = 2)
 	public void PopUpMesaageCancle() throws InterruptedException {
 		LoginPage.userEmail(email2);
@@ -49,8 +48,8 @@ public class negativeBulkPayment extends baseClass {
 		BulkPayment.Click__Extranal_Recipients();
 		BulkPayment.Invalid_Amount_Pay();
 		BulkPayment.selectAlternativeCurrencyOption("CAD");
-		BulkPayment.getRate();
-		BulkPayment.Click_AccpctRateButton();
+		BulkPayment.getRateNegative();
+		//BulkPayment.Click_AccpctRateButton();
 
 	}
 
@@ -72,9 +71,9 @@ public class negativeBulkPayment extends baseClass {
 		BulkPayment.Click__Extranal_Recipients();
 		BulkPayment.Invalid_Amount_Pay();
 		BulkPayment.selectAlternativeCurrencyOption("CAD");
-		BulkPayment.getRate();
-		BulkPayment.Click_AccpctRateButton();
-		BulkPayment.Click_Mandatoryreference();
+		BulkPayment.getRateNegative();
+		//BulkPayment.Click_AccpctRateButton();
+		//BulkPayment.Click_Mandatoryreference();
 
 	}
 

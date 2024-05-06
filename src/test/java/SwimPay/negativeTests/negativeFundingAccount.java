@@ -24,6 +24,12 @@ public class negativeFundingAccount extends baseClass {
 		LoginPage.otpData();
 		LoginPage.otpSubmitBtn();
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
+		FundingAccount.clickDeleteOptforRequestedUser("Steveww");
+		FundingAccount.confirmActionMessagePopup();
+		FundingAccount.yesAction();
+		FundingAccount.otpData();
+		FundingAccount.otpVerify();
+		LoginPage.pauseRun5();
 		FundingAccount.addBankAccountBtn();
 		FundingAccount.submitBankAccountDetails();
 		FundingAccount.errorMsgDisplay();

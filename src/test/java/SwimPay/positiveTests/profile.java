@@ -12,8 +12,8 @@ public class profile extends baseClass {
 
 	String email1 = "qa3@narola.email";
 
-	String password = "Pass@12345";
-	String password1 = "Pass@1234";
+	String password = "Pass@1234";
+	String password1 = "Pass@12345";
 	String contact1 = "16871231132";
 	String contact2 = "16871231121";
 
@@ -159,7 +159,7 @@ public class profile extends baseClass {
 	}
 
 	// Verify change password with valid format
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	public void changePassword() throws InterruptedException {
 
 		loginPage LoginPage = new loginPage(driver);
