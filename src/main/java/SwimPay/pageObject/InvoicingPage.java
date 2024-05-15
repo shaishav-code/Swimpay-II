@@ -104,7 +104,7 @@ public class InvoicingPage extends abstractComponentsMethods{
 		
 		public void ClickButton(int i)
 		{
-			waitTimeForWebElementListToAppear(button);
+			//waitTimeForWebElementListToAppear(button);
 			button.get(i).click();		
 		}
 		
@@ -506,6 +506,7 @@ public class InvoicingPage extends abstractComponentsMethods{
 		
 		public void CreateInvoiceBtn()
 		{
+			waitTimeForWebElementToAppear(invoicebutton);
 			invoicebutton.click();
 		}
 		

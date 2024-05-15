@@ -159,7 +159,7 @@ public class profile extends baseClass {
 	}
 
 	// Verify change password with valid format
-//	@Test(priority = 3)
+	@Test(priority = 3)
 	public void changePassword() throws InterruptedException {
 
 		loginPage LoginPage = new loginPage(driver);

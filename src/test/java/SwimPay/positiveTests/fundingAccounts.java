@@ -467,7 +467,7 @@ public class fundingAccounts extends baseClass {
 		fundingAccountsPage FundingAccount = LoginPage.fundingAccountOption();
 		LoginPage.pauseRun5();
 		FundingAccount.clickEditOptforRequestedUser("steve");
-		 ;
+		 
 	}
 
 //Verify click on edit option button for request user from displayed data list and edit/update details
@@ -589,9 +589,6 @@ public class fundingAccounts extends baseClass {
 		FundingAccount.CreateMyAccont_click();
 		FundingAccount.otpData();
 		FundingAccount.otpVerify();
-		 
-		
-
 	}
 
 }

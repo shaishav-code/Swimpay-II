@@ -15,6 +15,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import SwimPay.pageObject.BulkPaymentPage;
 import SwimPay.pageObject.InvoicingPage;
@@ -58,7 +59,7 @@ public class abstractComponentsMethods {
 	}
 
 	public void otpData() {
-		
+
 		loginOTP.size();
 		loginOTP.get(0).click();
 		for (int i = 0; i < loginOTP.size(); i++) {
@@ -134,7 +135,7 @@ public class abstractComponentsMethods {
 	private List<WebElement> ErrorMessageDisplays;
 
 	public void errorsDisplay() {
-		waitTimeForWebElementListToAppear(ErrorMessageDisplays);
+		// waitTimeForWebElementListToAppear(ErrorMessageDisplays);
 		for (int i = 0; i < ErrorMessageDisplays.size(); i++) {
 			String errorMessage = ErrorMessageDisplays.get(i).getText();
 			if (errorMessage.contains(errorMessage)) {
@@ -151,7 +152,7 @@ public class abstractComponentsMethods {
 	private List<WebElement> FieldsErrorMessageDisplays;
 
 	public void fieldserrorsDisplay() {
-		//waitTimeForWebElementListToAppear(FieldsErrorMessageDisplays);
+		// waitTimeForWebElementListToAppear(FieldsErrorMessageDisplays);
 		for (int i = 0; i < FieldsErrorMessageDisplays.size(); i++) {
 			String errorMessage = FieldsErrorMessageDisplays.get(i).getText();
 			if (errorMessage.contains(errorMessage)) {
@@ -323,10 +324,11 @@ public class abstractComponentsMethods {
 	}
 
 	public void getMessage() {
-		waitTimeForWebElementToAppear(successMessage);
+		//
 		scrollActionTop();
 
 		if (successMessage.isDisplayed()) {
+			waitTimeForWebElementToAppear(successMessage);
 			System.out.println(successMessage.getText());
 		}
 //		 else if (SuccessMsg.isDisplayed())
@@ -610,6 +612,7 @@ public class abstractComponentsMethods {
 	private WebElement ConrimDescription;
 
 	public void confirmActionMessagePopup() {
+		waitTimeForWebElementToAppear(ConrimHeading);
 		System.out.println(ConrimHeading.getText());
 		System.out.println(ConrimDescription.getText());
 	}
@@ -665,14 +668,34 @@ public class abstractComponentsMethods {
 	}
 
 	@FindBy(xpath = "//div[@class='content2-container']/div/div[4]/div[2]/div[1]/div/input")
-	private WebElement CalendarMonthString;
+	private WebElement CalendarMonthFromDateString;
 
-	public void selectNextMonth1(String mon) throws InterruptedException {
-		Thread.sleep(2000);
+	@FindBy(xpath = "	//div[@class='content2-container']/div/div[4]/div[2]/div[2]/div/input")
+	private WebElement CalendarMonthFromToString;
+
+	public void InvalidDate_CompletedTransactions(String mon) throws InterruptedException {
+		pauseRun2();
 		// CalendarMonthString.click();
-		CalendarMonthString.clear();
-		Thread.sleep(5000);
-		CalendarMonthString.sendKeys("258549");
+		CalendarMonthFromDateString.clear();
+		pauseRun5();
+		CalendarMonthFromDateString.sendKeys(mon);
+		
+		String FromDatestr = CalendarMonthFromDateString.getAttribute("value").toString();
+		System.out.println(FromDatestr);
+
+		pauseRun2();
+		CalendarMonthFromToString.clear();
+		pauseRun5();
+		CalendarMonthFromToString.sendKeys(mon);
+
+		String ToDatestr = CalendarMonthFromToString.getAttribute("value").toString();
+		System.out.println(ToDatestr);
+		
+		if (FromDatestr.contains(mon) && ToDatestr.contains(mon)) {
+			Assert.assertFalse(true);	
+		}
+		else {
+		}
 	}
 
 	/////////////////////////// NDA ABSTRACT CODE////////////////////////////
@@ -740,16 +763,16 @@ public class abstractComponentsMethods {
 		 * scroll.executeScript("arguments[0].scrollIntoView();", NoDatatoDisplay); }
 		 */
 	}
-	
-	// PAyment option from Side Menu
-	
-			@FindBy(xpath = "//*[@class='sidebar-container']/div[2]/div[5]/a")
-			private WebElement Paymentopt;
 
-			public NewChange_PaymentPage PaymentOptions() {
-				Paymentopt.click();
-				NewChange_PaymentPage New_Change_Payment =new NewChange_PaymentPage(driver);
-			return New_Change_Payment;
-			}
+	// PAyment option from Side Menu
+
+	@FindBy(xpath = "//*[@class='sidebar-container']/div[2]/div[5]/a")
+	private WebElement Paymentopt;
+
+	public NewChange_PaymentPage PaymentOptions() {
+		Paymentopt.click();
+		NewChange_PaymentPage New_Change_Payment = new NewChange_PaymentPage(driver);
+		return New_Change_Payment;
+	}
 
 }

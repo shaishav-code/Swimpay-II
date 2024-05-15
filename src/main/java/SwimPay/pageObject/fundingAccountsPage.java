@@ -171,6 +171,7 @@ public class fundingAccountsPage extends abstractComponentsMethods {
 	private WebElement Nickname;
 
 	public void nickname(String nickName) {
+		waitTimeForWebElementToAppear(Nickname);
 		Nickname.click();
 		clearField(Nickname);
 		Nickname.sendKeys(nickName);

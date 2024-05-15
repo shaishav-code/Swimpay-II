@@ -6,45 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SwimPay.negativeTests.negativeFundingAccount">
+      <class name="SwimPay.positiveTests.FailSkipTC">
         <methods>
+          <include name="click_Paybtn_Fillup_bank_Details_and_Submitbtn_click"/>
           <include name="tearDown"/>
-          <include name="addNew_submitAndValdiateBankAccountDetails_withoutDataProvideInPaymentFormFields"/>
           <include name="lanuchWebsite"/>
         </methods>
-      </class> <!-- SwimPay.negativeTests.negativeFundingAccount -->
-      <class name="SwimPay.negativeTests.NegativeInvoicingTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="InsertNotes_Discount_Tax_details"/>
-          <include name="lanuchWebsite"/>
-        </methods>
-      </class> <!-- SwimPay.negativeTests.NegativeInvoicingTest -->
-      <class name="SwimPay.positiveTests.accountInfo">
-        <methods>
-          <include name="tearDown"/>
-          <include name="clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup_VerifyUSer_EnableUserAgain"/>
-          <include name="clickEnable_DisableOptForRequestedUserFromDataListOfAccounts_andClickYesOptFromPopup"/>
-          <include name="lanuchWebsite"/>
-        </methods>
-      </class> <!-- SwimPay.positiveTests.accountInfo -->
-      <class name="SwimPay.positiveTests.Bulk_Payment">
-        <methods>
-          <include name="tearDown"/>
-          <include name="PayLetter"/>
-          <include name="PaynowVerify"/>
-          <include name="PaynowCalncel"/>
-          <include name="Multipay"/>
-          <include name="MultipayAmount"/>
-          <include name="mandatoryreference"/>
-          <include name="Cancel"/>
-          <include name="lanuchWebsite"/>
-          <include name="GetRate"/>
-          <include name="ReasonCode"/>
-          <include name="Accpect"/>
-          <include name="Pay"/>
-        </methods>
-      </class> <!-- SwimPay.positiveTests.Bulk_Payment -->
+      </class> <!-- SwimPay.positiveTests.FailSkipTC -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

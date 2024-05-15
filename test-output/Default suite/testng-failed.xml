@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SwimPay.positiveTests.fundingAccounts">
+      <class name="SwimPay.negativeTests.negativeBulkPayment">
         <methods>
           <include name="tearDown"/>
-          <include name="clickDeleteOptForRequestedUserFromDataList_andPerformDeleteAction"/>
           <include name="lanuchWebsite"/>
+          <include name="Mandatoryreference_specialnumber_accpct"/>
         </methods>
-      </class> <!-- SwimPay.positiveTests.fundingAccounts -->
+      </class> <!-- SwimPay.negativeTests.negativeBulkPayment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

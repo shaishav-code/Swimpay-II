@@ -36,7 +36,9 @@ public class baseClass {
 	public WebDriver invokeDriver() {
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		return driver;

@@ -333,7 +333,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 
 	public void getRate() {
 		pauseRun5();
-		System.out.println(Getrate.isEnabled());
+	//	System.out.println(Getrate.isEnabled());
 		if (!Getrate.isEnabled()) {
 
 			Assert.assertFalse(false);
@@ -347,7 +347,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 
 	public void getRateNegative() {
 		pauseRun5();
-	System.out.println(Getrate.isEnabled());
+//	System.out.println(Getrate.isEnabled());
 		if(!Getrate.isEnabled()) {
 		
 		Assert.assertFalse(false);
@@ -411,10 +411,10 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	@FindBy(xpath = "//*[@name='bulkpayment.0.reference_number']")
 	private WebElement mandatoryreference;
 
-	public void Click_Mandatoryreference() {
+	public void Click_Mandatoryreference(String number) {
 		mandatoryreference.click();
-		mandatoryreference.sendKeys("123456");
-	}
+		mandatoryreference.sendKeys(number);
+		}
 
 	// Multipay mandatoryreference
 
@@ -564,8 +564,32 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	private WebElement pay_Now;
 
 	public void Click_PayNow() {
+		waitTimeForWebElementToAppear(pay_Now);
 		pay_Now.click();
 	}
+		
+	public void PayNowNegative() {
+		pauseRun5();
+	//System.out.println(pay_Now.isEnabled());
+		if(!pay_Now.isEnabled()) {
+		
+		Assert.assertFalse(false);
+		
+	}else
+	{
+		
+	//	pay_Now.click();
+		Assert.assertFalse(true);
+	}
+		}
+
+	
+	
+	
+	
+	
+	
+	
 
 //================Find Pay later Button perform click action====================
 
@@ -573,6 +597,7 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 	private WebElement Paylater1;
 
 	public void Click_Paylater1() {
+		waitTimeForWebElementToAppear(Paylater1);
 		Paylater1.click();
 	}
 
@@ -624,4 +649,13 @@ public class BulkPaymentPage extends abstractComponentsMethods {
 		AmountToPay1.sendKeys("@@##");
 	}
 
+	
+	
+	
+	
+
+
+	
+	
+	
 }

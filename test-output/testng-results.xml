@@ -1,373 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="30" passed="30" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-06T17:08:28 IST" name="Default suite" finished-at="2024-05-06T17:25:50 IST" duration-ms="1042025">
+  <suite started-at="2024-05-15T10:29:44 IST" name="Suite" finished-at="2024-05-15T10:34:08 IST" duration-ms="264395">
     <groups>
     </groups>
-    <test started-at="2024-05-06T17:08:28 IST" name="Default test" finished-at="2024-05-06T17:25:50 IST" duration-ms="1042025">
-      <class name="SwimPay.positiveTests.Bulk_Payment">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:08:28 IST" name="lanuchWebsite" finished-at="2024-05-06T17:08:36 IST" duration-ms="7395" status="PASS">
+    <test started-at="2024-05-15T10:29:44 IST" name="Test" finished-at="2024-05-15T10:34:08 IST" duration-ms="264395">
+      <class name="SwimPay.positiveTests.FailSkipTC">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:29:44 IST" name="lanuchWebsite" finished-at="2024-05-15T10:29:52 IST" duration-ms="7781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Bulkpaymentformenu()[pri:1, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:08:36 IST" name="Bulkpaymentformenu" finished-at="2024-05-06T17:08:42 IST" duration-ms="6483" status="PASS">
+        <test-method signature="resetPassword_withWhiteSpaceData()[pri:1, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:29:52 IST" name="resetPassword_withWhiteSpaceData" finished-at="2024-05-15T10:29:56 IST" duration-ms="4901" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Bulkpaymentformenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:08:42 IST" name="tearDown" finished-at="2024-05-06T17:08:48 IST" duration-ms="6160" status="PASS">
+        </test-method> <!-- resetPassword_withWhiteSpaceData -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:29:56 IST" name="tearDown" finished-at="2024-05-15T10:30:47 IST" duration-ms="50584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:08:48 IST" name="lanuchWebsite" finished-at="2024-05-06T17:08:53 IST" duration-ms="4881" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:30:47 IST" name="lanuchWebsite" finished-at="2024-05-15T10:30:52 IST" duration-ms="4982" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Referencenumber()[pri:2, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:08:53 IST" name="Referencenumber" finished-at="2024-05-06T17:09:15 IST" duration-ms="21837" status="PASS">
+        <test-method signature="balPayin_RequestCSVFile()[pri:2, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:30:52 IST" name="balPayin_RequestCSVFile" finished-at="2024-05-15T10:31:31 IST" duration-ms="39062" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Referencenumber -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:09:15 IST" name="tearDown" finished-at="2024-05-06T17:09:19 IST" duration-ms="3645" status="PASS">
+        </test-method> <!-- balPayin_RequestCSVFile -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:31:31 IST" name="tearDown" finished-at="2024-05-15T10:31:35 IST" duration-ms="3924" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:09:19 IST" name="lanuchWebsite" finished-at="2024-05-06T17:09:23 IST" duration-ms="4832" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:31:35 IST" name="lanuchWebsite" finished-at="2024-05-15T10:31:41 IST" duration-ms="5573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="FromDateCalendar()[pri:3, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:09:23 IST" name="FromDateCalendar" finished-at="2024-05-06T17:09:54 IST" duration-ms="30575" status="PASS">
+        <test-method signature="balPayin_completedTransactionsByDate()[pri:3, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:31:41 IST" name="balPayin_completedTransactionsByDate" finished-at="2024-05-15T10:32:12 IST" duration-ms="31263" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FromDateCalendar -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:09:54 IST" name="tearDown" finished-at="2024-05-06T17:09:58 IST" duration-ms="3848" status="PASS">
+        </test-method> <!-- balPayin_completedTransactionsByDate -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:32:12 IST" name="tearDown" finished-at="2024-05-15T10:32:16 IST" duration-ms="3849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:09:58 IST" name="lanuchWebsite" finished-at="2024-05-06T17:10:03 IST" duration-ms="5129" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:32:16 IST" name="lanuchWebsite" finished-at="2024-05-15T10:32:21 IST" duration-ms="5290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="StatusField()[pri:4, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:10:03 IST" name="StatusField" finished-at="2024-05-06T17:10:26 IST" duration-ms="23541" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StatusField -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:10:27 IST" name="tearDown" finished-at="2024-05-06T17:10:30 IST" duration-ms="3704" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:10:30 IST" name="lanuchWebsite" finished-at="2024-05-06T17:10:35 IST" duration-ms="5229" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="PageArrowbutton()[pri:5, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:10:35 IST" name="PageArrowbutton" finished-at="2024-05-06T17:10:44 IST" duration-ms="8428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PageArrowbutton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:10:44 IST" name="tearDown" finished-at="2024-05-06T17:10:48 IST" duration-ms="3928" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:10:48 IST" name="lanuchWebsite" finished-at="2024-05-06T17:10:53 IST" duration-ms="5634" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="SearchButton()[pri:6, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:10:53 IST" name="SearchButton" finished-at="2024-05-06T17:11:22 IST" duration-ms="28493" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:11:22 IST" name="tearDown" finished-at="2024-05-06T17:11:26 IST" duration-ms="4262" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:11:26 IST" name="lanuchWebsite" finished-at="2024-05-06T17:11:31 IST" duration-ms="4864" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ExternalPayment()[pri:7, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:11:31 IST" name="ExternalPayment" finished-at="2024-05-06T17:11:38 IST" duration-ms="6753" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ExternalPayment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:11:38 IST" name="tearDown" finished-at="2024-05-06T17:11:46 IST" duration-ms="7911" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:11:46 IST" name="lanuchWebsite" finished-at="2024-05-06T17:11:51 IST" duration-ms="4848" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Amountpay()[pri:8, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:11:51 IST" name="Amountpay" finished-at="2024-05-06T17:12:09 IST" duration-ms="18370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Amountpay -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:12:09 IST" name="tearDown" finished-at="2024-05-06T17:12:14 IST" duration-ms="4929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:12:14 IST" name="lanuchWebsite" finished-at="2024-05-06T17:12:19 IST" duration-ms="4906" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="AlternativeCurrencyOpt()[pri:9, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:12:19 IST" name="AlternativeCurrencyOpt" finished-at="2024-05-06T17:12:42 IST" duration-ms="22935" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AlternativeCurrencyOpt -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:12:42 IST" name="tearDown" finished-at="2024-05-06T17:12:47 IST" duration-ms="5235" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:12:47 IST" name="lanuchWebsite" finished-at="2024-05-06T17:12:52 IST" duration-ms="5184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="GetRate()[pri:10, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:12:52 IST" name="GetRate" finished-at="2024-05-06T17:13:20 IST" duration-ms="28213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetRate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:13:20 IST" name="tearDown" finished-at="2024-05-06T17:13:25 IST" duration-ms="4750" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:13:25 IST" name="lanuchWebsite" finished-at="2024-05-06T17:13:30 IST" duration-ms="5066" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Cancel()[pri:11, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:13:30 IST" name="Cancel" finished-at="2024-05-06T17:14:02 IST" duration-ms="31963" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Cancel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:14:02 IST" name="tearDown" finished-at="2024-05-06T17:14:08 IST" duration-ms="5705" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:14:08 IST" name="lanuchWebsite" finished-at="2024-05-06T17:14:13 IST" duration-ms="5234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Accpect()[pri:12, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:14:13 IST" name="Accpect" finished-at="2024-05-06T17:14:45 IST" duration-ms="32171" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Accpect -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:14:45 IST" name="tearDown" finished-at="2024-05-06T17:14:50 IST" duration-ms="4957" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:14:50 IST" name="lanuchWebsite" finished-at="2024-05-06T17:14:54 IST" duration-ms="3475" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="mandatoryreference()[pri:13, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:14:54 IST" name="mandatoryreference" finished-at="2024-05-06T17:15:31 IST" duration-ms="37118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mandatoryreference -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:15:31 IST" name="tearDown" finished-at="2024-05-06T17:15:36 IST" duration-ms="4744" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:15:36 IST" name="lanuchWebsite" finished-at="2024-05-06T17:15:40 IST" duration-ms="4677" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="ReasonCode()[pri:14, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:15:40 IST" name="ReasonCode" finished-at="2024-05-06T17:16:14 IST" duration-ms="33990" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReasonCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:16:14 IST" name="tearDown" finished-at="2024-05-06T17:16:19 IST" duration-ms="5034" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:16:19 IST" name="lanuchWebsite" finished-at="2024-05-06T17:16:24 IST" duration-ms="4651" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Multipay()[pri:15, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:16:24 IST" name="Multipay" finished-at="2024-05-06T17:17:03 IST" duration-ms="39061" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Multipay -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:17:03 IST" name="tearDown" finished-at="2024-05-06T17:17:08 IST" duration-ms="5258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:17:08 IST" name="lanuchWebsite" finished-at="2024-05-06T17:17:13 IST" duration-ms="4417" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="MultipayAmount()[pri:16, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:17:13 IST" name="MultipayAmount" finished-at="2024-05-06T17:18:09 IST" duration-ms="56121" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MultipayAmount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:18:09 IST" name="tearDown" finished-at="2024-05-06T17:18:13 IST" duration-ms="4234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:18:13 IST" name="lanuchWebsite" finished-at="2024-05-06T17:18:18 IST" duration-ms="4902" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="PaynowCalncel()[pri:17, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:18:18 IST" name="PaynowCalncel" finished-at="2024-05-06T17:19:01 IST" duration-ms="43325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PaynowCalncel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:19:01 IST" name="tearDown" finished-at="2024-05-06T17:19:06 IST" duration-ms="5136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:19:06 IST" name="lanuchWebsite" finished-at="2024-05-06T17:19:12 IST" duration-ms="5222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="PaynowVerify()[pri:18, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:19:12 IST" name="PaynowVerify" finished-at="2024-05-06T17:19:54 IST" duration-ms="41951" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PaynowVerify -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:19:54 IST" name="tearDown" finished-at="2024-05-06T17:19:58 IST" duration-ms="4205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:19:58 IST" name="lanuchWebsite" finished-at="2024-05-06T17:20:03 IST" duration-ms="4756" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="PayLetter()[pri:19, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:20:03 IST" name="PayLetter" finished-at="2024-05-06T17:20:41 IST" duration-ms="38626" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PayLetter -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:20:41 IST" name="tearDown" finished-at="2024-05-06T17:20:46 IST" duration-ms="4794" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:20:46 IST" name="lanuchWebsite" finished-at="2024-05-06T17:20:50 IST" duration-ms="4530" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Pay()[pri:20, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:20:50 IST" name="Pay" finished-at="2024-05-06T17:21:28 IST" duration-ms="37661" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Pay -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:21:28 IST" name="tearDown" finished-at="2024-05-06T17:21:32 IST" duration-ms="4119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:21:32 IST" name="lanuchWebsite" finished-at="2024-05-06T17:21:37 IST" duration-ms="4367" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="cancelbutton()[pri:21, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:21:37 IST" name="cancelbutton" finished-at="2024-05-06T17:21:50 IST" duration-ms="12998" status="PASS">
+        <test-method signature="cancelbutton()[pri:4, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:32:21 IST" name="cancelbutton" finished-at="2024-05-15T10:32:38 IST" duration-ms="17186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cancelbutton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:21:50 IST" name="tearDown" finished-at="2024-05-06T17:21:54 IST" duration-ms="3959" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:32:38 IST" name="tearDown" finished-at="2024-05-15T10:32:42 IST" duration-ms="3936" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:21:54 IST" name="lanuchWebsite" finished-at="2024-05-06T17:21:58 IST" duration-ms="4661" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:32:42 IST" name="lanuchWebsite" finished-at="2024-05-15T10:32:46 IST" duration-ms="3972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="WalletToWalletPayment()[pri:22, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:21:58 IST" name="WalletToWalletPayment" finished-at="2024-05-06T17:22:06 IST" duration-ms="8112" status="PASS">
+        <test-method signature="click_Paybtn_Fillup_bank_Details_and_Submitbtn_click()[pri:5, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:32:46 IST" name="click_Paybtn_Fillup_bank_Details_and_Submitbtn_click" finished-at="2024-05-15T10:33:10 IST" duration-ms="23986" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- WalletToWalletPayment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:22:06 IST" name="tearDown" finished-at="2024-05-06T17:22:12 IST" duration-ms="6082" status="PASS">
+        </test-method> <!-- click_Paybtn_Fillup_bank_Details_and_Submitbtn_click -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:33:10 IST" name="tearDown" finished-at="2024-05-15T10:33:14 IST" duration-ms="4349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:22:12 IST" name="lanuchWebsite" finished-at="2024-05-06T17:22:16 IST" duration-ms="3922" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:33:14 IST" name="lanuchWebsite" finished-at="2024-05-15T10:33:22 IST" duration-ms="7311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Paymentcurrency()[pri:23, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:22:16 IST" name="Paymentcurrency" finished-at="2024-05-06T17:22:30 IST" duration-ms="13462" status="PASS">
+        <test-method signature="Click_Editbtn_for_payments_pay()[pri:6, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:33:22 IST" name="Click_Editbtn_for_payments_pay" finished-at="2024-05-15T10:33:40 IST" duration-ms="18548" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Paymentcurrency -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:22:30 IST" name="tearDown" finished-at="2024-05-06T17:22:34 IST" duration-ms="4154" status="PASS">
+        </test-method> <!-- Click_Editbtn_for_payments_pay -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:33:40 IST" name="tearDown" finished-at="2024-05-15T10:33:44 IST" duration-ms="3675" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:22:34 IST" name="lanuchWebsite" finished-at="2024-05-06T17:22:39 IST" duration-ms="4545" status="PASS">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:33:44 IST" name="lanuchWebsite" finished-at="2024-05-15T10:33:50 IST" duration-ms="5726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="AmountPay()[pri:24, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:22:39 IST" name="AmountPay" finished-at="2024-05-06T17:22:55 IST" duration-ms="16252" status="PASS">
+        <test-method signature="Click_Deletebtn_for_payments_pay()[pri:7, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:33:50 IST" name="Click_Deletebtn_for_payments_pay" finished-at="2024-05-15T10:34:03 IST" duration-ms="13709" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AmountPay -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:22:55 IST" name="tearDown" finished-at="2024-05-06T17:23:01 IST" duration-ms="6052" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:01 IST" name="lanuchWebsite" finished-at="2024-05-06T17:23:06 IST" duration-ms="4732" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Mandatoryreference()[pri:25, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:06 IST" name="Mandatoryreference" finished-at="2024-05-06T17:23:23 IST" duration-ms="17254" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Mandatoryreference -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:23 IST" name="tearDown" finished-at="2024-05-06T17:23:27 IST" duration-ms="4119" status="PASS">
+        </test-method> <!-- Click_Deletebtn_for_payments_pay -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.FailSkipTC@61544ae6]" started-at="2024-05-15T10:34:03 IST" name="tearDown" finished-at="2024-05-15T10:34:08 IST" duration-ms="4670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:27 IST" name="lanuchWebsite" finished-at="2024-05-06T17:23:31 IST" duration-ms="4519" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="referenceCode()[pri:26, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:31 IST" name="referenceCode" finished-at="2024-05-06T17:23:49 IST" duration-ms="17906" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- referenceCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:49 IST" name="tearDown" finished-at="2024-05-06T17:23:54 IST" duration-ms="4200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:54 IST" name="lanuchWebsite" finished-at="2024-05-06T17:23:58 IST" duration-ms="4330" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="PayIn()[pri:27, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:23:58 IST" name="PayIn" finished-at="2024-05-06T17:24:19 IST" duration-ms="20822" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PayIn -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:24:19 IST" name="tearDown" finished-at="2024-05-06T17:24:23 IST" duration-ms="3841" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:24:23 IST" name="lanuchWebsite" finished-at="2024-05-06T17:24:28 IST" duration-ms="4938" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="PayInCalcelbutton()[pri:28, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:24:28 IST" name="PayInCalcelbutton" finished-at="2024-05-06T17:24:49 IST" duration-ms="21869" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PayInCalcelbutton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:24:49 IST" name="tearDown" finished-at="2024-05-06T17:24:54 IST" duration-ms="4282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:24:54 IST" name="lanuchWebsite" finished-at="2024-05-06T17:24:58 IST" duration-ms="4287" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="PayLaterButton1()[pri:29, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:24:58 IST" name="PayLaterButton1" finished-at="2024-05-06T17:25:19 IST" duration-ms="20573" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PayLaterButton1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:25:19 IST" name="tearDown" finished-at="2024-05-06T17:25:22 IST" duration-ms="3856" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:25:22 IST" name="lanuchWebsite" finished-at="2024-05-06T17:25:27 IST" duration-ms="4704" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Cancelbutton()[pri:30, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:25:27 IST" name="Cancelbutton" finished-at="2024-05-06T17:25:45 IST" duration-ms="17742" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Cancelbutton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SwimPay.positiveTests.Bulk_Payment@26e356f0]" started-at="2024-05-06T17:25:45 IST" name="tearDown" finished-at="2024-05-06T17:25:50 IST" duration-ms="5229" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- SwimPay.positiveTests.Bulk_Payment -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- SwimPay.positiveTests.FailSkipTC -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

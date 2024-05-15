@@ -11,8 +11,10 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
+			<class name="SwimPay.negativeTests.negativeNewchangePayment" /> 
 			
-			<class name="SwimPay.positiveTests.FailSkipTC" /> 	 <!--TTC23 TC 7 8 21 22 23-->
+			<class name="SwimPay.positiveTests.New_Change_Payment" />
+
 
 			
 
