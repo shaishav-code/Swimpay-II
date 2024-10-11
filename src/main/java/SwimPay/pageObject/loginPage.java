@@ -18,7 +18,7 @@ import SwimPay.AbstractComponents.abstractComponentsMethods;
 
 public class loginPage extends abstractComponentsMethods{
 	
-	WebDriver driver;
+	
 	
 	public loginPage(WebDriver driver)
 	{
